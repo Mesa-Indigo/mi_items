@@ -3,16 +3,23 @@ return {
     ----------------------------------------------------------------
     --[[    Consumables - General Foods    ]]--
 
-    ['sandwich'] = {
-        label = 'Sandwich',
-        weight = 250,
-        stack = true,
-        close = true,
-        description = "A simple sandwich for a simple day",
+    ['sandwich_ham'] = {
+        label = 'Ham Sandwich', weight = 250, stack = true,
+        degrade = 10, decay = true, close = true,
+        description = "Ham in bread? What a wild concept.",
         client = {
-            status = { hunger = 200000 },
-            anim = 'eating_hand', prop = 'sandwich',
-            usetime = 7500, disable = { combat = true }
+            status = { hunger = 145000 }, anim = 'eating_hand', prop = 'sandwich',
+            usetime = 7500, disable = { move = false, car = false, combat = true },
+        },
+    },
+
+    ['apple'] = {
+        label = 'Apple', weight = 150, stack = true,
+        degrade = 7, decay = true, close = true,
+        description = "'Get that shit away from me' - Dr. Cohen",
+        client = {
+            status = { hunger = 100000 }, anim = 'eating_hand', prop = 'apple',
+            usetime = 7500, disable = { move = false, car = false, combat = true },
         },
     },
 
@@ -21,7 +28,7 @@ return {
     --[[    Consumables - General Drinks    ]]--
 
     ['water'] = {
-        label = 'Sandwich',
+        label = 'Water Bottle',
         weight = 250,
         stack = true,
         close = true,

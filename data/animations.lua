@@ -61,7 +61,7 @@ return {
         ----------------------------------------------------------------
         --[[    Prop Details - General Drinks    ]]--
         ['water'] = {
-            model = 'prop_sandwich_01',
+            model = 'vw_prop_casino_water_bottle_01a',
             pos = vec3(0.05, -0.02, -0.03),
             rot = vec3(150.0, 340.0, 170.0)
         },
