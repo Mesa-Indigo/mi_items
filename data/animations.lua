@@ -8,6 +8,11 @@ return {
             clip = 'mp_player_int_eat_burger_fp'
         },
 
+        ['eating_tool'] = {
+            dict = 'anim@scripted@island@special_peds@pavel@hs4_pavel_ig5_caviar_p1',
+            clip = 'base_idle'
+        },
+
         ----------------------------------------------------------------
         ----------------------------------------------------------------
         --[[    Animations - General Drinks    ]]--
@@ -17,6 +22,24 @@ return {
         },
     },
     prop = {
+
+        ----------------------------------------------------------------
+        ----------------------------------------------------------------
+        --[[    Prop Details - General Tools    ]]--
+        ['fork'] = {
+            bone = 28422,
+            model = 'prop_cs_fork',
+            pos = vec3(0.0, 0.0, 0.0),
+            rot = vec3(180.0, 180.0, 0.0)
+        },
+
+        ['spoon'] = {
+            bone = 28422,
+            model = 'xm3_prop_xm3_coke_spoon_01a',
+            pos = vec3(0.0, 0.0, 0.0),
+            rot = vec3(180.0, 180.0, 0.0)
+        },
+
         ----------------------------------------------------------------
         ----------------------------------------------------------------
         --[[    Prop Details - General Foods    ]]--
@@ -37,13 +60,18 @@ return {
         },
         ['chips_bag'] = {
             model = 'ng_proc_food_chips01a',
-            pos = vec3(0.0, 0.08, 0.05),
+            pos = vec3(0.0, 0.08, -0.02),
             rot = vec3(90.0, 0.0, -45.0)
         },
         ['candy'] = {
             model = 'prop_candy_pqs',
             pos = vec3(0.0, 0.02, 0.05),
             rot = vec3(90.0, 0.0, -45.0)
+        },
+        ['donut'] = {
+            model = 'prop_donut_01',
+            pos = vec3(0.03, -0.010, -0.060),
+            rot = vec3(-10.0, 300.0, 90.0)
         },
         ['apple'] = {
             model = 'sf_prop_sf_apple_01a',
@@ -55,6 +83,12 @@ return {
             pos = vec3(0.05, -0.02, 0.01),
             rot = vec3(270.0, 90.0, 0.0)
         },
+        ['taco'] = {
+            bone = 60309,
+            model = 'prop_taco_01',
+            pos = vec3(-0.017, 0.007, -0.021),
+            rot = vec3(107.9, -105.0, 55.5)
+        },
 
 
         ----------------------------------------------------------------
@@ -62,11 +96,12 @@ return {
         --[[    Prop Details - General Drinks    ]]--
         ['water'] = {
             model = 'vw_prop_casino_water_bottle_01a',
-            pos = vec3(0.05, -0.02, -0.03),
-            rot = vec3(150.0, 340.0, 170.0)
+            pos = vec3(0.008, 0.0, -0.05),
+            rot = vec3(0.0, 0.0, -40.0)
         },
         ['milk'] = {
             model = 'v_res_tt_milk',
+            bone = 18905,
             pos = vec3(0.10, 0.008, 0.070),
             rot = vec3(240.0, -60.0, 0.0)
         },
