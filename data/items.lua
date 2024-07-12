@@ -305,6 +305,42 @@ return {
 
     ----------------------------------------------------------------
     ----------------------------------------------------------------
+    --[[    Items - Tools    ]]--
+
+    ['bandage_basic'] = {
+        label = 'Basic Bandage', weight = 600, stack = true,
+        description = "That won't stop a bullet hole but ok I guess.",
+    },
+
+    ['armor1'] = {
+        label = 'Light Body Armor', weight = 5000, stack = false,
+        description = "Can it stop bullets? Lets find out.",
+    },
+
+    ['armor2'] = {
+        label = 'Medium Body Armor', weight = 8000, stack = false,
+        description = "You'll probably kinda sort be fine.",
+    },
+
+    ['armor3'] = {
+        label = 'Heavy Body Armor', weight = 11000, stack = false,
+        description = "I would be surprised if you got hurt wearing this.",
+    },
+
+    ['shield_riot'] = {
+        label = 'Police Riot Shield', weight = 4000, stack = false,
+        description = "I would be surprised if you got hurt wearing this.",
+    },
+    
+    ['repair_veheng'] = {
+        label = 'Engine Repair Kit', weight = 7500, stack = false,
+        description = "This will only fix the engine, you goober.",
+    },
+
+
+
+    ----------------------------------------------------------------
+    ----------------------------------------------------------------
     --[[    Items - Crafting Supplies    ]]--
 
     ['scrap_iron'] = {
