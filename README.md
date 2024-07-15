@@ -1,2 +1,3 @@
-![mi_script template](https://github.com/user-attachments/assets/3174cb94-1977-4258-9252-1eb778cb0660)
+![mi_items](https://github.com/user-attachments/assets/bd9cdebe-e0da-4382-a59d-8b046ce03db0)
 # M.I. Ox Items
+
