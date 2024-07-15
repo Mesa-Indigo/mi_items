@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 
 Item('armor1', function(data, slot)
 	ox_inventory:useItem(data, function(data)
