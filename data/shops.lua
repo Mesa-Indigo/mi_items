@@ -2,7 +2,7 @@ return {
 	General = {
 		name = 'Gas Station',
 		blip = {
-			id = 59, colour = 69, scale = 0.6
+			id = 59, colour = 43, scale = 0.6
 		}, inventory = {
 			{ name = 'sandwich_ham', price = 5 },
 			{ name = 'taco', price = 4 },
@@ -16,6 +16,8 @@ return {
 			{ name = 'orangotang', price = 4 },
 			{ name = 'ejunk', price = 6 },
 
+			{ name = 'WEAPON_BALL', price = 10 },
+
 		}, locations = {
 			vec3(25.7, -1347.3, 29.49),
 			vec3(-3038.71, 585.9, 7.9),
@@ -28,23 +30,25 @@ return {
 			vec3(2557.94, 382.05, 108.62),
 			vec3(373.55, 325.56, 103.56),
 		}, targets = {
-			{ loc = vec3(25.06, -1347.32, 29.5), length = 0.7, width = 0.5, heading = 0.0, minZ = 29.5, maxZ = 29.9, distance = 1.5 },
-			{ loc = vec3(-3039.18, 585.13, 7.91), length = 0.6, width = 0.5, heading = 15.0, minZ = 7.91, maxZ = 8.31, distance = 1.5 },
-			{ loc = vec3(-3242.2, 1000.58, 12.83), length = 0.6, width = 0.6, heading = 175.0, minZ = 12.83, maxZ = 13.23, distance = 1.5 },
-			{ loc = vec3(1728.39, 6414.95, 35.04), length = 0.6, width = 0.6, heading = 65.0, minZ = 35.04, maxZ = 35.44, distance = 1.5 },
-			{ loc = vec3(1698.37, 4923.43, 42.06), length = 0.5, width = 0.5, heading = 235.0, minZ = 42.06, maxZ = 42.46, distance = 1.5 },
-			{ loc = vec3(1960.54, 3740.28, 32.34), length = 0.6, width = 0.5, heading = 120.0, minZ = 32.34, maxZ = 32.74, distance = 1.5 },
-			{ loc = vec3(548.5, 2671.25, 42.16), length = 0.6, width = 0.5, heading = 10.0, minZ = 42.16, maxZ = 42.56, distance = 1.5 },
-			{ loc = vec3(2678.29, 3279.94, 55.24), length = 0.6, width = 0.5, heading = 330.0, minZ = 55.24, maxZ = 55.64, distance = 1.5 },
-			{ loc = vec3(2557.19, 381.4, 108.62), length = 0.6, width = 0.5, heading = 0.0, minZ = 108.62, maxZ = 109.02, distance = 1.5 },
-			{ loc = vec3(373.13, 326.29, 103.57), length = 0.6, width = 0.5, heading = 345.0, minZ = 103.57, maxZ = 103.97, distance = 1.5 },
+
+			{ ped = `mp_m_shopkeep_01`, scenario = 'Standing', loc = vec3(372.441, 326.501, 102.566), 	heading = 254.537 },
+			{ ped = `mp_m_shopkeep_01`, scenario = 'Standing', loc = vec3(24.497, -1347.485, 28.497), 	heading = 267.693 },
+			{ ped = `mp_m_shopkeep_01`, scenario = 'Standing', loc = vec3(-3040.499, 584.044, 6.908), 	heading = 17.372 },
+			{ ped = `mp_m_shopkeep_01`, scenario = 'Standing', loc = vec3(-3243.953, 1000.159, 11.830), heading = 355.801 },
+			{ ped = `mp_m_shopkeep_01`, scenario = 'Standing', loc = vec3(1727.754, 6414.942, 34.037), 	heading = 248.335 },
+			{ ped = `mp_m_shopkeep_01`, scenario = 'Standing', loc = vec3(1697.308, 4923.434, 41.063), 	heading = 331.204 },
+			{ ped = `mp_m_shopkeep_01`, scenario = 'Standing', loc = vec3(1959.315, 3741.397, 31.343), 	heading = 295.997 },
+			{ ped = `mp_m_shopkeep_01`, scenario = 'Standing', loc = vec3(549.305, 2669.675, 41.156), 	heading = 99.053 },
+			{ ped = `mp_m_shopkeep_01`, scenario = 'Standing', loc = vec3(2676.587, 3280.221, 54.241), 	heading = 326.606 },
+			{ ped = `mp_m_shopkeep_01`, scenario = 'Standing', loc = vec3(2555.498, 380.867, 107.622), 	heading = 358.802 },
+			
 		}
 	},
 
 	Liquor = {
 		name = 'Liquor Store',
 		blip = {
-			id = 93, colour = 69, scale = 0.6
+			id = 59, colour = 50, scale = 0.6
 		}, inventory = {
 			{ name = 'patriot_beer', price = 8 },
 			{ name = 'rancho_beer', price = 9 },
@@ -63,38 +67,38 @@ return {
 			vec3(1392.562, 3604.684, 34.980),
 			vec3(-1393.409, -606.624, 30.319)
 		}, targets = {
-			{ loc = vec3(1134.9, -982.34, 46.41), length = 0.5, width = 0.5, heading = 96.0, minZ = 46.4, maxZ = 46.8, distance = 1.5 },
-			{ loc = vec3(-1222.33, -907.82, 12.43), length = 0.6, width = 0.5, heading = 32.7, minZ = 12.3, maxZ = 12.7, distance = 1.5 },
-			{ loc = vec3(-1486.67, -378.46, 40.26), length = 0.6, width = 0.5, heading = 133.77, minZ = 40.1, maxZ = 40.5, distance = 1.5 },
-			{ loc = vec3(-2967.0, 390.9, 15.14), length = 0.7, width = 0.5, heading = 85.23, minZ = 15.0, maxZ = 15.4, distance = 1.5 },
-			{ loc = vec3(1165.95, 2710.20, 38.26), length = 0.6, width = 0.5, heading = 178.84, minZ = 38.1, maxZ = 38.5, distance = 1.5 },
-			{ loc = vec3(1393.0, 3605.95, 35.11), length = 0.6, width = 0.6, heading = 200.0, minZ = 35.0, maxZ = 35.4, distance = 1.5 }
-		}
-	},
-
-	YouTool = {
-		name = 'YouTool',
-		blip = {
-			id = 402, colour = 69, scale = 0.6
-		}, inventory = {
-			{ name = 'lockpick', price = 10 }
-		}, locations = {
-			vec3(2748.0, 3473.0, 55.67),
-			vec3(342.99, -1298.26, 32.51)
-		}, targets = {
-			{ loc = vec3(2746.8, 3473.13, 55.67), length = 0.6, width = 3.0, heading = 65.0, minZ = 55.0, maxZ = 56.8, distance = 3.0 }
+			{ ped = `s_m_m_ammucountry`, scenario = 'Standing', loc = vec3(1134.305, -983.116, 45.415), 		heading = 277.47 },
+			{ ped = `s_m_m_ammucountry`, scenario = 'Standing', loc = vec3(-1221.371, -907.892, 11.326), 	heading = 34.34 },
+			{ ped = `s_m_m_ammucountry`, scenario = 'Standing', loc = vec3(-1486.797, -377.517, 40.163), 	heading = 139.616 },
+			{ ped = `s_m_m_ammucountry`, scenario = 'Standing', loc = vec3(-2966.415, 391.497, 14.043), 		heading = 91.049 },
+			{ ped = `s_m_m_ammucountry`, scenario = 'Standing', loc = vec3(1165.190, 2710.786, 37.157), 		heading = 179.483 },
+			{ ped = `s_m_m_ammucountry`, scenario = 'Standing', loc = vec3(1392.254, 3606.195, 33.980), 		heading = 200.279 },
 		}
 	},
 
 	Ammunation = {
 		name = 'Ammunation',
 		blip = {
-			id = 110, colour = 69, scale = 0.6
+			id = 110, colour = 35, scale = 0.6
 		}, inventory = {
-			{ name = 'ammo-9', price = 5, },
+			{ name = 'WEAPON_FLASHLIGHT', price = 65 },
 			{ name = 'WEAPON_KNIFE', price = 200 },
 			{ name = 'WEAPON_BAT', price = 100 },
-			{ name = 'WEAPON_PISTOLXM3', price = 1000, metadata = { registered = true }, license = 'weapon' }
+			{ name = 'WEAPON_FLAREGUN', price = 300, metadata = { registered = true } },
+			{ name = 'ammo-flare', price = 5, },
+
+			{ name = 'WEAPON_PISTOL', price = 1130, metadata = { registered = true }, license = 'weapon' },
+			{ name = 'WEAPON_COMBATPISTOL', price = 1350, metadata = { registered = true }, license = 'weapon' },
+			{ name = 'WEAPON_CERAMICPISTOL', price = 1150, metadata = { registered = true }, license = 'weapon' },
+			{ name = 'WEAPON_PISTOLXM3', price = 1540, metadata = { registered = true }, license = 'weapon' },
+			{ name = 'ammo-9', price = 8, },
+
+			{ name = 'WEAPON_PUMPSHOTGUN', price = 3450, metadata = { registered = true }, license = 'weapon' },
+			{ name = 'ammo-shotgun', price = 19, },
+			{ name = 'WEAPON_ASSAULTRIFLE', price = 5320, metadata = { registered = true }, license = 'weapon' },
+			{ name = 'WEAPON_CARBINERIFLE', price = 5460, metadata = { registered = true }, license = 'weapon' },
+			{ name = 'ammo-rifle', price = 23, },
+
 		}, locations = {
 			vec3(-662.180, -934.961, 21.829),
 			vec3(810.25, -2157.60, 29.62),
@@ -106,17 +110,88 @@ return {
 			vec3(-1117.58, 2698.61, 18.55),
 			vec3(842.44, -1033.42, 28.19)
 		}, targets = {
-			{ loc = vec3(-660.92, -934.10, 21.94), length = 0.6, width = 0.5, heading = 180.0, minZ = 21.8, maxZ = 22.2, distance = 2.0 },
-			{ loc = vec3(808.86, -2158.50, 29.73), length = 0.6, width = 0.5, heading = 360.0, minZ = 29.6, maxZ = 30.0, distance = 2.0 },
-			{ loc = vec3(1693.57, 3761.60, 34.82), length = 0.6, width = 0.5, heading = 227.39, minZ = 34.7, maxZ = 35.1, distance = 2.0 },
-			{ loc = vec3(-330.29, 6085.54, 31.57), length = 0.6, width = 0.5, heading = 225.0, minZ = 31.4, maxZ = 31.8, distance = 2.0 },
-			{ loc = vec3(252.85, -51.62, 70.0), length = 0.6, width = 0.5, heading = 70.0, minZ = 69.9, maxZ = 70.3, distance = 2.0 },
-			{ loc = vec3(23.68, -1106.46, 29.91), length = 0.6, width = 0.5, heading = 160.0, minZ = 29.8, maxZ = 30.2, distance = 2.0 },
-			{ loc = vec3(2566.59, 293.13, 108.85), length = 0.6, width = 0.5, heading = 360.0, minZ = 108.7, maxZ = 109.1, distance = 2.0 },
-			{ loc = vec3(-1117.61, 2700.26, 18.67), length = 0.6, width = 0.5, heading = 221.82, minZ = 18.5, maxZ = 18.9, distance = 2.0 },
-			{ loc = vec3(841.05, -1034.76, 28.31), length = 0.6, width = 0.5, heading = 360.0, minZ = 28.2, maxZ = 28.6, distance = 2.0 }
+			{ ped = `s_m_m_ammucountry`, scenario = 'Standing', loc = vec3(-331.516, 6085.390, 30.454), heading = 224.178 },
+			{ ped = `s_m_m_ammucountry`, scenario = 'Standing', loc = vec3(-661.797, -933.428, 20.829), heading = 177.735 },
+			{ ped = `s_m_m_ammucountry`, scenario = 'Standing', loc = vec3(810.020, -2159.133, 28.618), heading = 358.744 },
+			{ ped = `s_m_m_ammucountry`, scenario = 'Standing', loc = vec3(1692.268, 3760.911, 33.705), heading = 228.238 },
+			{ ped = `s_m_m_ammucountry`, scenario = 'Standing', loc = vec3(253.731, -50.662, 68.941), 	heading = 72.221 },
+			{ ped = `s_m_m_ammucountry`, scenario = 'Standing', loc = vec3(22.659, -1105.361, 28.796), 	heading = 156.685 },
+			{ ped = `s_m_m_ammucountry`, scenario = 'Standing', loc = vec3(2567.927, 292.596, 107.734), heading = 359.322 },
+			{ ped = `s_m_m_ammucountry`, scenario = 'Standing', loc = vec3(-1119.008, 2699.694, 17.554), heading = 215.5 },
+			{ ped = `s_m_m_ammucountry`, scenario = 'Standing', loc = vec3(842.247, -1035.290, 27.194), heading = 358.9},
 		}
 	},
+
+	Mechshop = {
+		name = 'Mechanic Shop',
+		inventory = {
+			{ name = 'lockpick', price = 12 },
+			{ name = 'repair_veheng', price = 245 },
+			{ name = 'repair_vehtir', price = 65 },
+			{ name = 'repair_vehbod', price = 110 },
+			{ name = 'WEAPON_WRENCH', price = 135, metadata = { registered = true } }
+		}, targets = {
+			{ ped = `mp_m_waremech_01`, scenario = 'WORLD_HUMAN_AA_SMOKE', loc = vec3(1154.203, -778.198, 56.598), 	heading = 26.078 },
+			{ ped = `s_m_y_xmech_01`, scenario = 'WORLD_HUMAN_CLIPBOARD', loc = vec3(545.611, -173.495, 53.481), 	heading = 109.361 },
+			{ ped = `s_m_y_xmech_01`, scenario = 'WORLD_HUMAN_CLIPBOARD', loc = vec3(-1430.279, -444.911, 34.678), 	heading = 15.854 },
+			{ ped = `mp_m_waremech_01`, scenario = 'WORLD_HUMAN_AA_SMOKE', loc = vec3(490.232, -1321.101, 28.159), 	heading = 259.805 },
+			{ ped = `mp_m_waremech_01`, scenario = 'WORLD_HUMAN_AA_SMOKE', loc = vec3(488.845, -894.574, 24.735), 	heading = 274.546 },
+			{ ped = `s_m_y_xmech_02`, scenario = 'WORLD_HUMAN_STAND_MOBILE_FACILITY', loc = vec3(737.290, -1082.044, 21.168), 	heading = 85.266 },
+			{ ped = `s_m_y_xmech_02`, scenario = 'WORLD_HUMAN_STAND_MOBILE_FACILITY', loc = vec3(-1148.504, -1999.744, 12.180), heading = 130.957 },
+			{ ped = `mp_m_waremech_01`, scenario = 'WORLD_HUMAN_AA_SMOKE', loc = vec3(-347.340, -133.326, 38.009), 	heading = 252.737 },
+			{ ped = `s_m_y_xmech_01`, scenario = 'WORLD_HUMAN_CLIPBOARD', loc = vec3(1172.276, 2637.183, 36.793), 	heading = 303.468 },
+			{ ped = `s_m_y_xmech_01`, scenario = 'WORLD_HUMAN_CLIPBOARD', loc = vec3(105.910, 6627.513, 30.787), 	heading = 265.732 },
+			{ ped = `mp_m_waremech_01`, scenario = 'WORLD_HUMAN_CLIPBOARD', loc = vec3(-187.094, 6273.784, 30.489), heading = 32.841 },
+		}
+	},
+
+	BlackMarket = {
+		name = 'Street Dealer',
+		inventory = {
+			{ name = 'lockpick', price = 18 },
+			{ name = 'armor1', price = 230 },
+			{ name = 'armor2', price = 525 },
+			{ name = 'armor3', price = 840 },
+			{ name = 'bandage_basic', price = 35 },
+
+			{ name = 'WEAPON_KNUCKLE', price = 350, metadata = { registered = false } },
+			{ name = 'WEAPON_SWITCHBLADE', price = 460, metadata = { registered = false } },
+			{ name = 'WEAPON_SNSPISTOL', price = 1250, metadata = { registered = false } },
+			{ name = 'WEAPON_MICROSMG', price = 1860, metadata = { registered = false } },
+			{ name = 'WEAPON_SAWNOFFSHOTGUN', price = 2965, metadata = { registered = false } },
+
+		}, targets = {
+			{ ped = `g_m_m_armgoon_01`, scenario = 'WORLD_HUMAN_DRUG_DEALER_HARD', loc = vec3(658.613, -1011.115, 21.722), heading = 165.0 },
+			{ ped = `g_m_y_mexgoon_02`, scenario = 'WORLD_HUMAN_DRUG_DEALER', loc = vec3(1292.248, -1621.394, 53.224), heading = 203.38 },
+			{ ped = `g_m_y_salvagoon_02`, scenario = 'WORLD_HUMAN_DRUG_DEALER_HARD', loc = vec3(613.857, -3067.570, 5.069), heading = 91.68 },
+			{ ped = `g_m_y_armgoon_02`, scenario = 'WORLD_HUMAN_DRUG_DEALER', loc = vec3(-504.696, -2215.275, 5.394), heading = 235.108 },
+			{ ped = `g_m_m_armlieut_01`, scenario = 'WORLD_HUMAN_DRUG_DEALER_HARD', loc = vec3(-469.610, -1721.951, 17.688), heading = 284.679 },
+			{ ped = `g_f_y_vagos_01`, scenario = 'WORLD_HUMAN_DRUG_DEALER_HARD', loc = vec3(452.376, -1562.354, 28.282), heading = 50.72 },
+			{ ped = `g_m_y_mexgoon_03`, scenario = 'WORLD_HUMAN_DRUG_DEALER', loc = vec3(135.438, -1048.244, 56.796), heading = 339.577 },
+			{ ped = `g_m_y_azteca_01`, scenario = 'WORLD_HUMAN_DRUG_DEALER_HARD', loc = vec3(-173.105, -1064.393, 17.685), heading = 156.868 },
+			{ ped = `g_m_y_korean_02`, scenario = 'WORLD_HUMAN_DRUG_DEALER_HARD', loc = vec3(-621.153, 321.665, 81.263), heading = 315.171 },
+			{ ped = `g_m_importexport_01`, scenario = 'WORLD_HUMAN_DRUG_DEALER', loc = vec3(-1608.308, -1007.884, 6.613), heading = 319.353 },
+			{ ped = `g_f_importexport_01`, scenario = 'WORLD_HUMAN_DRUG_DEALER', loc = vec3(-1127.149, -1458.121, 3.929), heading = 35.142 },
+			{ ped = `mp_m_exarmy_01`, scenario = 'WORLD_HUMAN_DRUG_DEALER', loc = vec3(2338.142, 3052.409, 47.151), heading = 244.077 },
+			{ ped = `a_m_o_salton_01`, scenario = 'WORLD_HUMAN_DRUG_DEALER', loc = vec3(1554.455, 3600.013, 37.775), heading = 246.025 },
+			{ ped = `a_m_m_rurmeth_01`, scenario = 'WORLD_HUMAN_DRUG_DEALER', loc = vec3(90.048, 3749.576, 39.774), heading = 267.811 },
+			{ ped = `a_m_m_rurmeth_01`, scenario = 'WORLD_HUMAN_DRUG_DEALER', loc = vec3(-178.243, 6264.185, 30.489), heading = 203.421 },
+		}
+	},
+
+	PrisonDealer = {
+		name = 'Prison Dealer',
+		inventory = {
+			{ name = 'lockpick', price = 15 },
+			{ name = 'ejunk', price = 8 },
+			{ name = 'candy', price = 10 },
+
+		}, targets = {
+			{ ped = `u_m_y_prisoner_01`, scenario = 'WORLD_HUMAN_DRUG_DEALER_HARD', loc = vec3(1724.573, 2496.237, 44.564), heading = 88.994 },
+			{ ped = `s_m_y_prisoner_01`, scenario = 'WORLD_HUMAN_DRUG_DEALER', loc = vec3(1627.465, 2565.282, 44.564), heading = 136.072 },
+		}
+	},
+
 
 	VendingMachineDrinks = {
 		name = 'Vending Machine',
