@@ -136,6 +136,58 @@ return {
             },
             usetime = 15000, disable = { move = false, car = false, combat = true },
         },
+    },    
+
+
+
+
+    ----------------------------------------------------------------
+    ----------------------------------------------------------------
+    --[[    Consumables - Burger Shot    ]]--
+
+    ['bs_bleeder'] = {
+        label = 'The Bleeder', weight = 250, stack = true, close = true,
+        description = "Internal bleeding sold separately.",
+        client = {
+            status = { hunger = 200000 }, anim = 'eating_hand', prop = 'sandwich',
+            usetime = 7500, disable = { move = false, car = false, combat = true },
+        },
+    },
+
+    ['bs_moneyshot'] = {
+        label = 'Money Shot', weight = 250, stack = true, close = true,
+        description = "If you find $10, it's mine.",
+        client = {
+            status = { hunger = 200000 }, anim = 'eating_hand', prop = 'sandwich',
+            usetime = 7500, disable = { move = false, car = false, combat = true },
+        },
+    },
+
+    ['bs_doubleshot'] = {
+        label = 'Double Shot', weight = 250, stack = true, close = true,
+        description = "Double the heart problems.",
+        client = {
+            status = { hunger = 200000 }, anim = 'eating_hand', prop = 'sandwich',
+            usetime = 7500, disable = { move = false, car = false, combat = true },
+        },
+    },
+
+    ['bs_godfather'] = {
+        label = 'Godfather', weight = 250, stack = true, close = true,
+        description = "You come here on the day of my burger\'s grilling?",
+        client = {
+            status = { hunger = 200000 }, anim = 'eating_hand', prop = 'sandwich',
+            usetime = 7500, disable = { move = false, car = false, combat = true },
+        },
+    },
+
+    ['bs_fries'] = {
+        label = 'French Fries', weight = 250, stack = true, close = true,
+        description = "Internal bleeding sold separately.",
+        client = {
+            status = { hunger = 200000 }, anim = 'eating_hand', prop = 'sandwich',
+            usetime = 7500, disable = { move = false, car = false, combat = true },
+        },
     },
 
 
@@ -159,15 +211,6 @@ return {
         description = "You need strong bones for all that socializing you don't do.",
         client = {
             status = { thirst = 130000 }, anim = 'drinking_hand', prop = 'milk',
-            usetime = 3500, disable = { move = false, car = false, combat = true },
-        },
-    },
-
-	['coffee'] = {
-        label = 'Black Coffee', weight = 100, stack = true, close = true,
-        description = "What do you need all that caffiene for, huh?",
-        client = {
-            status = { thirst = 130000 }, anim = 'drinking_hand', prop = 'coffee',
             usetime = 3500, disable = { move = false, car = false, combat = true },
         },
     },
@@ -213,13 +256,57 @@ return {
 
     ----------------------------------------------------------------
     ----------------------------------------------------------------
-    --[[    Consumables - General Alcohol    ]]--
+    --[[    Consumables - Coffee   ]]--
+
+    ['coffee_black'] = {
+        label = 'Black Coffee', weight = 100, stack = true, close = true,
+        description = "What do you need all that caffiene for, huh?",
+        client = {
+            status = { thirst = 130000 }, anim = 'drinking_hand', prop = 'coffee',
+            usetime = 3500, disable = { move = false, car = false, combat = true },
+        },
+    },
+
+    ['coffee_mocha'] = {
+        label = 'Mocha', weight = 100, stack = true, close = true,
+        description = "What even IS a mocha?",
+        client = {
+            status = { thirst = 130000 }, anim = 'drinking_hand', prop = 'coffee',
+            usetime = 3500, disable = { move = false, car = false, combat = true },
+        },
+    },
+
+    ['coffee_cpcno'] = {
+        label = 'Cappuccino', weight = 100, stack = true, close = true,
+        description = "This might wake you up a smidgey smidge bit.",
+        client = {
+            status = { thirst = 130000 }, anim = 'drinking_hand', prop = 'coffee',
+            usetime = 3500, disable = { move = false, car = false, combat = true },
+        },
+    },
+
+    ['coffee_amrcno'] = {
+        label = 'Americano', weight = 100, stack = true, close = true,
+        description = "American coffee, with an O.",
+        client = {
+            status = { thirst = 130000 }, anim = 'drinking_hand', prop = 'coffee',
+            usetime = 3500, disable = { move = false, car = false, combat = true },
+        },
+    },
+
+
+
+
+    ----------------------------------------------------------------
+    ----------------------------------------------------------------
+    --[[    Consumables - Beer    ]]--
 
     ['rancho_beer'] = {
         label = 'Bottle of Rancho Beer', weight = 250,
         stack = true, close = true,
-        description = "Good old import beer from Mexico",
+        description = "Good old import beer from Mexico.",
         client = {
+            status = { drunk = 110000 },
             anim = 'drinking_hand', prop = 'rancho_beer',
             usetime = 3500, disable = { move = false, car = false, combat = true },
         },
@@ -228,8 +315,9 @@ return {
 	['dusche_beer'] = {
         label = 'Bottle of Dusche Beer', weight = 250,
         stack = true, close = true,
-        description = "Good old import beer from Germany",
+        description = "Good old import beer from Germany.",
         client = {
+            status = { drunk = 110000 },
             anim = 'drinking_hand', prop = 'dusche_beer',
             usetime = 3500, disable = { move = false, car = false, combat = true },
         },
@@ -238,8 +326,9 @@ return {
 	['stronzo_beer'] = {
         label = 'Bottle of Stronzo Beer', weight = 250,
         stack = true, close = true,
-        description = "Good old import beer from Italy",
+        description = "Good old import beer from Italy.",
         client = {
+            status = { drunk = 110000 },
             anim = 'drinking_hand', prop = 'stronzo_beer',
             usetime = 3500, disable = { move = false, car = false, combat = true },
         },
@@ -250,6 +339,7 @@ return {
         stack = true, close = true,
         description = "Good old import beer from the U.S.A.",
         client = {
+            status = { drunk = 110000 },
             anim = 'drinking_hand', prop = 'patriot_beer',
             usetime = 3500, disable = { move = false, car = false, combat = true },
         },
@@ -260,11 +350,284 @@ return {
 
     ----------------------------------------------------------------
     ----------------------------------------------------------------
+    --[[    Consumables - Alcohol Bottles    ]]--
+
+    ['bourgeoix_bottle'] = {
+        label = 'Bottle of Bourgeoix Cognac', weight = 450,
+        stack = true, close = true,
+        description = "Like whiskey, but more ouch.",
+        client = {
+            status = { drunk = 350000 },
+            anim = 'drinking_hand', prop = 'bourgeoix_bottle',
+            usetime = 9500, disable = { move = false, car = false, combat = true },
+        },
+    },
+
+    ['cariaque_bottle'] = {
+        label = 'Bottle of Cariaque Bourbon', weight = 450,
+        stack = true, close = true,
+        description = "Ooh you a fancy bitch, huh?",
+        client = {
+            status = { drunk = 370000 },
+            anim = 'drinking_hand', prop = 'cariaque_bottle',
+            usetime = 9500, disable = { move = false, car = false, combat = true },
+        },
+    },
+
+    ['bleuterd_bottle'] = {
+        label = 'Bottle of Bleuter\'d Champagne', weight = 450,
+        stack = true, close = true,
+        description = "For those fancy events.",
+        client = {
+            status = { drunk = 480000 },
+            anim = 'drinking_hand', prop = 'bleuterd_bottle',
+            usetime = 9500, disable = { move = false, car = false, combat = true },
+        },
+    },
+
+    ['ragga_bottle'] = {
+        label = 'Bottle of Ragga Rum', weight = 450,
+        stack = true, close = true,
+        description = "A pirates drink for me.",
+        client = {
+            status = { drunk = 370000 },
+            anim = 'drinking_hand', prop = 'ragga_bottle',
+            usetime = 9500, disable = { move = false, car = false, combat = true },
+        },
+    },
+
+    ['tequilya_bottle'] = {
+        label = 'Bottle of Tequilya Tequila', weight = 450,
+        stack = true, close = true,
+        description = "For extra kick, add snake venom.",
+        client = {
+            status = { drunk = 370000 },
+            anim = 'drinking_hand', prop = 'tequilya_bottle',
+            usetime = 9500, disable = { move = false, car = false, combat = true },
+        },
+    },
+
+    ['nogo_bottle'] = {
+        label = 'Bottle of Nogo Vodka', weight = 450,
+        stack = true, close = true,
+        description = "Chilled like the mountains of Siberia.",
+        client = {
+            status = { drunk = 370000 },
+            anim = 'drinking_hand', prop = 'nogo_bottle',
+            usetime = 9500, disable = { move = false, car = false, combat = true },
+        },
+    },
+
+    ['mount_bottle'] = {
+        label = 'Bottle of Mount Whiskey', weight = 450,
+        stack = true, close = true,
+        description = "The cowboy's choice for getting plastered.",
+        client = {
+            status = { drunk = 370000 },
+            anim = 'drinking_hand', prop = 'mount_bottle',
+            usetime = 9500, disable = { move = false, car = false, combat = true },
+        },
+    },
+
+    ['richards_bottle'] = {
+        label = 'Bottle of Richard\'s Whiskey', weight = 450,
+        stack = true, close = true,
+        description = "For the refined taste buds you so clearly have.",
+        client = {
+            status = { drunk = 370000 },
+            anim = 'drinking_hand', prop = 'richards_bottle',
+            usetime = 9500, disable = { move = false, car = false, combat = true },
+        },
+    },
+
+
+
+
+    ----------------------------------------------------------------
+    ----------------------------------------------------------------
+    --[[    Consumables - Alcohol Glasses    ]]--
+
+    ['cariaque_glass'] = {
+        label = 'Glass of Bourgeoix Cognac', weight = 150,
+        stack = true, close = true,
+        description = "Like whiskey, but more ouch.",
+        client = {
+            status = { drunk = 350000 },
+            anim = 'drinking_hand', prop = 'liqour_glass',
+            usetime = 5500, disable = { move = false, car = false, combat = true },
+        },
+    },
+
+    ['bourgeoix_glass'] = {
+        label = 'Glass of Bourgeoix Cognac', weight = 150,
+        stack = true, close = true,
+        description = "Like whiskey, but more ouch.",
+        client = {
+            status = { drunk = 350000 },
+            anim = 'drinking_hand', prop = 'liqour_glass',
+            usetime = 5500, disable = { move = false, car = false, combat = true },
+        },
+    },
+
+    ['bleuterd_glass'] = {
+        label = 'Glass of Bourgeoix Cognac', weight = 150,
+        stack = true, close = true,
+        description = "Like whiskey, but more ouch.",
+        client = {
+            status = { drunk = 350000 },
+            anim = 'drinking_hand', prop = 'liqour_glass',
+            usetime = 5500, disable = { move = false, car = false, combat = true },
+        },
+    },
+
+    ['tequilya_glass'] = {
+        label = 'Glass of Bourgeoix Cognac', weight = 150,
+        stack = true, close = true,
+        description = "Like whiskey, but more ouch.",
+        client = {
+            status = { drunk = 350000 },
+            anim = 'drinking_hand', prop = 'liqour_glass',
+            usetime = 5500, disable = { move = false, car = false, combat = true },
+        },
+    },
+
+    ['nogo_glass'] = {
+        label = 'Glass of Bourgeoix Cognac', weight = 150,
+        stack = true, close = true,
+        description = "Like whiskey, but more ouch.",
+        client = {
+            status = { drunk = 350000 },
+            anim = 'drinking_hand', prop = 'liqour_glass',
+            usetime = 5500, disable = { move = false, car = false, combat = true },
+        },
+    },
+
+    ['mount_glass'] = {
+        label = 'Glass of Bourgeoix Cognac', weight = 150,
+        stack = true, close = true,
+        description = "Like whiskey, but more ouch.",
+        client = {
+            status = { drunk = 350000 },
+            anim = 'drinking_hand', prop = 'liqour_glass',
+            usetime = 5500, disable = { move = false, car = false, combat = true },
+        },
+    },
+
+    ['richards_glass'] = {
+        label = 'Glass of Bourgeoix Cognac', weight = 150,
+        stack = true, close = true,
+        description = "Like whiskey, but more ouch.",
+        client = {
+            status = { drunk = 350000 },
+            anim = 'drinking_hand', prop = 'liqour_glass',
+            usetime = 5500, disable = { move = false, car = false, combat = true },
+        },
+    },
+
+
+
+
+    ----------------------------------------------------------------
+    ----------------------------------------------------------------
+    --[[    Consumables - Alcohol Glasses    ]]--
+
+    ['cariaque_shot'] = {
+        label = 'Glass of Bourgeoix Cognac', weight = 150,
+        stack = true, close = true,
+        description = "Like whiskey, but more ouch.",
+        client = {
+            status = { drunk = 350000 },
+            anim = 'drinking_hand', prop = 'liqour_shot',
+            usetime = 2000, disable = { move = false, car = false, combat = true },
+        },
+    },
+
+    ['bourgeoix_shot'] = {
+        label = 'Glass of Bourgeoix Cognac', weight = 150,
+        stack = true, close = true,
+        description = "Like whiskey, but more ouch.",
+        client = {
+            status = { drunk = 350000 },
+            anim = 'drinking_hand', prop = 'liqour_shot',
+            usetime = 2000, disable = { move = false, car = false, combat = true },
+        },
+    },
+    
+    ['bleuterd_shot'] = {
+        label = 'Glass of Bourgeoix Cognac', weight = 150,
+        stack = true, close = true,
+        description = "Like whiskey, but more ouch.",
+        client = {
+            status = { drunk = 350000 },
+            anim = 'drinking_hand', prop = 'liqour_shot',
+            usetime = 2000, disable = { move = false, car = false, combat = true },
+        },
+    },
+
+    ['ragga_shot'] = {
+        label = 'Glass of Bourgeoix Cognac', weight = 150,
+        stack = true, close = true,
+        description = "Like whiskey, but more ouch.",
+        client = {
+            status = { drunk = 350000 },
+            anim = 'drinking_hand', prop = 'liqour_shot',
+            usetime = 2000, disable = { move = false, car = false, combat = true },
+        },
+    },
+
+    ['tequilya_shot'] = {
+        label = 'Glass of Bourgeoix Cognac', weight = 150,
+        stack = true, close = true,
+        description = "Like whiskey, but more ouch.",
+        client = {
+            status = { drunk = 350000 },
+            anim = 'drinking_hand', prop = 'liqour_shot',
+            usetime = 2000, disable = { move = false, car = false, combat = true },
+        },
+    },
+
+    ['nogo_shot'] = {
+        label = 'Glass of Bourgeoix Cognac', weight = 150,
+        stack = true, close = true,
+        description = "Like whiskey, but more ouch.",
+        client = {
+            status = { drunk = 350000 },
+            anim = 'drinking_hand', prop = 'liqour_shot',
+            usetime = 2000, disable = { move = false, car = false, combat = true },
+        },
+    },
+
+    ['mount_shot'] = {
+        label = 'Glass of Bourgeoix Cognac', weight = 150,
+        stack = true, close = true,
+        description = "Like whiskey, but more ouch.",
+        client = {
+            status = { drunk = 350000 },
+            anim = 'drinking_hand', prop = 'liqour_shot',
+            usetime = 2000, disable = { move = false, car = false, combat = true },
+        },
+    },
+
+    ['richards_shot'] = {
+        label = 'Glass of Bourgeoix Cognac', weight = 150,
+        stack = true, close = true,
+        description = "Like whiskey, but more ouch.",
+        client = {
+            status = { drunk = 350000 },
+            anim = 'drinking_hand', prop = 'liqour_shot',
+            usetime = 2000, disable = { move = false, car = false, combat = true },
+        },
+    },
+
+
+
+    ----------------------------------------------------------------
+    ----------------------------------------------------------------
     --[[    Items - Currencies    ]]--
 
     ['money'] = {
         label = 'Money', weight = 0, stack = true,
-        description = "The life blood of your frivolous activities",
+        description = "The life blood of your frivolous activities.",
     },
 
 
@@ -358,6 +721,31 @@ return {
 
     ----------------------------------------------------------------
     ----------------------------------------------------------------
+    --[[    Items - Fireworks    ]]--
+
+    ['case_shotgls'] = {
+        label = 'Case of Shooters', weight = 700, stack = true,
+        description = "6 cups, for shots on the go.",
+    },
+
+
+
+
+
+    ----------------------------------------------------------------
+    ----------------------------------------------------------------
+    --[[    Items - Fireworks    ]]--
+
+    ['firew_small1'] = {
+        label = 'Small Firework: Rex', weight = 2300, stack = true,
+        description = "See that shit go bing bong.",
+    },
+
+
+
+
+    ----------------------------------------------------------------
+    ----------------------------------------------------------------
     --[[    Items - Chemicals    ]]--
 
     ['chem_sulfur'] = {
@@ -374,6 +762,7 @@ return {
         label = 'Sulfuric Acid', weight = 230, stack = true,
         description = "Pro tip: Rust is not a vitamin. Also, I need to see a doctor.",
     },
+
 
 
     ----------------------------------------------------------------
@@ -408,6 +797,18 @@ return {
     ['scrap_wires'] = {
         label = 'Bundle of Wires', weight = 100, stack = true,
         description = "What do you call a wire with a break in it?",
+    },
+
+
+
+    ----------------------------------------------------------------
+    ----------------------------------------------------------------
+    --[[    Items - Chemicals    ]]--
+
+    ['bombbag_exp'] = {
+        label = 'Plantable Explosives', weight = 5500, stack = true,
+        consume = 1,
+        description = "Pro tip: Rust is not a vitamin. Also, I need to see a doctor.",
     },
     
 }
