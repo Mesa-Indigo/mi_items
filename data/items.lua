@@ -301,6 +301,7 @@ return {
     ----------------------------------------------------------------
     --[[    Consumables - Beer    ]]--
 
+    
     ['rancho_beer'] = {
         label = 'Bottle of Rancho Beer', weight = 250,
         stack = true, close = true,
@@ -313,8 +314,7 @@ return {
         buttons = {
             {
                 label = 'Break bottle', action = function(slot)
-                    print('you broke the bottle')
-                    exports['mi_utils']:break_bottle('rancho_beer')
+                    exports['mi_items']:break_bottle_rancho()
                 end
             }
         }
@@ -329,6 +329,13 @@ return {
             anim = 'drinking_hand', prop = 'dusche_beer',
             usetime = 3500, disable = { move = false, car = false, combat = true },
         },
+        buttons = {
+            {
+                label = 'Break bottle', action = function(slot)
+                    exports['mi_items']:break_bottle_dusche()
+                end
+            }
+        }
     },
 
 	['stronzo_beer'] = {
@@ -340,6 +347,13 @@ return {
             anim = 'drinking_hand', prop = 'stronzo_beer',
             usetime = 3500, disable = { move = false, car = false, combat = true },
         },
+        buttons = {
+            {
+                label = 'Break bottle', action = function(slot)
+                    exports['mi_items']:break_bottle_stronzo()
+                end
+            }
+        }
     },
 
 	['patriot_beer'] = {
@@ -351,6 +365,13 @@ return {
             anim = 'drinking_hand', prop = 'patriot_beer',
             usetime = 3500, disable = { move = false, car = false, combat = true },
         },
+        buttons = {
+            {
+                label = 'Break bottle', action = function(slot)
+                    exports['mi_items']:break_bottle_patriot()
+                end
+            }
+        }
     },
 
 
