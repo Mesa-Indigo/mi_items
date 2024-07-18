@@ -480,6 +480,17 @@ return {
         },
     },
 
+    ['ragga_glass'] = {
+        label = 'Glass of Ragga Rum', weight = 150,
+        stack = true, close = true,
+        description = "Like whiskey, but more ouch.",
+        client = {
+            status = { drunk = 350000 },
+            anim = 'drinking_hand', prop = 'liqour_glass',
+            usetime = 5500, disable = { move = false, car = false, combat = true },
+        },
+    },
+
     ['tequilya_glass'] = {
         label = 'Glass of Bourgeoix Cognac', weight = 150,
         stack = true, close = true,
