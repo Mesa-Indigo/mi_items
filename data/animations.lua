@@ -177,9 +177,8 @@ return {
         --[[    Prop Details - General Liqour Glasses    ]]--
         ['liqour_glass'] = {
             model = 'prop_drink_whisky',
-            pos = vec3(0.02, -0.01, -0.14), rot = vec3(1.0, 5.0, -182.5)
+            pos = vec3(0.02, 0.01, 0.025), rot = vec3(1.0, 5.0, -182.5)
         },
-
 
 
         ----------------------------------------------------------------
