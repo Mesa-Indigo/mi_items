@@ -24,3 +24,4 @@ Data.Bomb = {
     time = { min = 1, max = 30 },
     explosive = { duration = 8000, amount = 40 },
 }
+

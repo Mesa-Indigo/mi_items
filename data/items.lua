@@ -310,6 +310,14 @@ return {
             anim = 'drinking_hand', prop = 'rancho_beer',
             usetime = 3500, disable = { move = false, car = false, combat = true },
         },
+        buttons = {
+            {
+                label = 'Break bottle', action = function(slot)
+                    print('you broke the bottle')
+                    exports['mi_utils']:break_bottle('rancho_beer')
+                end
+            }
+        }
     },
 
 	['dusche_beer'] = {
