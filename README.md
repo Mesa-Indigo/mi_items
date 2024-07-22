@@ -9,7 +9,7 @@
 | Items                 | Description |
 | :---                  |     :---:      |
 | **Armor**             | Three levels of body armor to wear |
-| **Beach Kit** *WIP*   | A cooler with drinks, Towels, & Umbrellas |
+| **Beach Kit** *WIP*   | A cooler with drinks, towels, & umbrellas |
 | **Sheilds**           | Riot shield for police to utilize |
 | **Diving**            | A rebreather & diving gear for underwater diving |
 | **Bombs**             | Plantable explosive bag with timer |
