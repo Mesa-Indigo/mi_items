@@ -5,12 +5,6 @@
 ![GitHub](https://img.shields.io/github/license/Mesa-Indigo/mi_items)
 
 ## Current Item Functions
-- break a beer bottle to recieve broken bottle weapon *(wip)*
-- riot shield object to summon shield
-- fireworks that go brrr in the night
-- body armor that kinda stops bullets
-- vehicle care kits *(wip)*
-- party table to get drinks / take shots *(wip)*
 
 | Items                 | Description |
 | :---                  |     :---:      |
