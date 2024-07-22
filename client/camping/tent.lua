@@ -12,7 +12,7 @@ local tentops = {
         end,
         onSelect = function()
             -- open tent stash
-            --lib.callback.await('miit:table:patriot_beer:add')
+            exports.ox_inventory:openInventory('tentstash')
         end
     },
     {
@@ -30,6 +30,9 @@ local tentops = {
         end
     },
 }
+
+--[[
+WIP
 
 RegisterCommand('ctent', function()
     local player = cache.ped
@@ -55,5 +58,8 @@ RegisterCommand('ctent', function()
         FreezeEntityPosition(tent.obj, true)
         SetEntityCollision(tent.obj, true, true)
         exports.ox_target:addLocalEntity(tent.obj, tentops)
+        TriggerEvent('miit:stash:tent:add')
     end
 end, false)
+
+]]

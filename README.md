@@ -7,9 +7,21 @@
 ## Current Item Functions
 - break a beer bottle to recieve broken bottle weapon *(wip)*
 - riot shield object to summon shield
-- health recovery items
 - fireworks that go brrr in the night
 - body armor that kinda stops bullets
 - vehicle care kits *(wip)*
-- bomb bag with timer to be set
 - party table to get drinks / take shots *(wip)*
+
+| Items                 | Description |
+| :---                  |     :---:      |
+| **Armor**             | Three levels of body armor to wear |
+| **Beach Kit** *WIP*   | A cooler with drinks, Towels, & Umbrellas |
+| **Sheilds**           | Riot shield for police to utilize |
+| **Diving**            | A rebreather & diving gear for underwater diving |
+| **Bombs**             | Plantable explosive bag with timer |
+| **Bottles**           | Right click on beer bottles to break them for a weapon |
+
+## WIP items
+- fireworks that go brrr in the night
+- vehicle care kits *(wip)*
+- camping kits

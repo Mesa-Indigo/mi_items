@@ -31,6 +31,9 @@ local fireops = {
     },
 }
 
+--[[
+WIP
+
 RegisterCommand('cfire', function()
     local player = cache.ped
     local offset = GetOffsetFromEntityInWorldCoords(player, 0.0, 1.3, -1.6)
@@ -57,3 +60,4 @@ RegisterCommand('cfire', function()
         exports.ox_target:addLocalEntity(fire.obj, fireops)
     end
 end, false)
+]]

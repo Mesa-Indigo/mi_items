@@ -13,24 +13,24 @@ Data.using = {
 --------------------------------
 -- energy items
 
--- duration is the time effect will last
+-- duration are the seconds the effect will last
 Data.Energy = {
-    light =     { duration = 10000 },
-    medium =    { duration = 35000 },
-    heavy =     { duration = 60000 },
+    light =     { duration = 10 },
+    medium =    { duration = 25 },
+    heavy =     { duration = 60 },
 }
 
 --------------------------------
 -- drug items
 
--- duration is the time effect will last
+-- duration is the seconds the effect will last
 Data.Drugs = {
-    indica =    { duration = 30000 },
-    sativa =    { duration = 30000 },
-    hybrid =    { duration = 30000 },
-    cocaine =   { duration = 30000 },
-    meth =      { duration = 30000 },
-    molly =     { duration = 30000 },
+    indica =    { duration = 30 },
+    sativa =    { duration = 30 },
+    hybrid =    { duration = 30 },
+    cocaine =   { duration = 30 },
+    meth =      { duration = 30 },
+    molly =     { duration = 30 },
 }
 
 --[[    Item Details    ]]--
@@ -41,16 +41,18 @@ Data.Drugs = {
 -- duration is the time it takes to use the item
 -- amount is the amount of armor the player is set with
 Data.Armor = {
-    light =     { duration = 8000, amount = 40 },
-    medium =    { duration = 12000, amount = 70  },
-    heavy =     { duration = 18000, amount = 100  },
+    light =     { duration = 8, amount = 40 },
+    medium =    { duration = 12, amount = 70  },
+    heavy =     { duration = 18, amount = 100  },
 }
 
 --------------------------------
 -- diving items
 
+-- restrict means cant use under water
 -- duration is the time it takes to use the item
 Data.Diving = {
+    restrict = true,
     snorkle =     { duration = 6000 },
     divekit =     { duration = 12000 },
 }
@@ -69,10 +71,10 @@ Data.Bomb = {
 -- delay is time to wait until playing particle effects
 -- count is how many times it will play the particle effect
 Data.Fireworks = {
-    small1 =    { delay = 10000, count = 10},
-    small2 =    { delay = 10000, count = 10},
-    big1 =      { delay = 15000, count = 20},
-    sig1 =      { delay = 15000, count = 20},
+    small1 =    { delay = 10, count = 10},
+    small2 =    { delay = 10, count = 10},
+    big1 =      { delay = 15, count = 20},
+    sig1 =      { delay = 15, count = 20},
 }
 
 --------------------------------
@@ -81,7 +83,7 @@ Data.Fireworks = {
 -- time is the time it takes to do task
 -- items are the number of slots in a stash
 Data.Camping = {
-    grill =     { time = 15000 },
+    grill =     { time = 15 },
     cooler =    { items = 10 },
     tent =      { items = 20 }
 }
@@ -94,7 +96,7 @@ Data.Camping = {
 -- percent is the percentage of health to restore
 -- ex: percent = 10 means restore 1/10 of health
 Data.Recovery = {
-    minor =     { time = 8000, percent = 12 },
-    basic =     { time = 8000, percent = 8 },
-    major =     { time = 8000, percent = 4 },
+    minor =     { time = 8, percent = 12 },
+    basic =     { time = 12, percent = 8 },
+    major =     { time = 16, percent = 4 },
 }

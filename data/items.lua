@@ -703,6 +703,17 @@ return {
         description = "I would be surprised if you got hurt wearing this.",
     },
 
+    -- diving
+    ['rebreather'] = {
+        label = 'Rebreather', weight = 2300, stack = false,
+        description = "This will get you some ways down the water.",
+    },
+
+    ['divegear'] = {
+        label = 'Diving gear', weight = 4000, stack = false,
+        description = "Don\'t get lost in the deep ocean.",
+    },
+
     -- vehicle
     ['enginekit'] = {
         label = 'Engine Repair Kit', weight = 7500, stack = true,
@@ -750,7 +761,7 @@ return {
     -- beach
     ['cooler'] = {
         label = 'Alcohol Cooler', weight = 2300, stack = false,
-        description = "See that shit go bing bong.",
+        description = "Get some fresh beers, dude.",
     },
 
     -- camping

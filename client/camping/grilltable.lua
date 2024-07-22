@@ -84,6 +84,9 @@ local loadObjects = function()
     SetEntityCollision(cooking.cool.obj, true, true)
 end
 
+--[[
+WIP
+
 RegisterCommand('ctable', function()
     if lib.progressBar({
         duration = 5000,
@@ -102,3 +105,5 @@ RegisterCommand('ctable', function()
         exports.ox_target:addLocalEntity(cooking.table.obj, tableops)
     end
 end, false)
+
+]]
