@@ -1,0 +1,1 @@
+-- https://wiki.rage.mp/index.php?title=Vehicle_Colors for vehicle color reference

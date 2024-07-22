@@ -22,7 +22,7 @@ exports('bandage_basic', function()
             pos = vec3(-0.1, -0.05, -0.1),
             rot = vec3(0.0, 0.0, 0.0)
         },
-    }) then 
+    }) then
         SetEntityHealth(player, math.min(maxHealth, math.floor(health + maxHealth / 16)))
     end
 end)

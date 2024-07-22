@@ -23,7 +23,7 @@ AddEventHandler('miut:client:firework:small', function(crds, obj)
 
     Citizen.Wait(10000)
     repeat
-        UseParticleFxAssetNextCall("scr_indep_fireworks")
+        UseParticleFxAssetNextCall(ptfx)
         local part1 = StartNetworkedParticleFxNonLoopedAtCoord(
             efc, crds.x, crds.y, crds.z, 0.0, 0.0, 0.0, 1.0, false, false, false)
         times = times - 1
@@ -32,10 +32,8 @@ AddEventHandler('miut:client:firework:small', function(crds, obj)
         DeleteObject(obj)
 end)
 
-exports('firew_small1', function()
+exports('firework_s1', function()
     -- variables
-    local textS = { id = 'f1', title = 'Firework Planted', desc = 'I dare you to stare into it' }
-    local textE = { id = 'f0', title = 'Cancelled Action', desc = 'How lame' }
     local player = cache.ped
     local crds = GetOffsetFromEntityInWorldCoords(player, 0.0, 0.6, 0.0)
     local head = GetEntityHeading(player)
@@ -59,12 +57,10 @@ exports('firew_small1', function()
     then
         -- if success, set off reaction
         if Debug then print('firework obj planted') end
-        TriggerEvent('notif', textS, Cor )
         TriggerEvent('miut:client:firework:small', crds, box)
     else
         -- if cancel, delete box w/ no reaction
         if Debug then print('firework obj not planted') end
-        TriggerEvent('notif', textE, Err )
         DeleteObject(box)
     end
 end)

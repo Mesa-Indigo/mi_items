@@ -49,7 +49,7 @@ local tableoptions_start = {
     }
 }
 
-RegisterCommand('beachcooler', function()
+RegisterCommand('cooler', function()
     local player = cache.ped
     local offset = GetOffsetFromEntityInWorldCoords(player, 0.0, 1.2, 0.0)
     local heading = GetEntityHeading(player)

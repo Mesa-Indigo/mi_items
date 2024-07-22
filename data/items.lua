@@ -299,9 +299,8 @@ return {
 
     ----------------------------------------------------------------
     ----------------------------------------------------------------
-    --[[    Consumables - Beer    ]]--
+    --[[    Consumables - Alcohol    ]]--
 
-    
     ['rancho_beer'] = {
         label = 'Bottle of Rancho Beer', weight = 250,
         stack = true, close = true,
@@ -373,13 +372,6 @@ return {
             }
         }
     },
-
-
-
-
-    ----------------------------------------------------------------
-    ----------------------------------------------------------------
-    --[[    Consumables - Alcohol Bottles    ]]--
 
     ['bourgeoix_bottle'] = {
         label = 'Bottle of Bourgeoix Cognac', weight = 450,
@@ -469,13 +461,6 @@ return {
         },
     },
 
-
-
-
-    ----------------------------------------------------------------
-    ----------------------------------------------------------------
-    --[[    Consumables - Alcohol Glasses    ]]--
-
     ['cariaque_glass'] = {
         label = 'Glass of Bourgeoix Cognac', weight = 150,
         stack = true, close = true,
@@ -563,13 +548,6 @@ return {
             usetime = 5500, disable = { move = false, car = false, combat = true },
         },
     },
-
-
-
-
-    ----------------------------------------------------------------
-    ----------------------------------------------------------------
-    --[[    Consumables - Alcohol Glasses    ]]--
 
     ['cariaque_shot'] = {
         label = 'Glass of Bourgeoix Cognac', weight = 150,
@@ -661,25 +639,19 @@ return {
 
 
 
+
     ----------------------------------------------------------------
     ----------------------------------------------------------------
-    --[[    Items - Currencies    ]]--
+    --[[    Items    ]]--
 
     ['money'] = {
         label = 'Money', weight = 0, stack = true,
         description = "The life blood of your frivolous activities.",
     },
 
-
-
-
-    ----------------------------------------------------------------
-    ----------------------------------------------------------------
-    --[[    Items - Tools    ]]--
-
     ['phone'] = {
 		label = 'Phone',
-		weight = 500,
+		weight = 750,
 		stack = false,
 		consume = 0,
         description = "Did you miss a call? I\'ll never tell.",
@@ -703,11 +675,13 @@ return {
         description = "When in doubt, steal shit.",
     },
 
+    -- recovery
     ['bandage_basic'] = {
         label = 'Basic Bandage', weight = 1200, stack = true,
         description = "That won't stop a bullet hole but ok I guess.",
     },
 
+    -- armor
     ['armor1'] = {
         label = 'Light Body Armor', weight = 5000, stack = false,
         description = "Can it stop bullets? Lets find out.",
@@ -723,84 +697,76 @@ return {
         description = "I would be surprised if you got hurt wearing this.",
     },
 
+    -- shields
     ['shield_riot'] = {
         label = 'Police Riot Shield', weight = 4000, stack = false,
         description = "I would be surprised if you got hurt wearing this.",
     },
 
-
-
-
-    ----------------------------------------------------------------
-    ----------------------------------------------------------------
-    --[[    Items - Vehicles    ]]--
-
-    ['repair_veheng'] = {
+    -- vehicle
+    ['enginekit'] = {
         label = 'Engine Repair Kit', weight = 7500, stack = true,
         description = "I see what's wrong with it. Ain't got no gas in it.",
     },
 
-    ['repair_vehtir'] = {
+    ['cleankit'] = {
         label = 'Tire Repair Kit', weight = 7500, stack = true,
         description = "Driving with a flat tire? That's a paddlin.",
     },
 
-    ['repair_vehbod'] = {
-        label = 'Body Repair Kit', weight = 7500, stack = true,
-        description = "Vanity repairs, as that is all that matters.",
-    },
-
-    -- https://wiki.rage.mp/index.php?title=Vehicle_Colors for vehicle color reference
-
-    ['colorveh_red'] = {
+    ['spraykit'] = {
         label = 'Spray Kit: Red', weight = 2000, stack = true,
         description = "Paints over your car with this color.",
     },
 
-
-
-    ----------------------------------------------------------------
-    ----------------------------------------------------------------
-    --[[    Items - Fireworks    ]]--
-
-    ['case_shotgls'] = {
-        label = 'Case of Shooters', weight = 700, stack = true,
-        description = "6 cups, for shots on the go.",
-    },
-
-
-
-
-
-    ----------------------------------------------------------------
-    ----------------------------------------------------------------
-    --[[    Items - Fireworks    ]]--
-
-    ['firew_small1'] = {
+    -- fireworks
+    ['firework_s1'] = {
         label = 'Small Firework: Rex', weight = 2300, stack = true,
         description = "See that shit go bing bong.",
     },
 
+    ['firework_s2'] = {
+        label = 'Small Firework: Rex', weight = 2300, stack = true,
+        description = "See that shit go bing bong.",
+    },
 
+    ['firework_b1'] = {
+        label = 'Small Firework: Rex', weight = 2300, stack = true,
+        description = "See that shit go bing bong.",
+    },
 
+    ['firework_b2'] = {
+        label = 'Small Firework: Rex', weight = 2300, stack = true,
+        description = "See that shit go bing bong.",
+    },
 
-    ----------------------------------------------------------------
-    ----------------------------------------------------------------
-    --[[    Items - Chemicals    ]]--
-
-    ['chem_sulfur'] = {
-        label = 'Sulfur', weight = 230, stack = true,
+    -- bombs
+    ['bombbag_exp'] = {
+        label = 'Explosive Bag', weight = 5500, stack = false,
+        consume = 1,
         description = "Pro tip: Rust is not a vitamin. Also, I need to see a doctor.",
     },
 
-    ['chem_potnitr'] = {
-        label = 'Potassium Nitrate', weight = 230, stack = true,
-        description = "Pro tip: Rust is not a vitamin. Also, I need to see a doctor.",
+    -- beach
+    ['cooler'] = {
+        label = 'Alcohol Cooler', weight = 2300, stack = false,
+        description = "See that shit go bing bong.",
     },
 
-    ['chem_acid'] = {
-        label = 'Sulfuric Acid', weight = 230, stack = true,
-        description = "Pro tip: Rust is not a vitamin. Also, I need to see a doctor.",
+    -- camping
+    ['tent'] = {
+        label = 'Camping Tent', weight = 5600, stack = true,
+        description = "Good for holding things and looking nature-y.",
+    },
+
+    ['foldchair'] = {
+        label = 'Foldable Chair', weight = 2300, stack = true,
+        description = "Plant a chair and an ass in that chair.",
+    },
+
+    ['grilltable'] = {
+        label = 'Cooking Kit', weight = 6800, stack = true,
+        description = "Sustain yourself in the woods as you survive.",
     },
 
 
@@ -839,16 +805,19 @@ return {
         description = "What do you call a wire with a break in it?",
     },
 
-
-
-    ----------------------------------------------------------------
-    ----------------------------------------------------------------
-    --[[    Items - Chemicals    ]]--
-
-    ['bombbag_exp'] = {
-        label = 'Plantable Explosives', weight = 5500, stack = true,
-        consume = 1,
+    ['chem_sulfur'] = {
+        label = 'Sulfur', weight = 230, stack = true,
         description = "Pro tip: Rust is not a vitamin. Also, I need to see a doctor.",
     },
-    
+
+    ['chem_potnitr'] = {
+        label = 'Potassium Nitrate', weight = 230, stack = true,
+        description = "Pro tip: Rust is not a vitamin. Also, I need to see a doctor.",
+    },
+
+    ['chem_acid'] = {
+        label = 'Sulfuric Acid', weight = 230, stack = true,
+        description = "Pro tip: Rust is not a vitamin. Also, I need to see a doctor.",
+    },
+
 }
