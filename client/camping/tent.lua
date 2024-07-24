@@ -34,6 +34,8 @@ local tentops = {
 --[[
 WIP
 
+-- tent1 = -596943609, tent2 = -1055611302
+
 RegisterCommand('ctent', function()
     local player = cache.ped
     local offset = GetOffsetFromEntityInWorldCoords(player, 0.2, 2.5, 0.0)
