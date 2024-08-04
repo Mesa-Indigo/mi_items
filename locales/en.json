@@ -1,0 +1,15 @@
+{
+    "debug_": "Global Option Set: ",
+
+    "init_ped_general": "General Interactions",
+    "init_ped_gang": "Gang Interactions",
+    "init_ped_police": "Police Interactions",
+    "init_ped_fire": "Fire Interactions",
+    "init_ped_ems": "Medcial Interactions",
+
+    "init_plr_soc": "Interactions",
+
+    "init_veh_repair": "Repair Engine",
+    "init_veh_clean": "Clean Vehicle",
+    "init_veh_recolor": "Change Color"
+}

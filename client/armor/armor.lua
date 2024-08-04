@@ -2,10 +2,10 @@
 
 -- armor level 1
 exports('armor1', function()
-    local player = cache.ped
+    local player, armor = cache.ped, Data.Armor.light
     if true then
         if lib.progressBar({
-            duration = Data.Armor.light.dur,
+            duration = armor.duration*1000,
             label = 'Equipping Light Body Armor',
             useWhileDead = false, allowFalling = false, allowRagdoll = false,
             allowCuffed = false, canCancel = true, disable = { car = false },
@@ -14,8 +14,9 @@ exports('armor1', function()
                 blendIn = 4.0, blendOut = 4.0, playbackRate = 0
             },
         }) then
+            print('armored')
             SetPlayerMaxArmour(player, 100)
-			SetPedArmour(player, Data.Armor.light.amt)
+			SetPedArmour(player, armor.amount)
         else
             return
         end
@@ -24,10 +25,10 @@ end)
 
 -- armor level 2
 exports('armor2', function()
-    local player = cache.ped
+    local player, armor = cache.ped, Data.Armor.medium
     if true then
         if lib.progressBar({
-            duration = Data.Armor.medium.dur,
+            duration = armor.duration*1000,
             label = 'Equipping Medium Body Armor',
             useWhileDead = false, allowFalling = false, allowRagdoll = false,
             allowCuffed = false, canCancel = true, disable = { car = false },
@@ -37,7 +38,7 @@ exports('armor2', function()
             },
         }) then
             SetPlayerMaxArmour(player, 100)
-			SetPedArmour(player, Data.Armor.medium.amt)
+			SetPedArmour(player, armor.amount)
         else
             return
         end
@@ -46,10 +47,10 @@ end)
 
 -- armor level 3
 exports('armor3', function()
-    local player = cache.ped
+    local player, armor = cache.ped, Data.Armor.heavy
     if true then
         if lib.progressBar({
-            duration = Data.Armor.heavy.dur,
+            duration = armor.duration*1000,
             label = 'Equipping Heavy Body Armor',
             useWhileDead = false, allowFalling = false, allowRagdoll = false,
             allowCuffed = false, canCancel = true, disable = { car = false },
@@ -59,7 +60,7 @@ exports('armor3', function()
             },
         }) then
             SetPlayerMaxArmour(player, 100)
-			SetPedArmour(player, Data.Armor.heavy.amt)
+			SetPedArmour(player, armor.amount)
         else
             return
         end

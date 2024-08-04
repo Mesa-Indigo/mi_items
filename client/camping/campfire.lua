@@ -1,5 +1,5 @@
 local fire = {
-    obj = nil, model = lib.requestModel('prop_beach_fire'),
+    obj = nil, model = lib.requestModel('prop_beach_fire', 300),
 }
 
 local fireops = {

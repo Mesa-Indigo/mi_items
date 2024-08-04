@@ -1,5 +1,15 @@
-Shared, Data = {}, {}
+-- global variables
+Shared, Data  = {}, {}
+Target, Inventory = exports.ox_target, exports.ox_inventory
+
+-- debug option
 Debug = true
+
+-- locale option | 'en', 'es', 'fr'
+Locale = 'en'
+
+-- set global options as active
+Set = { player = true, peds = true, vehicle = true }
 
 -- these are wip, so don't set them to true
 -- unless you're frome the future and have the resources
@@ -7,8 +17,6 @@ Data.using = {
     mi_cooking = false, mi_housing = false,
     mi_medical = false, mi_artist = false
 }
-
---[[    Consumable Details    ]]--
 
 --------------------------------
 -- energy items
@@ -32,8 +40,6 @@ Data.Drugs = {
     meth =      { duration = 30 },
     molly =     { duration = 30 },
 }
-
---[[    Item Details    ]]--
 
 --------------------------------
 -- armor items
@@ -87,7 +93,6 @@ Data.Camping = {
     cooler =    { items = 10 },
     tent =      { items = 20 }
 }
-
 
 --------------------------------
 -- recovery items

@@ -42,6 +42,7 @@ local systemon = function(player)
             SetEnableScuba(player, true)
             SetPedMaxTimeUnderwater(player, Data.Diving.divekit.duration)
             equip.used = true
+            SetModelAsNoLongerNeeded(maskmodel) SetModelAsNoLongerNeeded(tankmodel)
         end
     end
 end

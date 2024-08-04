@@ -12,11 +12,13 @@ repository 'https://github.com/Mesa-Indigo/mi_items'
 description 'ox item handling script'
 
 --[[    dependancies    ]]--
-dependencies { '/server:7290', '/onesync', 'ox_lib', 'ox_target' }
+dependencies { '/onesync', 'ox_lib', 'ox_target', 'ox_inventory' }
 
 --[[    manifest information    ]]--
 shared_scripts { '@ox_lib/init.lua', 'shared/*.lua' }
 
-client_scripts { 'client/**/*.lua' }
+client_scripts { 'client/main.lua', 'client/**/*.lua' }
 
-server_scripts { '@oxmysql/lib/MySQL.lua', 'server/**/*.lua' }
+server_scripts { '@oxmysql/lib/MySQL.lua', 'server/*.lua' }
+
+files { 'locales/*.json' }
