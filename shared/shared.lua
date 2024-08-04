@@ -9,7 +9,7 @@ Debug = true
 Locale = 'en'
 
 -- set global options as active
-Set = { player = true, peds = true, vehicle = true }
+Set = { player = true, ped = true, vehicle = true }
 
 -- these are wip, so don't set them to true
 -- unless you're frome the future and have the resources

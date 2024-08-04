@@ -721,13 +721,23 @@ return {
     },
 
     ['cleankit'] = {
-        label = 'Tire Repair Kit', weight = 7500, stack = true,
+        label = 'Vehicle Cleaning Kit', weight = 7500, stack = true,
         description = "Driving with a flat tire? That's a paddlin.",
     },
 
     ['spraykit'] = {
-        label = 'Spray Kit: Red', weight = 2000, stack = true,
+        label = 'Spray Kit', weight = 2000, stack = true,
         description = "Paints over your car with this color.",
+    },
+
+    ['tirekit'] = {
+        label = 'Tire Repair Kit', weight = 2000, stack = true,
+        description = "Yes, you DO need all your tires to drive.",
+    },
+
+    ['inspectionkit'] = {
+        label = 'Vehicle Insp. Tool', weight = 2000, stack = true,
+        description = "A mechanic's most handy tool.",
     },
 
     -- fireworks

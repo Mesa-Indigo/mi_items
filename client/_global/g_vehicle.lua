@@ -38,6 +38,33 @@ Data.Vehicle = {
         onSelect = function(data)
             local vehicle = data.entity
             if Debug then print('Vehicle: '..vehicle) end
+
+        end
+    },
+    {
+        name = 'veh_int', icon = 'fa-solid fa-toolbox',
+        label = locale('init_veh_tire'),
+        items = 'tirekit',
+        canInteract = function(_, distance)
+            return distance < 2.0
+        end,
+        onSelect = function(data)
+            local vehicle = data.entity
+            if Debug then print('Vehicle: '..vehicle) end
+            TriggerEvent('mi_items:global:vehicle:tires', vehicle)
+        end
+    },
+    {
+        name = 'veh_int', icon = 'fa-solid fa-clipboard-question',
+        label = locale('init_veh_inspection'),
+        items = 'inspectionkit',
+        canInteract = function(_, distance)
+            return distance < 2.0
+        end,
+        onSelect = function(data)
+            local vehicle = data.entity
+            if Debug then print('Vehicle: '..vehicle) end
+            TriggerEvent('mi_items:global:vehicle:inspect', vehicle)
         end
     },
 }

@@ -46,6 +46,7 @@ local vehiclerepairs = function(vehicle)
             description = response }
             DoNotif(tx2, Cor) ClearPedTasks(player)
             SetVehicleEngineHealth(vehicle, 1000)
+            SetVehicleOilLevel(vehicle, 1000)
             SetVehicleDoorShut(vehicle, 4, false)
         else
             local tx3 = { id = 'fix_stopped', title = "Engine Repair Stopped",

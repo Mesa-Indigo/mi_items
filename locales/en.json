@@ -1,7 +1,8 @@
 {
     "debug_": "Global Option Set: ",
 
-    "init_ped_general": "General Interactions",
+    "init_gen_shove": "Shove",
+
     "init_ped_gang": "Gang Interactions",
     "init_ped_police": "Police Interactions",
     "init_ped_fire": "Fire Interactions",
@@ -11,5 +12,7 @@
 
     "init_veh_repair": "Repair Engine",
     "init_veh_clean": "Clean Vehicle",
-    "init_veh_recolor": "Change Color"
+    "init_veh_recolor": "Change Color",
+    "init_veh_tire": "Repair Tires",
+    "init_veh_inspection": "Inspect Vehicle"
 }
