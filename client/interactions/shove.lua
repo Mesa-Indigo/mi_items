@@ -1,23 +1,18 @@
-local forceTypes = {
-    MinForce = 0,
-    MaxForceRot = 1,
-    MinForce2 = 2,
-    MaxForceRot2 = 3,
-    ForceNoRot = 4,
-    ForceRotPlusForce = 5
-}
+local getrotation = function(rotation)
+    -- Convert rotation angles from degrees to radians
+    local retz = math.rad(rotation.z) -- Yaw
+    local retx = math.rad(rotation.x) -- Pitch
 
-local entity = PlayerPedId()
-local forceType = forceTypes.MaxForceRot2
- -- sends the entity straight up into the sky:
-local direction = vector3(0.0, 1500.0, 0.0)
-local rotation = vector3(0.0, 0.0, 15.0)
-local boneIndex = 0
-local isDirectionRel = false
-local ignoreUpVec = true
-local isForceRel = true
-local p12 = false
-local p13 = true
+    -- Calculate the absolute value of the cosine of the pitch
+    local absx = math.abs(math.cos(retx))
+
+    -- Calculate and return the direction vector
+    return vector3(
+        -math.sin(retz) * absx, -- X component
+        math.cos(retz) * absx,  -- Y component
+        math.sin(retx)          -- Z component (vertical)
+    )
+end
 
 -- event to repair engine
 RegisterNetEvent('mi_items:global:gen:shove')
