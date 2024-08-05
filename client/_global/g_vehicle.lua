@@ -38,7 +38,7 @@ Data.Vehicle = {
         onSelect = function(data)
             local vehicle = data.entity
             if Debug then print('Vehicle: '..vehicle) end
-
+            TriggerEvent('mi_items:global:vehicle:color', vehicle)
         end
     },
     {

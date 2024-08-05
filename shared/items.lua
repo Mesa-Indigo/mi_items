@@ -64,3 +64,11 @@ Item.Recovery = {
     basic =     { time = 12, percent = 8 },
     major =     { time = 16, percent = 4 },
 }
+
+--------------------------------
+-- car coloring items
+
+-- time is the duration of progress bar
+Item.VehSpray = {
+    time =     10,
+}
