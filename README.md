@@ -10,7 +10,7 @@
 | :---                  |     :---:      |
 | **Armor**             | Three levels of body armor to wear |
 | **Beach Kit** *WIP*   | A cooler with drinks, towels, & umbrellas |
-| **Sheilds**           | Riot shield for police to utilize |
+| **Shields**           | Riot shield for police to utilize |
 | **Diving**            | A rebreather & diving gear for underwater diving |
 | **Bombs**             | Plantable explosive bag with timer |
 | **Bottles**           | Right click on beer bottles to break them for a weapon |
