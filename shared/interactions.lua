@@ -1,3 +1,5 @@
+Interact = {}
+
 -- Force Reference    
 ----------------
 -- https://gtaforums.com/topic/885669-precisely-define-object-physics/
@@ -9,7 +11,7 @@
 
 -- force is the force exerted against the entity
 -- ragtime is the times needed for ragdoll
-Data.Shove = {
+Interact.Shove = {
     type = 2,
     force = 20.0,
     ragtime = { a = 1500, b = 3000 }

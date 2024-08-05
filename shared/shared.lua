@@ -1,5 +1,5 @@
 -- global variables
-Shared, Data  = {}, {}
+Shared, Data = {}, {}
 Target, Inventory = exports.ox_target, exports.ox_inventory
 
 -- debug option
@@ -13,7 +13,7 @@ Set = { player = true, ped = true, vehicle = true }
 
 -- these are wip, so don't set them to true
 -- unless you're from the future and have the resources
-Data.using = {
+Shared.using = {
     mi_housing = false,
     mi_hotels = false,
     mi_medical = false

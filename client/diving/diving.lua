@@ -40,7 +40,7 @@ local systemon = function(player)
             equip.mask = mask
     
             SetEnableScuba(player, true)
-            SetPedMaxTimeUnderwater(player, Data.Diving.divekit.duration)
+            SetPedMaxTimeUnderwater(player, Item.Diving.divekit.duration)
             equip.used = true
             SetModelAsNoLongerNeeded(maskmodel) SetModelAsNoLongerNeeded(tankmodel)
         end
@@ -79,7 +79,7 @@ local systemoff = function(player)
 end
 
 exports('divegear', function()
-    if Data.Diving.restrict then
+    if Item.Diving.restrict then
         if not equip.used then
             if IsPedSwimming(cache.ped) or IsPedSwimmingUnderWater(cache.ped) then
                 -- notify
@@ -93,7 +93,7 @@ exports('divegear', function()
                 systemoff(cache.ped)
             end
         else return end
-    elseif not Data.Diving.restrict then
+    elseif not Item.Diving.restrict then
         if not equip.used then
             systemon(cache.ped)
         elseif equip.used then
@@ -103,7 +103,7 @@ exports('divegear', function()
 end)
 
 RegisterCommand('dive', function()
-    if Data.Diving.restrict then
+    if Item.Diving.restrict then
         if not equip.used then
             if IsPedSwimming(cache.ped) or IsPedSwimmingUnderWater(cache.ped) then
                 -- notify
@@ -117,7 +117,7 @@ RegisterCommand('dive', function()
                 systemoff(cache.ped)
             end
         else return end
-    elseif not Data.Diving.restrict then
+    elseif not Item.Diving.restrict then
         if not equip.used then
             systemon(cache.ped)
         elseif equip.used then

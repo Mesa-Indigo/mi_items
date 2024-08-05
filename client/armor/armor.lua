@@ -2,7 +2,7 @@
 
 -- armor level 1
 exports('armor1', function()
-    local player, armor = cache.ped, Data.Armor.light
+    local player, armor = cache.ped, Item.Armor.light
     if true then
         if lib.progressBar({
             duration = armor.duration*1000,
@@ -25,7 +25,7 @@ end)
 
 -- armor level 2
 exports('armor2', function()
-    local player, armor = cache.ped, Data.Armor.medium
+    local player, armor = cache.ped, Item.Armor.medium
     if true then
         if lib.progressBar({
             duration = armor.duration*1000,
@@ -47,7 +47,7 @@ end)
 
 -- armor level 3
 exports('armor3', function()
-    local player, armor = cache.ped, Data.Armor.heavy
+    local player, armor = cache.ped, Item.Armor.heavy
     if true then
         if lib.progressBar({
             duration = armor.duration*1000,

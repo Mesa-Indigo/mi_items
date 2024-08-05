@@ -34,7 +34,7 @@ local systemon = function(player)
             equip.mask = mask
 
             SetEnableScuba(player, true)
-            SetPedMaxTimeUnderwater(player, Data.Diving.snorkle.duration)
+            SetPedMaxTimeUnderwater(player, Item.Diving.snorkle.duration)
             equip.used = true
         end
     end
@@ -69,7 +69,7 @@ local systemoff = function(player)
 end
 
 exports('rebreather', function()
-    if Data.Diving.restrict then
+    if Item.Diving.restrict then
         if not equip.used then
             if IsPedSwimming(cache.ped) or IsPedSwimmingUnderWater(cache.ped) then
                 -- notify
@@ -83,7 +83,7 @@ exports('rebreather', function()
                 systemoff(cache.ped)
             end
         else return end
-    elseif not Data.Diving.restrict then
+    elseif not Item.Diving.restrict then
         if not equip.used then
             systemon(cache.ped)
         elseif equip.used then
@@ -93,7 +93,7 @@ exports('rebreather', function()
 end)
 
 RegisterCommand('rebreather', function()
-    if Data.Diving.restrict then
+    if Item.Diving.restrict then
         if not equip.used then
             if IsPedSwimming(cache.ped) or IsPedSwimmingUnderWater(cache.ped) then
                 -- notify
@@ -107,7 +107,7 @@ RegisterCommand('rebreather', function()
                 systemoff(cache.ped)
             end
         else return end
-    elseif not Data.Diving.restrict then
+    elseif not Item.Diving.restrict then
         if not equip.used then
             systemon(cache.ped)
         elseif equip.used then
