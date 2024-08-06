@@ -8,8 +8,15 @@ Debug = true
 -- locale option | 'en', 'es', 'fr'
 Locale = 'en'
 
+Shared.Groups = {
+    leo = { '' },
+    ems = { '' },
+    fir = { '' },
+    crm = { '' },
+}
+
 -- set global options as active
-Set = { player = true, ped = true, vehicle = true }
+Shared.Set = { player = true, ped = true, vehicle = true }
 
 -- these are wip, so don't set them to true
 -- unless you're from the future and have the resources
