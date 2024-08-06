@@ -64,3 +64,5 @@ Data.Ped = {
         end
     },
 }
+
+Target:addGlobalPed(Data.Ped)

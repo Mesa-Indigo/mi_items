@@ -69,3 +69,4 @@ Data.Vehicle = {
     },
 }
 
+Target:addGlobalVehicle(Data.Vehicle)
