@@ -91,6 +91,69 @@ local vehicleinspection = function(vehicle)
                 colorvehicle(vehicle, colors.black.id)
             end,
           },
+          {
+            title = colors.white.label, readOnly = false,
+            description = 'Damn, that shit bright',
+            icon = 'spray-can-sparkles', iconColor = '#fffff6',
+            iconAnimation = 'beatFade',
+            onSelect = function()
+                colorvehicle(vehicle, colors.white.id)
+            end,
+          },
+          {
+            title = colors.red.label, readOnly = false,
+            description = 'The fastest way to get pulled over',
+            icon = 'spray-can-sparkles', iconColor = '#c00e1a',
+            iconAnimation = 'beatFade',
+            onSelect = function()
+                colorvehicle(vehicle, colors.red.id)
+            end,
+          },
+          {
+            title = colors.orange.label, readOnly = false,
+            description = 'This color brings out the stupid in my face',
+            icon = 'spray-can-sparkles', iconColor = '#f78616',
+            iconAnimation = 'beatFade',
+            onSelect = function()
+                colorvehicle(vehicle, colors.orange.id)
+            end,
+          },
+          {
+            title = colors.green.label, readOnly = false,
+            description = 'As green as green could possibly be',
+            icon = 'spray-can-sparkles', iconColor = '#155c2d',
+            iconAnimation = 'beatFade',
+            onSelect = function()
+                colorvehicle(vehicle, colors.green.id)
+            end,
+          },
+          {
+            title = colors.blue.label, readOnly = false,
+            description = '[insert_blue_joke_here_dontForget]',
+            icon = 'spray-can-sparkles', iconColor = '#47578f',
+            iconAnimation = 'beatFade',
+            onSelect = function()
+                colorvehicle(vehicle, colors.blue.id)
+            end,
+          },
+          {
+            title = colors.yellow.label, readOnly = false,
+            description = 'Did you know that yellow is a color?',
+            icon = 'spray-can-sparkles', iconColor = '#e0e13d',
+            iconAnimation = 'beatFade',
+            onSelect = function()
+                colorvehicle(vehicle, colors.yellow.id)
+            end,
+          },
+          {
+            title = colors.purple.label, readOnly = false,
+            description = 'What ever happened to the Saints?',
+            icon = 'spray-can-sparkles', iconColor = '#621276',
+            iconAnimation = 'beatFade',
+            onSelect = function()
+                colorvehicle(vehicle, colors.purple.id)
+            end,
+          },
         }
       })
     lib.showContext('color_veh_menu')
