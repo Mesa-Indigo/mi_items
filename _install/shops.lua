@@ -126,10 +126,10 @@ return {
 		name = 'Mechanic Shop',
 		inventory = {
 			{ name = 'lockpick', price = 12 },
-			{ name = 'repair_veheng', price = 245 },
-			{ name = 'repair_vehtir', price = 65 },
-			{ name = 'repair_vehbod', price = 110 },
-			{ name = 'WEAPON_WRENCH', price = 135, metadata = { registered = true } }
+			{ name = 'enginekit', price = 245 },
+			{ name = 'cleankit', price = 65 },
+			{ name = 'spraykit', price = 330 },
+			{ name = 'tirekit', price = 125 },
 		}, targets = {
 			{ ped = `mp_m_waremech_01`, scenario = 'WORLD_HUMAN_AA_SMOKE', loc = vec3(1154.203, -778.198, 56.598), 	heading = 26.078 },
 			{ ped = `s_m_y_xmech_01`, scenario = 'WORLD_HUMAN_CLIPBOARD', loc = vec3(545.611, -173.495, 53.481), 	heading = 109.361 },
@@ -225,7 +225,10 @@ return {
 	VendingMachineCoffee = {
 		name = 'Coffee Machine',
 		inventory = {
-			{ name = 'coffee', price = 4 }
+			{ name = 'coffee_black', price = 4 },
+			{ name = 'coffee_mocha', price = 4 },
+			{ name = 'coffee_cpcno', price = 4 },
+			{ name = 'coffee_amrcno', price = 4 },
 		},
 		model = {
 			`prop_vend_coffe_01`, `prop_vend_snak_01_tu`

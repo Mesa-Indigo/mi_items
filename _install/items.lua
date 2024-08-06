@@ -769,7 +769,7 @@ return {
     },
 
     -- beach
-    ['cooler'] = {
+    ['cooler_beer'] = {
         label = 'Alcohol Cooler', weight = 2300, stack = false,
         description = "Get some fresh beers, dude.",
     },
