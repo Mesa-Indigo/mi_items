@@ -69,10 +69,3 @@ Data.Vehicle = {
     },
 }
 
--- resource load
-AddEventHandler('onResourceStart', function(resourceName)
-    if (GetCurrentResourceName() == resourceName) then
-        if Set.vehicle then Target:addGlobalVehicle(Data.Vehicle) end
-      if Debug then print(locale('debug_')..'Vehicle Targeting') end
-    end
-end)

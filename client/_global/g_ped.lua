@@ -15,11 +15,3 @@ Data.Ped = {
         end
     },
 }
-
--- resource load
-AddEventHandler('onResourceStart', function(resourceName)
-    if (GetCurrentResourceName() == resourceName) then
-        if Set.ped then Target:addGlobalPed(Data.Ped) end
-      if Debug then print(locale('debug_')..'Ped Targeting') end
-    end
-end)
