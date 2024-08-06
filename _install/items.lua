@@ -761,6 +761,11 @@ return {
         description = "See that shit go bing bong.",
     },
 
+    ['firework_exp'] = {
+        label = 'Expired Fireworks', weight = 1500, stack = true,
+        description = "Remnants of a good time. I wonder what's inside?",
+    },
+
     -- bombs
     ['bombbag_exp'] = {
         label = 'Explosive Bag', weight = 5500, stack = false,
@@ -797,48 +802,78 @@ return {
     --[[    Items - Crafting Supplies    ]]--
 
     ['scrap_iron'] = {
-        label = 'Iron Scrap', weight = 100, stack = true,
+        label = 'Iron Scrap', weight = 60, stack = true,
         description = "Pro tip: Rust is not a vitamin. Also, I need to see a doctor.",
     },
 
-    ['scrap_alluminium'] = {
-        label = 'Alluminium Scrap', weight = 100, stack = true,
+    ['scrap_aluminium'] = {
+        label = 'Aluminium Scrap', weight = 70, stack = true,
         description = "How do you pronounce this shit?",
     },
 
     ['scrap_bolts'] = {
-        label = 'Bolts & Fittings', weight = 100, stack = true,
+        label = 'Bolts & Fittings', weight = 30, stack = true,
         description = "Hahahahaha, you said fittings.",
     },
 
     ['scrap_wood'] = {
-        label = 'Wood Planks', weight = 170, stack = true,
+        label = 'Wood Planks', weight = 120, stack = true,
         description = "It is not can you, but 'wood' you pick this up?",
     },
 
     ['scrap_plastic'] = {
-        label = 'Plastic Scrap', weight = 100, stack = true,
+        label = 'Plastic Scrap', weight = 30, stack = true,
         description = "Pro tip: Rust is not a vitamin. Also, I need to see a doctor.",
     },
 
+    ['scrap_bottle'] = {
+        label = 'Glass Bottle', weight = 50, stack = true,
+        description = "And they didn't save any for you? Shame.",
+    },
+
     ['scrap_wires'] = {
-        label = 'Bundle of Wires', weight = 100, stack = true,
+        label = 'Bundle of Wires', weight = 30, stack = true,
         description = "What do you call a wire with a break in it?",
     },
 
     ['chem_sulfur'] = {
-        label = 'Sulfur', weight = 230, stack = true,
+        label = 'Sulfur', weight = 150, stack = true,
         description = "Pro tip: Rust is not a vitamin. Also, I need to see a doctor.",
     },
 
     ['chem_potnitr'] = {
-        label = 'Potassium Nitrate', weight = 230, stack = true,
+        label = 'Potassium Nitrate', weight = 130, stack = true,
         description = "Pro tip: Rust is not a vitamin. Also, I need to see a doctor.",
     },
 
-    ['chem_acid'] = {
-        label = 'Sulfuric Acid', weight = 230, stack = true,
+    ['chem_saltp'] = {
+        label = 'Saltpeter', weight = 120, stack = true,
         description = "Pro tip: Rust is not a vitamin. Also, I need to see a doctor.",
     },
 
+
+
+    ----------------------------------------------------------------
+    ----------------------------------------------------------------
+    --[[    Items - Mining    ]]--
+
+    ['crystal_uncut'] = {
+        label = 'Uncut Crystal', weight = 100, stack = true,
+        description = "Good job, you found... that shit.",
+    },
+
+    ['ore_iron'] = {
+        label = 'Iron Ore', weight = 230, stack = true,
+        description = "Man, I know a place online where this is also worth nothing.",
+    },
+
+    ['ore_copper'] = {
+        label = 'Copper Ore', weight = 230, stack = true,
+        description = "No, we don't make copper weapons, you nerd.",
+    },
+
+    ['ore_tin'] = {
+        label = 'Tin Ore', weight = 230, stack = true,
+        description = "I almost forgot these were a thing. How neat.",
+    },
 }
