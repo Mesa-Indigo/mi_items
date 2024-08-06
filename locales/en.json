@@ -10,6 +10,8 @@
 
     "init_plr_soc": "Interactions",
 
+    "side_obtn_rock": "Mine Rock",
+
     "init_veh_repair": "Repair Engine",
     "init_veh_clean": "Clean Vehicle",
     "init_veh_recolor": "Change Color",
