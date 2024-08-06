@@ -20,6 +20,7 @@ World.Recycle = {
 -- farming system
 World.Mining = {
     active = true,
+    duration = 5000
 
 }
 

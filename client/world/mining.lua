@@ -1,3 +1,11 @@
+local responses = {
+    'Did you know rocks are hard? ',
+    'Hell yeah, you hit that rock real hard',
+    'Is that how you hold a pickaxe?',
+    'Only an iron pickaxe? What a pleb',
+    '*insert_mincraft_reference_dont_forget*',
+}
+
 local rocks = {
     'cs_x_rublrge', 'cs_x_rublrgd', 'cs_x_rublrga'
 }
@@ -20,7 +28,7 @@ local spawns = {
 
 local minerock = function(data)
     if lib.progressBar({
-        duration = 5000, label = 'Mining Rock',
+        duration = World.Mining.duration, label = 'Mining Rock',
         useWhileDead = false, canCancel = true,
         disable = {
             car = true, move = true
@@ -32,16 +40,18 @@ local minerock = function(data)
         prop = {
             bone = 57005,
             model = `prop_tool_pickaxe`,
-            pos = vec3(0.0, -0.20, -0.10),
+            pos = vec3(0.0, -0.20, -0.05),
             rot = vec3(80.0, -20.0, 175.0)
         },
     }) then
-        local tx2 = { id = 'fix_complete', title = "Engine Repaired",
-        description = 'did' } DoNotif(tx2, Cor)
+        local response = responses[math.random(1, #responses)]
+        lib.callback.await('miit:give:mine:reward')
+        local tx2 = { id = 'mined', title = "Rock Mined",
+        description = response } DoNotif(tx2, Cor)
 
     else
-        local tx3 = { id = 'fix_complete', title = "Engine Repaired",
-        description = 'did' }
+        local tx3 = { id = 'not_mined', title = "Mining Stopped",
+        description = 'You stopped mining the rock' }
         DoNotif(tx3, War)
     end
 end
@@ -65,9 +75,7 @@ local options = {
 local testload = function(spawn)
     for _, obs in pairs(spawn) do
         local model = rocks[math.random(1, #rocks)]
-        local head = math.random(1,360)
         local ob = CreateObject(model, obs.x, obs.y, obs.z, true, false, false)
-        SetEntityHeading(ob, head)
         PlaceObjectOnGroundProperly(ob)
         FreezeEntityPosition(ob, true)
         SetEntityCollision(ob, true, true)

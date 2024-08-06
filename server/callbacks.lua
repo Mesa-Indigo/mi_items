@@ -54,3 +54,11 @@ end)
 lib.callback.register('miit:stash:cooler:add', function(source)
     Inventory:AddItem(source, 'patriot_beer', 1)
 end)
+
+-- camping items
+lib.callback.register('miit:give:mine:reward', function(source)
+    local list = { 'crystal_uncut', 'ore_iron', 'ore_gold', 'ore_coal' }
+    local reward = list[math.random(1, #list)]
+    local amount = math.random(1,3)
+    Inventory:AddItem(source, reward, amount)
+end)

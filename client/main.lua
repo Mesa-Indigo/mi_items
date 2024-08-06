@@ -1,7 +1,5 @@
--- will work on this later
+Target = exports.ox_target
 
 -- load locale
 lib.locale()
-
-Target = exports.ox_target
 
