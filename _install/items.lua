@@ -6,6 +6,7 @@ return {
     ['sandwich_ham'] = {
         label = 'Ham Sandwich', weight = 250, stack = true, close = true,
         description = "Ham in bread? What a wild concept.",
+        allowArmed = false,
         client = {
             status = { hunger = 200000 }, anim = 'eating_hand', prop = 'sandwich',
             usetime = 7500, disable = { move = false, car = false, combat = true },
@@ -15,6 +16,7 @@ return {
     ['taco'] = {
         label = 'Beef Taco', weight = 250, stack = true, close = true,
         description = "A gas station taco? Yeah, totally safe.",
+        allowArmed = false,
         client = {
             status = { hunger = 190000 }, anim = 'eating_hand', prop = 'taco',
             usetime = 7500, disable = { move = false, car = false, combat = true },
@@ -24,6 +26,7 @@ return {
 	['apple'] = {
         label = 'Apple', weight = 150, stack = true, close = true,
         description = "'Get that shit away from me' - Dr. Cohen'",
+        allowArmed = false,
         client = {
             status = { hunger = 100000 }, anim = 'eating_hand', prop = 'apple',
             usetime = 3500, disable = { move = false, car = false, combat = true },
@@ -33,6 +36,7 @@ return {
 	['banana'] = {
         label = 'Banana', weight = 150, stack = true, close = true,
         description = "B a n a n a n a n a n a n a n a.",
+        allowArmed = false,
         client = {
             status = { hunger = 100000 }, anim = 'eating_hand', prop = 'banana',
             usetime = 4500, disable = { move = false, car = false, combat = true },
@@ -42,6 +46,7 @@ return {
 	['chips_bag'] = {
         label = 'Bag of Chips', weight = 150, stack = true, close = true,
         description = "Can you only have one? I can.",
+        allowArmed = false,
         client = {
             status = { hunger = 80000 }, anim = 'drinking_hand', prop = 'chips_bag',
             usetime = 4500, disable = { move = false, car = false, combat = true },
@@ -51,6 +56,7 @@ return {
 	['candy'] = {
         label = 'P\'s & Q\'s', weight = 100, stack = true, close = true,
         description = "Do you still have teeth? You wont soon.",
+        allowArmed = false,
         client = {
             status = { hunger = 80000 }, anim = 'drinking_hand', prop = 'candy',
             usetime = 3500, disable = { move = false, car = false, combat = true },
@@ -69,6 +75,7 @@ return {
     ['noodle_beef'] = {
         label = 'Noodles To-Go: Beef', weight = 100, stack = true, close = true,
         description = "A college student\'s first true love.",
+        allowArmed = false,
         client = {
             status = { hunger = 300000 }, anim = 'eating_tool', prop = {
                 {
@@ -87,6 +94,7 @@ return {
     ['noodle_chicken'] = {
         label = 'Noodles To-Go: Chicken', weight = 100, stack = true, close = true,
         description = "A college student\'s first true love.",
+        allowArmed = false,
         client = {
             status = { hunger = 300000 }, anim = 'eating_tool', prop = {
                 {
@@ -105,6 +113,7 @@ return {
     ['noodle_shrimp'] = {
         label = 'Noodles To-Go: Shrimp', weight = 100, stack = true, close = true,
         description = "A college student\'s first true love.",
+        allowArmed = false,
         client = {
             status = { hunger = 300000 }, anim = 'eating_tool', prop = {
                 {
@@ -123,6 +132,7 @@ return {
     ['noodle_pork'] = {
         label = 'Noodles To-Go: Pork', weight = 100, stack = true, close = true,
         description = "A college student\'s first true love.",
+        allowArmed = false,
         client = {
             status = { hunger = 300000 }, anim = 'eating_tool', prop = {
                 {
@@ -148,6 +158,7 @@ return {
     ['bs_bleeder'] = {
         label = 'The Bleeder', weight = 250, stack = true, close = true,
         description = "Internal bleeding sold separately.",
+        allowArmed = false,
         client = {
             status = { hunger = 200000 }, anim = 'eating_hand', prop = 'sandwich',
             usetime = 7500, disable = { move = false, car = false, combat = true },
@@ -157,6 +168,7 @@ return {
     ['bs_moneyshot'] = {
         label = 'Money Shot', weight = 250, stack = true, close = true,
         description = "If you find $10, it's mine.",
+        allowArmed = false,
         client = {
             status = { hunger = 200000 }, anim = 'eating_hand', prop = 'sandwich',
             usetime = 7500, disable = { move = false, car = false, combat = true },
@@ -166,6 +178,7 @@ return {
     ['bs_doubleshot'] = {
         label = 'Double Shot', weight = 250, stack = true, close = true,
         description = "Double the heart problems.",
+        allowArmed = false,
         client = {
             status = { hunger = 200000 }, anim = 'eating_hand', prop = 'sandwich',
             usetime = 7500, disable = { move = false, car = false, combat = true },
@@ -175,6 +188,7 @@ return {
     ['bs_godfather'] = {
         label = 'Godfather', weight = 250, stack = true, close = true,
         description = "You come here on the day of my burger\'s grilling?",
+        allowArmed = false,
         client = {
             status = { hunger = 200000 }, anim = 'eating_hand', prop = 'sandwich',
             usetime = 7500, disable = { move = false, car = false, combat = true },
@@ -184,6 +198,7 @@ return {
     ['bs_fries'] = {
         label = 'French Fries', weight = 250, stack = true, close = true,
         description = "Internal bleeding sold separately.",
+        allowArmed = false,
         client = {
             status = { hunger = 200000 }, anim = 'eating_hand', prop = 'sandwich',
             usetime = 7500, disable = { move = false, car = false, combat = true },
@@ -200,6 +215,7 @@ return {
     ['water'] = {
         label = 'Water Bottle', weight = 100, stack = true, close = true,
         description = "Ahh, hear that? No? It's your body crying for water.",
+        allowArmed = false,
         client = {
             status = { thirst = 260000 }, anim = 'drinking_hand', prop = 'water',
             usetime = 3500, disable = { move = false, car = false, combat = true },
@@ -209,6 +225,7 @@ return {
 	['milk'] = {
         label = 'Water Bottle', weight = 100, stack = true, close = true,
         description = "You need strong bones for all that socializing you don't do.",
+        allowArmed = false,
         client = {
             status = { thirst = 130000 }, anim = 'drinking_hand', prop = 'milk',
             usetime = 3500, disable = { move = false, car = false, combat = true },
@@ -218,6 +235,7 @@ return {
 	['ecola'] = {
         label = 'eCola Can', weight = 120, stack = true, close = true,
         description = "Carbonated syrup? Good for the soul.",
+        allowArmed = false,
         client = {
             status = { thirst = 110000 }, anim = 'drinking_hand', prop = 'ecola',
             usetime = 3500, disable = { move = false, car = false, combat = true },
@@ -227,6 +245,7 @@ return {
 	['sprunk'] = {
         label = 'Sprunk Can', weight = 120, stack = true, close = true,
         description = "Like getting punched in the mouth by spicy water.",
+        allowArmed = false,
         client = {
             status = { thirst = 110000 }, anim = 'drinking_hand', prop = 'sprunk',
             usetime = 3500, disable = { move = false, car = false, combat = true },
@@ -236,6 +255,7 @@ return {
 	['orangotang'] = {
         label = 'Orang-o-tang Can', weight = 120, stack = true, close = true,
         description = "Who the hell likes orange drinks? Cause I do.",
+        allowArmed = false,
         client = {
             status = { thirst = 110000 }, anim = 'drinking_hand', prop = 'orangotang',
             usetime = 3500, disable = { move = false, car = false, combat = true },
@@ -245,6 +265,7 @@ return {
 	['ejunk'] = {
         label = 'eJunk Can', weight = 120, stack = true, close = true,
         description = "God yes, I need it in my blood.",
+        allowArmed = false,
         client = {
             status = { thirst = 110000 }, anim = 'drinking_hand', prop = 'ejunk',
             usetime = 3500, disable = { move = false, car = false, combat = true },
@@ -261,6 +282,7 @@ return {
     ['coffee_black'] = {
         label = 'Black Coffee', weight = 100, stack = true, close = true,
         description = "What do you need all that caffiene for, huh?",
+        allowArmed = false,
         client = {
             status = { thirst = 130000 }, anim = 'drinking_hand', prop = 'coffee',
             usetime = 3500, disable = { move = false, car = false, combat = true },
@@ -270,6 +292,7 @@ return {
     ['coffee_mocha'] = {
         label = 'Mocha', weight = 100, stack = true, close = true,
         description = "What even IS a mocha?",
+        allowArmed = false,
         client = {
             status = { thirst = 130000 }, anim = 'drinking_hand', prop = 'coffee',
             usetime = 3500, disable = { move = false, car = false, combat = true },
@@ -279,6 +302,7 @@ return {
     ['coffee_cpcno'] = {
         label = 'Cappuccino', weight = 100, stack = true, close = true,
         description = "This might wake you up a smidgey smidge bit.",
+        allowArmed = false,
         client = {
             status = { thirst = 130000 }, anim = 'drinking_hand', prop = 'coffee',
             usetime = 3500, disable = { move = false, car = false, combat = true },
@@ -288,6 +312,7 @@ return {
     ['coffee_amrcno'] = {
         label = 'Americano', weight = 100, stack = true, close = true,
         description = "American coffee, with an O.",
+        allowArmed = false,
         client = {
             status = { thirst = 130000 }, anim = 'drinking_hand', prop = 'coffee',
             usetime = 3500, disable = { move = false, car = false, combat = true },
@@ -305,6 +330,7 @@ return {
         label = 'Bottle of Rancho Beer', weight = 250,
         stack = true, close = true,
         description = "Good old import beer from Mexico.",
+        allowArmed = false,
         client = {
             status = { drunk = 110000 },
             anim = 'drinking_hand', prop = 'rancho_beer',
@@ -323,6 +349,7 @@ return {
         label = 'Bottle of Dusche Beer', weight = 250,
         stack = true, close = true,
         description = "Good old import beer from Germany.",
+        allowArmed = false,
         client = {
             status = { drunk = 110000 },
             anim = 'drinking_hand', prop = 'dusche_beer',
@@ -341,6 +368,7 @@ return {
         label = 'Bottle of Stronzo Beer', weight = 250,
         stack = true, close = true,
         description = "Good old import beer from Italy.",
+        allowArmed = false,
         client = {
             status = { drunk = 110000 },
             anim = 'drinking_hand', prop = 'stronzo_beer',
@@ -359,6 +387,7 @@ return {
         label = 'Bottle of Patriot Beer', weight = 250,
         stack = true, close = true,
         description = "Good old import beer from the U.S.A.",
+        allowArmed = false,
         client = {
             status = { drunk = 110000 },
             anim = 'drinking_hand', prop = 'patriot_beer',
@@ -377,6 +406,7 @@ return {
         label = 'Bottle of Bourgeoix Cognac', weight = 450,
         stack = true, close = true,
         description = "Like whiskey, but more ouch.",
+        allowArmed = false,
         client = {
             status = { drunk = 350000 },
             anim = 'drinking_hand', prop = 'bourgeoix_bottle',
@@ -388,6 +418,7 @@ return {
         label = 'Bottle of Cariaque Bourbon', weight = 450,
         stack = true, close = true,
         description = "Ooh you a fancy bitch, huh?",
+        allowArmed = false,
         client = {
             status = { drunk = 370000 },
             anim = 'drinking_hand', prop = 'cariaque_bottle',
@@ -399,6 +430,7 @@ return {
         label = 'Bottle of Bleuter\'d Champagne', weight = 450,
         stack = true, close = true,
         description = "For those fancy events.",
+        allowArmed = false,
         client = {
             status = { drunk = 480000 },
             anim = 'drinking_hand', prop = 'bleuterd_bottle',
@@ -410,6 +442,7 @@ return {
         label = 'Bottle of Ragga Rum', weight = 450,
         stack = true, close = true,
         description = "A pirates drink for me.",
+        allowArmed = false,
         client = {
             status = { drunk = 370000 },
             anim = 'drinking_hand', prop = 'ragga_bottle',
@@ -421,6 +454,7 @@ return {
         label = 'Bottle of Tequilya Tequila', weight = 450,
         stack = true, close = true,
         description = "For extra kick, add snake venom.",
+        allowArmed = false,
         client = {
             status = { drunk = 370000 },
             anim = 'drinking_hand', prop = 'tequilya_bottle',
@@ -432,6 +466,7 @@ return {
         label = 'Bottle of Nogo Vodka', weight = 450,
         stack = true, close = true,
         description = "Chilled like the mountains of Siberia.",
+        allowArmed = false,
         client = {
             status = { drunk = 370000 },
             anim = 'drinking_hand', prop = 'nogo_bottle',
@@ -443,6 +478,7 @@ return {
         label = 'Bottle of Mount Whiskey', weight = 450,
         stack = true, close = true,
         description = "The cowboy's choice for getting plastered.",
+        allowArmed = false,
         client = {
             status = { drunk = 370000 },
             anim = 'drinking_hand', prop = 'mount_bottle',
@@ -454,6 +490,7 @@ return {
         label = 'Bottle of Richard\'s Whiskey', weight = 450,
         stack = true, close = true,
         description = "For the refined taste buds you so clearly have.",
+        allowArmed = false,
         client = {
             status = { drunk = 370000 },
             anim = 'drinking_hand', prop = 'richards_bottle',
@@ -465,6 +502,7 @@ return {
         label = 'Glass of Bourgeoix Cognac', weight = 150,
         stack = true, close = true,
         description = "Like whiskey, but more ouch.",
+        allowArmed = false,
         client = {
             status = { drunk = 350000 },
             anim = 'drinking_hand', prop = 'liqour_glass',
@@ -476,6 +514,7 @@ return {
         label = 'Glass of Bourgeoix Cognac', weight = 150,
         stack = true, close = true,
         description = "Like whiskey, but more ouch.",
+        allowArmed = false,
         client = {
             status = { drunk = 350000 },
             anim = 'drinking_hand', prop = 'liqour_glass',
@@ -487,6 +526,7 @@ return {
         label = 'Glass of Bourgeoix Cognac', weight = 150,
         stack = true, close = true,
         description = "Like whiskey, but more ouch.",
+        allowArmed = false,
         client = {
             status = { drunk = 350000 },
             anim = 'drinking_hand', prop = 'liqour_glass',
@@ -498,6 +538,7 @@ return {
         label = 'Glass of Ragga Rum', weight = 150,
         stack = true, close = true,
         description = "Like whiskey, but more ouch.",
+        allowArmed = false,
         client = {
             status = { drunk = 350000 },
             anim = 'drinking_hand', prop = 'liqour_glass',
@@ -509,6 +550,7 @@ return {
         label = 'Glass of Bourgeoix Cognac', weight = 150,
         stack = true, close = true,
         description = "Like whiskey, but more ouch.",
+        allowArmed = false,
         client = {
             status = { drunk = 350000 },
             anim = 'drinking_hand', prop = 'liqour_glass',
@@ -520,6 +562,7 @@ return {
         label = 'Glass of Bourgeoix Cognac', weight = 150,
         stack = true, close = true,
         description = "Like whiskey, but more ouch.",
+        allowArmed = false,
         client = {
             status = { drunk = 350000 },
             anim = 'drinking_hand', prop = 'liqour_glass',
@@ -531,6 +574,7 @@ return {
         label = 'Glass of Bourgeoix Cognac', weight = 150,
         stack = true, close = true,
         description = "Like whiskey, but more ouch.",
+        allowArmed = false,
         client = {
             status = { drunk = 350000 },
             anim = 'drinking_hand', prop = 'liqour_glass',
@@ -542,6 +586,7 @@ return {
         label = 'Glass of Bourgeoix Cognac', weight = 150,
         stack = true, close = true,
         description = "Like whiskey, but more ouch.",
+        allowArmed = false,
         client = {
             status = { drunk = 350000 },
             anim = 'drinking_hand', prop = 'liqour_glass',
@@ -553,6 +598,7 @@ return {
         label = 'Glass of Bourgeoix Cognac', weight = 150,
         stack = true, close = true,
         description = "Like whiskey, but more ouch.",
+        allowArmed = false,
         client = {
             status = { drunk = 350000 },
             anim = 'drinking_hand', prop = 'liqour_shot',
@@ -564,6 +610,7 @@ return {
         label = 'Glass of Bourgeoix Cognac', weight = 150,
         stack = true, close = true,
         description = "Like whiskey, but more ouch.",
+        allowArmed = false,
         client = {
             status = { drunk = 350000 },
             anim = 'drinking_hand', prop = 'liqour_shot',
@@ -575,6 +622,7 @@ return {
         label = 'Glass of Bourgeoix Cognac', weight = 150,
         stack = true, close = true,
         description = "Like whiskey, but more ouch.",
+        allowArmed = false,
         client = {
             status = { drunk = 350000 },
             anim = 'drinking_hand', prop = 'liqour_shot',
@@ -586,6 +634,7 @@ return {
         label = 'Glass of Bourgeoix Cognac', weight = 150,
         stack = true, close = true,
         description = "Like whiskey, but more ouch.",
+        allowArmed = false,
         client = {
             status = { drunk = 350000 },
             anim = 'drinking_hand', prop = 'liqour_shot',
@@ -597,6 +646,7 @@ return {
         label = 'Glass of Bourgeoix Cognac', weight = 150,
         stack = true, close = true,
         description = "Like whiskey, but more ouch.",
+        allowArmed = false,
         client = {
             status = { drunk = 350000 },
             anim = 'drinking_hand', prop = 'liqour_shot',
@@ -608,6 +658,7 @@ return {
         label = 'Glass of Bourgeoix Cognac', weight = 150,
         stack = true, close = true,
         description = "Like whiskey, but more ouch.",
+        allowArmed = false,
         client = {
             status = { drunk = 350000 },
             anim = 'drinking_hand', prop = 'liqour_shot',
@@ -619,6 +670,7 @@ return {
         label = 'Glass of Bourgeoix Cognac', weight = 150,
         stack = true, close = true,
         description = "Like whiskey, but more ouch.",
+        allowArmed = false,
         client = {
             status = { drunk = 350000 },
             anim = 'drinking_hand', prop = 'liqour_shot',
@@ -630,6 +682,7 @@ return {
         label = 'Glass of Bourgeoix Cognac', weight = 150,
         stack = true, close = true,
         description = "Like whiskey, but more ouch.",
+        allowArmed = false,
         client = {
             status = { drunk = 350000 },
             anim = 'drinking_hand', prop = 'liqour_shot',
@@ -701,6 +754,7 @@ return {
     ['shield_riot'] = {
         label = 'Police Riot Shield', weight = 4000, stack = false,
         description = "I would be surprised if you got hurt wearing this.",
+        allowArmed = false,
     },
 
     -- diving
@@ -718,26 +772,31 @@ return {
     ['enginekit'] = {
         label = 'Engine Repair Kit', weight = 7500, stack = true,
         description = "I see what's wrong with it. Ain't got no gas in it.",
+        allowArmed = false,
     },
 
     ['cleankit'] = {
         label = 'Vehicle Cleaning Kit', weight = 7500, stack = true,
         description = "Driving with a flat tire? That's a paddlin.",
+        allowArmed = false,
     },
 
     ['spraykit'] = {
         label = 'Spray Kit', weight = 2000, stack = true,
         description = "Paints over your car with this color.",
+        allowArmed = false,
     },
 
     ['tirekit'] = {
         label = 'Tire Repair Kit', weight = 2000, stack = true,
         description = "Yes, you DO need all your tires to drive.",
+        allowArmed = false,
     },
 
     ['inspectionkit'] = {
         label = 'Vehicle Insp. Tool', weight = 2000, stack = true,
         description = "A mechanic's most handy tool.",
+        allowArmed = false,
     },
 
     -- fireworks
@@ -771,6 +830,7 @@ return {
         label = 'Explosive Bag', weight = 5500, stack = false,
         consume = 1,
         description = "Pro tip: Rust is not a vitamin. Also, I need to see a doctor.",
+        allowArmed = false,
     },
 
     -- beach
@@ -783,16 +843,19 @@ return {
     ['tent'] = {
         label = 'Camping Tent', weight = 5600, stack = true,
         description = "Good for holding things and looking nature-y.",
+        allowArmed = false,
     },
 
     ['foldchair'] = {
         label = 'Foldable Chair', weight = 2300, stack = true,
         description = "Plant a chair and an ass in that chair.",
+        allowArmed = false,
     },
 
     ['grilltable'] = {
         label = 'Cooking Kit', weight = 6800, stack = true,
         description = "Sustain yourself in the woods as you survive.",
+        allowArmed = false,
     },
 
 
@@ -855,12 +918,52 @@ return {
 
     ----------------------------------------------------------------
     ----------------------------------------------------------------
-    --[[    Items - Mining    ]]--
+    --[[    Items - Jeweling    ]]--
 
-    ['crystal_uncut'] = {
-        label = 'Uncut Crystal', weight = 100, stack = true,
-        description = "Good job, you found... that shit.",
+    ['ruby_uncut'] = {
+        label = 'Uncut Ruby', weight = 100, stack = true,
+        description = "Kinda pretty, but you should cut this.",
     },
+
+    ['sapphire_uncut'] = {
+        label = 'Uncut Sapphire', weight = 100, stack = true,
+        description = "Kinda pretty, but you should cut this.",
+    },
+
+    ['emerald_uncut'] = {
+        label = 'Uncut Emerald', weight = 100, stack = true,
+        description = "Kinda pretty, but you should cut this.",
+    },
+
+    ['diamond_uncut'] = {
+        label = 'Uncut Diamond', weight = 100, stack = true,
+        description = "Kinda pretty, but you should cut this.",
+    },
+
+    ['ruby_cut'] = {
+        label = 'Cut Ruby', weight = 100, stack = true,
+        description = "This one is favorable with ground types.",
+    },
+
+    ['sapphire_cut'] = {
+        label = 'Cut Sapphire', weight = 100, stack = true,
+        description = "This one is favorable with water types.",
+    },
+
+    ['emerald_cut'] = {
+        label = 'Cut Emerald', weight = 100, stack = true,
+        description = "This one is favorable with dragon types.",
+    },
+
+    ['diamond_cut'] = {
+        label = 'Cut Diamond', weight = 100, stack = true,
+        description = "Ethically sourced, I think.",
+    },
+
+
+    ----------------------------------------------------------------
+    ----------------------------------------------------------------
+    --[[    Items - Mining    ]]--
 
     ['ore_iron'] = {
         label = 'Iron Ore', weight = 230, stack = true,
