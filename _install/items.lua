@@ -970,13 +970,13 @@ return {
         description = "Man, I know a place online where this is also worth nothing.",
     },
 
-    ['ore_copper'] = {
-        label = 'Copper Ore', weight = 230, stack = true,
-        description = "No, we don't make copper weapons, you nerd.",
+    ['ore_gold'] = {
+        label = 'Gold Ore', weight = 230, stack = true,
+        description = "Somehow less durable than Iron.",
     },
 
-    ['ore_tin'] = {
-        label = 'Tin Ore', weight = 230, stack = true,
-        description = "I almost forgot these were a thing. How neat.",
-    },
+    ['ore_coal'] = {
+        label = 'Coal', weight = 230, stack = true,
+        description = "Was that from Santa? That's rough buddy.",
+    }
 }
