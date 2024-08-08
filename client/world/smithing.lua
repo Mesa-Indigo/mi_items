@@ -83,6 +83,6 @@ end, false)
 -- to set
 AddEventHandler('onResourceStart', function()
     if World.Smithing then
-        loadzone(smelter.coords, smelter.size, smelter.rotation)
+        --loadzone(smelter.coords, smelter.size, smelter.rotation)
     end
 end)
