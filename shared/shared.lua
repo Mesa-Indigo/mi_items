@@ -16,7 +16,7 @@ Shared.Groups = {
 }
 
 -- set global options as active
-Shared.Set = { player = true, ped = true, vehicle = true }
+Shared.Set = { player = false, ped = false, vehicle = true }
 
 -- these are wip, so don't set them to true
 -- unless you're from the future and have the resources
