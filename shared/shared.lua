@@ -1,5 +1,5 @@
 -- global variables
-Shared, Data = {}, {}
+Shared, Data, Utils = {}, {}, {}
 Target, Inventory = exports.ox_target, exports.ox_inventory
 
 -- debug option
@@ -13,17 +13,6 @@ Shared.Groups = {
     ems = { '' },
     fir = { '' },
     crm = { '' },
-}
-
--- set global options as active
-Shared.Set = { player = false, ped = false, vehicle = true }
-
--- these are wip, so don't set them to true
--- unless you're from the future and have the resources
-Shared.using = {
-    mi_housing = false,
-    mi_hotels = false,
-    mi_medical = false
 }
 
 

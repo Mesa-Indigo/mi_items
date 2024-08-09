@@ -3,13 +3,12 @@
 -- https://www.w3schools.com/colors/colors_picker.asp For HTML Colors
 -- https://fontawesome.com/search?m=free&o=r For Choosing Icons
 -- https://overextended.dev/ox_lib/Modules/Interface/Client/notify Notification Documentation
--- Colors: bgnd - 20% / main 70% / desc 90%
 
 ----    Notification Options    ----
 NotInfo = {
     position = 'top',
     duration = 5000,
-    showduration = false,
+    showduration = true,
 }
 
 Inf = {
