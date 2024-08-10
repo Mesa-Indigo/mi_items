@@ -50,7 +50,7 @@ end
 -- fades screen to ease player transport
 Teleport = function(ped, x, y, z, w)
     DoScreenFadeOut(100)
-    Citizen.Wait(1000)
+    Wait(1000)
     SetEntityCoords(ped, x, y, z, false, false, false, false)
     SetEntityHeading(ped, w)
     DoScreenFadeIn(750)

@@ -19,3 +19,7 @@
 - fireworks that go brrr in the night
 - vehicle care kits *(wip)*
 - camping kits
+
+
+## Discord
+(https://discord.gg/EtgZsVBtYB)
