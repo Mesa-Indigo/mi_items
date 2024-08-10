@@ -20,7 +20,23 @@ World.Recycle = {
 -- farming system
 World.Mining = {
     active = true,
-    duration = 5000
+    duration = 6000,
+    rewards = {
+        items = {
+            ores = {
+                'ore_iron',
+                'ore_gold',
+                'ore_coal'
+            },
+            gems = {
+                'ruby_uncut',
+                'sapphire_uncut',
+                'emerald_uncut',
+                'diamond_uncut'
+            }
+        },
+        amount = { min = 2, max = 5}
+    }
 
 }
 

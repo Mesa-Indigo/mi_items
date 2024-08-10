@@ -70,7 +70,10 @@ lib.callback.register('miit:toolbox:add', function(source)
     Inventory:AddItem(source, 'small_toolkit', 1)
 end)
 
-lib.callback.register('miit:s:spawn:obj', function(source, model, coord)
-    CreateObject(model, coord.x, coord.y, coord.z, true, false, false)
+lib.callback.register('miit:item:add', function(source, item, count)
+    Inventory:AddItem(source, item, count)
 end)
 
+lib.callback.register('miit:item:rem', function(source, item, count)
+    Inventory:RemoveItem(source, item, count)
+end)

@@ -21,3 +21,4 @@ GetEntity = function(entity)
         return EntId
     end
 end
+

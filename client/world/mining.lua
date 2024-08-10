@@ -10,13 +10,6 @@ local rocks = {
     'cs_x_rublrge', 'cs_x_rublrgd', 'cs_x_rublrga'
 }
 
-local vehicle = { model = 'bobcatxl', loc = vec4(2687.501, 2768.189, 37.585, 152.78) }
-
-local foreman = {
-    ped = nil, spawn = false, model = 's_m_y_construct_01',
-    loc = vec4(2696.114, 2768.574, 37.877, 94.968),
-}
-
 local loc = {
     [1] = vec3(2951.349, 2732.997, 44.641), [2] = vec3(2974.869, 2781.313, 38.825),
     [3] = vec3(2945.104, 2772.254, 39.206), [4] = vec3(2927.815, 2799.937, 41.329),
@@ -79,7 +72,7 @@ local load_rocks = function()
         lib.requestModel(model, 500)
         -- create object
         local object = CreateObject(model, rock.x, rock.y, rock.z, true, true, false)
-        local head = 55
+        local head = math.random(45,235)
         SetObject(object, head)
         -- set entity
         Target:addLocalEntity(object, options)
