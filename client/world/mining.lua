@@ -75,11 +75,11 @@ local options = {
 local testload = function(spawn)
     for _, obs in pairs(spawn) do
         local model = rocks[math.random(1, #rocks)]
-        local ob = CreateObject(model, obs.x, obs.y, obs.z, true, false, false)
-        PlaceObjectOnGroundProperly(ob)
-        FreezeEntityPosition(ob, true)
-        SetEntityCollision(ob, true, true)
-        exports.ox_target:addLocalEntity(ob, options)
+        local ob
+        Utils.CreateObject(ob, model, obs)
+        Utils.SetObject(ob, math.random(45,235))
+        local netId = Utils.GetNetId(ob)
+        Target:addEntity(netId, options)
     end
 end
 

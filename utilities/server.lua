@@ -10,3 +10,21 @@ Utils.GetNetId = function(entity)
         return NetId
     end
 end
+
+-- create object function
+-- mission entity sets to belong to this script
+Utils.CreateObject = function(obj, model, coord)
+    obj = CreateObject(model, coord.x,
+    coord.y, coord.z, true, false, false)
+    SetEntityAsMissionEntity(obj, true, false)
+end
+
+-- delete object function
+-- returns error if object not found
+Utils.DeleteObject = function(obj)
+    if not obj then
+        print(locale('debug')..'No presented object to delete')
+    return end
+    DeleteEntity(obj)
+    obj = nil
+end
