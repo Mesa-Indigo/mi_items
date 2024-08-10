@@ -17,7 +17,7 @@ local foreman = {
     loc = vec4(2696.114, 2768.574, 37.877, 94.968),
 }
 
-local spawns = {
+local loc = {
     [1] = vec3(2951.349, 2732.997, 44.641), [2] = vec3(2974.869, 2781.313, 38.825),
     [3] = vec3(2945.104, 2772.254, 39.206), [4] = vec3(2927.815, 2799.937, 41.329),
     [5] = vec3(3025.864, 2764.761, 55.415), [6] = vec3(2952.192, 2699.734, 54.939),
@@ -72,38 +72,25 @@ local options = {
     },
 }
 
-local testload = function(spawn)
-    for _, obs in pairs(spawn) do
+local load_rocks = function()
+    for _, rock in pairs(loc) do
+        -- load model
         local model = rocks[math.random(1, #rocks)]
         lib.requestModel(model, 500)
-        local ob = lib.callback('miut:server:spawnbox:small', false, function() end, obs, model)
-        local head = math.random(45,235)
-        
-        local netId = Utils.GetNetId(ob)
-        Utils.SetObject(netId, head)
-        Target:addEntity(netId, options)
-        SetModelAsNoLongerNeeded(model)
+        -- create object
+        local object = CreateObject(model, rock.x, rock.y, rock.z, true, true, false)
+        local head = 55
+        SetObject(object, head)
+        -- set entity
+        Target:addLocalEntity(object, options)
+        -- log for debug
+        if Debug then lib.print.info('Loaded:Mine:Obj: '..object) end
     end
 end
 
---testload(spawns)
-
-RegisterNetEvent('testsspawn')
-AddEventHandler('testsspawn', function()
-    for _, obs in pairs(spawns) do
-        -- request model
-        local model = rocks[math.random(1, #rocks)]
-        lib.requestModel(model, 500)
-        -- spawn object per item in list
-        local ob = lib.callback('miit:s:spawn:obj', false,
-        function() end, obs, model)
-        local netId = Utils.GetNetId(ob)
-
-        local head = math.random(45,235)
-        Utils.SetObject(ob, head)
-        Target:addEntity(ob, options)
-        SetModelAsNoLongerNeeded(model)
-    end
+RegisterNetEvent('miit:c:mining:load:rocks')
+AddEventHandler('miit:c:mining:load:rocks', function()
+    load_rocks()
 end)
 
-TriggerEvent('testsspawn')
+TriggerServerEvent('miit:s:mining:load:rocks')

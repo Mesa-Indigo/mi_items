@@ -12,6 +12,6 @@ AddEventHandler('miit:stash:tent:add', function()
     exports.ox_inventory:RegisterStash(stash.id, stash.label, stash.slots, stash.weight, stash.owner)
 end)
 
-RegisterServerEvent('miit:c:mining:load:rocks', function()
-    TriggerEvent('miit:s:mining:load:rocks')
+RegisterServerEvent('miit:s:mining:load:rocks', function()
+    TriggerClientEvent('miit:c:mining:load:rocks', -1)
 end)
