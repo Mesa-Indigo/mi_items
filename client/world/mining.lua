@@ -66,7 +66,7 @@ local options = {
         end,
         onSelect = function(data)
             local object = data.entity
-            if Debug then print('Rock: '..object) end
+            if Debug then lib.print.info('Rock: '..object) end
             minerock(object)
         end
     },

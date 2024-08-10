@@ -9,7 +9,7 @@ equip.mask, equip.tank, equip.used = 0, 0, false
 
 local systemon = function(player)
     while not HasModelLoaded(maskmodel) do
-        Citizen.Wait(10)
+        Wait(10)
     end
     if not equip.used then
         if lib.progressBar({

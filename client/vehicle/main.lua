@@ -62,9 +62,9 @@ local menu_repairs = function(vehicle)
         }
       })
       lib.showContext('veh_menu_repairs')
-      print(Utils.GetPercentage(detail.engineHealth, 10))
-      print(Utils.GetPercentage(detail.oilLevel, 1000))
-      print(Utils.GetPercentage(detail.fuelLevel, 100))
+      lib.print.info(Utils.GetPercentage(detail.engineHealth, 10))
+      lib.print.info(Utils.GetPercentage(detail.oilLevel, 1000))
+      lib.print.info(Utils.GetPercentage(detail.fuelLevel, 100))
 end
 
 RegisterCommand('vhr', function()
