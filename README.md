@@ -22,4 +22,4 @@
 
 
 ## Discord
-![Link](https://discord.gg/EtgZsVBtYB)
+(https://discord.gg/EtgZsVBtYB)
