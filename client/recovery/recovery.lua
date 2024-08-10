@@ -1,7 +1,6 @@
 exports('bandage_basic', function()
-    local player = cache.ped
-    local maxHealth = GetEntityMaxHealth(player)
-	local health = GetEntityHealth(player)
+    local maxHealth = GetEntityMaxHealth(cache.ped)
+	local health = GetEntityHealth(cache.ped)
     if lib.progressBar({
         duration = 5000,
         label = 'Applying Bandage',
@@ -23,6 +22,6 @@ exports('bandage_basic', function()
             rot = vec3(0.0, 0.0, 0.0)
         },
     }) then
-        SetEntityHealth(player, math.min(maxHealth, math.floor(health + maxHealth / 16)))
+        SetEntityHealth(cache.ped, math.min(maxHealth, math.floor(health + maxHealth / 16)))
     end
 end)

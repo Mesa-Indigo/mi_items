@@ -50,9 +50,8 @@ local tableoptions_start = {
 }
 
 RegisterCommand('cooler', function()
-    local player = cache.ped
-    local offset = GetOffsetFromEntityInWorldCoords(player, 0.0, 1.2, 0.0)
-    local heading = GetEntityHeading(player)
+    local offset = GetOffsetFromEntityInWorldCoords(cache.ped, 0.0, 1.2, 0.0)
+    local heading = GetEntityHeading(cache.ped)
 
     if lib.progressBar({
         duration = 5000,

@@ -19,7 +19,7 @@ AddEventHandler('mi_items:drug:effects', function(effect, time, trip)
         ped.spawn = true SetEntityInvincible(ped.obj, true)
         TaskGoToEntity(ped.obj, cache.ped, 10000, 3.5, 1.25, 1, 1)
     end
-    Citizen.Wait(time*1000)
+    Wait(time*1000)
 
     -- delete ped
     if trip then
@@ -30,7 +30,7 @@ AddEventHandler('mi_items:drug:effects', function(effect, time, trip)
 
     -- winding down
     ShakeGameplayCam("DRUNK_SHAKE", 0.4)
-    Citizen.Wait(time*1000/2)
+    Wait(time*1000/2)
 
     -- effect stops
     AnimpostfxStopAll() ShakeGameplayCam("DRUNK_SHAKE", 0.0)

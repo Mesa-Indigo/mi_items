@@ -10,10 +10,9 @@ local fixes = {
 
 -- start repairs
 local vehiclerepairs = function(vehicle)
-    local player = cache.ped
     SetVehicleDoorOpen(vehicle, 4, false, false)
     Wait(500)
-    TaskPlayAnim(player,'random@train_tracks','idle_e',4.0,-4.0, -1, 1, 1, true, true, true)
+    TaskPlayAnim(cache.ped,'random@train_tracks','idle_e',4.0,-4.0, -1, 1, 1, true, true, true)
     Wait(5000)
     local tx1 = { id = 'fix_unneeded', title = "Inspecting For Damages",
         description = 'It seems there is an issue with the engine' }
@@ -22,7 +21,7 @@ local vehiclerepairs = function(vehicle)
     if not success then
         local tx2 = { id = 'fix_notfound', title = "No Damages Found",
         description = 'You couldn\'t find any issues with the engine' }
-        DoNotif(tx2, Err) ClearPedTasks(player)
+        DoNotif(tx2, Err) ClearPedTasks(cache.ped)
     else
         Wait(500)
         if lib.progressBar({
@@ -44,14 +43,14 @@ local vehiclerepairs = function(vehicle)
             local response = fixes[math.random(1, #fixes)]
             local tx2 = { id = 'fix_complete', title = "Engine Repaired",
             description = response }
-            DoNotif(tx2, Cor) ClearPedTasks(player)
+            DoNotif(tx2, Cor) ClearPedTasks(cache.ped)
             SetVehicleEngineHealth(vehicle, 1000)
             SetVehicleOilLevel(vehicle, 1000)
             SetVehicleDoorShut(vehicle, 4, false)
         else
             local tx3 = { id = 'fix_stopped', title = "Engine Repair Stopped",
             description = 'You stopped working on the engine' }
-            DoNotif(tx3, War) ClearPedTasks(player)
+            DoNotif(tx3, War) ClearPedTasks(cache.ped)
         end
     end
 end

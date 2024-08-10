@@ -5,10 +5,10 @@ local rioton = function()
     local shieldmod = lib.requestModel('prop_ballistic_shield')
     local dict = lib.requestAnimDict('anim@random@shop_clothes@watches', 200)
     while not HasModelLoaded(shieldmod) do
-        Citizen.Wait(10)
+        Wait(10)
     end
     while not HasAnimDictLoaded(dict) do
-        Citizen.Wait(100)
+        Wait(100)
     end
     if not holding.used then
         if lib.progressBar({
