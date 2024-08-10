@@ -1,4 +1,3 @@
-local Inventory = exports.ox_inventory
 
 -- bottle breaking 
 lib.callback.register('miit:button:breakbottle:rancho', function(source)
@@ -69,4 +68,8 @@ end)
 
 lib.callback.register('miit:toolbox:add', function(source)
     Inventory:AddItem(source, 'small_toolkit', 1)
+end)
+
+lib.callback.register('miit:s:spawn:obj', function(source, model, coord)
+    local obj = CreateObject(model, coord.x, coord.y, coord.z, true, false, false)
 end)

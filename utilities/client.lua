@@ -38,6 +38,7 @@ Utils.SetObject = function(obj, head)
     PlaceObjectOnGroundProperly(obj)
     FreezeEntityPosition(obj, true)
     SetEntityCollision(obj, true, true)
+    SetEntityAsMissionEntity(obj, true, false)
 end
 
 -- teleport function

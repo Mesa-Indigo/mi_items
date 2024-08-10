@@ -75,11 +75,15 @@ local options = {
 local testload = function(spawn)
     for _, obs in pairs(spawn) do
         local model = rocks[math.random(1, #rocks)]
-        local ob
-        Utils.CreateObject(ob, model, obs)
-        Utils.SetObject(ob, math.random(45,235))
+        lib.requestModel(model, 500)
+        local ob = lib.callback('miit:s:spawn:obj', false,
+        function() end, model, obs)
+        local head = math.random(45,235)
+        
         local netId = Utils.GetNetId(ob)
+        Utils.SetObject(netId, head)
         Target:addEntity(netId, options)
+        SetModelAsNoLongerNeeded(model)
     end
 end
 
