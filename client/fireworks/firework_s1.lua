@@ -8,7 +8,7 @@ AddEventHandler('miut:client:firework:small', function(crds, obj)
 
     -- check to see if loaded
     while not HasAnimDictLoaded(anim) do
-        Citizen.Wait(10)
+       Wait(10)
     end
 
     -- load particle effect
@@ -21,22 +21,21 @@ AddEventHandler('miut:client:firework:small', function(crds, obj)
 
     local times = 5
 
-    Citizen.Wait(10000)
+    Wait(10000)
     repeat
         UseParticleFxAssetNextCall(ptfx)
         local part1 = StartNetworkedParticleFxNonLoopedAtCoord(
             efc, crds.x, crds.y, crds.z, 0.0, 0.0, 0.0, 1.0, false, false, false)
         times = times - 1
-        Citizen.Wait(2000)
+        Wait(2000)
     until(times == 0)
         DeleteObject(obj)
 end)
 
 exports('firework_s1', function()
     -- variables
-    local player = cache.ped
-    local crds = GetOffsetFromEntityInWorldCoords(player, 0.0, 0.6, 0.0)
-    local head = GetEntityHeading(player)
+    local crds = GetOffsetFromEntityInWorldCoords(cache.ped, 0.0, 0.6, 0.0)
+    local head = GetEntityHeading(cache.ped)
     -- spawn box
     local box = lib.callback('miut:server:spawn:obj', false, function()
     end, crds, 'ind_prop_firework_02')
@@ -56,11 +55,11 @@ exports('firework_s1', function()
     })
     then
         -- if success, set off reaction
-        if Debug then print('firework obj planted') end
+        if Debug then lib.print.info('firework obj planted') end
         TriggerEvent('miut:client:firework:small', crds, box)
     else
         -- if cancel, delete box w/ no reaction
-        if Debug then print('firework obj not planted') end
+        if Debug then lib.print.error('firework obj not planted') end
         DeleteObject(box)
     end
 end)

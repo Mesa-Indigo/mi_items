@@ -5,7 +5,7 @@ Target, Inventory = exports.ox_target, exports.ox_inventory
 -- debug option
 Debug = true
 
--- locale option | 'en', 'es', 'fr'
+-- locale option | 'en', 'nl'
 Locale = 'en'
 
 Shared.Groups = {

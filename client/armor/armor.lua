@@ -2,7 +2,7 @@
 
 -- armor level 1
 exports('armor1', function()
-    local player, armor = cache.ped, Item.Armor.light
+    local armor = Item.Armor.light
     if true then
         if lib.progressBar({
             duration = armor.duration*1000,
@@ -14,9 +14,9 @@ exports('armor1', function()
                 blendIn = 4.0, blendOut = 4.0, playbackRate = 0
             },
         }) then
-            print('armored')
-            SetPlayerMaxArmour(player, 100)
-			SetPedArmour(player, armor.amount)
+            lib.print.info('armored')
+            SetPlayerMaxArmour(cache.ped, 100)
+			SetPedArmour(cache.ped, armor.amount)
         else
             return
         end
@@ -25,7 +25,7 @@ end)
 
 -- armor level 2
 exports('armor2', function()
-    local player, armor = cache.ped, Item.Armor.medium
+    local armor = Item.Armor.medium
     if true then
         if lib.progressBar({
             duration = armor.duration*1000,
@@ -37,8 +37,8 @@ exports('armor2', function()
                 blendIn = 4.0, blendOut = 4.0, playbackRate = 0
             },
         }) then
-            SetPlayerMaxArmour(player, 100)
-			SetPedArmour(player, armor.amount)
+            SetPlayerMaxArmour(cache.ped, 100)
+			SetPedArmour(cache.ped, armor.amount)
         else
             return
         end
@@ -47,7 +47,7 @@ end)
 
 -- armor level 3
 exports('armor3', function()
-    local player, armor = cache.ped, Item.Armor.heavy
+    local armor = Item.Armor.heavy
     if true then
         if lib.progressBar({
             duration = armor.duration*1000,
@@ -59,8 +59,8 @@ exports('armor3', function()
                 blendIn = 4.0, blendOut = 4.0, playbackRate = 0
             },
         }) then
-            SetPlayerMaxArmour(player, 100)
-			SetPedArmour(player, armor.amount)
+            SetPlayerMaxArmour(cache.ped, 100)
+			SetPedArmour(cache.ped, armor.amount)
         else
             return
         end

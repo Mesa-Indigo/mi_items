@@ -28,13 +28,13 @@ local systemon = function(player)
         }) then
 
             mask = CreateObject(maskmodel, 1.0, 1.0, 1.0, true, true, false)
-            local bone2 = GetPedBoneIndex(player, 12844)
-            AttachEntityToEntity(mask, player, bone2, -0.07, 0.13, 0.0,
+            local bone2 = GetPedBoneIndex(cache.ped, 12844)
+            AttachEntityToEntity(mask, cache.ped, bone2, -0.07, 0.13, 0.0,
             180.0, 90.0, 0.0, true, true, false, false, 2, true)
             equip.mask = mask
 
-            SetEnableScuba(player, true)
-            SetPedMaxTimeUnderwater(player, Item.Diving.snorkle.duration)
+            SetEnableScuba(cache.ped, true)
+            SetPedMaxTimeUnderwater(cache.ped, Item.Diving.snorkle.duration)
             equip.used = true
         end
     end
@@ -61,8 +61,8 @@ local systemoff = function(player)
             DeleteEntity(equip.mask)
             equip.mask = 0
 
-            SetEnableScuba(player, false)
-            SetPedMaxTimeUnderwater(player, 20.00)
+            SetEnableScuba(cache.ped, false)
+            SetPedMaxTimeUnderwater(cache.ped, 20.00)
             equip.used = false
         end
     end

@@ -55,9 +55,8 @@ local tableops = {
 }
 
 local loadObjects = function()
-    local player = cache.ped
-    local offset_table = GetOffsetFromEntityInWorldCoords(player, 0.0, 1.2, 0.0)
-    local heading = GetEntityHeading(player)
+    local offset_table = GetOffsetFromEntityInWorldCoords(cache.ped, 0.0, 1.2, 0.0)
+    local heading = GetEntityHeading(cache.ped)
 
     cooking.table.obj = CreateObject(cooking.table.model, offset_table.x,
     offset_table.y, offset_table.z, true, false, false)
