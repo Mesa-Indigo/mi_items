@@ -21,4 +21,5 @@
 - camping kits
 
 
-![Discord](https://discord.gg/EtgZsVBtYB)
+## Discord
+![Link](https://discord.gg/EtgZsVBtYB)
