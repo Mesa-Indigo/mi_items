@@ -55,10 +55,18 @@ lib.callback.register('miit:stash:cooler:add', function(source)
 end)
 
 -- mining reward items
-lib.callback.register('miit:give:mine:reward', function(source)
-    local list = { 'crystal_uncut', 'ore_iron', 'ore_gold', 'ore_coal' }
-    local reward = list[math.random(1, #list)]
-    local amount = math.random(1,3)
+lib.callback.register('miit:give:mining:reward', function(source)
+    local chance = World.Mining.reward
+    local reward = World.Mining.ores[math.random(1, #World.Mining.ores)]
+    local amount = math.random(chance.min, chance.max)
+    Inventory:AddItem(source, reward, amount)
+end)
+
+-- mining bonus items
+lib.callback.register('miit:give:mining:bonus', function(source)
+    local chance = World.Mining.reward
+    local reward = World.Mining.gems[math.random(1, #World.Mining.gems)]
+    local amount = math.random(chance.min, chance.max)
     Inventory:AddItem(source, reward, amount)
 end)
 

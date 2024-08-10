@@ -6,6 +6,10 @@ local responses = {
     '*insert_mincraft_reference_dont_forget*',
 }
 
+local response = responses[math.random(1, #responses)]
+local tx1 = { id = 'mined', title = "Rock Mined", description = response }
+local tx2 = { id = 'not_mined', title = "Mining Stopped", description = 'You stopped mining the rock' }
+
 local rocks = {
     'cs_x_rublrge', 'cs_x_rublrgd', 'cs_x_rublrga'
 }
@@ -19,7 +23,7 @@ local loc = {
     [11] = vec3(3022.759, 3033.391, 90.390), [12] = vec3(2966.989, 2802.650, 41.408)
 }
 
-local minerock = function(data)
+local minerock = function()
     if lib.progressBar({
         duration = World.Mining.duration, label = 'Mining Rock',
         useWhileDead = false, canCancel = true,
@@ -37,15 +41,16 @@ local minerock = function(data)
             rot = vec3(80.0, -20.0, 175.0)
         },
     }) then
-        local response = responses[math.random(1, #responses)]
-        lib.callback.await('miit:give:mine:reward')
-        local tx2 = { id = 'mined', title = "Rock Mined",
-        description = response } DoNotif(tx2, Cor)
-
+        DoNotif(tx1, Cor)
+        local chance = math.random(1, 99)
+        if chance <= 70 then
+            lib.callback.await('miit:give:mining:reward')
+        else
+            lib.callback.await('miit:give:mining:reward')
+            lib.callback.await('miit:give:mining:bonus')
+        end
     else
-        local tx3 = { id = 'not_mined', title = "Mining Stopped",
-        description = 'You stopped mining the rock' }
-        DoNotif(tx3, War)
+        DoNotif(tx2, War)
     end
 end
 
@@ -60,7 +65,7 @@ local options = {
         onSelect = function(data)
             local object = data.entity
             if Debug then lib.print.info('Rock: '..object) end
-            minerock(object)
+            minerock()
         end
     },
 }
