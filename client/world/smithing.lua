@@ -76,7 +76,7 @@ RegisterCommand('smelt', function()
             clip = 'loop', blendOut = 3.0,
         },
     }) then
-        print('smelt: '..amount)
+        lib.print.info('smelt: '..amount)
     end
 end, false)
 
