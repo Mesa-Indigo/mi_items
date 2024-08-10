@@ -76,8 +76,7 @@ local testload = function(spawn)
     for _, obs in pairs(spawn) do
         local model = rocks[math.random(1, #rocks)]
         lib.requestModel(model, 500)
-        local ob = lib.callback('miit:s:spawn:obj', false,
-        function() end, model, obs)
+        local ob = lib.callback('miut:server:spawnbox:small', false, function() end, obs, model)
         local head = math.random(45,235)
         
         local netId = Utils.GetNetId(ob)
@@ -87,4 +86,24 @@ local testload = function(spawn)
     end
 end
 
-testload(spawns)
+--testload(spawns)
+
+RegisterNetEvent('testsspawn')
+AddEventHandler('testsspawn', function()
+    for _, obs in pairs(spawns) do
+        -- request model
+        local model = rocks[math.random(1, #rocks)]
+        lib.requestModel(model, 500)
+        -- spawn object per item in list
+        local ob = lib.callback('miit:s:spawn:obj', false,
+        function() end, obs, model)
+        local netId = Utils.GetNetId(ob)
+
+        local head = math.random(45,235)
+        Utils.SetObject(ob, head)
+        Target:addEntity(ob, options)
+        SetModelAsNoLongerNeeded(model)
+    end
+end)
+
+TriggerEvent('testsspawn')

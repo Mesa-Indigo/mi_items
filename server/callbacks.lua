@@ -73,3 +73,11 @@ end)
 lib.callback.register('miit:s:spawn:obj', function(source, model, coord)
     local obj = CreateObject(model, coord.x, coord.y, coord.z, true, false, false)
 end)
+
+
+lib.callback.register('miit:s:spawn:obj', function(source, crds, model)
+    local obj = nil
+    obj = CreateObject(model, crds.x, crds.y, crds.z-1, true, false, false)
+    local NetId = NetworkGetEntityFromNetworkId(obj)
+    return NetId
+end)
