@@ -57,24 +57,23 @@ end)
 -- mining reward items
 lib.callback.register('miit:give:mining:reward', function(source)
     local chance = World.Mining.reward
-    local reward = World.Mining.ores[math.random(1, #World.Mining.ores)]
+    local reward = World.Mining.items[math.random(1, #World.Mining.items)]
     local amount = math.random(chance.min, chance.max)
     Inventory:AddItem(source, reward, amount)
 end)
-
--- mining bonus items
-lib.callback.register('miit:give:mining:bonus', function(source)
-    local chance = World.Mining.reward
-    local reward = World.Mining.gems[math.random(1, #World.Mining.gems)]
-    local amount = math.random(chance.min, chance.max)
-    Inventory:AddItem(source, reward, amount)
-end)
-
 
 -- chemicals reward items
 lib.callback.register('miit:give:chemicals:reward', function(source)
     local chance = World.Chemicals.reward
     local reward = World.Chemicals.items[math.random(1, #World.Chemicals.items)]
+    local amount = math.random(chance.min, chance.max)
+    Inventory:AddItem(source, reward, amount)
+end)
+
+-- cannabis reward items
+lib.callback.register('miit:give:cannabis:reward', function(source)
+    local chance = World.Cannabis.reward
+    local reward = World.Cannabis.items[math.random(1, #World.Cannabis.items)]
     local amount = math.random(chance.min, chance.max)
     Inventory:AddItem(source, reward, amount)
 end)

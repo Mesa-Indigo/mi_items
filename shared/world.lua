@@ -19,21 +19,46 @@ World.Recycle = {
 
 -- farming system
 World.Mining = {
-    -- default location is the quartz quarry
+    -- the default location is the zancudo swamps
+    -- it covers the area between the pier and bridge
+
+    -- sets system as active / inactive
     active = true,
-    duration = 6000,
-    reward = { min = 2, max = 5},
-    ores = {
+
+    -- sets model of chem object
+    model = 'csx_rvrbldr_smle_',
+
+    -- sets time before another object spawns
+    timer = 500,
+
+    -- sets amount to spawn in that location
+    count = 20,
+
+    -- sets location to spawn
+    spawn = vec3(2952.256, 2791.134, 41.148),
+
+    -- sets the x / y range to spawn
+    space = {
+        x = { min = -15, max = 15},
+        y = { min = -20, max = 20}
+    },
+
+    -- sets time to open container
+    duration = 3000,
+
+    -- items to give upon skillcheck success
+    items = {
         'ore_iron',
         'ore_gold',
-        'ore_coal'
-    },
-    gems = {
+        'ore_coal',
         'ruby_uncut',
         'sapphire_uncut',
         'emerald_uncut',
         'diamond_uncut'
-    }
+    },
+
+    -- sets the min / max for items to give
+    reward = { min = 1, max = 6},
 }
 
 World.Chemicals = {
@@ -69,6 +94,50 @@ World.Chemicals = {
         'chem_sulfur',
         'chem_potnitr',
         'chem_saltp'
+    },
+
+    -- sets the min / max for items to give
+    reward = { min = 2, max = 5},
+
+}
+
+World.Cannabis = {
+    -- the default location is the zancudo swamps
+    -- it covers the area between the pier and bridge
+
+    -- sets system as active / inactive
+    active = true,
+
+    -- sets model of chem object
+    model = 'prop_weed_01',
+
+    -- sets time before another object spawns
+    timer = 500,
+
+    -- sets amount to spawn in that location
+    count = 30,
+
+    -- sets location to spawn
+    spawn = {
+        loc1 = vec3(-2075.693, 1457.510, 276.110),
+        loc2 = vec3(-2299.119, 2605.806, 0.119),
+        loc3 = vec3(-2299.119, 2605.806, 0.119),
+    },
+
+    -- sets the x / y range to spawn
+    space = {
+        x = { min = -50, max = 50},
+        y = { min = -50, max = 50}
+    },
+
+    -- sets time to open container
+    duration = 3000,
+
+    -- items to give upon skillcheck success
+    items = {
+        'wd_sativa',
+        'wd_indica',
+        'wd_hybrid'
     },
 
     -- sets the min / max for items to give
