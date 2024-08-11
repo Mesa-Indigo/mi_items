@@ -88,7 +88,7 @@ end
 
 RegisterNetEvent('miit:c:mining:load:rocks')
 AddEventHandler('miit:c:mining:load:rocks', function()
-    load_rocks()
+    --load_rocks()
 end)
 
 TriggerServerEvent('miit:s:mining:load:rocks')

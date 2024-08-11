@@ -19,6 +19,7 @@ World.Recycle = {
 
 -- farming system
 World.Mining = {
+    -- default location is the quartz quarry
     active = true,
     duration = 6000,
     reward = { min = 2, max = 5},
@@ -36,7 +37,27 @@ World.Mining = {
 }
 
 World.Chemicals = {
+    -- the default location is the zancudo swamps
+    -- it covers the area between the pier and bridge
     active = true,
+
+    -- sets model of chem object
+    model = 'xm3_prop_xm3_barrel_01a',
+
+    -- sets time before another object spawns
+    timer = 10000,
+
+    -- sets amount to spawn in that location
+    count = 30,
+
+    -- sets location to spawn
+    spawn = vec3(-2402.717, 2608.572, 1.036),
+
+    -- sets the x / y range to spawn
+    space = {
+        x = { min = -300, max = 300},
+        y = { min = -150, max = 150}
+    }
 
 }
 
