@@ -88,7 +88,9 @@ local spawnchems = function()
         table.insert(barrelList, object)
         barrels = barrels + 1
         -- debug print for console
-        lib.print.info('chem:barrel:created: '..object..' - '..barrels..' | '..ofx..', '..ofy)
+        if Debug then
+            lib.print.info('chem:barrel:created: '..object..' - '..barrels..' | '..ofx..', '..ofy)
+        end
     end
 end
 
