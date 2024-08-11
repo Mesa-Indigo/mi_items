@@ -958,6 +958,67 @@ return {
 
     ----------------------------------------------------------------
     ----------------------------------------------------------------
+    --[[    Items - Drugs    ]]--
+
+    ['wd_sativa'] = {
+        label = 'Sativa Plant', weight = 60, stack = true,
+        description = "Wild cannabis, yet to be processed and vibing in your pocket",
+    },
+
+    ['pc_sativa'] = {
+        label = 'Sativa Buds', weight = 30, stack = true,
+        description = "Ready to be ground up, sold, or forgotten in your dresser.",
+    },
+
+    ['bc_sativa'] = {
+        label = 'Sativa Brick', weight = 700, stack = true,
+        description = "The phrase 'hits like a brick' comes to mind, more out there.",
+    },
+
+    ['wd_indica'] = {
+        label = 'Indica Plant', weight = 6030, stack = true,
+        description = "Wild cannabis, yet to be processed and vibing in your pocket",
+    },
+
+    ['pc_indica'] = {
+        label = 'Indica Buds', weight = 30, stack = true,
+        description = "Ready to be ground up, sold, or forgotten in your dresser.",
+    },
+
+    ['bc_indica'] = {
+        label = 'Indica Brick', weight = 700, stack = true,
+        description = "The phrase 'hits like a brick' comes to mind, more out there.",
+    },
+
+    ['wd_hybrid'] = {
+        label = 'Hybrid Plant', weight = 60, stack = true,
+        description = "Wild cannabis, yet to be processed and vibing in your pocket",
+    },
+
+    ['pc_hybrid'] = {
+        label = 'Hybrid Buds', weight = 30, stack = true,
+        description = "Ready to be ground up, sold, or forgotten in your dresser.",
+    },
+
+    ['bc_hybrid'] = {
+        label = 'Hybrid Brick', weight = 700, stack = true,
+        description = "The phrase 'hits like a brick' comes to mind, more out there.",
+    },
+
+    ['pd_meth'] = {
+        label = 'Powdered Meth', weight = 60, stack = true,
+        description = "Wild cannabis, yet to be processed and vibing in your pocket",
+    },
+
+    ['cr_meth'] = {
+        label = 'Crystal Meth', weight = 90, stack = true,
+        description = "Ready to be ground up, sold, or forgotten in your dresser.",
+    },
+
+
+
+    ----------------------------------------------------------------
+    ----------------------------------------------------------------
     --[[    Items - Chemistry    ]]--
 
     ['chem_sulfur'] = {

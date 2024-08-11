@@ -1,0 +1,5 @@
+Crafting = {}
+
+Crafting.Drug = {
+
+}
