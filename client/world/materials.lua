@@ -74,7 +74,13 @@ local spawnobjects = function(data)
     end
 end
 
-spawnobjects(World.Mining)
+RegisterNetEvent('miit:c:mining:load:rocks')
+AddEventHandler('miit:c:mining:load:rocks', function()
+    spawnobjects(World.Mining)
+end)
+
+TriggerServerEvent('miit:s:mining:load:rocks')
+
 
 --[[
 Citizen.CreateThread(function()

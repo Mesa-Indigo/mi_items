@@ -34,9 +34,8 @@ local chemops = {
     },
 }
 
-local spawnobjects = function(data)
+local spawnobjects = function(data, spawn)
     -- spawn location
-    local spawn = data.spawn.loc1
     -- while loop to ensure limit met
     while cannabis < data.count do
         Wait(data.timer)
@@ -65,7 +64,7 @@ local spawnobjects = function(data)
     end
 end
 
-spawnobjects(World.Cannabis)
+spawnobjects(World.Cannabis, World.Cannabis.spawn.loc1)
 
 
 --[[
