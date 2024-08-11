@@ -799,6 +799,12 @@ return {
         allowArmed = false,
     },
 
+    ['small_toolkit'] = {
+        label = 'Small Vehicle Toolkit', weight = 7500, stack = true,
+        description = "I see what's wrong with it. Ain't got no gas in it.",
+        allowArmed = false,
+    },
+
     -- fireworks
     ['firework_s1'] = {
         label = 'Small Firework: Rex', weight = 2300, stack = true,

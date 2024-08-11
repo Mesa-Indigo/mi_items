@@ -1,36 +1,66 @@
+local barrels, model = 0, World.Chemicals.model
 local barrelList = {}
-local barrels = 0
 
-local model = 'xm3_prop_xm3_barrel_01a'
+local progress = function(object)
+    if lib.progressBar({
+        duration = World.Chemicals.duration, label = 'Examining Container',
+        useWhileDead = false, canCancel = true,
+        disable = {
+            car = true, move = true
+        },
+        anim = { scenario = 'CODE_HUMAN_MEDIC_TEND_TO_DEAD' },
+    }) then
+        Wait(250)
+        DeleteObject(object)
+        barrels = barrels - 1
+        lib.callback.await('miit:give:chemicals:reward')
+    end
+end
+
+local attemp = function(object)
+    TaskPlayAnim(cache.ped,'mini@repair','fixing_a_player',4.0,-4.0, 3500, 1, 1, true, true, true)
+    local success = lib.skillCheck(
+        {'easy', 'easy', 'medium' },
+        {'q', 'w', 'e', 'r'}
+    )
+    if success then
+        ClearPedTasksImmediately(cache.ped)
+        progress(object)
+    if not success then
+        ClearPedTasksImmediately(cache.ped)
+        end
+    end
+end
 
 local chemops = {
     {
         name = 'give_chems',
-        label = 'Collect Chemicals',
-        icon = 'fa-solid fa-flask-vial',
+        label = 'Attempt to Open',
+        icon = 'fa-solid fa-hand-fist',
         canInteract = function(_, distance)
             return distance < 1.2
         end,
         onSelect = function(data)
             local object = data.entity
-            lib.print.info('collect: '..object)
-            
+            attemp(object)
+            if Debug then
+            lib.print.info('collected: '..object) end
         end
     },
     {
-        name = 'dest_chems',
-        label = 'Destroy Chemicals',
-        icon = 'fa-solid fa-trash',
+        name = 'open_chems',
+        label = 'Pry Open',
+        icon = 'fa-solid fa-hammer',
         canInteract = function(_, distance)
             return distance < 1.2
         end,
         onSelect = function(data)
             local object = data.entity
-            lib.print.info('collect: '..object)
-            DeleteObject(object)
-            barrels = barrels - 1
+            -- function to obtain chemical
+            if Debug then
+            lib.print.info('collected: '..object) end
         end
-    },
+    }
 }
 
 local spawnchems = function()

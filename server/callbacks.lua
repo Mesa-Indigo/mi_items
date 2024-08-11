@@ -70,6 +70,16 @@ lib.callback.register('miit:give:mining:bonus', function(source)
     Inventory:AddItem(source, reward, amount)
 end)
 
+
+-- chemicals reward items
+lib.callback.register('miit:give:chemicals:reward', function(source)
+    local chance = World.Chemicals.reward
+    local reward = World.Chemicals.items[math.random(1, #World.Chemicals.items)]
+    local amount = math.random(chance.min, chance.max)
+    Inventory:AddItem(source, reward, amount)
+end)
+
+
 lib.callback.register('miit:toolbox:remove', function(source)
     Inventory:RemoveItem(source, 'small_toolkit', 1)
 end)
