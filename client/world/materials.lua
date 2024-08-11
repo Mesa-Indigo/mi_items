@@ -69,24 +69,23 @@ local spawnobjects = function(data)
         rocks = rocks + 1
         -- debug print for console
         if Debug then
-            lib.print.info('chem:barrel:created: '..object..' - '..rocks..' | '..ofx..', '..ofy)
+            lib.print.info('material:rock:created: '..object..' - '..rocks..' | '..ofx..', '..ofy)
         end
     end
 end
 
-RegisterNetEvent('miit:c:mining:load:rocks')
-AddEventHandler('miit:c:mining:load:rocks', function()
+RegisterNetEvent('miit:c:load:mining')
+AddEventHandler('miit:c:load:mining', function()
     spawnobjects(World.Mining)
 end)
 
-TriggerServerEvent('miit:s:mining:load:rocks')
+TriggerServerEvent('miit:s:load:mining')
 
 
---[[
+
 Citizen.CreateThread(function()
-    while barrels <= 10 do
-        spawnchems()
+    while rocks < World.Mining.count do
+        TriggerServerEvent('miit:s:load:mining')
         Citizen.Wait(1000)
     end
 end)
-]]

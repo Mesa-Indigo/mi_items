@@ -94,7 +94,12 @@ local spawnchems = function()
     end
 end
 
-spawnchems()
+RegisterNetEvent('miit:c:load:chemicals')
+AddEventHandler('miit:c:load:chemicals', function()
+    spawnchems()
+end)
+
+TriggerServerEvent('miit:s:load:chemicals')
 
 --[[
 Citizen.CreateThread(function()

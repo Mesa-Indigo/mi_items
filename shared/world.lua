@@ -75,7 +75,7 @@ World.Chemicals = {
     timer = 500,
 
     -- sets amount to spawn in that location
-    count = 50,
+    count = 30,
 
     -- sets location to spawn
     spawn = vec3(-2299.119, 2605.806, 0.119),
@@ -83,7 +83,7 @@ World.Chemicals = {
     -- sets the x / y range to spawn
     space = {
         x = { min = -300, max = 300},
-        y = { min = -150, max = 150}
+        y = { min = -200, max = 200}
     },
 
     -- sets time to open container

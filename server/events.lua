@@ -1,20 +1,17 @@
--- register tent stash
-RegisterNetEvent('miit:stash:tent:add')
-AddEventHandler('miit:stash:tent:add', function()
-    local stash = {
-        id = 'tentstash',
-        label = 'Camping Tent',
-        slots = Data.Camping.tent.items,
-        weight = 50000,
-        owner = false
-    }
-
-    exports.ox_inventory:RegisterStash(stash.id, stash.label, stash.slots, stash.weight, stash.owner)
+-- inital events on start
+RegisterNetEvent('miit:s:load:mining')
+AddEventHandler('miit:s:load:mining', function()
+    TriggerClientEvent('miit:c:load:mining', -1)
 end)
 
-RegisterNetEvent('miit:s:mining:load:rocks')
-AddEventHandler('miit:s:mining:load:rocks', function()
-    TriggerClientEvent('miit:c:mining:load:rocks', -1)
+RegisterNetEvent('miit:s:load:chemicals')
+AddEventHandler('miit:s:load:chemicals', function()
+    TriggerClientEvent('miit:c:load:chemicals', -1)
+end)
+
+RegisterNetEvent('miit:s:load:cannabis')
+AddEventHandler('miit:s:load:cannabis', function()
+    TriggerClientEvent('miit:c:load:cannabis', -1)
 end)
 
 RegisterServerEvent('miit:s:camp:tempstash', function(stash, label, slot, weight, list)

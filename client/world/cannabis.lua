@@ -59,12 +59,19 @@ local spawnobjects = function(data, spawn)
         cannabis = cannabis + 1
         -- debug print for console
         if Debug then
-            lib.print.info('chem:barrel:created: '..object..' - '..cannabis..' | '..ofx..', '..ofy)
+            lib.print.info('drug:weed:created: '..object..' - '..cannabis..' | '..ofx..', '..ofy)
         end
     end
 end
 
-spawnobjects(World.Cannabis, World.Cannabis.spawn.loc1)
+RegisterNetEvent('miit:c:load:cannabis')
+AddEventHandler('miit:c:load:cannabis', function()
+    spawnobjects(World.Cannabis, World.Cannabis.spawn.loc1)
+end)
+
+TriggerServerEvent('miit:s:load:cannabis')
+
+
 
 
 --[[
