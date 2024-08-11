@@ -695,6 +695,55 @@ return {
 
     ----------------------------------------------------------------
     ----------------------------------------------------------------
+    --[[    Containers    ]]--
+
+    ['cnt_bcpk1'] = {
+        label = 'Backpack', weight = 6000,
+        stack = false, close = false, consume = 0,
+        description = "Use to hold thing, like a bag that holds things.",
+    },
+
+    ['cnt_bcpk2'] = {
+        label = 'Backpack', weight = 6000,
+        stack = false, close = false, consume = 0,
+        description = "Use to hold thing, like a bag that holds things.",
+    },
+
+    ['cnt_bcpk3'] = {
+        label = 'Backpack', weight = 7500,
+        stack = false, close = false, consume = 0,
+        description = "Use to hold thing, like a bag that holds things.",
+    },
+
+    ['cnt_bcpk4'] = {
+        label = 'Backpack', weight = 7500,
+        stack = false, close = false, consume = 0,
+        description = "Use to hold thing, like a bag that holds things.",
+    },
+
+    ['cnt_bfcs1'] = {
+        label = 'Briefcase', weight = 3500,
+        stack = false, close = false, consume = 0,
+        description = "I\'m a business man with a business plan.",
+    },
+
+    ['cnt_bfcs2'] = {
+        label = 'Briefcase', weight = 3500,
+        stack = false, close = false, consume = 0,
+        description = "I\'m a business man with a business plan.",
+    },
+
+    ['cnt_bfcs3'] = {
+        label = 'Briefcase', weight = 3500,
+        stack = false, close = false, consume = 0,
+        description = "I\'m a business man with a business plan.",
+    },
+
+
+
+
+    ----------------------------------------------------------------
+    ----------------------------------------------------------------
     --[[    Items    ]]--
 
     ['money'] = {
@@ -905,19 +954,45 @@ return {
         description = "What do you call a wire with a break in it?",
     },
 
+
+
+    ----------------------------------------------------------------
+    ----------------------------------------------------------------
+    --[[    Items - Chemistry    ]]--
+
     ['chem_sulfur'] = {
-        label = 'Sulfur', weight = 150, stack = true,
-        description = "Pro tip: Rust is not a vitamin. Also, I need to see a doctor.",
+        label = 'Sulfur', weight = 140, stack = true,
+        description = "A chemical used in chemistry or stored at Humane Labs.",
     },
 
     ['chem_potnitr'] = {
         label = 'Potassium Nitrate', weight = 130, stack = true,
-        description = "Pro tip: Rust is not a vitamin. Also, I need to see a doctor.",
+        description = "A chemical used in chemistry or stored at Humane Labs.",
     },
 
-    ['chem_saltp'] = {
-        label = 'Saltpeter', weight = 120, stack = true,
-        description = "Pro tip: Rust is not a vitamin. Also, I need to see a doctor.",
+    ['chem_psdnrn'] = {
+        label = 'Psuedoephedrine', weight = 120, stack = true,
+        description = "A chemical used in chemistry or stored at Humane Labs.",
+    },
+
+    ['chem_iodine'] = {
+        label = 'Iodine', weight = 120, stack = true,
+        description = "A chemical used in chemistry or stored at Humane Labs.",
+    },
+
+    ['chem_phsrus'] = {
+        label = 'Phosphorus', weight = 120, stack = true,
+        description = "A chemical used in chemistry or stored at Humane Labs.",
+    },
+
+    ['chem_amonia'] = {
+        label = 'Ammonia', weight = 120, stack = true,
+        description = "A chemical used in chemistry or stored at Humane Labs.",
+    },
+
+    ['chem_actone'] = {
+        label = 'Acetone', weight = 120, stack = true,
+        description = "A chemical used in chemistry or stored at Humane Labs.",
     },
 
 

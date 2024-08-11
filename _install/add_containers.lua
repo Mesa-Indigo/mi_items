@@ -1,13 +1,36 @@
 ---@diagnostic disable: undefined-global
 
-setContainerProperties('paperbag', {
-	slots = 5,
-	maxWeight = 1000,
-	blacklist = { 'testburger' }
+setContainerProperties('cnt_bcpk1', {
+	slots = 10,
+	maxWeight = 6000
 })
 
-setContainerProperties('pizzabox', {
+setContainerProperties('cnt_bcpk2', {
+	slots = 10,
+	maxWeight = 6000
+})
+
+setContainerProperties('cnt_bcpk3', {
+	slots = 10,
+	maxWeight = 7500
+})
+
+setContainerProperties('cnt_bcpk4', {
+	slots = 10,
+	maxWeight = 7500
+})
+
+setContainerProperties('cnt_bfcs1', {
 	slots = 5,
-	maxWeight = 1000,
-	whitelist = { 'pizza' }
+	maxWeight = 3500,
+})
+
+setContainerProperties('cnt_bfcs2', {
+	slots = 5,
+	maxWeight = 3500,
+})
+
+setContainerProperties('cnt_bfcs3', {
+	slots = 5,
+	maxWeight = 3500,
 })
