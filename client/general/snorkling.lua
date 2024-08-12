@@ -91,27 +91,3 @@ exports('rebreather', function()
         end
     else return end
 end)
-
-RegisterCommand('rebreather', function()
-    if Item.Diving.restrict then
-        if not equip.used then
-            if IsPedSwimming(cache.ped) or IsPedSwimmingUnderWater(cache.ped) then
-                -- notify
-            else
-                systemon(cache.ped)
-            end
-        elseif equip.used then
-            if IsPedSwimming(cache.ped) or IsPedSwimmingUnderWater(cache.ped) then
-                -- notify
-            else
-                systemoff(cache.ped)
-            end
-        else return end
-    elseif not Item.Diving.restrict then
-        if not equip.used then
-            systemon(cache.ped)
-        elseif equip.used then
-            systemoff(cache.ped)
-        end
-    else return end
-end, false)

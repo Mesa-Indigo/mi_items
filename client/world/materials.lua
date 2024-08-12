@@ -57,11 +57,11 @@ local spawnobjects = function(data)
         lib.requestModel(model, 1000)
         local object = CreateObject(model, ofx.x, ofy.y, spawn.z, true, true, false)
         local head = math.random(45,235)
+        -- set rotation
+        local tilt = math.random(5, 75)
+        SetEntityRotation(object, 0.0, tilt, 0.0, 2, true)
         -- set object physics
         SetObject(object, head)
-        -- set rotation
-        --local tilt = math.random(5, 75)
-        --SetEntityRotation(object, 0.0, tilt, 0.0, 2, true)
         -- set target
         Target:addLocalEntity(object, chemops)
         -- insert object into list
@@ -78,9 +78,6 @@ RegisterNetEvent('miit:c:load:mining')
 AddEventHandler('miit:c:load:mining', function()
     spawnobjects(World.Mining)
 end)
-
-TriggerServerEvent('miit:s:load:mining')
-
 
 
 Citizen.CreateThread(function()

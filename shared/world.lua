@@ -142,7 +142,41 @@ World.Cannabis = {
 }
 
 World.Diving = {
+    -- the default location east of the palomino highlands
+    -- it covers the area in the gulf
+
+    -- sets system as active / inactive
     active = true,
 
+    -- sets model of chem object
+    model = 'xm_prop_x17_chest_closed',
+
+    -- sets time before another object spawns
+    timer = 500,
+
+    -- sets amount to spawn in that location
+    count = 10,
+
+    -- sets location to spawn
+    spawn = vec3(2657.511, -1430.931, -23.677),
+
+    -- sets the x / y range to spawn
+    space = {
+        x = { min = -50, max = 50},
+        y = { min = -50, max = 50}
+    },
+
+    -- sets time to open container
+    duration = 3000,
+
+    -- items to give upon skillcheck success
+    items = {
+        'wd_sativa',
+        'wd_indica',
+        'wd_hybrid'
+    },
+
+    -- sets the min / max for items to give
+    reward = { min = 2, max = 5},
 
 }

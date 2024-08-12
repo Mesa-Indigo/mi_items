@@ -17,6 +17,7 @@
     "itm_note_create": "Write your note: ",
     "itm_note_header": "Subject",
     "itm_note_content": "Content",
+    "itm_note_putaway": "Put Note Away",
 
     "init_veh_repair": "Repair Engine",
     "init_veh_clean": "Clean Vehicle",

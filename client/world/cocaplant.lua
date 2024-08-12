@@ -1,6 +1,8 @@
 local cannabis, model = 0, World.Cannabis.model
 local cannabisList = {}
 
+-- h4_prop_bush_cocaplant_01
+
 local progress = function(object)
     if lib.progressBar({
         duration = World.Chemicals.duration, label = 'Collecting Cannabis',

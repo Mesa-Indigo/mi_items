@@ -4,24 +4,23 @@
 -- create note item
 RegisterCommand('note', function()
     -- variable for header / content
-    local write = { hd = '', ct = '' }
+    local hd, ct
 
     local input = lib.inputDialog(locale('itm_note_create'),
     {locale('itm_note_header'), locale('itm_note_content')})
- 
+
     if not input then return end
-    print(json.encode(input), input[1], input[2])
-    write.hd, write.ct = input{1}, input{2}
+    hd, ct = input[1], input[2]
+    print(json.encode(input), hd, ct)
 
     local note = lib.alertDialog({
-        header = write.hd,
-        content = write.ct,
+        header = hd,
+        content = ct,
         centered = true, size = 'lg',
         overflow = true, labels = {
-            confirm = 'Put Note Away'
+            confirm = locale('itm_note_putaway')
         }
     })
 
     print(note)
 end, false)
-

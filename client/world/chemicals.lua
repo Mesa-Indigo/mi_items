@@ -63,25 +63,25 @@ local chemops = {
     }
 }
 
-local spawnchems = function()
+local spawnobjects = function(data)
     -- spawn location
-    local spawn = World.Chemicals.spawn
+    local spawn = data.spawn
     -- while loop to ensure limit met
-    while barrels < World.Chemicals.count do
-        Wait(World.Chemicals.timer)
-        local ofcd = World.Chemicals.space
+    while barrels < data.count do
+        Wait(data.timer)
+        local ofcd = data.space
         -- offset math for locations
         local ofx = spawn+math.random(ofcd.x.min, ofcd.x.max)
         local ofy = spawn+math.random(-50, 50)
         -- creation of objects
-        lib.requestModel(model, 500)
+        lib.requestModel(model, 1000)
         local object = CreateObject(model, ofx.x, ofy.y, spawn.z, true, true, false)
         local head = math.random(45,235)
         -- set object physics
         SetObject(object, head)
         -- set rotation
-        local tilt = math.random(5, 75)
-        SetEntityRotation(object, 0.0, tilt, 0.0, 2, true)
+        --local tilt = math.random(5, 75)
+        --SetEntityRotation(object, 0.0, tilt, 0.0, 2, true)
         -- set target
         Target:addLocalEntity(object, chemops)
         -- insert object into list
@@ -89,23 +89,20 @@ local spawnchems = function()
         barrels = barrels + 1
         -- debug print for console
         if Debug then
-            lib.print.info('chem:barrel:created: '..object..' - '..barrels..' | '..ofx..', '..ofy)
+            lib.print.info('chemical:barrel:created: '..object..' - '..barrels..' | '..ofx..', '..ofy)
         end
     end
 end
 
 RegisterNetEvent('miit:c:load:chemicals')
 AddEventHandler('miit:c:load:chemicals', function()
-    spawnchems()
+    spawnobjects(World.Chemicals)
 end)
 
-TriggerServerEvent('miit:s:load:chemicals')
 
---[[
 Citizen.CreateThread(function()
-    while barrels <= 10 do
-        spawnchems()
+    while barrels < World.Chemicals.count do
+        TriggerServerEvent('miit:s:load:chemicals')
         Citizen.Wait(1000)
     end
 end)
-]]
