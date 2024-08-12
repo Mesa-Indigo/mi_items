@@ -1,11 +1,10 @@
-local cannabis, model = 0, World.Cannabis.model
-local cannabisList = {}
+local coca, model = 0, World.Cocaplant.model
+local cocaList = {}
 
--- h4_prop_bush_cocaplant_01
 
 local progress = function(object)
     if lib.progressBar({
-        duration = World.Chemicals.duration, label = 'Collecting Cannabis',
+        duration = World.Chemicals.duration, label = 'Collecting Coca Leaves',
         useWhileDead = false, canCancel = true,
         disable = {
             car = true, move = true
@@ -14,15 +13,15 @@ local progress = function(object)
     }) then
         Wait(250)
         DeleteObject(object)
-        cannabis = cannabis - 1
-        lib.callback.await('miit:give:cannabis:reward')
+        coca = coca - 1
+        lib.callback.await('miit:give:cocaleaf:reward')
     end
 end
 
 local weedops = {
     {
         name = 'give_weed',
-        label = 'Collect Cannabis',
+        label = 'Collect Coca Leaves',
         icon = 'fa-solid fa-hand-fist',
         canInteract = function(_, distance)
             return distance < 1.5
@@ -39,7 +38,7 @@ local weedops = {
 local spawnobjects = function(data)
     -- spawn location
     -- while loop to ensure limit met
-    while cannabis < data.count do
+    while coca < data.count do
         Wait(data.timer)
         local ofcd = data.space
         -- offset math for locations
@@ -54,23 +53,23 @@ local spawnobjects = function(data)
         -- set target
         Target:addLocalEntity(object, weedops)
         -- insert object into list
-        table.insert(cannabisList, object)
-        cannabis = cannabis + 1
+        table.insert(cocaList, object)
+        coca = coca + 1
         -- debug print for console
         if Debug then
-            lib.print.info('drug:weed:created: '..object..' - '..cannabis..' | '..ofx..', '..ofy)
+            lib.print.info('cocaplant:coca:created: '..coca..' - '..coca..' | '..ofx..', '..ofy)
         end
     end
 end
 
-RegisterNetEvent('miit:c:load:cannabis')
-AddEventHandler('miit:c:load:cannabis', function()
-    spawnobjects(World.Cannabis)
+RegisterNetEvent('miit:c:load:cocaplant')
+AddEventHandler('miit:c:load:cocaplant', function()
+    spawnobjects(World.Cocaplant)
 end)
 
 Citizen.CreateThread(function()
-    while cannabis < World.Chemicals.count do
-        TriggerServerEvent('miit:s:load:cannabis')
+    while coca < World.Cocaplant.count do
+        TriggerServerEvent('miit:s:load:cocaplant')
         Citizen.Wait(1000)
     end
 end)

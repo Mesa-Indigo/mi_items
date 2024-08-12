@@ -33,7 +33,7 @@ local systemon = function(player)
             180.0, 90.0, 0.0, true, true, false, false, 2, true)
             equip.mask = mask
 
-            SetEnableScuba(cache.ped, true)
+            SetEnableScuba(cache.ped, false)
             SetPedMaxTimeUnderwater(cache.ped, Item.Diving.snorkle.duration)
             equip.used = true
         end

@@ -3,7 +3,7 @@ local barrelList = {}
 
 local progress = function(object)
     if lib.progressBar({
-        duration = World.Chemicals.duration, label = 'Examining Container',
+        duration = World.Chemicals.duration, label = 'Opening Container',
         useWhileDead = false, canCancel = true,
         disable = {
             car = true, move = true
@@ -17,46 +17,17 @@ local progress = function(object)
     end
 end
 
-local attemp = function(object)
-    TaskPlayAnim(cache.ped,'mini@repair','fixing_a_player',4.0,-4.0, 3500, 1, 1, true, true, true)
-    local success = lib.skillCheck(
-        {'easy', 'easy', 'medium' },
-        {'q', 'w', 'e', 'r'}
-    )
-    if success then
-        ClearPedTasksImmediately(cache.ped)
-        progress(object)
-    if not success then
-        ClearPedTasksImmediately(cache.ped)
-        end
-    end
-end
-
 local chemops = {
     {
         name = 'give_chems',
-        label = 'Attempt to Open',
+        label = 'Collect Chemicals',
         icon = 'fa-solid fa-hand-fist',
         canInteract = function(_, distance)
             return distance < 1.2
         end,
         onSelect = function(data)
             local object = data.entity
-            attemp(object)
-            if Debug then
-            lib.print.info('collected: '..object) end
-        end
-    },
-    {
-        name = 'open_chems',
-        label = 'Pry Open',
-        icon = 'fa-solid fa-hammer',
-        canInteract = function(_, distance)
-            return distance < 1.2
-        end,
-        onSelect = function(data)
-            local object = data.entity
-            -- function to obtain chemical
+            progress(object)
             if Debug then
             lib.print.info('collected: '..object) end
         end

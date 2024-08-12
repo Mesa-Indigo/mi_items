@@ -75,7 +75,7 @@ World.Chemicals = {
     timer = 500,
 
     -- sets amount to spawn in that location
-    count = 30,
+    count = 20,
 
     -- sets location to spawn
     spawn = vec3(-2385.763, 2756.206, 1.983),
@@ -93,7 +93,11 @@ World.Chemicals = {
     items = {
         'chem_sulfur',
         'chem_potnitr',
-        'chem_saltp'
+        'chem_psdnrn',
+        'chem_iodine',
+        'chem_phsrus',
+        'chem_amonia',
+        'chem_actone'
     },
 
     -- sets the min / max for items to give
@@ -141,6 +145,44 @@ World.Cannabis = {
 
 }
 
+World.Cocaplant = {
+    -- the default location is near the madrazo ranch
+    -- it covers the area between the pier and bridge
+
+    -- sets system as active / inactive
+    active = true,
+
+    -- sets model of chem object
+    model = 'h4_prop_bush_cocaplant_01',
+
+    -- sets time before another object spawns
+    timer = 500,
+
+    -- sets amount to spawn in that location
+    count = 20,
+
+    -- sets location to spawn
+    spawn = vec3(3708.034, 3107.141, 12.339),
+
+    -- sets the x / y range to spawn
+    space = {
+        x = { min = -5, max = 5},
+        y = { min = -5, max = 5}
+    },
+
+    -- sets time to open container
+    duration = 3000,
+
+    -- items to give upon skillcheck success
+    items = {
+        'wd_cocaine'
+    },
+
+    -- sets the min / max for items to give
+    reward = { min = 2, max = 7},
+
+}
+
 World.Diving = {
     -- the default location east of the palomino highlands
     -- it covers the area in the gulf
@@ -155,15 +197,15 @@ World.Diving = {
     timer = 500,
 
     -- sets amount to spawn in that location
-    count = 10,
+    count = 20,
 
     -- sets location to spawn
-    spawn = vec3(2657.511, -1430.931, -23.677),
+    spawn = vec3(2683.073, -1342.563, -22.422),
 
     -- sets the x / y range to spawn
     space = {
-        x = { min = -50, max = 50},
-        y = { min = -50, max = 50}
+        x = { min = -10, max = 10},
+        y = { min = -20, max = 20}
     },
 
     -- sets time to open container
@@ -171,9 +213,11 @@ World.Diving = {
 
     -- items to give upon skillcheck success
     items = {
-        'wd_sativa',
-        'wd_indica',
-        'wd_hybrid'
+        'trsr_doubloons',
+        'trsr_sharkstooth',
+        'trsr_sanddollar',
+        'trsr_seaglass',
+        'trsr_pearls'
     },
 
     -- sets the min / max for items to give

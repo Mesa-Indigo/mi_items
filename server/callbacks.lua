@@ -62,6 +62,14 @@ lib.callback.register('miit:give:mining:reward', function(source)
     Inventory:AddItem(source, reward, amount)
 end)
 
+-- diving reward items
+lib.callback.register('miit:give:diving:reward', function(source)
+    local chance = World.Diving.reward
+    local reward = World.Diving.items[math.random(1, #World.Diving.items)]
+    local amount = math.random(chance.min, chance.max)
+    Inventory:AddItem(source, reward, amount)
+end)
+
 -- chemicals reward items
 lib.callback.register('miit:give:chemicals:reward', function(source)
     local chance = World.Chemicals.reward
@@ -74,6 +82,14 @@ end)
 lib.callback.register('miit:give:cannabis:reward', function(source)
     local chance = World.Cannabis.reward
     local reward = World.Cannabis.items[math.random(1, #World.Cannabis.items)]
+    local amount = math.random(chance.min, chance.max)
+    Inventory:AddItem(source, reward, amount)
+end)
+
+-- cocaleaf reward items
+lib.callback.register('miit:give:cocaleaf:reward', function(source)
+    local chance = World.Cocaplant.reward
+    local reward = World.Cocaplant.items[math.random(1, #World.Cocaplant.items)]
     local amount = math.random(chance.min, chance.max)
     Inventory:AddItem(source, reward, amount)
 end)
