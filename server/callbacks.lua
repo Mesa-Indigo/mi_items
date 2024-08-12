@@ -94,6 +94,21 @@ lib.callback.register('miit:give:cocaleaf:reward', function(source)
     Inventory:AddItem(source, reward, amount)
 end)
 
+-- create note object
+lib.callback.register('miit:item:add', function(source, header, content)
+    -- hook for item creation
+    local hookId = exports.ox_inventory:registerHook('createItem', function(payload)
+        local gtavcard = tradingcardmeta[payload.metadata.type]
+        if not gtavcard then return end
+        return gtavcard
+    end, {
+        itemFilter = {
+            lstradingcard = true
+        }
+    })
+    -- create item
+end)
+
 
 lib.callback.register('miit:toolbox:remove', function(source)
     Inventory:RemoveItem(source, 'small_toolkit', 1)

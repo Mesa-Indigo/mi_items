@@ -24,6 +24,8 @@ AddEventHandler('miit:s:load:cocaplant', function()
     TriggerClientEvent('miit:c:load:cocaplant', -1)
 end)
 
+-- creation of temporary stash
+RegisterNetEvent('miit:s:camp:tempstash')
 RegisterServerEvent('miit:s:camp:tempstash', function(stash, label, slot, weight, list)
     stash = exports.ox_inventory:CreateTemporaryStash({
         label = label,

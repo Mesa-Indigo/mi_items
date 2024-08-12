@@ -16,7 +16,7 @@ RegisterCommand('note', function()
     local note = lib.alertDialog({
         header = hd,
         content = ct,
-        centered = true, size = 'lg',
+        centered = true, size = 'md',
         overflow = true, labels = {
             confirm = locale('itm_note_putaway')
         }
