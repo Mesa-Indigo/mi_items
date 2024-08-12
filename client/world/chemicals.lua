@@ -75,7 +75,7 @@ local spawnchems = function()
         local ofy = spawn+math.random(-50, 50)
         -- creation of objects
         lib.requestModel(model, 500)
-        local object = CreateObject(model, ofx.x, ofy.y, spawn.z+0.5, true, true, false)
+        local object = CreateObject(model, ofx.x, ofy.y, spawn.z, true, true, false)
         local head = math.random(45,235)
         -- set object physics
         SetObject(object, head)

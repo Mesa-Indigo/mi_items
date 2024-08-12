@@ -17,7 +17,7 @@ local progress = function(object)
     end
 end
 
-local chemops = {
+local weedops = {
     {
         name = 'give_weed',
         label = 'Collect Cannabis',
@@ -34,26 +34,23 @@ local chemops = {
     },
 }
 
-local spawnobjects = function(data, spawn)
+local spawnobjects = function(data)
     -- spawn location
     -- while loop to ensure limit met
     while cannabis < data.count do
         Wait(data.timer)
         local ofcd = data.space
         -- offset math for locations
-        local ofx = spawn+math.random(ofcd.x.min, ofcd.x.max)
-        local ofy = spawn+math.random(-50, 50)
+        local ofx = data.spawn+math.random(ofcd.x.min, ofcd.x.max)
+        local ofy = data.spawn+math.random(-50, 50)
         -- creation of objects
         lib.requestModel(model, 1000)
-        local object = CreateObject(model, ofx.x, ofy.y, spawn.z+0.5, true, true, false)
+        local object = CreateObject(model, ofx.x, ofy.y, data.spawn.z, true, true, false)
         local head = math.random(45,235)
         -- set object physics
         SetObject(object, head)
-        -- set rotation
-        --local tilt = math.random(5, 75)
-        --SetEntityRotation(object, 0.0, tilt, 0.0, 2, true)
         -- set target
-        Target:addLocalEntity(object, chemops)
+        Target:addLocalEntity(object, weedops)
         -- insert object into list
         table.insert(cannabisList, object)
         cannabis = cannabis + 1
@@ -64,9 +61,13 @@ local spawnobjects = function(data, spawn)
     end
 end
 
+local cannabisload = function()
+    spawnobjects(World.Cannabis)
+end
+
 RegisterNetEvent('miit:c:load:cannabis')
 AddEventHandler('miit:c:load:cannabis', function()
-    spawnobjects(World.Cannabis, World.Cannabis.spawn.loc1)
+    cannabisload()
 end)
 
 TriggerServerEvent('miit:s:load:cannabis')

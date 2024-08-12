@@ -78,12 +78,12 @@ World.Chemicals = {
     count = 30,
 
     -- sets location to spawn
-    spawn = vec3(-2299.119, 2605.806, 0.119),
+    spawn = vec3(-2385.763, 2756.206, 1.983),
 
     -- sets the x / y range to spawn
     space = {
         x = { min = -300, max = 300},
-        y = { min = -200, max = 200}
+        y = { min = -100, max = 100}
     },
 
     -- sets time to open container
@@ -102,7 +102,7 @@ World.Chemicals = {
 }
 
 World.Cannabis = {
-    -- the default location is the zancudo swamps
+    -- the default location is near the madrazo ranch
     -- it covers the area between the pier and bridge
 
     -- sets system as active / inactive
@@ -118,11 +118,7 @@ World.Cannabis = {
     count = 30,
 
     -- sets location to spawn
-    spawn = {
-        loc1 = vec3(-2075.693, 1457.510, 276.110),
-        loc2 = vec3(-2299.119, 2605.806, 0.119),
-        loc3 = vec3(-2299.119, 2605.806, 0.119),
-    },
+    spawn = vec3(1404.864, 1401.292, 103.842),
 
     -- sets the x / y range to spawn
     space = {
