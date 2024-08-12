@@ -54,4 +54,24 @@ return {
 			ingredients = { chem_phsrus = 2, chem_iodine = 2, chem_psdnrn = 1, chem_actone = 1 }
 		}
 	},
+	{
+		items = {
+			name = 'bc_meth', duration = 5000, count = 2,
+			ingredients = { cr_meth = 2 }
+		}
+	},
+
+	-- drug cocaine
+	{
+		items = {
+			name = 'pc_cocaine', duration = 5000, count = 2,
+			ingredients = { wd_cocaine = 2, WEAPON_JERRYCAN = 0.05 }
+		}
+	},
+	{
+		items = {
+			name = 'bc_cocaine', duration = 5000, count = 2,
+			ingredients = { pc_cocaine = 2 }
+		}
+	},
 }

@@ -11,6 +11,12 @@
     "init_plr_soc": "Interactions",
 
     "side_obtn_rock": "Mine Rock",
+    "side_obtn_chem": "Open Container",
+    "side_obtn_weed": "Collect Cannabis",
+
+    "itm_note_create": "Write your note: ",
+    "itm_note_header": "Subject",
+    "itm_note_content": "Content",
 
     "init_veh_repair": "Repair Engine",
     "init_veh_clean": "Clean Vehicle",

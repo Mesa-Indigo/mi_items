@@ -965,8 +965,28 @@ return {
         description = "Wild cannabis, yet to be processed and vibing in your pocket",
     },
 
+    ['wd_indica'] = {
+        label = 'Indica Plant', weight = 6030, stack = true,
+        description = "Wild cannabis, yet to be processed and vibing in your pocket",
+    },
+
+    ['wd_hybrid'] = {
+        label = 'Hybrid Plant', weight = 60, stack = true,
+        description = "Wild cannabis, yet to be processed and vibing in your pocket",
+    },
+
     ['pc_sativa'] = {
         label = 'Sativa Buds', weight = 30, stack = true,
+        description = "Ready to be ground up, sold, or forgotten in your dresser.",
+    },
+
+    ['pc_indica'] = {
+        label = 'Indica Buds', weight = 30, stack = true,
+        description = "Ready to be ground up, sold, or forgotten in your dresser.",
+    },
+
+    ['pc_hybrid'] = {
+        label = 'Hybrid Buds', weight = 30, stack = true,
         description = "Ready to be ground up, sold, or forgotten in your dresser.",
     },
 
@@ -975,29 +995,9 @@ return {
         description = "The phrase 'hits like a brick' comes to mind, more out there.",
     },
 
-    ['wd_indica'] = {
-        label = 'Indica Plant', weight = 6030, stack = true,
-        description = "Wild cannabis, yet to be processed and vibing in your pocket",
-    },
-
-    ['pc_indica'] = {
-        label = 'Indica Buds', weight = 30, stack = true,
-        description = "Ready to be ground up, sold, or forgotten in your dresser.",
-    },
-
     ['bc_indica'] = {
         label = 'Indica Brick', weight = 700, stack = true,
         description = "The phrase 'hits like a brick' comes to mind, more out there.",
-    },
-
-    ['wd_hybrid'] = {
-        label = 'Hybrid Plant', weight = 60, stack = true,
-        description = "Wild cannabis, yet to be processed and vibing in your pocket",
-    },
-
-    ['pc_hybrid'] = {
-        label = 'Hybrid Buds', weight = 30, stack = true,
-        description = "Ready to be ground up, sold, or forgotten in your dresser.",
     },
 
     ['bc_hybrid'] = {
@@ -1007,12 +1007,32 @@ return {
 
     ['pd_meth'] = {
         label = 'Powdered Meth', weight = 60, stack = true,
-        description = "Wild cannabis, yet to be processed and vibing in your pocket",
+        description = "If it looks and smells like cocaine, it's probably not cocaine",
     },
 
     ['cr_meth'] = {
         label = 'Crystal Meth', weight = 90, stack = true,
-        description = "Ready to be ground up, sold, or forgotten in your dresser.",
+        description = "Teeth never matter when you can get new ones.",
+    },
+
+    ['bc_meth'] = {
+        label = 'Brick of Crystal Meth', weight = 90, stack = true,
+        description = "The phrase 'hits like a brick' comes to mind, more out there.",
+    },
+
+    ['wd_cocaine'] = {
+        label = 'Coca Leaves', weight = 90, stack = true,
+        description = "Is the one we smoke? No? Imma try it anyways",
+    },
+
+    ['pc_cocaine'] = {
+        label = 'Powdered Cocaine', weight = 90, stack = true,
+        description = "Up the nose as fast as that shit goes",
+    },
+
+    ['bc_cocaine'] = {
+        label = 'Brick of Powdered Cocaine', weight = 90, stack = true,
+        description = "The phrase 'hits like a brick' comes to mind, more out there.",
     },
 
 
