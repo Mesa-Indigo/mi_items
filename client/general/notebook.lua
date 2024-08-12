@@ -6,7 +6,8 @@ RegisterCommand('note', function()
     -- variable for header / content
     local write = { hd = '', ct = '' }
 
-    local input = lib.inputDialog('Basic dialog', {'First row', 'Second row'})
+    local input = lib.inputDialog(locale('itm_note_create'),
+    {locale('itm_note_header'), locale('itm_note_content')})
  
     if not input then return end
     print(json.encode(input), input[1], input[2])
