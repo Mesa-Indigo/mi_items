@@ -38,8 +38,67 @@ return {
 			{ loc = vec3(2678.1, 3280.6, 55.24), length = 0.55, width = 2.6, heading = 240.75, minZ = 55.24, maxZ = 55.64, distance = 2.0 },
 			{ loc = vec3(2556.7, 381.95, 108.62), length = 0.55, width = 2.6, heading = 267.75, minZ = 108.62, maxZ = 109.02, distance = 2.0 },
 			{ loc = vec3(373.75, 326.65, 103.57), length = 0.55, width = 2.6, heading = 346.0, minZ = 103.57, maxZ = 103.97, distance = 2.0 },
-			-- gabz paleto gas station
+			-- Gabz Paleto Gas Station
 			{ loc = vec3(161.65, 6641.2, 31.55), length = 0.55, width = 2.6, heading = 315.25, minZ = 31.55, maxZ = 31.95, distance = 2.0 },
+		}
+	},
+
+	Grocery = {
+		name = 'Grocery',
+		inventory = {
+			{ name = 'ck_flour', price = 5 },
+			{ name = 'ck_bakingp', price = 4 },
+			{ name = 'ck_salt', price = 3 },
+			{ name = 'ck_pepper', price = 3 },
+			{ name = 'ck_sugar', price = 4 },
+
+			{ name = 'ck_spices', price = 3 },
+			{ name = 'ck_cookoil', price = 4 },
+			{ name = 'ck_bread', price = 4 },
+			{ name = 'ck_rice', price = 4 },
+			{ name = 'ck_butter', price = 6 },
+
+			{ name = 'ck_cheese', price = 3 },
+			{ name = 'ck_tomatoes', price = 4 },
+			{ name = 'ck_lettuce', price = 4 },
+			{ name = 'ck_onions', price = 4 },
+			{ name = 'ck_peppers', price = 6 },
+
+			{ name = 'ck_potatoes', price = 3 },
+			{ name = 'ck_eggs', price = 4 },
+			{ name = 'ck_beef', price = 4 },
+			{ name = 'ck_chkn', price = 4 },
+			{ name = 'ck_pork', price = 6 },
+
+			{ name = 'ck_chocolt', price = 3 },
+			{ name = 'ck_grhmckr', price = 4 },
+			{ name = 'ck_mrshmlw', price = 4 },
+			{ name = 'milk', price = 4 },
+
+		}, locations = {
+			vec3(-3240.7, 1009.5, 13.35),
+			vec3(-3038.71, 585.9, 7.9),
+			vec3(-3241.47, 1001.14, 12.83),
+			vec3(1728.66, 6414.16, 35.03),
+			vec3(1697.99, 4924.4, 42.06),
+			vec3(1961.48, 3739.96, 32.34),
+			vec3(547.79, 2671.79, 42.15),
+			vec3(2679.25, 3280.12, 55.24),
+			vec3(2557.94, 382.05, 108.62),
+			vec3(373.55, 325.56, 103.56),
+		}, targets = {
+			{ loc = vec3(-3241.55, 1009.6, 13.35), length = 1.35, width = 0.1, heading = 355.0, minZ = 12.15, maxZ = 12.25, distance = 2.0 },
+			{ loc = vec3(-3042.0, 593.65, 8.45), length = 1.35, width = 0.1, heading = 18.0, minZ = 8.45, maxZ = 8.55, distance = 2.0 },
+			{ loc = vec3(1736.55, 6411.05, 35.55), length = 1.35, width = 0.1, heading = 63.5, minZ = 35.55, maxZ = 35.65, distance = 2.0 },
+			{ loc = vec3(1707.15, 4927.35, 42.4), length = 1.35, width = 0.1, heading = 55.0, minZ = 42.4, maxZ = 42.5, distance = 2.0 },
+			{ loc = vec3(1968.3, 3745.1, 32.85), length = 1.35, width = 0.1, heading = 119.25, minZ = 32.85, maxZ = 32.95, distance = 2.0 },
+			{ loc = vec3(539.6, 2670.1, 42.65), length = 1.35, width = 0.1, heading = 97.5, minZ = 42.65, maxZ = 42.75, distance = 2.0 },
+			{ loc = vec3(2682.6, 3287.8, 55.75), length = 1.35, width = 0.1, heading = 150.5, minZ = 55.75, maxZ = 55.85, distance = 2.0 },
+			{ loc = vec3(2557.5, 390.4, 109.15), length = 1.35, width = 0.1, heading = 177.75, minZ = 109.15, maxZ = 109.25, distance = 2.0 },
+			{ loc = vec3(381.85, 324.15, 104.1), length = 1.35, width = 0.1, heading = 75.75, minZ = 104.1, maxZ = 104.2, distance = 2.0 },
+			-- Gabz Paleto Gas Station
+			{ loc = vec3(167.4, 6634.9, 32.25), length = 1.35, width = 0.1, heading = 45.0, minZ = 32.25, maxZ = 32.35, distance = 2.0 },
+
 		}
 	},
 
