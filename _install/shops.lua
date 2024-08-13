@@ -16,8 +16,6 @@ return {
 			{ name = 'orangotang', price = 4 },
 			{ name = 'ejunk', price = 6 },
 
-			{ name = 'WEAPON_BALL', price = 10 },
-
 		}, locations = {
 			vec3(25.7, -1347.3, 29.49),
 			vec3(-3038.71, 585.9, 7.9),
@@ -30,18 +28,18 @@ return {
 			vec3(2557.94, 382.05, 108.62),
 			vec3(373.55, 325.56, 103.56),
 		}, targets = {
-
-			{ ped = `mp_m_shopkeep_01`, scenario = 'Standing', loc = vec3(372.441, 326.501, 102.566), 	heading = 254.537 },
-			{ ped = `mp_m_shopkeep_01`, scenario = 'Standing', loc = vec3(24.497, -1347.485, 28.497), 	heading = 267.693 },
-			{ ped = `mp_m_shopkeep_01`, scenario = 'Standing', loc = vec3(-3040.499, 584.044, 6.908), 	heading = 17.372 },
-			{ ped = `mp_m_shopkeep_01`, scenario = 'Standing', loc = vec3(-3243.953, 1000.159, 11.830), heading = 355.801 },
-			{ ped = `mp_m_shopkeep_01`, scenario = 'Standing', loc = vec3(1727.754, 6414.942, 34.037), 	heading = 248.335 },
-			{ ped = `mp_m_shopkeep_01`, scenario = 'Standing', loc = vec3(1697.308, 4923.434, 41.063), 	heading = 331.204 },
-			{ ped = `mp_m_shopkeep_01`, scenario = 'Standing', loc = vec3(1959.315, 3741.397, 31.343), 	heading = 295.997 },
-			{ ped = `mp_m_shopkeep_01`, scenario = 'Standing', loc = vec3(549.305, 2669.675, 41.156), 	heading = 99.053 },
-			{ ped = `mp_m_shopkeep_01`, scenario = 'Standing', loc = vec3(2676.587, 3280.221, 54.241), 	heading = 326.606 },
-			{ ped = `mp_m_shopkeep_01`, scenario = 'Standing', loc = vec3(2555.498, 380.867, 107.622), 	heading = 358.802 },
-			
+			{ loc = vec3(25.55, -1346.75, 29.50), length = 0.55, width = 2.6, heading = 0.35, minZ = 29.5, maxZ = 29.8, distance = 2.0 },
+			{ loc = vec3(-3039.85, 585.4, 7.9), length = 0.55, width = 2.6, heading = 35.0, minZ = 7.9, maxZ = 8.3, distance = 2.0 },
+			{ loc = vec3(-3242.75, 1001.2, 12.83), length = 0.55, width = 2.6, heading = 175.0, minZ = 12.83, maxZ = 13.23, distance = 2.0 },
+			{ loc = vec3(1729.1, 6415.2, 35.04), length = 0.55, width = 2.6, heading = 333.5, minZ = 35.04, maxZ = 35.44, distance = 2.0 },
+			{ loc = vec3(1698.25, 4923.5, 42.06), length = 0.55, width = 2.6, heading = 235.0, minZ = 42.06, maxZ = 42.46, distance = 2.0 },
+			{ loc = vec3(1960.75, 3741.0, 32.34), length = 0.55, width = 2.6, heading = 210.0, minZ = 32.34, maxZ = 32.74, distance = 2.0 },
+			{ loc = vec3(548.05, 2670.65, 42.16), length = 0.55, width = 2.6, heading = 10.0, minZ = 42.16, maxZ = 42.56, distance = 2.0 },
+			{ loc = vec3(2678.1, 3280.6, 55.24), length = 0.55, width = 2.6, heading = 240.75, minZ = 55.24, maxZ = 55.64, distance = 2.0 },
+			{ loc = vec3(2556.7, 381.95, 108.62), length = 0.55, width = 2.6, heading = 267.75, minZ = 108.62, maxZ = 109.02, distance = 2.0 },
+			{ loc = vec3(373.75, 326.65, 103.57), length = 0.55, width = 2.6, heading = 346.0, minZ = 103.57, maxZ = 103.97, distance = 2.0 },
+			-- gabz paleto gas station
+			{ loc = vec3(161.65, 6641.2, 31.55), length = 0.55, width = 2.6, heading = 315.25, minZ = 31.55, maxZ = 31.95, distance = 2.0 },
 		}
 	},
 
@@ -67,12 +65,14 @@ return {
 			vec3(1392.562, 3604.684, 34.980),
 			vec3(-1393.409, -606.624, 30.319)
 		}, targets = {
-			{ ped = `s_m_m_ammucountry`, scenario = 'Standing', loc = vec3(1134.305, -983.116, 45.415), 		heading = 277.47 },
-			{ ped = `s_m_m_ammucountry`, scenario = 'Standing', loc = vec3(-1221.371, -907.892, 11.326), 	heading = 34.34 },
-			{ ped = `s_m_m_ammucountry`, scenario = 'Standing', loc = vec3(-1486.797, -377.517, 40.163), 	heading = 139.616 },
-			{ ped = `s_m_m_ammucountry`, scenario = 'Standing', loc = vec3(-2966.415, 391.497, 14.043), 		heading = 91.049 },
-			{ ped = `s_m_m_ammucountry`, scenario = 'Standing', loc = vec3(1165.190, 2710.786, 37.157), 		heading = 179.483 },
-			{ ped = `s_m_m_ammucountry`, scenario = 'Standing', loc = vec3(1392.254, 3606.195, 33.980), 		heading = 200.279 },
+			{ loc = vec3(1134.85, -982.5, 46.5), length = 0.55, width = 2.6, heading = 187.75, minZ = 46.5, maxZ = 46.9, distance = 2.0 },
+			{ loc = vec3(-1222.25, -907.75, 12.45), length = 0.55, width = 2.6, heading = 123.75, minZ = 12.45, maxZ = 12.95, distance = 2.0 },
+			{ loc = vec3(-1486.65, -378.5, 40.3), length = 0.55, width = 2.6, heading = 44.75, minZ = 40.3, maxZ = 40.7, distance = 2.0 },
+			{ loc = vec3(-2967.05, 390.75, 15.2), length = 0.55, width = 2.6, heading = 356.0, minZ = 15.2, maxZ = 15.6, distance = 2.0 },
+			{ loc = vec3(1165.85, 2710.2, 38.3), length = 0.55, width = 2.6, heading = 270.0, minZ = 38.3, maxZ = 38.7, distance = 2.0 },
+			{ loc = vec3(1392.7, 3605.7, 35.1), length = 0.55, width = 2.6, heading = 289.75, minZ = 35.1, maxZ = 35.5, distance = 2.0 },
+			-- gabz liqour store
+			{ loc = vec3(-160.6, 6321.8, 31.7), length = 0.55, width = 2.6, heading = 225.0, minZ = 31.7, maxZ = 32.1, distance = 2.0 },
 		}
 	},
 
@@ -110,15 +110,15 @@ return {
 			vec3(-1117.58, 2698.61, 18.55),
 			vec3(842.44, -1033.42, 28.19)
 		}, targets = {
-			{ ped = `s_m_m_ammucountry`, scenario = 'Standing', loc = vec3(-331.516, 6085.390, 30.454), heading = 224.178 },
-			{ ped = `s_m_m_ammucountry`, scenario = 'Standing', loc = vec3(-661.797, -933.428, 20.829), heading = 177.735 },
-			{ ped = `s_m_m_ammucountry`, scenario = 'Standing', loc = vec3(810.020, -2159.133, 28.618), heading = 358.744 },
-			{ ped = `s_m_m_ammucountry`, scenario = 'Standing', loc = vec3(1692.268, 3760.911, 33.705), heading = 228.238 },
-			{ ped = `s_m_m_ammucountry`, scenario = 'Standing', loc = vec3(253.731, -50.662, 68.941), 	heading = 72.221 },
-			{ ped = `s_m_m_ammucountry`, scenario = 'Standing', loc = vec3(22.659, -1105.361, 28.796), 	heading = 156.685 },
-			{ ped = `s_m_m_ammucountry`, scenario = 'Standing', loc = vec3(2567.927, 292.596, 107.734), heading = 359.322 },
-			{ ped = `s_m_m_ammucountry`, scenario = 'Standing', loc = vec3(-1119.008, 2699.694, 17.554), heading = 215.5 },
-			{ ped = `s_m_m_ammucountry`, scenario = 'Standing', loc = vec3(842.247, -1035.290, 27.194), heading = 358.9},
+			{ loc = vec3(-326.0, 6080.05, 31.8), length = 0.8, width = 1, heading = 225.25, minZ = 28.55, maxZ = 28.95, distance = 2.0 },
+			{ loc = vec3(-659.9, -940.45, 22.15), length = 0.8, width = 1, heading = 180.25, minZ = 22.15, maxZ = 22.55, distance = 2.0 },
+			{ loc = vec3(812.9, -2154.35, 29.9), length = 0.8, width = 1, heading = 180.25, minZ = 29.9, maxZ = 30.3, distance = 2.0 },
+			{ loc = vec3(1698.05, 3756.2, 35.0), length = 0.8, width = 1, heading = 227.75, minZ = 34.9, maxZ = 35.3, distance = 2.0 },
+			{ loc = vec3(246.5, -50.35, 70.25), length = 0.8, width = 1, heading = 249.75, minZ = 70.25, maxZ = 70.65, distance = 2.0 },
+			{ loc = vec3(18.3, -1109.0, 30.1), length = 0.8, width = 1, heading = 249.75, minZ = 30.1, maxZ = 30.5, distance = 2.0 },
+			{ loc = vec3(2565.6, 299.6, 109.05), length = 0.8, width = 1, heading = 179.75, minZ = 109.05, maxZ = 109.45, distance = 2.0 },
+			{ loc = vec3(-1112.65, 2696.2, 18.9), length = 0.8, width = 1, heading = 131.25, minZ = 18.9, maxZ = 19.3, distance = 2.0 },
+			{ loc = vec3(841.95, -1027.9, 28.55), length = 0.8, width = 1, heading = 180.75, minZ = 28.55, maxZ = 28.95, distance = 2.0 },
 		}
 	},
 
