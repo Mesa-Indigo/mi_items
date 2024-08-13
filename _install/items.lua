@@ -223,7 +223,7 @@ return {
     },
 
 	['milk'] = {
-        label = 'Water Bottle', weight = 100, stack = true, close = true,
+        label = 'Milk', weight = 100, stack = true, close = true,
         description = "You need strong bones for all that socializing you don't do.",
         allowArmed = false,
         client = {
@@ -695,11 +695,133 @@ return {
 
     ----------------------------------------------------------------
     ----------------------------------------------------------------
+    --[[    Cooking - Ingredients    ]]--
+
+    ['ck_flour'] = {
+        label = 'All Purpouse Flour', weight = 15, stack = true,
+        description = "General Ingredients for cooking.",
+    },
+
+    ['ck_bakingp'] = {
+        label = 'Baking Powder', weight = 5, stack = true,
+        description = "General Ingredients for cooking.",
+    },
+
+    ['ck_salt'] = {
+        label = 'Sea Salt', weight = 5, stack = true,
+        description = "General Ingredients for cooking.",
+    },
+
+    ['ck_pepper'] = {
+        label = 'Cracked Pepper', weight = 5, stack = true,
+        description = "General Ingredients for cooking.",
+    },
+
+    ['ck_sugar'] = {
+        label = 'Powdered Sugar', weight = 10, stack = true,
+        description = "General Ingredients for cooking.",
+    },
+
+    ['ck_spices'] = {
+        label = 'Spices', weight = 5, stack = true,
+        description = "General Ingredients for cooking.",
+    },
+
+    ['ck_cookoil'] = {
+        label = 'Cooking Oil', weight = 15, stack = true,
+        description = "General Ingredients for cooking.",
+    },
+
+    ['ck_bread'] = {
+        label = 'Bread Loaf', weight = 15, stack = true,
+        description = "General Ingredients for cooking.",
+    },
+
+    ['ck_rice'] = {
+        label = 'Rice', weight = 15, stack = true,
+        description = "General Ingredients for cooking.",
+    },
+
+    ['ck_butter'] = {
+        label = 'Salted Butter', weight = 15, stack = true,
+        description = "General Ingredients for cooking.",
+    },
+
+    ['ck_cheese'] = {
+        label = 'Cheese', weight = 15, stack = true,
+        description = "General Ingredients for cooking.",
+    },
+
+    ['ck_tomatoes'] = {
+        label = 'Tomatoes', weight = 15, stack = true,
+        description = "General Ingredients for cooking.",
+    },
+
+    ['ck_lettuce'] = {
+        label = 'Lettuce', weight = 15, stack = true,
+        description = "General Ingredients for cooking.",
+    },
+
+    ['ck_onions'] = {
+        label = 'Onions', weight = 15, stack = true,
+        description = "General Ingredients for cooking.",
+    },
+
+    ['ck_peppers'] = {
+        label = 'Peppers', weight = 15, stack = true,
+        description = "General Ingredients for cooking.",
+    },
+
+    ['ck_potatoes'] = {
+        label = 'Potatoes', weight = 15, stack = true,
+        description = "General Ingredients for cooking.",
+    },
+
+    ['ck_eggs'] = {
+        label = 'Eggs', weight = 15, stack = true,
+        description = "General Ingredients for cooking.",
+    },
+
+    ['ck_beef'] = {
+        label = 'Beef', weight = 15, stack = true,
+        description = "General Ingredients for cooking.",
+    },
+
+    ['ck_chkn'] = {
+        label = 'Chicken', weight = 15, stack = true,
+        description = "General Ingredients for cooking.",
+    },
+
+    ['ck_pork'] = {
+        label = 'Pork', weight = 15, stack = true,
+        description = "General Ingredients for cooking.",
+    },
+
+    ['ck_chocolt'] = {
+        label = 'Chocolate', weight = 15, stack = true,
+        description = "General Ingredients for cooking.",
+    },
+
+    ['ck_grhmckr'] = {
+        label = 'Graham Crackers', weight = 15, stack = true,
+        description = "General Ingredients for cooking.",
+    },
+
+    ['ck_mrshmlw'] = {
+        label = 'Marshmellow', weight = 15, stack = true,
+        description = "General Ingredients for cooking.",
+    },
+
+
+
+
+    ----------------------------------------------------------------
+    ----------------------------------------------------------------
     --[[    Containers    ]]--
 
     ['cnt_bcpk1'] = {
         label = 'Backpack', weight = 6000,
-        stack = false, close = false, consume = 0,
+        stack = true, close = false,
         description = "Use to hold thing, like a bag that holds things.",
     },
 
@@ -749,6 +871,15 @@ return {
     ['money'] = {
         label = 'Money', weight = 0, stack = true,
         description = "The life blood of your frivolous activities.",
+    },
+
+    ['notebook'] = {
+        label = 'Notebook', weight = 750, stack = false,
+        description = "For writing notes.",
+    },
+
+    ['note'] = {
+        label = 'Note', weight = 10, stack = false,
     },
 
     ['phone'] = {
@@ -966,7 +1097,7 @@ return {
     },
 
     ['wd_indica'] = {
-        label = 'Indica Plant', weight = 6030, stack = true,
+        label = 'Indica Plant', weight = 60, stack = true,
         description = "Wild cannabis, yet to be processed and vibing in your pocket",
     },
 
@@ -1120,6 +1251,37 @@ return {
     ['diamond_cut'] = {
         label = 'Cut Diamond', weight = 100, stack = true,
         description = "Ethically sourced, I think.",
+    },
+
+
+
+    ----------------------------------------------------------------
+    ----------------------------------------------------------------
+    --[[    Items - Diving    ]]--
+
+    ['trsr_doubloons'] = {
+        label = 'Gold Doubloons', weight = 100, stack = true,
+        description = "You remember that meme with the cat? I miss that cat.",
+    },
+
+    ['trsr_sharkstooth'] = {
+        label = 'Sharks Tooth', weight = 100, stack = true,
+        description = "If you start singing the baby shark song I will stab you.",
+    },
+
+    ['trsr_sanddollar'] = {
+        label = 'Gold Doubloons', weight = 100, stack = true,
+        description = "Did you know these are from drying ouy jelly fish?",
+    },
+
+    ['trsr_seaglass'] = {
+        label = 'Sea Glass', weight = 100, stack = true,
+        description = "Nice and smooth. Don't do what I think you're thinking of doing.",
+    },
+
+    ['trsr_pearls'] = {
+        label = 'Pearls', weight = 100, stack = true,
+        description = "Don't wear these into an alley.",
     },
 
 

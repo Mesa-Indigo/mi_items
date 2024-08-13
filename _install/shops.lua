@@ -40,6 +40,8 @@ return {
 			{ loc = vec3(373.75, 326.65, 103.57), length = 0.55, width = 2.6, heading = 346.0, minZ = 103.57, maxZ = 103.97, distance = 2.0 },
 			-- Gabz Paleto Gas Station
 			{ loc = vec3(161.65, 6641.2, 31.55), length = 0.55, width = 2.6, heading = 315.25, minZ = 31.55, maxZ = 31.95, distance = 2.0 },
+			-- Gabz Grove LTD
+			{ loc = vec3(-47.65, -1758.0, 29.6), length = 1.35, width = 0.1, heading = 319.75, minZ = 29.6, maxZ = 30.0, distance = 2.0 },
 		}
 	},
 
@@ -98,6 +100,8 @@ return {
 			{ loc = vec3(381.85, 324.15, 104.1), length = 1.35, width = 0.1, heading = 75.75, minZ = 104.1, maxZ = 104.2, distance = 2.0 },
 			-- Gabz Paleto Gas Station
 			{ loc = vec3(167.4, 6634.9, 32.25), length = 1.35, width = 0.1, heading = 45.0, minZ = 32.25, maxZ = 32.35, distance = 2.0 },
+			-- Gabz Grove LTD
+			{ loc = vec3(-50.5, -1748.6, 29.75), length = 1.35, width = 0.1, heading = 320.0, minZ = 29.75, maxZ = 29.85, distance = 2.0 },
 
 		}
 	},
@@ -113,8 +117,15 @@ return {
 			{ name = 'stronzo_beer', price = 10 },
 			{ name = 'water', price = 3 },
 
-			{ name = 'chips_bag', price = 3 },
-			{ name = 'candy', price = 3 },
+			{ name = 'bourgeoix_bottle', price = 46 },
+			{ name = 'cariaque_bottle', price = 35 },
+			{ name = 'bleuterd_bottle', price = 37 },
+			{ name = 'ragga_bottle', price = 45 },
+			{ name = 'tequilya_bottle', price = 35 },
+
+			{ name = 'nogo_bottle', price = 62 },
+			{ name = 'mount_bottle', price = 40 },
+			{ name = 'richards_bottle', price = 42 },
 		}, locations = {
 			vec3(1135.808, -982.281, 46.415),
 			vec3(-1222.915, -906.983, 12.326),
@@ -157,7 +168,6 @@ return {
 			{ name = 'WEAPON_ASSAULTRIFLE', price = 5320, metadata = { registered = true }, license = 'weapon' },
 			{ name = 'WEAPON_CARBINERIFLE', price = 5460, metadata = { registered = true }, license = 'weapon' },
 			{ name = 'ammo-rifle', price = 23, },
-
 		}, locations = {
 			vec3(-662.180, -934.961, 21.829),
 			vec3(810.25, -2157.60, 29.62),
@@ -178,6 +188,7 @@ return {
 			{ loc = vec3(2565.6, 299.6, 109.05), length = 0.8, width = 1, heading = 179.75, minZ = 109.05, maxZ = 109.45, distance = 2.0 },
 			{ loc = vec3(-1112.65, 2696.2, 18.9), length = 0.8, width = 1, heading = 131.25, minZ = 18.9, maxZ = 19.3, distance = 2.0 },
 			{ loc = vec3(841.95, -1027.9, 28.55), length = 0.8, width = 1, heading = 180.75, minZ = 28.55, maxZ = 28.95, distance = 2.0 },
+			{ loc = vec3(-1311.45, -393.25, 37.15), length = 0.8, width = 1, heading = 0.0, minZ = 28.55, maxZ = 28.95, distance = 2.0 },
 		}
 	},
 
