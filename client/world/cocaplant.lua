@@ -4,7 +4,7 @@ local cocaList = {}
 
 local progress = function(object)
     if lib.progressBar({
-        duration = World.Chemicals.duration, label = 'Collecting Coca Leaves',
+        duration = World.Chemicals.duration, label = locale('side_obtng_ccne'),
         useWhileDead = false, canCancel = true,
         disable = {
             car = true, move = true
@@ -20,8 +20,8 @@ end
 
 local weedops = {
     {
-        name = 'give_weed',
-        label = 'Collect Coca Leaves',
+        name = 'give_coca',
+        label = locale('side_obtn_ccne'),
         icon = 'fa-solid fa-hand-fist',
         canInteract = function(_, distance)
             return distance < 1.5

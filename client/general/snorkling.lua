@@ -13,8 +13,8 @@ local systemon = function(player)
     end
     if not equip.used then
         if lib.progressBar({
-            duration = 1500,
-            label = 'Equipping Rebreather',
+            duration = Item.Diving.rebreather.time,
+            label = locale('eq_rebreather'),
             useWhileDead = false,
             canCancel = true,
             disable = {
@@ -34,7 +34,7 @@ local systemon = function(player)
             equip.mask = mask
 
             SetEnableScuba(cache.ped, false)
-            SetPedMaxTimeUnderwater(cache.ped, Item.Diving.snorkle.duration)
+            SetPedMaxTimeUnderwater(cache.ped, Item.Diving.rebreather.duration)
             equip.used = true
         end
     end
@@ -43,8 +43,8 @@ end
 local systemoff = function(player)
     if equip.used then
         if lib.progressBar({
-            duration = 1500,
-            label = 'Removing Rebreather',
+            duration = Item.Diving.rebreather.time,
+            label = locale('rm_rebreather'),
             useWhileDead = false,
             canCancel = true,
             disable = {

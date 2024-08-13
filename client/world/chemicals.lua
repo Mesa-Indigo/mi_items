@@ -3,7 +3,7 @@ local barrelList = {}
 
 local progress = function(object)
     if lib.progressBar({
-        duration = World.Chemicals.duration, label = 'Opening Container',
+        duration = World.Chemicals.duration, label = locale('side_obtng_chem'),
         useWhileDead = false, canCancel = true,
         disable = {
             car = true, move = true
@@ -20,8 +20,8 @@ end
 local chemops = {
     {
         name = 'give_chems',
-        label = 'Collect Chemicals',
-        icon = 'fa-solid fa-hand-fist',
+        label = locale('side_obtn_chem'),
+        icon = 'fa-solid fa-hand',
         canInteract = function(_, distance)
             return distance < 1.2
         end,

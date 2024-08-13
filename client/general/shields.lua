@@ -13,7 +13,7 @@ local rioton = function()
     if not holding.used then
         if lib.progressBar({
             duration = 5000,
-            label = 'Equipping Riot Shield',
+            label = locale('eq_riotshield'),
             useWhileDead = false,
             canCancel = true,
             disable = {
@@ -49,7 +49,7 @@ local riotoff = function()
     if holding.used then
         if lib.progressBar({
             duration = 5000,
-            label = 'Removing Riot Shield',
+            label = locale('rm_riotshield'),
             useWhileDead = false,
             canCancel = true,
             disable = {

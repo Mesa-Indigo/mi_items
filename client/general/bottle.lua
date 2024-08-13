@@ -4,7 +4,7 @@ exports('break_bottle_rancho', function()
     -- do animation
     if lib.progressBar({
         duration = 600,
-        label = 'Breaking Bottle',
+        label = locale('us_bottle'),
         useWhileDead = false,
         canCancel = false,
         disable = {
@@ -17,8 +17,8 @@ exports('break_bottle_rancho', function()
             clip = "givetake1_a",
         },
     }) then
-        -- give broken bottle weapons (s)
-        lib.callback.await('miit:button:breakbottle:add')
+        lib.callback.await('miit:item:add', 'WEAPON_BOTTLE', 1)
+        lib.callback.await('miit:item:rem', 'rancho_beer', 1)
     end
 end)
 
@@ -28,7 +28,7 @@ exports('break_bottle_dusche', function()
     -- do animation
     if lib.progressBar({
         duration = 600,
-        label = 'Breaking Bottle',
+        label = locale('us_bottle'),
         useWhileDead = false,
         canCancel = false,
         disable = {
@@ -41,8 +41,8 @@ exports('break_bottle_dusche', function()
             clip = "givetake1_a",
         },
     }) then
-        -- give broken bottle weapons (s)
-        lib.callback.await('miit:button:breakbottle:add')
+        lib.callback.await('miit:item:add', 'WEAPON_BOTTLE', 1)
+        lib.callback.await('miit:item:rem', 'dusche_beer', 1)
     end
 end)
 
@@ -52,7 +52,7 @@ exports('break_bottle_rstronzo', function()
     -- do animation
     if lib.progressBar({
         duration = 600,
-        label = 'Breaking Bottle',
+        label = locale('us_bottle'),
         useWhileDead = false,
         canCancel = false,
         disable = {
@@ -65,8 +65,8 @@ exports('break_bottle_rstronzo', function()
             clip = "givetake1_a",
         },
     }) then
-        -- give broken bottle weapons (s)
-        lib.callback.await('miit:button:breakbottle:add')
+        lib.callback.await('miit:item:add', 'WEAPON_BOTTLE', 1)
+        lib.callback.await('miit:item:rem', 'stronza_beer', 1)
     end
 end)
 
@@ -76,7 +76,7 @@ exports('break_bottle_patriot', function()
     -- do animation
     if lib.progressBar({
         duration = 600,
-        label = 'Breaking Bottle',
+        label = locale('us_bottle'),
         useWhileDead = false,
         canCancel = false,
         disable = {
@@ -89,7 +89,7 @@ exports('break_bottle_patriot', function()
             clip = "givetake1_a",
         },
     }) then
-        -- give broken bottle weapons (s)
-        lib.callback.await('miit:button:breakbottle:add')
+        lib.callback.await('miit:item:add', 'WEAPON_BOTTLE', 1)
+        lib.callback.await('miit:item:rem', 'patriot_beer', 1)
     end
 end)

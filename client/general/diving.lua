@@ -7,15 +7,15 @@ local equip = { mask = 0, tank = 0, used = false }
 
 equip.mask, equip.tank, equip.used = 0, 0, false
 
-local systemon = function(player)
+local systemon = function()
     while not HasModelLoaded(maskmodel)
     and not HasModelLoaded(tankmodel) do
         Wait(10)
     end
     if not equip.used then
         if lib.progressBar({
-            duration = 5000,
-            label = 'Equipping Dive Gear',
+            duration = Item.Diving.divekit.time,
+            label = locale('eq_diving'),
             useWhileDead = false,
             canCancel = true,
             disable = {
@@ -47,11 +47,11 @@ local systemon = function(player)
     end
 end
 
-local systemoff = function(player)
+local systemoff = function()
     if equip.used then
         if lib.progressBar({
-            duration = 5000,
-            label = 'Removing Dive Gear',
+            duration = Item.Diving.divekit.time,
+            label = locale('rm_diving'),
             useWhileDead = false,
             canCancel = true,
             disable = {
@@ -84,20 +84,20 @@ exports('divegear', function()
             if IsPedSwimming(cache.ped) or IsPedSwimmingUnderWater(cache.ped) then
                 -- notify
             else
-                systemon(cache.ped)
+                systemon()
             end
         elseif equip.used then
             if IsPedSwimming(cache.ped) or IsPedSwimmingUnderWater(cache.ped) then
                 -- notify
             else
-                systemoff(cache.ped)
+                systemoff()
             end
         else return end
     elseif not Item.Diving.restrict then
         if not equip.used then
-            systemon(cache.ped)
+            systemon()
         elseif equip.used then
-            systemoff(cache.ped)
+            systemoff()
         end
     else return end
 end)

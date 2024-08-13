@@ -3,7 +3,7 @@ local cannabisList = {}
 
 local progress = function(object)
     if lib.progressBar({
-        duration = World.Chemicals.duration, label = 'Collecting Cannabis',
+        duration = World.Chemicals.duration, label = locale('side_obtn_weed'),
         useWhileDead = false, canCancel = true,
         disable = {
             car = true, move = true
@@ -20,8 +20,8 @@ end
 local weedops = {
     {
         name = 'give_weed',
-        label = 'Collect Cannabis',
-        icon = 'fa-solid fa-hand-fist',
+        label = locale('side_obtng_weed'),
+        icon = 'fa-solid fa-hand',
         canInteract = function(_, distance)
             return distance < 1.5
         end,

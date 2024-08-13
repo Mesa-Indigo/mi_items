@@ -1,18 +1,34 @@
 {
     "debug_": "Global Option Set: ",
 
-    "init_gen_shove": "Shove",
+    "eq_armor": "Equipping Body Armor",
 
-    "init_ped_gang": "Gang Interactions",
-    "init_ped_police": "Police Interactions",
-    "init_ped_fire": "Fire Interactions",
-    "init_ped_ems": "Medical Interactions",
+    "eq_diving": "Equipping Diving Gear",
+    "rm_diving": "Removing Diving Gear",
 
-    "init_plr_soc": "Interactions",
+    "eq_rebreather": "Equipping Rebreather",
+    "rm_rebreather": "Removing Rebreather",
+
+    "eq_riotshield": "Equipping Riot Shield",
+    "rm_riotshield": "Removing Roit Shield",
+
+    "us_bottle": "Breaking Bottle",
+
+    "cooler_patriot": "Take a Patriot Beer",
+    "cooler_stronzo": "Take a Stronzo Beer",
+    "cooler_dusche": "Take a Dusche Beer",
+    "cooler_rancho": "Take a Rancho Beer",
 
     "side_obtn_rock": "Mine Rock",
     "side_obtn_chem": "Open Container",
     "side_obtn_weed": "Collect Cannabis",
+    "side_obtn_ccne": "Collect Coca Leaves",
+    "side_obtn_trsr": "Collect Treasure",
+
+    "side_obtng_rock": "Mining Materials",
+    "side_obtng_chem": "Collecting Chemicals",
+    "side_obtng_weed": "Collecting Cannibis",
+    "side_obtng_ccne": "Collecting Coca Leaves",
 
     "itm_note_create": "Write your note: ",
     "itm_note_header": "Subject",

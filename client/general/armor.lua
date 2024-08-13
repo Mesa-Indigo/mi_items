@@ -6,7 +6,7 @@ exports('armor1', function()
     if true then
         if lib.progressBar({
             duration = armor.duration*1000,
-            label = 'Equipping Light Body Armor',
+            label = locale('eq_armor'),
             useWhileDead = false, allowFalling = false, allowRagdoll = false,
             allowCuffed = false, canCancel = true, disable = { car = false },
             anim = {
@@ -29,7 +29,7 @@ exports('armor2', function()
     if true then
         if lib.progressBar({
             duration = armor.duration*1000,
-            label = 'Equipping Medium Body Armor',
+            label = locale('eq_armor'),
             useWhileDead = false, allowFalling = false, allowRagdoll = false,
             allowCuffed = false, canCancel = true, disable = { car = false },
             anim = {
@@ -51,7 +51,7 @@ exports('armor3', function()
     if true then
         if lib.progressBar({
             duration = armor.duration*1000,
-            label = 'Equipping Heavy Body Armor',
+            label = locale('eq_armor'),
             useWhileDead = false, allowFalling = false, allowRagdoll = false,
             allowCuffed = false, canCancel = true, disable = { car = false },
             anim = {

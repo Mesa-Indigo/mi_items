@@ -5,46 +5,46 @@ local cooler = {
 local tableoptions_start = {
     {
         name = 'givebeer1',
-        label = 'Take Patriot Beer',
+        label = locale('cooler_patriot'),
         icon = 'fa-solid fa-wine-bottle',
         canInteract = function(_, distance)
             return distance < 1.5
         end,
         onSelect = function()
-            lib.callback.await('miit:table:patriot_beer:add')
+            lib.callback.await('miit:item:add', 'patriot_beer', 1)
         end
     },
     {
         name = 'givebeer2',
-        label = 'Take Stronzo Beer',
+        label = locale('cooler_stronzo'),
         icon = 'fa-solid fa-wine-bottle',
         canInteract = function(_, distance)
             return distance < 1.5
         end,
         onSelect = function()
-            lib.callback.await('miit:table:stronzo_beer:add')
+            lib.callback.await('miit:item:add', 'stronzo_beer', 1)
         end
     },
     {
         name = 'givebeer3',
         label = 'Take Dusche Beer',
-        icon = 'fa-solid fa-wine-bottle',
+        icon = locale('cooler_dusche'),
         canInteract = function(_, distance)
             return distance < 1.5
         end,
         onSelect = function()
-            lib.callback.await('miit:table:dusche_beer:add')
+            lib.callback.await('miit:item:add', 'dusche_beer', 1)
         end
     },
     {
         name = 'givebeer4',
-        label = 'Take Rancho Beer',
+        label = locale('cooler_rancho'),
         icon = 'fa-solid fa-wine-bottle',
         canInteract = function(_, distance)
             return distance < 1.5
         end,
         onSelect = function()
-            lib.callback.await('miit:table:rancho_beer:add')
+            lib.callback.await('miit:item:add', 'rancho_beer', 1)
         end
     }
 }

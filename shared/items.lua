@@ -18,8 +18,8 @@ Item.Armor = {
 -- duration is the time it takes to use the item
 Item.Diving = {
     restrict = true,
-    snorkle =     { duration = 6000 },
-    divekit =     { duration = 12000 },
+    rebreather =  { time = 1500, duration = 300 },
+    divekit =     { time = 6000, duration = 600 },
 }
 
 --------------------------------
@@ -39,7 +39,7 @@ Item.Fireworks = {
     small1 =    { delay = 10, count = 10},
     small2 =    { delay = 10, count = 10},
     big1 =      { delay = 15, count = 20},
-    sig1 =      { delay = 15, count = 20},
+    big2 =      { delay = 15, count = 20},
 }
 
 --------------------------------

@@ -3,7 +3,7 @@ local rockList = {}
 
 local progress = function(object)
     if lib.progressBar({
-        duration = World.Mining.duration, label = 'Mining Rock',
+        duration = World.Mining.duration, label = locale('side_obtng_rock'),
         useWhileDead = false, canCancel = true,
         disable = {
             car = true, move = true
@@ -29,7 +29,7 @@ end
 local chemops = {
     {
         name = 'give_mtrl',
-        label = 'Mine Rock',
+        label = locale('side_obtn_rock'),
         icon = 'fa-solid fa-hammer',
         canInteract = function(_, distance)
             return distance < 2.0

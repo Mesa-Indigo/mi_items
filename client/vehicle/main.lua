@@ -8,7 +8,7 @@ local prog_setup = function(obj)
     local heading = GetEntityHeading(cache.ped)
     -- set progress bar
     if lib.progressBar({
-        duration = 5000, label = 'Loading Tool Box', useWhileDead = false,
+        duration = 5000, label = 'Preparing Tool Box', useWhileDead = false,
         canCancel = true,
         disable = { car = true, move = true },
         anim = { scenario = 'CODE_HUMAN_MEDIC_TEND_TO_DEAD' },
@@ -18,7 +18,7 @@ local prog_setup = function(obj)
         toolbox.obj = CreateObject(model, offset.x, offset.y, offset.z, true, false, false)
         Utils.SetObject(toolbox.obj, heading-135)
         -- remove from inventory
-        lib.callback.await('miit:toolbox:remove')
+        lib.callback.await('miit:item:add', 'small_toolkit', 1)
     end
 end
 

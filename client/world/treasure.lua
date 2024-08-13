@@ -4,7 +4,7 @@ local chestList = {}
 local chestops = {
     {
         name = 'give_trsr',
-        label = 'Open Chest',
+        label = locale('side_obtn_trsr'),
         icon = 'fa-solid fa-hand-fist',
         canInteract = function(_, distance)
             return distance < 3.0
