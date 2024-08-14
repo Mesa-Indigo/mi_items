@@ -58,6 +58,22 @@ AddEventHandler('mi_items:c:vehicle:clean', function(vehicle)
     end
 end)
 
+exports('cleankit', function()
+    -- get vehicle details
+    local coords = GetEntityCoords(cache.ped)
+    local vehicle = lib.getClosestVehicle(coords, 4.0, true)
+
+    if not vehicle then
+        local txt = { id = 'veh_notclose', title = 'Unable to Deploy Tool Kit',
+        description = 'You need to be close to a vehicle to use this tool' }
+        DoNotif(txt, Err)
+    else
+        --prog_setup(toolbox.obj)
+        --TaskTurnPedToFaceEntity(cache.ped, vehicle, 2000)
+        TriggerServerEvent('mi_items:s:vehicle:clean', vehicle)
+    end
+end)
+
 RegisterCommand('carclean', function()
 -- get vehicle details
 local coords = GetEntityCoords(cache.ped)

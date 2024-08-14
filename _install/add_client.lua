@@ -1,5 +1,24 @@
 ---@diagnostic disable: undefined-global
 
+client.parachute = false
+Item('parachute', function(data, slot)
+	if not client.parachute then
+		ox_inventory:useItem(data, function(data)
+			if data then
+				local chute = `GADGET_PARACHUTE`
+				SetPlayerParachuteTintIndex(PlayerData.id, -1)
+				GiveWeaponToPed(cache.ped, chute, 0, true, false)
+				SetPedGadget(cache.ped, chute, true)
+				lib.requestModel(1269906701)
+				client.parachute = {CreateParachuteBagObject(cache.ped, true, true), slot?.metadata?.type or -1}
+				if slot.metadata.type then
+					SetPlayerParachuteTintIndex(PlayerData.id, slot.metadata.type)
+				end
+			end
+		end)
+	end
+end)
+
 Item('armor1', function(data, slot)
 	ox_inventory:useItem(data, function(data)
 		exports['mi_utils']:armor1()
@@ -30,9 +49,27 @@ Item('bandage_basic', function(data, slot)
 	end)
 end)
 
-Item('repair_veheng', function(data, slot)
+Item('spraykit', function(data, slot)
 	ox_inventory:useItem(data, function(data)
-		exports['mi_utils']:repair_veheng()
+		exports['mi_utils']:spraykit()
+	end)
+end)
+
+Item('enginekit', function(data, slot)
+	ox_inventory:useItem(data, function(data)
+		exports['mi_utils']:enginekit()
+	end)
+end)
+
+Item('tirekit', function(data, slot)
+	ox_inventory:useItem(data, function(data)
+		exports['mi_utils']:tirekit()
+	end)
+end)
+
+Item('cleankit', function(data, slot)
+	ox_inventory:useItem(data, function(data)
+		exports['mi_utils']:cleankit()
 	end)
 end)
 

@@ -40,6 +40,11 @@ AddEventHandler('mi_items:s:vehicle:tires', function(vehicle)
     TriggerClientEvent('mi_items:c:vehicle:tires', -1, vehicle)
 end)
 
+RegisterNetEvent('mi_items:s:vehicle:repair')
+AddEventHandler('mi_items:s:vehicle:repair', function(vehicle)
+    TriggerClientEvent('mi_items:c:vehicle:repair', -1, vehicle)
+end)
+
 -- creation of temporary stash
 RegisterNetEvent('miit:s:camp:tempstash')
 RegisterServerEvent('miit:s:camp:tempstash', function(stash, label, slot, weight, list)

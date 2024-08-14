@@ -165,6 +165,23 @@ AddEventHandler('mi_items:c:vehicle:color', function(vehicle)
     vehicleinspection(vehicle)
 end)
 
+exports('spraykit', function()
+  -- get vehicle details
+  local coords = GetEntityCoords(cache.ped)
+  local vehicle = lib.getClosestVehicle(coords, 4.0, true)
+
+  if not vehicle then
+      local txt = { id = 'veh_notclose', title = 'Unable to Deploy Tool Kit',
+      description = 'You need to be close to a vehicle to use this tool' }
+      DoNotif(txt, Err)
+  else
+      --prog_setup(toolbox.obj)
+      --TaskTurnPedToFaceEntity(cache.ped, vehicle, 2000)
+      TriggerServerEvent('mi_items:s:vehicle:color', vehicle)
+  end
+end)
+
+--[[
 RegisterCommand('color', function()
   -- get vehicle details
   local coords = GetEntityCoords(cache.ped)
@@ -180,3 +197,4 @@ RegisterCommand('color', function()
       TriggerServerEvent('mi_items:s:vehicle:color', vehicle)
   end
 end, false)
+]]

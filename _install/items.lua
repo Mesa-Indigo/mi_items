@@ -877,6 +877,49 @@ return {
 
     ----------------------------------------------------------------
     ----------------------------------------------------------------
+    --[[    Tables    ]]--
+
+    ['fold_table'] = {
+        label = 'Foldable Table', weight = 3500,
+        stack = false, close = true,
+        description = "For on the go needs of a flat surface.",
+    },
+
+    ['tkit_camp'] = {
+        label = 'Camping Grill Kit', weight = 4500,
+        stack = false, close = true,
+        description = "Loads the table with outdoor grilling equipment.",
+    },
+
+    ['tkit_alch'] = {
+        label = 'Camping Grill Kit', weight = 4500,
+        stack = false, close = true,
+        description = "Loads the table with outdoor grilling equipment.",
+    },
+
+    ['tkit_weed'] = {
+        label = 'Camping Grill Kit', weight = 4500,
+        stack = false, close = true,
+        description = "Loads the table with outdoor grilling equipment.",
+    },
+
+    ['tkit_coke'] = {
+        label = 'Camping Grill Kit', weight = 4500,
+        stack = false, close = true,
+        description = "Loads the table with outdoor grilling equipment.",
+    },
+
+    ['tkit_meth'] = {
+        label = 'Camping Grill Kit', weight = 4500,
+        stack = false, close = true,
+        description = "Loads the table with outdoor grilling equipment.",
+    },
+
+
+
+
+    ----------------------------------------------------------------
+    ----------------------------------------------------------------
     --[[    Containers    ]]--
 
     ['cnt_bcpk1'] = {
@@ -936,6 +979,11 @@ return {
     ['notebook'] = {
         label = 'Notebook', weight = 750, stack = false,
         description = "For writing notes.",
+    },
+
+    ['parachute'] = {
+        label = 'Notebook', weight = 3000, stack = false,
+        description = "Pray that it works.",
     },
 
     ['note'] = {
@@ -1033,11 +1081,13 @@ return {
         allowArmed = false,
     },
 
+    --[[    WIP tool, do not use
     ['inspectionkit'] = {
         label = 'Vehicle Insp. Tool', weight = 2000, stack = true,
         description = "A mechanic's most handy tool.",
         allowArmed = false,
     },
+    ]]
 
     ['small_toolkit'] = {
         label = 'Small Vehicle Toolkit', weight = 7500, stack = true,
