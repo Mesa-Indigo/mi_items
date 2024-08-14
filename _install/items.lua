@@ -982,7 +982,7 @@ return {
     },
 
     ['parachute'] = {
-        label = 'Notebook', weight = 3000, stack = false,
+        label = 'Parachute', weight = 3000, stack = false,
         description = "Pray that it works.",
     },
 
@@ -1065,7 +1065,7 @@ return {
 
     ['cleankit'] = {
         label = 'Vehicle Cleaning Kit', weight = 7500, stack = true,
-        description = "Driving with a flat tire? That's a paddlin.",
+        description = "Vanity for a car? That's new.",
         allowArmed = false,
     },
 
