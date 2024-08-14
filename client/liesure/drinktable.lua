@@ -1,7 +1,6 @@
 local cooking = {
-    table = { obj = nil, model = lib.requestModel('prop_ven_market_table1') },
-    grill = { obj = nil, model = lib.requestModel('prop_bbq_2') },
-    cool = { obj = nil, model = lib.requestModel('prop_coolbox_01') },
+    table = { obj = nil, model = lib.requestModel('bkr_prop_weed_table_01b') },
+    prop = { obj = nil, model = lib.requestModel('prop_bar_shots') },
 }
 
 local grillops = {
@@ -15,41 +14,6 @@ local grillops = {
         onSelect = function()
             local data = { id = 3 , 1 }
         Inventory:openInventory('crafting', data)
-        end
-    },
-}
-
-local coolops = {
-    {
-        name = 'opencool',
-        label = 'Open Cooler',
-        icon = 'fa-solid fa-box-open',
-        canInteract = function(_, distance)
-            return distance < 2.2
-        end,
-        onSelect = function()
-            -- delete stash with items inside
-            -- delete tent
-            -- delete target
-            --lib.callback.await('miit:table:stronzo_beer:add')
-        end
-    },
-}
-
-local tableops = {
-    {
-        name = 'opencool',
-        label = 'Clean up',
-        icon = 'fa-solid fa-box-archive',
-        canInteract = function(_, distance)
-            return distance < 2.2
-        end,
-        onSelect = function()
-            -- delete cooler stash with items inside
-            -- delete grill
-            -- delete table
-            -- delete targets
-            --lib.callback.await('miit:table:stronzo_beer:add')
         end
     },
 }
@@ -83,7 +47,7 @@ local loadObjects = function()
     SetEntityCollision(cooking.cool.obj, true, true)
 end
 
-RegisterCommand('ctable', function()
+RegisterCommand('dtable', function()
     if lib.progressBar({
         duration = 5000,
         label = 'Setting Tent',

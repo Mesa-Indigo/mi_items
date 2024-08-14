@@ -8,7 +8,67 @@ return {
         description = "Ham in bread? What a wild concept.",
         allowArmed = false,
         client = {
-            status = { hunger = 200000 }, anim = 'eating_hand', prop = 'sandwich',
+            status = { hunger = 230000 }, anim = 'eating_hand', prop = 'sandwich',
+            usetime = 7500, disable = { move = false, car = false, combat = true },
+        },
+    },
+
+    ['sandwich_beef'] = {
+        label = 'Beef Sandwich', weight = 250, stack = true, close = true,
+        description = "I smell like beef.",
+        allowArmed = false,
+        client = {
+            status = { hunger = 230000 }, anim = 'eating_hand', prop = 'sandwich',
+            usetime = 7500, disable = { move = false, car = false, combat = true },
+        },
+    },
+
+    ['sandwich_chkn'] = {
+        label = 'Chicken Sandwich', weight = 250, stack = true, close = true,
+        description = "Feathers not included, unfortunately.",
+        allowArmed = false,
+        client = {
+            status = { hunger = 230000 }, anim = 'eating_hand', prop = 'sandwich',
+            usetime = 7500, disable = { move = false, car = false, combat = true },
+        },
+    },
+
+    ['sandwich_eggs'] = {
+        label = 'Chicken Sandwich', weight = 250, stack = true, close = true,
+        description = "Feathers not included, unfortunately.",
+        allowArmed = false,
+        client = {
+            status = { hunger = 230000 }, anim = 'eating_hand', prop = 'sandwich',
+            usetime = 7500, disable = { move = false, car = false, combat = true },
+        },
+    },
+
+    ['burger_reg'] = {
+        label = 'Burger', weight = 250, stack = true, close = true,
+        description = "A regular burger with nothing on it.",
+        allowArmed = false,
+        client = {
+            status = { hunger = 230000 }, anim = 'eating_hand', prop = 'burger',
+            usetime = 7500, disable = { move = false, car = false, combat = true },
+        },
+    },
+
+    ['burger_chs'] = {
+        label = 'Cheese Burger', weight = 250, stack = true, close = true,
+        description = "A regular burger with some cheese.",
+        allowArmed = false,
+        client = {
+            status = { hunger = 230000 }, anim = 'eating_hand', prop = 'burger',
+            usetime = 7500, disable = { move = false, car = false, combat = true },
+        },
+    },
+
+    ['burger_bcn'] = {
+        label = 'Bacon Cheese Burger', weight = 250, stack = true, close = true,
+        description = "A regular burger with some cheese and bacon.",
+        allowArmed = false,
+        client = {
+            status = { hunger = 230000 }, anim = 'eating_hand', prop = 'burger',
             usetime = 7500, disable = { move = false, car = false, combat = true },
         },
     },
@@ -77,7 +137,7 @@ return {
         description = "A college student\'s first true love.",
         allowArmed = false,
         client = {
-            status = { hunger = 300000 }, anim = 'eating_tool', prop = {
+            status = { hunger = 350000 }, anim = 'eating_tool', prop = {
                 {
                     bone = 28422, model = 'prop_cs_fork',
                     pos = vec3(0.0, 0.0, 0.0), rot = vec3(180.0, 180.0, 0.0)
@@ -96,7 +156,7 @@ return {
         description = "A college student\'s first true love.",
         allowArmed = false,
         client = {
-            status = { hunger = 300000 }, anim = 'eating_tool', prop = {
+            status = { hunger = 350000 }, anim = 'eating_tool', prop = {
                 {
                     bone = 28422, model = 'prop_cs_fork',
                     pos = vec3(0.0, 0.0, 0.0), rot = vec3(180.0, 180.0, 0.0)
@@ -115,7 +175,7 @@ return {
         description = "A college student\'s first true love.",
         allowArmed = false,
         client = {
-            status = { hunger = 300000 }, anim = 'eating_tool', prop = {
+            status = { hunger = 350000 }, anim = 'eating_tool', prop = {
                 {
                     bone = 28422, model = 'prop_cs_fork',
                     pos = vec3(0.0, 0.0, 0.0), rot = vec3(180.0, 180.0, 0.0)
@@ -134,7 +194,7 @@ return {
         description = "A college student\'s first true love.",
         allowArmed = false,
         client = {
-            status = { hunger = 300000 }, anim = 'eating_tool', prop = {
+            status = { hunger = 350000 }, anim = 'eating_tool', prop = {
                 {
                     bone = 28422, model = 'prop_cs_fork',
                     pos = vec3(0.0, 0.0, 0.0), rot = vec3(180.0, 180.0, 0.0)
@@ -523,7 +583,7 @@ return {
     },
 
     ['bleuterd_glass'] = {
-        label = 'Glass of Bourgeoix Cognac', weight = 150,
+        label = 'Glass of Bleuter\'d Champagne', weight = 150,
         stack = true, close = true,
         description = "Like whiskey, but more ouch.",
         allowArmed = false,
@@ -547,7 +607,7 @@ return {
     },
 
     ['tequilya_glass'] = {
-        label = 'Glass of Bourgeoix Cognac', weight = 150,
+        label = 'Glass of Tequilya Tequila', weight = 150,
         stack = true, close = true,
         description = "Like whiskey, but more ouch.",
         allowArmed = false,
@@ -559,7 +619,7 @@ return {
     },
 
     ['nogo_glass'] = {
-        label = 'Glass of Bourgeoix Cognac', weight = 150,
+        label = 'Glass of Nogo Vodka', weight = 150,
         stack = true, close = true,
         description = "Like whiskey, but more ouch.",
         allowArmed = false,
@@ -571,7 +631,7 @@ return {
     },
 
     ['mount_glass'] = {
-        label = 'Glass of Bourgeoix Cognac', weight = 150,
+        label = 'Glass of Mount Whiskey', weight = 150,
         stack = true, close = true,
         description = "Like whiskey, but more ouch.",
         allowArmed = false,
@@ -583,7 +643,7 @@ return {
     },
 
     ['richards_glass'] = {
-        label = 'Glass of Bourgeoix Cognac', weight = 150,
+        label = 'Glass of Richard\'s Whiskey', weight = 150,
         stack = true, close = true,
         description = "Like whiskey, but more ouch.",
         allowArmed = false,
@@ -595,7 +655,7 @@ return {
     },
 
     ['cariaque_shot'] = {
-        label = 'Glass of Bourgeoix Cognac', weight = 150,
+        label = 'Glass of Cariaque Bourbon', weight = 150,
         stack = true, close = true,
         description = "Like whiskey, but more ouch.",
         allowArmed = false,
@@ -607,7 +667,7 @@ return {
     },
 
     ['bourgeoix_shot'] = {
-        label = 'Glass of Bourgeoix Cognac', weight = 150,
+        label = 'Shot of Bourgeoix Cognac', weight = 150,
         stack = true, close = true,
         description = "Like whiskey, but more ouch.",
         allowArmed = false,
@@ -619,7 +679,7 @@ return {
     },
     
     ['bleuterd_shot'] = {
-        label = 'Glass of Bourgeoix Cognac', weight = 150,
+        label = 'Shot of Bleuter\'d Champagne', weight = 150,
         stack = true, close = true,
         description = "Like whiskey, but more ouch.",
         allowArmed = false,
@@ -631,7 +691,7 @@ return {
     },
 
     ['ragga_shot'] = {
-        label = 'Glass of Bourgeoix Cognac', weight = 150,
+        label = 'Shot of Ragga Rum', weight = 150,
         stack = true, close = true,
         description = "Like whiskey, but more ouch.",
         allowArmed = false,
@@ -643,7 +703,7 @@ return {
     },
 
     ['tequilya_shot'] = {
-        label = 'Glass of Bourgeoix Cognac', weight = 150,
+        label = 'Shot of Tequilya Tequila', weight = 150,
         stack = true, close = true,
         description = "Like whiskey, but more ouch.",
         allowArmed = false,
@@ -655,7 +715,7 @@ return {
     },
 
     ['nogo_shot'] = {
-        label = 'Glass of Bourgeoix Cognac', weight = 150,
+        label = 'Shot of Nogo Vodka', weight = 150,
         stack = true, close = true,
         description = "Like whiskey, but more ouch.",
         allowArmed = false,
@@ -667,7 +727,7 @@ return {
     },
 
     ['mount_shot'] = {
-        label = 'Glass of Bourgeoix Cognac', weight = 150,
+        label = 'Shot of Mount Whiskey', weight = 150,
         stack = true, close = true,
         description = "Like whiskey, but more ouch.",
         allowArmed = false,
@@ -679,7 +739,7 @@ return {
     },
 
     ['richards_shot'] = {
-        label = 'Glass of Bourgeoix Cognac', weight = 150,
+        label = 'Shot of Richard\'s Whiskey', weight = 150,
         stack = true, close = true,
         description = "Like whiskey, but more ouch.",
         allowArmed = false,
@@ -1042,6 +1102,18 @@ return {
         label = 'Cooking Kit', weight = 6800, stack = true,
         description = "Sustain yourself in the woods as you survive.",
         allowArmed = false,
+    },
+
+    ['alc_cups'] = {
+        label = 'Glass Cups', weight = 30,
+        stack = false, close = false, consume = 0,
+        description = "Used for mixing drinks.",
+    },
+
+    ['alc_shots'] = {
+        label = 'Shot Glasses', weight = 30,
+        stack = false, close = false, consume = 0,
+        description = "Used for pouring shots.",
     },
 
 
