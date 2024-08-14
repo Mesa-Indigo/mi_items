@@ -160,12 +160,23 @@ local vehicleinspection = function(vehicle)
 end
 
 -- event to repair engine
-RegisterNetEvent('mi_items:global:vehicle:color')
-AddEventHandler('mi_items:global:vehicle:color', function(vehicle)
-    --local color = lib.getVehicleProperties(vehicle)
-    --print(color.color1)
-    --lib.setVehicleProperties(vehicle, {color1 = 15})
-    --lib.setVehicleProperties(vehicle, {color2 = 15})
-
+RegisterNetEvent('mi_items:c:vehicle:color')
+AddEventHandler('mi_items:c:vehicle:color', function(vehicle)
     vehicleinspection(vehicle)
 end)
+
+RegisterCommand('color', function()
+  -- get vehicle details
+  local coords = GetEntityCoords(cache.ped)
+  local vehicle = lib.getClosestVehicle(coords, 4.0, true)
+
+  if not vehicle then
+      local txt = { id = 'veh_notclose', title = 'Unable to Deploy Tool Kit',
+      description = 'You need to be close to a vehicle to use this tool' }
+      DoNotif(txt, Err)
+  else
+      --prog_setup(toolbox.obj)
+      --TaskTurnPedToFaceEntity(cache.ped, vehicle, 2000)
+      TriggerServerEvent('mi_items:s:vehicle:color', vehicle)
+  end
+end, false)

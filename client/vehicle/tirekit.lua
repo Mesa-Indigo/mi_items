@@ -63,8 +63,8 @@ local repairtire = function(vehicle, player)
 end
 
 -- event to repair engine
-RegisterNetEvent('mi_items:global:vehicle:tires')
-AddEventHandler('mi_items:global:vehicle:tires', function(vehicle)
+RegisterNetEvent('mi_items:c:vehicle:tires')
+AddEventHandler('mi_items:c:vehicle:tires', function(vehicle)
     local player = cache.ped
     local burst, fix
     local tires1 = { 0, 1, 4, 5, 2, 3, 45, 47 }
@@ -82,3 +82,19 @@ AddEventHandler('mi_items:global:vehicle:tires', function(vehicle)
         repairtire(vehicle, player)
      end
 end)
+
+RegisterCommand('tirefix', function()
+    -- get vehicle details
+    local coords = GetEntityCoords(cache.ped)
+    local vehicle = lib.getClosestVehicle(coords, 4.0, true)
+
+    if not vehicle then
+        local txt = { id = 'veh_notclose', title = 'Unable to Deploy Tool Kit',
+        description = 'You need to be close to a vehicle to use this tool' }
+        DoNotif(txt, Err)
+    else
+        --prog_setup(toolbox.obj)
+        --TaskTurnPedToFaceEntity(cache.ped, vehicle, 2000)
+        TriggerServerEvent('mi_items:s:vehicle:tires', vehicle)
+    end
+end, false)

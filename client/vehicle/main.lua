@@ -16,7 +16,7 @@ local prog_setup = function(obj)
         -- create object
         local model = lib.requestModel(toolbox.model)
         toolbox.obj = CreateObject(model, offset.x, offset.y, offset.z, true, false, false)
-        Utils.SetObject(toolbox.obj, heading-135)
+        SetObject(toolbox.obj, heading-135)
         -- remove from inventory
         lib.callback.await('miit:item:add', 'small_toolkit', 1)
     end
@@ -35,7 +35,7 @@ local get_condition = function(percent)
 end
 
 local menu_repairs = function(vehicle)
-    local name, detail = Utils.GetVehInfo(vehicle),
+    local name, detail = GetVehInfo(vehicle),
     lib.getVehicleProperties(vehicle)
     lib.registerContext({
         id = 'veh_menu_repairs',
@@ -43,28 +43,28 @@ local menu_repairs = function(vehicle)
         options = {
             {
                 title = 'Engine Condition', readOnly = true, icon = 'gauge-high',
-                description = get_condition(Utils.GetPercentage(detail.engineHealth, 10)),
-                progress = Utils.GetPercentage(detail.engineHealth, 10),
-                colorScheme = Utils.GetProgressColor(Utils.GetPercentage(detail.engineHealth, 10))
+                description = get_condition(GetPercentage(detail.engineHealth, 10)),
+                progress = GetPercentage(detail.engineHealth, 10),
+                colorScheme = GetProgressColor(GetPercentage(detail.engineHealth, 10))
             },
             {
                 title = 'Oil Level', readOnly = true, icon = 'oil-can',
-                description = get_condition(Utils.GetPercentage(detail.oilLevel, 1000)),
-                progress = Utils.GetPercentage(detail.oilLevel, 1000),
-                colorScheme = Utils.GetProgressColor(Utils.GetPercentage(detail.oilLevel, 1000))
+                description = get_condition(GetPercentage(detail.oilLevel, 1000)),
+                progress = GetPercentage(detail.oilLevel, 1000),
+                colorScheme = GetProgressColor(GetPercentage(detail.oilLevel, 1000))
             },
             {
                 title = 'Fuel Level', readOnly = true,  icon = 'gas-pump',
-                description = get_condition(Utils.GetPercentage(detail.fuelLevel, 100)),
-                progress = Utils.GetPercentage(detail.fuelLevel, 100),
-                colorScheme = Utils.GetProgressColor(Utils.GetPercentage(detail.fuelLevel, 100))
+                description = get_condition(GetPercentage(detail.fuelLevel, 100)),
+                progress = GetPercentage(detail.fuelLevel, 100),
+                colorScheme = GetProgressColor(GetPercentage(detail.fuelLevel, 100))
             },
         }
       })
       lib.showContext('veh_menu_repairs')
-      lib.print.info(Utils.GetPercentage(detail.engineHealth, 10))
-      lib.print.info(Utils.GetPercentage(detail.oilLevel, 1000))
-      lib.print.info(Utils.GetPercentage(detail.fuelLevel, 100))
+      lib.print.info(GetPercentage(detail.engineHealth, 10))
+      lib.print.info(GetPercentage(detail.oilLevel, 1000))
+      lib.print.info(GetPercentage(detail.fuelLevel, 100))
 end
 
 RegisterCommand('vhr', function()
