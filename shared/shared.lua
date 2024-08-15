@@ -8,12 +8,6 @@ Debug = true
 -- locale option | 'en', 'nl'
 Locale = 'en'
 
-Shared.Groups = {
-    leo = { '' },
-    ems = { '' },
-    fir = { '' },
-    crm = { '' },
-}
 
 -- function for clothing bag item to obtain outfits
 -- change export if you use a different clothing system than illenium-appearance
@@ -21,5 +15,6 @@ RegisterNetEvent('miit:c:clothing:outfitbag')
 AddEventHandler('miit:s:clothing:outfitbag', function()
 
     TriggerEvent('illenium-appearance:client:openOutfitMenu')
+    --exports['illenium-appearance']openOutfitMenu()
 
 end)

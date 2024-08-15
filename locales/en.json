@@ -35,6 +35,8 @@
     "itm_note_content": "Content",
     "itm_note_putaway": "Put Note Away",
 
+    "itm_clth_menu": "Opening Outfit Bag",
+
     "init_veh_repair": "Repair Engine",
     "init_veh_clean": "Clean Vehicle",
     "init_veh_recolor": "Change Color",

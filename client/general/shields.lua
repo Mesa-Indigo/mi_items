@@ -42,7 +42,6 @@ local rioton = function()
             end
         end
     end
-    
 end
 
 local riotoff = function()

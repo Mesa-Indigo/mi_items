@@ -51,6 +51,8 @@ lib.callback.register('miit:give:cocaleaf:reward', function(source)
     Inventory:AddItem(source, reward, amount)
 end)
 
+-- for meta item needs / notes & trading cards
+--[[
 -- create note object
 lib.callback.register('miit:item:add', function(source, header, content)
     -- hook for item creation
@@ -65,3 +67,4 @@ lib.callback.register('miit:item:add', function(source, header, content)
     })
     -- create item
 end)
+]]
