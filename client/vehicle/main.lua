@@ -1,3 +1,4 @@
+--[[
 local toolbox = {
     obj = nil,
     model =  'imp_prop_tool_chest_01a'
@@ -67,7 +68,6 @@ local menu_repairs = function(vehicle)
       lib.print.info(GetPercentage(detail.fuelLevel, 100))
 end
 
---[[
 RegisterCommand('vhr', function()
     -- get vehicle details
     local coords = GetEntityCoords(cache.ped)

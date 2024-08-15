@@ -930,37 +930,37 @@ return {
 
     ['cnt_bcpk2'] = {
         label = 'Backpack', weight = 6000,
-        stack = false, close = false, consume = 0,
+        stack = false, close = false,
         description = "Use to hold thing, like a bag that holds things.",
     },
 
     ['cnt_bcpk3'] = {
         label = 'Backpack', weight = 7500,
-        stack = false, close = false, consume = 0,
+        stack = false, close = false,
         description = "Use to hold thing, like a bag that holds things.",
     },
 
     ['cnt_bcpk4'] = {
         label = 'Backpack', weight = 7500,
-        stack = false, close = false, consume = 0,
+        stack = false, close = false,
         description = "Use to hold thing, like a bag that holds things.",
     },
 
     ['cnt_bfcs1'] = {
         label = 'Briefcase', weight = 3500,
-        stack = false, close = false, consume = 0,
+        stack = false, close = false,
         description = "I\'m a business man with a business plan.",
     },
 
     ['cnt_bfcs2'] = {
         label = 'Briefcase', weight = 3500,
-        stack = false, close = false, consume = 0,
+        stack = false, close = false,
         description = "I\'m a business man with a business plan.",
     },
 
     ['cnt_bfcs3'] = {
         label = 'Briefcase', weight = 3500,
-        stack = false, close = false, consume = 0,
+        stack = false, close = false,
         description = "I\'m a business man with a business plan.",
     },
 
@@ -976,6 +976,12 @@ return {
         description = "The life blood of your frivolous activities.",
     },
 
+    ['clothbag'] = {
+        label = 'Clothing Bag', weight = 3000, stack = false,
+        consume = 1,
+        description = "Good for one change of clothes.",
+    },
+
     ['notebook'] = {
         label = 'Notebook', weight = 750, stack = false,
         description = "For writing notes.",
@@ -983,6 +989,7 @@ return {
 
     ['parachute'] = {
         label = 'Parachute', weight = 3000, stack = false,
+        consume = 1,
         description = "Pray that it works.",
     },
 
@@ -1019,22 +1026,26 @@ return {
     -- recovery
     ['bandage_basic'] = {
         label = 'Basic Bandage', weight = 1200, stack = true,
+        consume = 1,
         description = "That won't stop a bullet hole but ok I guess.",
     },
 
     -- armor
     ['armor1'] = {
         label = 'Light Body Armor', weight = 5000, stack = false,
+        consume = 1,
         description = "Can it stop bullets? Lets find out.",
     },
 
     ['armor2'] = {
         label = 'Medium Body Armor', weight = 8000, stack = false,
+        consume = 1,
         description = "You'll probably kinda sort be fine.",
     },
 
     ['armor3'] = {
         label = 'Heavy Body Armor', weight = 11000, stack = false,
+        consume = 1,
         description = "I would be surprised if you got hurt wearing this.",
     },
 
@@ -1059,24 +1070,28 @@ return {
     -- vehicle
     ['enginekit'] = {
         label = 'Engine Repair Kit', weight = 7500, stack = true,
+        consume = 0.2,
         description = "I see what's wrong with it. Ain't got no gas in it.",
         allowArmed = false,
     },
 
     ['cleankit'] = {
         label = 'Vehicle Cleaning Kit', weight = 7500, stack = true,
+        consume = 0.2,
         description = "Vanity for a car? That's new.",
         allowArmed = false,
     },
 
     ['spraykit'] = {
         label = 'Spray Kit', weight = 2000, stack = true,
+        consume = 0.2,
         description = "Paints over your car with this color.",
         allowArmed = false,
     },
 
     ['tirekit'] = {
         label = 'Tire Repair Kit', weight = 2000, stack = true,
+        consume = 0.2,
         description = "Yes, you DO need all your tires to drive.",
         allowArmed = false,
     },
@@ -1089,35 +1104,34 @@ return {
     },
     ]]
 
-    ['small_toolkit'] = {
-        label = 'Small Vehicle Toolkit', weight = 7500, stack = true,
-        description = "I see what's wrong with it. Ain't got no gas in it.",
-        allowArmed = false,
-    },
-
     -- fireworks
     ['firework_s1'] = {
         label = 'Small Firework: Rex', weight = 2300, stack = true,
+        consume = 1,
         description = "See that shit go bing bong.",
     },
 
     ['firework_s2'] = {
         label = 'Small Firework: Rex', weight = 2300, stack = true,
+        consume = 1,
         description = "See that shit go bing bong.",
     },
 
     ['firework_b1'] = {
         label = 'Small Firework: Rex', weight = 2300, stack = true,
+        consume = 1,
         description = "See that shit go bing bong.",
     },
 
     ['firework_b2'] = {
         label = 'Small Firework: Rex', weight = 2300, stack = true,
+        consume = 1,
         description = "See that shit go bing bong.",
     },
 
     ['firework_exp'] = {
         label = 'Expired Fireworks', weight = 1500, stack = true,
+        consume = 1,
         description = "Remnants of a good time. I wonder what's inside?",
     },
 
@@ -1132,6 +1146,7 @@ return {
     -- beach
     ['cooler_beer'] = {
         label = 'Alcohol Cooler', weight = 2300, stack = false,
+        consume = 1,
         description = "Get some fresh beers, dude.",
     },
 
@@ -1139,30 +1154,26 @@ return {
     ['tent'] = {
         label = 'Camping Tent', weight = 5600, stack = true,
         description = "Good for holding things and looking nature-y.",
+        consume = 1,
         allowArmed = false,
     },
 
     ['foldchair'] = {
         label = 'Foldable Chair', weight = 2300, stack = true,
         description = "Plant a chair and an ass in that chair.",
-        allowArmed = false,
-    },
-
-    ['grilltable'] = {
-        label = 'Cooking Kit', weight = 6800, stack = true,
-        description = "Sustain yourself in the woods as you survive.",
+        consume = 1,
         allowArmed = false,
     },
 
     ['alc_cups'] = {
         label = 'Glass Cups', weight = 30,
-        stack = false, close = false, consume = 0,
+        stack = false, close = false,
         description = "Used for mixing drinks.",
     },
 
     ['alc_shots'] = {
         label = 'Shot Glasses', weight = 30,
-        stack = false, close = false, consume = 0,
+        stack = false, close = false,
         description = "Used for pouring shots.",
     },
 
@@ -1213,6 +1224,29 @@ return {
     ----------------------------------------------------------------
     --[[    Items - Drugs    ]]--
 
+    ['rollpaper'] = {
+        label = 'Rolling Paper', weight = 60, stack = true,
+        description = "You'll need these my guy",
+    },
+
+    ['jt_sativa'] = {
+        label = 'Joint: Sativa', weight = 60, stack = true,
+        description = "When you need a decent vibe",
+        client = {
+            export = 'sativa'
+        }
+    },
+
+    ['jt_indica'] = {
+        label = 'Joint: Indica', weight = 60, stack = true,
+        description = "Oh you're gonna feel the big eepy",
+    },
+
+    ['jt_hybrid'] = {
+        label = 'Joint: Hybrid', weight = 60, stack = true,
+        description = "It's the good mix of shit",
+    },
+
     ['wd_sativa'] = {
         label = 'Sativa Plant', weight = 60, stack = true,
         description = "Wild cannabis, yet to be processed and vibing in your pocket",
@@ -1231,6 +1265,13 @@ return {
     ['pc_sativa'] = {
         label = 'Sativa Buds', weight = 30, stack = true,
         description = "Ready to be ground up, sold, or forgotten in your dresser.",
+        buttons = {
+            {
+                label = 'Roll Joint', action = function(slot)
+                    exports['mi_items']:roll_sativa()
+                end
+            }
+        }
     },
 
     ['pc_indica'] = {

@@ -7,6 +7,10 @@ lib.callback.register('miit:item:rem', function(source, item, count)
     Inventory:RemoveItem(source, item, count)
 end)
 
+lib.callback.register('miit:item:check', function(source, item)
+    Inventory:GetItem(source, item, nil, false)
+end)
+
 -- mining reward items
 lib.callback.register('miit:give:mining:reward', function(source)
     local chance = World.Mining.reward

@@ -15,4 +15,11 @@ Shared.Groups = {
     crm = { '' },
 }
 
+-- function for clothing bag item to obtain outfits
+-- change export if you use a different clothing system than illenium-appearance
+RegisterNetEvent('miit:c:clothing:outfitbag')
+AddEventHandler('miit:s:clothing:outfitbag', function()
 
+    TriggerEvent('illenium-appearance:client:openOutfitMenu')
+
+end)

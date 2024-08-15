@@ -1,23 +1,5 @@
 World = {}
 
--- refine systems
-World.Jeweling = {
-    active = true,
-
-}
-
-World.Smithing = {
-    active = true,
-    location = vec4(1075.850, -1978.604, 31.471, 141.264),
-
-}
-
-World.Recycle = {
-    active = true,
-    location = vec4(1075.850, -1978.604, 31.471, 141.264),
-}
-
--- farming system
 World.Mining = {
     -- the default location is the zancudo swamps
     -- it covers the area between the pier and bridge

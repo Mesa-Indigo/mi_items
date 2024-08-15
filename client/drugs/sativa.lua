@@ -22,3 +22,25 @@ exports('sativa', function()
         return
     end
 end)
+
+exports('roll_sativa', function()
+    local paper = lib.callback.await('miit:item:check', 'pc_sativa')
+    if paper >= 1 then 
+        if lib.progressBar({
+            duration = 3000,
+            label = 'Rolling Joint',
+            useWhileDead = false, allowFalling = true,
+            allowRagdoll = false,
+            allowCuffed = false, canCancel = true,
+            disable = { car = false },
+            anim = {
+                scenario = 'WORLD_HUMAN_SMOKING_POT'
+            },
+        }) then
+            -- give item 
+        else
+            return
+        end
+    end
+    
+end)

@@ -36,21 +36,10 @@ Item.Bomb = {
 -- delay is time to wait until playing particle effects
 -- count is how many times it will play the particle effect
 Item.Fireworks = {
-    small1 =    { delay = 10, count = 10},
-    small2 =    { delay = 10, count = 10},
-    big1 =      { delay = 15, count = 20},
-    big2 =      { delay = 15, count = 20},
-}
-
---------------------------------
--- camping items
-
--- time is the time it takes to do task
--- items are the number of slots in a stash
-Item.Camping = {
-    grill =     { time = 15 },
-    cooler =    { items = 10 },
-    tent =      { items = 20 }
+    small1 =    { delay = 10000, count = 10},
+    small2 =    { delay = 10000, count = 10},
+    big1 =      { delay = 15000, count = 20},
+    big2 =      { delay = 15000, count = 20},
 }
 
 --------------------------------
@@ -60,9 +49,9 @@ Item.Camping = {
 -- percent is the percentage of health to restore
 -- ex: percent = 10 means restore 1/10 of health
 Item.Recovery = {
-    minor =     { time = 8, percent = 12 },
-    basic =     { time = 12, percent = 8 },
-    major =     { time = 16, percent = 4 },
+    minor =     { time = 8000, percent = 12 },
+    basic =     { time = 12000, percent = 8 },
+    major =     { time = 16000, percent = 4 },
 }
 
 --------------------------------
@@ -70,5 +59,5 @@ Item.Recovery = {
 
 -- time is the duration of progress bar
 Item.VehSpray = {
-    time =     10,
+    time =     10000,
 }
