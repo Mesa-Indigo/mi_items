@@ -28,7 +28,7 @@ local rioton = function()
             local plycrd = GetOffsetFromEntityInWorldCoords(GetPlayerPed(cache.ped), 0.0, 0.0, -5.0)
             shield = CreateObject(shieldmod, plycrd.x, plycrd.y, plycrd.z, true, false, false)
             AttachEntityToEntity(shield, GetPlayerPed(PlayerId()), GetPedBoneIndex(GetPlayerPed(PlayerId()),
-            45509),0.2, 0.25, -0.05, 305.0, 155.0, 87.5, true, true, true, true, 0, true)
+            45509),0.25, 0.25, -0.059, 305.0, 155.0, 87.5, true, true, true, true, 0, true)
             holding.shield = shield
             holding.used = true
             
