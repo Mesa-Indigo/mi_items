@@ -13,12 +13,10 @@ exports('break_bottle_rancho', function()
             move = false
         },
         anim = {
-            dict = 'mp_common',
-            clip = "givetake1_a",
+            scenario = 'PROP_HUMAN_PARKING_METER'
         },
     }) then
-        lib.callback.await('miit:item:add', 'WEAPON_BOTTLE', 1)
-        lib.callback.await('miit:item:rem', 'rancho_beer', 1)
+        lib.callback.await('miit:item:add', cache.ped, 'WEAPON_BOTTLE', 1)
     end
 end)
 
@@ -37,12 +35,10 @@ exports('break_bottle_dusche', function()
             move = false
         },
         anim = {
-            dict = 'mp_common',
-            clip = "givetake1_a",
+            scenario = 'PROP_HUMAN_PARKING_METER'
         },
     }) then
-        lib.callback.await('miit:item:add', 'WEAPON_BOTTLE', 1)
-        lib.callback.await('miit:item:rem', 'dusche_beer', 1)
+        lib.callback.await('miit:item:add', cache.ped, 'WEAPON_BOTTLE', 1)
     end
 end)
 
@@ -61,12 +57,10 @@ exports('break_bottle_rstronzo', function()
             move = false
         },
         anim = {
-            dict = 'mp_common',
-            clip = "givetake1_a",
+            scenario = 'PROP_HUMAN_PARKING_METER'
         },
     }) then
-        lib.callback.await('miit:item:add', 'WEAPON_BOTTLE', 1)
-        lib.callback.await('miit:item:rem', 'stronza_beer', 1)
+        lib.callback.await('miit:item:add', cache.ped, 'WEAPON_BOTTLE', 1)
     end
 end)
 
@@ -85,11 +79,9 @@ exports('break_bottle_patriot', function()
             move = false
         },
         anim = {
-            dict = 'mp_common',
-            clip = "givetake1_a",
+            scenario = 'PROP_HUMAN_PARKING_METER'
         },
     }) then
-        lib.callback.await('miit:item:add', 'WEAPON_BOTTLE', 1)
-        lib.callback.await('miit:item:rem', 'patriot_beer', 1)
+        lib.callback.await('miit:item:add', cache.ped, 'WEAPON_BOTTLE', 1)
     end
 end)

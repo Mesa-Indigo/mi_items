@@ -22,3 +22,23 @@ exports('indica', function()
         return
     end
 end)
+
+exports('roll_sativa', function()
+    local result1 = exports.ox_inventory:Search('count', 'rollpaper')
+    if result1 > 0 then
+        lib.callback.await('miit:item:rem', cache.ped, 'rollpaper', 1)
+        if lib.progressBar({
+            duration = 3000,
+            label = 'Rolling Joint',
+            useWhileDead = false, allowFalling = true,
+            allowRagdoll = false,
+            allowCuffed = false, canCancel = true,
+            disable = { car = false },
+            anim = {
+                scenario = 'PROP_HUMAN_PARKING_METER'
+            },
+        }) then
+            lib.callback.await('miit:item:indjoint')
+        end
+    end
+end)

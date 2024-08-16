@@ -24,10 +24,9 @@ exports('sativa', function()
 end)
 
 exports('roll_sativa', function()
-    local item, joint = 'rollpaper', 'jt_sativa'
-    local result = exports.ox_inventory:Search('count', item)
-    print(result)
-    if result > 0 then
+    local result1 = exports.ox_inventory:Search('count', 'rollpaper')
+    if result1 > 0 then
+        lib.callback.await('miit:item:rem', cache.ped, 'rollpaper', 1)
         if lib.progressBar({
             duration = 3000,
             label = 'Rolling Joint',
@@ -39,10 +38,7 @@ exports('roll_sativa', function()
                 scenario = 'PROP_HUMAN_PARKING_METER'
             },
         }) then
-            print(item)
-            lib.callback.await('miit:item:rem', item, 1)
-            lib.callback.await('miit:item:add', joint, 1)
+            lib.callback.await('miit:item:satjoint')
         end
     end
-    
 end)
