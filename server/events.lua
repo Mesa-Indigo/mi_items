@@ -45,6 +45,27 @@ AddEventHandler('mi_items:s:vehicle:repair', function(vehicle)
     TriggerClientEvent('mi_items:c:vehicle:repair', -1, vehicle)
 end)
 
+-- table events
+RegisterNetEvent('miit:s:table:setup')
+AddEventHandler('miit:s:table:setup', function()
+    TriggerClientEvent('miit:c:table:setup', -1)
+end)
+
+RegisterNetEvent('miit:s:table:clean')
+AddEventHandler('miit:s:table:clean', function(table, objects)
+    TriggerClientEvent('miit:c:table:clean', -1, table, objects)
+end)
+
+RegisterNetEvent('miit:s:table:grill')
+AddEventHandler('miit:s:table:grill', function(table, grill, cooler, pan)
+    TriggerClientEvent('miit:c:table:grill', -1, table, grill, cooler, pan)
+end)
+
+RegisterNetEvent('miit:s:table:meth')
+AddEventHandler('miit:s:table:meth', function(table, meth1, meth2, meth3)
+    TriggerClientEvent('miit:c:table:meth', -1, table, meth1, meth2, meth3)
+end)
+
 -- creation of temporary stash
 RegisterNetEvent('miit:s:camp:tempstash')
 RegisterServerEvent('miit:s:camp:tempstash', function(stash, label, slot, weight, list)

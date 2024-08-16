@@ -1,3 +1,5 @@
+---@diagnostic disable: undefined-global
+
 -- parachute tool
 client.parachute = false
 Item('parachute', function(data, slot)
@@ -16,6 +18,13 @@ Item('parachute', function(data, slot)
 			end
 		end)
 	end
+end)
+
+-- armor tools
+Item('fold_table', function(data, slot)
+	ox_inventory:useItem(data, function(data)
+		exports['mi_items']:fold_table()
+	end)
 end)
 
 -- armor tools
@@ -103,10 +112,27 @@ Item('pc_cocaine', function(data, slot)
 	end)
 end)
 
--- drugs
+Item('cr_meth', function(data, slot)
+	ox_inventory:useItem(data, function(data)
+		exports['mi_items']:meth()
+	end)
+end)
+
 Item('jt_sativa', function(data, slot)
 	ox_inventory:useItem(data, function(data)
 		exports['mi_items']:sativa()
+	end)
+end)
+
+Item('jt_indica', function(data, slot)
+	ox_inventory:useItem(data, function(data)
+		exports['mi_items']:indica()
+	end)
+end)
+
+Item('jt_hybrid', function(data, slot)
+	ox_inventory:useItem(data, function(data)
+		exports['mi_items']:hybrid()
 	end)
 end)
 

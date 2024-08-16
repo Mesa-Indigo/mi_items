@@ -1233,6 +1233,9 @@ return {
         label = 'Joint: Sativa', weight = 60, stack = true,
         consume = 1,
         description = "When you need a decent vibe",
+        client = {
+            export = 'sativa'
+        }
     },
 
     ['jt_indica'] = {
@@ -1281,11 +1284,25 @@ return {
     ['pc_indica'] = {
         label = 'Indica Buds', weight = 30, stack = true,
         description = "Ready to be ground up, sold, or forgotten in your dresser.",
+        buttons = {
+            {
+                label = 'Roll Joint', action = function(slot)
+                    exports['mi_items']:roll_indica()
+                end
+            }
+        }
     },
 
     ['pc_hybrid'] = {
         label = 'Hybrid Buds', weight = 30, stack = true,
         description = "Ready to be ground up, sold, or forgotten in your dresser.",
+        buttons = {
+            {
+                label = 'Roll Joint', action = function(slot)
+                    exports['mi_items']:roll_hybrid()
+                end
+            }
+        }
     },
 
     ['bc_sativa'] = {
