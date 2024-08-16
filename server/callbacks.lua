@@ -95,6 +95,13 @@ lib.callback.register('miit:give:cocaleaf:reward', function(source)
     Inventory:AddItem(source, reward, amount)
 end)
 
+-- set weapon tint
+lib.callback.register('miit:weapon:tint', function(source, weapon)
+    print('diid')
+    weapon.metadata.tint = 4
+    Inventory:SetMetadata(source, weapon.slot, weapon.metadata)
+end)
+
 -- for meta item needs / notes & trading cards
 --[[
 -- create note object

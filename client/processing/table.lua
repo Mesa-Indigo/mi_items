@@ -8,6 +8,10 @@ local setup = {
     meth1 = { obj = nil, model = lib.requestModel('tr_prop_meth_smashedtray_02') },
     meth2 = { obj = nil, model = lib.requestModel('bkr_prop_meth_sacid') },
     meth3 = { obj = nil, model = lib.requestModel('tr_prop_meth_pseudoephedrine') },
+
+    gun1 = { obj = nil, model = lib.requestModel('prop_tool_bluepnt') },
+    gun2 = { obj = nil, model = lib.requestModel('prop_paint_spray01a') },
+    gun3 = { obj = nil, model = lib.requestModel('h4_prop_h4_case_supp_01a') },
 }
 --[[
     local data = { id = 3 , 1 }
@@ -37,21 +41,18 @@ local tableops = {
             TriggerServerEvent('miit:s:table:meth', table.obj, setup.meth1, setup.meth2, setup.meth3)
         end
     },
+    {
+        name = 'gunk',
+        label = 'Use Gun Kit',
+        icon = 'fa-solid fa-flask-vial',
+        canInteract = function(_, distance)
+            return distance < 1.5
+        end,
+        onSelect = function()
+            TriggerServerEvent('miit:s:table:weapon', table.obj, setup.gun1, setup.gun2, setup.gun3)
+        end
+    },
 }
-
-
-local loadTable = function()
-    local offset_table = GetOffsetFromEntityInWorldCoords(cache.ped, 0.0, 1.2, 0.0)
-    local heading = GetEntityHeading(cache.ped)
-
-    table.obj = CreateObject(table.model, offset_table.x,
-    offset_table.y, offset_table.z, true, false, false)
-    SetEntityHeading(table.obj, heading)
-    PlaceObjectOnGroundProperly(table.obj)
-    FreezeEntityPosition(table.obj, true)
-    SetEntityCollision(table.obj, true, true)
-end
-
 
 RegisterNetEvent('miit:c:table:setup')
 AddEventHandler('miit:c:table:setup', function()

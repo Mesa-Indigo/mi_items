@@ -66,6 +66,11 @@ AddEventHandler('miit:s:table:meth', function(table, meth1, meth2, meth3)
     TriggerClientEvent('miit:c:table:meth', -1, table, meth1, meth2, meth3)
 end)
 
+RegisterNetEvent('miit:s:table:weapon')
+AddEventHandler('miit:s:table:weapon', function(table, meth1, meth2, meth3)
+    TriggerClientEvent('miit:c:table:weapon', -1, table, meth1, meth2, meth3)
+end)
+
 -- creation of temporary stash
 RegisterNetEvent('miit:s:camp:tempstash')
 RegisterServerEvent('miit:s:camp:tempstash', function(stash, label, slot, weight, list)
