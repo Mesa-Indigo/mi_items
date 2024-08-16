@@ -24,8 +24,10 @@ exports('sativa', function()
 end)
 
 exports('roll_sativa', function()
-    local paper = lib.callback.await('miit:item:check', 'pc_sativa')
-    if paper >= 1 then 
+    local item, joint = 'rollpaper', 'jt_sativa'
+    local result = exports.ox_inventory:Search('count', item)
+    print(result)
+    if result > 0 then
         if lib.progressBar({
             duration = 3000,
             label = 'Rolling Joint',
@@ -34,12 +36,12 @@ exports('roll_sativa', function()
             allowCuffed = false, canCancel = true,
             disable = { car = false },
             anim = {
-                scenario = 'WORLD_HUMAN_SMOKING_POT'
+                scenario = 'PROP_HUMAN_PARKING_METER'
             },
         }) then
-            -- give item 
-        else
-            return
+            print(item)
+            lib.callback.await('miit:item:rem', item, 1)
+            lib.callback.await('miit:item:add', joint, 1)
         end
     end
     

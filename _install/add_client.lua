@@ -1,3 +1,4 @@
+-- parachute tool
 client.parachute = false
 Item('parachute', function(data, slot)
 	if not client.parachute then
@@ -17,6 +18,7 @@ Item('parachute', function(data, slot)
 	end
 end)
 
+-- armor tools
 Item('armor1', function(data, slot)
 	ox_inventory:useItem(data, function(data)
 		exports['mi_items']:armor1()
@@ -41,12 +43,15 @@ Item('shield_riot', function(data, slot)
 	end)
 end)
 
+-- recovery
 Item('bandage_basic', function(data, slot)
 	ox_inventory:useItem(data, function(data)
 		exports['mi_items']:bandage_basic()
 	end)
 end)
 
+
+-- vehicles
 Item('spraykit', function(data, slot)
 	ox_inventory:useItem(data, function(data)
 		exports['mi_items']:spraykit()
@@ -71,6 +76,7 @@ Item('cleankit', function(data, slot)
 	end)
 end)
 
+-- diving
 Item('rebreather', function(data, slot)
 	ox_inventory:useItem(data, function(data)
 		exports['mi_items']:rebreather()
@@ -83,18 +89,28 @@ Item('divegear', function(data, slot)
 	end)
 end)
 
-Item('shield_riot', function(data, slot)
+-- crime things
+Item('bombbag_exp', function(data, slot)
 	ox_inventory:useItem(data, function(data)
-		exports['mi_items']:shield_riot()
+		exports['mi_items']:bombbag_exp()
 	end)
 end)
 
-Item('clothbag', function(data, slot)
+-- drugs
+Item('pc_cocaine', function(data, slot)
 	ox_inventory:useItem(data, function(data)
-		exports['mi_items']:clothbag()
+		exports['mi_items']:cocaine()
 	end)
 end)
 
+-- drugs
+Item('jt_sativa', function(data, slot)
+	ox_inventory:useItem(data, function(data)
+		exports['mi_items']:sativa()
+	end)
+end)
+
+-- phone object
 Item('phone', function(data, slot)
 	local success, result = pcall(function()
 		return exports.npwd:isPhoneVisible()

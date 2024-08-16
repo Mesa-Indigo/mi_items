@@ -1226,25 +1226,29 @@ return {
 
     ['rollpaper'] = {
         label = 'Rolling Paper', weight = 60, stack = true,
-        description = "You'll need these my guy",
+        description = "You'll need these my guy.",
     },
 
     ['jt_sativa'] = {
         label = 'Joint: Sativa', weight = 60, stack = true,
+        consume = 1,
         description = "When you need a decent vibe",
-        client = {
-            export = 'sativa'
-        }
     },
 
     ['jt_indica'] = {
         label = 'Joint: Indica', weight = 60, stack = true,
         description = "Oh you're gonna feel the big eepy",
+        client = {
+            export = 'indica'
+        }
     },
 
     ['jt_hybrid'] = {
         label = 'Joint: Hybrid', weight = 60, stack = true,
         description = "It's the good mix of shit",
+        client = {
+            export = 'hybrid'
+        }
     },
 
     ['wd_sativa'] = {

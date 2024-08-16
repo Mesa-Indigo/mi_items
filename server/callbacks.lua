@@ -8,7 +8,9 @@ lib.callback.register('miit:item:rem', function(source, item, count)
 end)
 
 lib.callback.register('miit:item:check', function(source, item)
-    Inventory:GetItem(source, item, nil, false)
+    local count = Inventory:Search(source, item, nil)
+    print(count)
+    return count
 end)
 
 -- mining reward items
