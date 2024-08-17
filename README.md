@@ -5,4 +5,4 @@
 ![GitHub all releases](https://img.shields.io/github/downloads/Mesa-Indigo/mi_items/total)
 ![GitHub](https://img.shields.io/github/license/Mesa-Indigo/mi_items)
 
-**[Documentation](https://mesa-indigo.gitbook.io/m.i.-resources/)**  |  **[Discord](https://discord.gg/EtgZsVBtYB)**
+**[Documentation](https://mesa-indigo.gitbook.io/m.i.-resources/)**  |  **[Discord](https://discord.gg/EtgZsVBtYB)**  |  **[Patreon](https://www.patreon.com/Agimir)**
