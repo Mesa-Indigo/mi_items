@@ -1,17 +1,18 @@
 World = {}
 
 World.Mining = {
-    -- the default location is the zancudo swamps
-    -- it covers the area between the pier and bridge
+    -- the default location is the davis quartz quarry
+    -- it covers the central quarry area
 
     -- sets system as active / inactive
     active = true,
 
-    -- sets model of chem object
+    -- sets model of object
+    -- probably a rock
     model = 'csx_rvrbldr_smle_',
 
     -- sets time before another object spawns
-    timer = 500,
+    timer = 60000,
 
     -- sets amount to spawn in that location
     count = 20,
@@ -25,8 +26,8 @@ World.Mining = {
         y = { min = -20, max = 20}
     },
 
-    -- sets time to open container
-    duration = 3000,
+    -- progress bar time
+    duration = 15000,
 
     -- items to give upon skillcheck success
     items = {
@@ -88,8 +89,8 @@ World.Chemicals = {
 }
 
 World.Cannabis = {
-    -- the default location is near the madrazo ranch
-    -- it covers the area between the pier and bridge
+    -- the default location is north the madrazo ranch
+    -- it covers the flat farm area
 
     -- sets system as active / inactive
     active = true,
@@ -98,10 +99,10 @@ World.Cannabis = {
     model = 'prop_weed_01',
 
     -- sets time before another object spawns
-    timer = 500,
+    timer = 120000,
 
     -- sets amount to spawn in that location
-    count = 30,
+    count = 12,
 
     -- sets location to spawn
     spawn = vec3(1404.864, 1401.292, 103.842),
@@ -113,7 +114,7 @@ World.Cannabis = {
     },
 
     -- sets time to open container
-    duration = 3000,
+    duration = 9000,
 
     -- items to give upon skillcheck success
     items = {
@@ -123,7 +124,7 @@ World.Cannabis = {
     },
 
     -- sets the min / max for items to give
-    reward = { min = 2, max = 5},
+    reward = { min = 1, max = 5},
 
 }
 
@@ -138,10 +139,10 @@ World.Cocaplant = {
     model = 'h4_prop_bush_cocaplant_01',
 
     -- sets time before another object spawns
-    timer = 500,
+    timer = 6000,
 
     -- sets amount to spawn in that location
-    count = 20,
+    count = 15,
 
     -- sets location to spawn
     spawn = vec3(3708.034, 3107.141, 12.339),
@@ -153,7 +154,7 @@ World.Cocaplant = {
     },
 
     -- sets time to open container
-    duration = 3000,
+    duration = 9000,
 
     -- items to give upon skillcheck success
     items = {
@@ -161,7 +162,7 @@ World.Cocaplant = {
     },
 
     -- sets the min / max for items to give
-    reward = { min = 2, max = 7},
+    reward = { min = 1, max = 5},
 
 }
 
@@ -176,10 +177,10 @@ World.Diving = {
     model = 'xm_prop_x17_chest_closed',
 
     -- sets time before another object spawns
-    timer = 500,
+    timer = 90000,
 
     -- sets amount to spawn in that location
-    count = 20,
+    count = 10,
 
     -- sets location to spawn
     spawn = vec3(2683.073, -1342.563, -22.422),
@@ -190,10 +191,7 @@ World.Diving = {
         y = { min = -20, max = 20}
     },
 
-    -- sets time to open container
-    duration = 3000,
-
-    -- items to give upon skillcheck success
+    -- items to give
     items = {
         'trsr_doubloons',
         'trsr_sharkstooth',
@@ -203,6 +201,6 @@ World.Diving = {
     },
 
     -- sets the min / max for items to give
-    reward = { min = 2, max = 5},
+    reward = { min = 1, max = 5},
 
 }
