@@ -96,9 +96,8 @@ lib.callback.register('miit:give:cocaleaf:reward', function(source)
 end)
 
 -- set weapon tint
-lib.callback.register('miit:weapon:tint', function(source, weapon)
-    print('diid')
-    weapon.metadata.tint = 4
+lib.callback.register('miit:weapon:tint', function(source, weapon, tint)
+    weapon.metadata.tint = tint
     Inventory:SetMetadata(source, weapon.slot, weapon.metadata)
 end)
 

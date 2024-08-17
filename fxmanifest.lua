@@ -5,8 +5,8 @@ lua54 'yes'
 game 'gta5'
 
 --[[    resource information    ]]--
-name 'mi_template_job'
-author 'MIAgimir'
+name 'mi_items'
+author 'Agimir'
 version '0.0.0'
 repository 'https://github.com/Mesa-Indigo/mi_items'
 description 'ox item handling script'

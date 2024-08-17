@@ -1,6 +1,75 @@
 local stylize = function(weapon)
-
+    lib.registerContext({
+        id = 'wpn_skin_menu',
+        title = weapon.label,
+        options = {
+            {
+                title = 'Default',
+                icon = 'swatchbook', iconColor = '#A6A7AB',
+                onSelect = function()
+                    lib.callback.await('miit:weapon:tint', false, weapon, 0)
+                end,
+            },
+            {
+                title = 'Green',
+                icon = 'swatchbook', iconColor = '#2F9E44',
+                onSelect = function()
+                    lib.callback.await('miit:weapon:tint', false, weapon, 1)
+                end,
+            },
+            {
+                title = 'Gold',
+                icon = 'swatchbook', iconColor = '#FCC419',
+                onSelect = function()
+                    lib.callback.await('miit:weapon:tint', false, weapon, 2)
+                end,
+            },
+            {
+                title = 'Pink',
+                icon = 'swatchbook', iconColor = '#F06595',
+                onSelect = function()
+                    lib.callback.await('miit:weapon:tint', false, weapon, 3)
+                end,
+            },
+            {
+                title = 'Tan',
+                icon = 'swatchbook', iconColor = '#FFD8A8',
+                onSelect = function()
+                    lib.callback.await('miit:weapon:tint', false, weapon, 4)
+                end,
+            },
+            {
+                title = 'Blue',
+                icon = 'swatchbook', iconColor = '#1C7ED6',
+                onSelect = function()
+                    lib.callback.await('miit:weapon:tint', false, weapon, 5)
+                end,
+            },
+            {
+                title = 'Orange',
+                icon = 'swatchbook', iconColor = '#F76707',
+                onSelect = function()
+                    lib.callback.await('miit:weapon:tint', false, weapon, 6)
+                end,
+            },
+            {
+                title = 'Platinum',
+                icon = 'swatchbook', iconColor = '#E9ECEF',
+                onSelect = function()
+                    lib.callback.await('miit:weapon:tint', false, weapon, 7)
+                end,
+            },
+        }
+    })
+    lib.showContext('wpn_skin_menu')
 end
+
+RegisterCommand('gsmenu', function()
+    local weapon = Inventory:getCurrentWeapon()
+    lib.print.info(weapon)
+
+    stylize(weapon)
+end, false)
 
 RegisterCommand('guntest', function()
     local weapon = Inventory:getCurrentWeapon()
@@ -18,23 +87,43 @@ AddEventHandler('miit:c:table:weapon', function(table, gun1, gun2, gun3)
         {
             name = 'gunc',
             label = 'Stylize Weapon',
-            icon = 'fa-solid fa-fire-swatchbook',
+            icon = 'fa-solid fa-swatchbook',
             canInteract = function(_, distance)
                 return distance < 1.5
             end,
             onSelect = function()
-                
+                local weapon = Inventory:getCurrentWeapon()
+                if weapon == nil then
+                    print('need weapon')
+                else
+                    if lib.progressBar({
+                        duration = 5000,
+                        label = locale('itm_wpn_skin'),
+                        useWhileDead = false,
+                        canCancel = false,
+                        disable = {
+                            car = true,
+                            combat = false,
+                            move = false
+                        },
+                        anim = {
+                            scenario = 'PROP_HUMAN_PARKING_METER'
+                        },
+                    }) then
+                        stylize(weapon)
+                    end
+                end
             end
         },
         {
             name = 'gunm',
             label = 'Create Attachments',
-            icon = 'fa-solid fa-fire-screwdriver-wrench',
+            icon = 'fa-solid fa-screwdriver-wrench',
             canInteract = function(_, distance)
                 return distance < 1.5
             end,
             onSelect = function()
-                local data = { id = 2 , 1 }
+                local data = { id = 5 , 1 }
                 Inventory:openInventory('crafting', data)
             end
         },
