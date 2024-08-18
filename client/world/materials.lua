@@ -79,10 +79,4 @@ AddEventHandler('miit:c:load:mining', function()
     spawnobjects(World.Mining)
 end)
 
-
-Citizen.CreateThread(function()
-    while rocks < World.Mining.count do
-        TriggerServerEvent('miit:s:load:mining')
-        Citizen.Wait(1000)
-    end
-end)
+TriggerServerEvent('miit:s:load:mining')

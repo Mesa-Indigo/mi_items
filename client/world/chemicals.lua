@@ -70,10 +70,4 @@ AddEventHandler('miit:c:load:chemicals', function()
     spawnobjects(World.Chemicals)
 end)
 
-
-Citizen.CreateThread(function()
-    while barrels < World.Chemicals.count do
-        TriggerServerEvent('miit:s:load:chemicals')
-        Citizen.Wait(1000)
-    end
-end)
+TriggerServerEvent('miit:s:load:chemicals')

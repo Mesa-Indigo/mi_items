@@ -67,9 +67,4 @@ AddEventHandler('miit:c:load:cocaplant', function()
     spawnobjects(World.Cocaplant)
 end)
 
-Citizen.CreateThread(function()
-    while coca < World.Cocaplant.count do
-        TriggerServerEvent('miit:s:load:cocaplant')
-        Citizen.Wait(1000)
-    end
-end)
+TriggerServerEvent('miit:s:load:cocaplant')

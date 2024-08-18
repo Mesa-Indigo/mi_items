@@ -66,9 +66,4 @@ AddEventHandler('miit:c:load:cannabis', function()
     spawnobjects(World.Cannabis)
 end)
 
-Citizen.CreateThread(function()
-    while cannabis < World.Chemicals.count do
-        TriggerServerEvent('miit:s:load:cannabis')
-        Citizen.Wait(1000)
-    end
-end)
+TriggerServerEvent('miit:s:load:cannabis')

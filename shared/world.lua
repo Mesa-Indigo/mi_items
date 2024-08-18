@@ -12,7 +12,7 @@ World.Mining = {
     model = 'csx_rvrbldr_smle_',
 
     -- sets time before another object spawns
-    timer = 60000,
+    timer = 2500,
 
     -- sets amount to spawn in that location
     count = 20,
@@ -55,7 +55,7 @@ World.Chemicals = {
     model = 'xm3_prop_xm3_barrel_01a',
 
     -- sets time before another object spawns
-    timer = 500,
+    timer = 2500,
 
     -- sets amount to spawn in that location
     count = 20,
@@ -99,7 +99,7 @@ World.Cannabis = {
     model = 'prop_weed_01',
 
     -- sets time before another object spawns
-    timer = 120000,
+    timer = 2500,
 
     -- sets amount to spawn in that location
     count = 12,
@@ -139,7 +139,7 @@ World.Cocaplant = {
     model = 'h4_prop_bush_cocaplant_01',
 
     -- sets time before another object spawns
-    timer = 6000,
+    timer = 2500,
 
     -- sets amount to spawn in that location
     count = 15,
@@ -177,7 +177,7 @@ World.Diving = {
     model = 'xm_prop_x17_chest_closed',
 
     -- sets time before another object spawns
-    timer = 90000,
+    timer = 2500,
 
     -- sets amount to spawn in that location
     count = 10,

@@ -57,10 +57,4 @@ AddEventHandler('miit:c:load:diving', function()
     spawnobjects(World.Diving)
 end)
 
-
-Citizen.CreateThread(function()
-    while chest < World.Diving.count do
-        TriggerServerEvent('miit:s:load:diving')
-        Citizen.Wait(1000)
-    end
-end)
+TriggerServerEvent('miit:s:load:diving')
