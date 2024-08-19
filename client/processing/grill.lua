@@ -6,7 +6,7 @@ AddEventHandler('miit:c:table:grill', function(table, grill, cooler, pan)
     local grillops = {
         {
             name = 'grill',
-            label = 'Open Grill Menu',
+            label = locale('tbl_act_grill'),
             icon = 'fa-solid fa-fire-burner',
             canInteract = function(_, distance)
                 return distance < 1.5
@@ -18,7 +18,7 @@ AddEventHandler('miit:c:table:grill', function(table, grill, cooler, pan)
         },
         {
             name = 'cleanup',
-            label = 'Clean up table',
+            label = locale('tbl_set_clean'),
             icon = 'fa-solid fa-broom',
             canInteract = function(_, distance)
                 return distance < 1.5
@@ -30,7 +30,7 @@ AddEventHandler('miit:c:table:grill', function(table, grill, cooler, pan)
     }
 
     if lib.progressBar({
-        duration = 5000, label = 'Setting Up Grill Kit', useWhileDead = false,
+        duration = 5000, label = locale('tbl_set_tkit'), useWhileDead = false,
         canCancel = true,
         disable = { car = true, move = true },
         anim = {

@@ -18,38 +18,117 @@ local setup = {
     Inventory:openInventory('crafting', data)
 ]]
 
+local kitted = false
+
 local tableops = {
     {
-        name = 'grill',
-        label = 'Use Grill Kit',
-        icon = 'fa-solid fa-fire-burner',
+        name = 'clean',
+        label = locale('tbl_set_clean'),
+        icon = 'fa-solid fa-broom',
         canInteract = function(_, distance)
-            return distance < 1.5
+            return distance < 1.5 and kitted
         end,
         onSelect = function()
+            kitted = false
             TriggerServerEvent('miit:s:table:grill', table.obj, setup.grill, setup.cool, setup.pan)
         end
     },
+
     {
-        name = 'meth',
-        label = 'Use Meth Kit',
-        icon = 'fa-solid fa-flask-vial',
+        name = 'grill',
+        label = locale('tbl_set_grill'),
+        icon = 'fa-solid fa-fire-burner',
+        items  = 'tkit_grill',
         canInteract = function(_, distance)
-            return distance < 1.5
+            return distance < 1.5 and not kitted
         end,
         onSelect = function()
-            TriggerServerEvent('miit:s:table:meth', table.obj, setup.meth1, setup.meth2, setup.meth3)
+            kitted = true
+            TriggerServerEvent('miit:s:table:grill', table.obj, setup.grill, setup.cool, setup.pan)
         end
     },
+
     {
-        name = 'gunk',
-        label = 'Use Gun Kit',
-        icon = 'fa-solid fa-flask-vial',
+        name = 'drink',
+        label = locale('tbl_set_drink'),
+        icon = 'fa-solid fa-champagne-glasses',
+        items  = 'tkit_grill',
         canInteract = function(_, distance)
-            return distance < 1.5
+            return distance < 1.5 and not kitted
         end,
         onSelect = function()
-            TriggerServerEvent('miit:s:table:weapon', table.obj, setup.gun1, setup.gun2, setup.gun3)
+            kitted = true
+            TriggerServerEvent('miit:s:table:grill', table.obj, setup.grill, setup.cool, setup.pan)
+        end
+    },
+
+    {
+        name = 'gunk',
+        label = locale('tbl_set_wepns'),
+        icon = 'fa-solid fa-gun',
+        items  = 'tkit_weap',
+        canInteract = function(_, distance)
+            return distance < 1.5 and not kitted
+        end,
+        onSelect = function()
+            kitted = true
+            --TriggerServerEvent('miit:s:table:weapon', table.obj, setup.gun1, setup.gun2, setup.gun3)
+        end
+    },
+
+    {
+        name = 'crime',
+        label = locale('tbl_set_crime'),
+        icon = 'fa-solid fa-mask',
+        items  = 'tkit_crim',
+        canInteract = function(_, distance)
+            return distance < 1.5 and not kitted
+        end,
+        onSelect = function()
+            kitted = true
+            --TriggerServerEvent('miit:s:table:meth', table.obj, setup.meth1, setup.meth2, setup.meth3)
+        end
+    },
+
+    {
+        name = 'weed',
+        label = locale('tbl_set_weedk'),
+        icon = 'fa-solid fa-flask-vial',
+        items  = 'tkit_weed',
+        canInteract = function(_, distance)
+            return distance < 1.5 and not kitted
+        end,
+        onSelect = function()
+            kitted = true
+            --TriggerServerEvent('miit:s:table:meth', table.obj, setup.meth1, setup.meth2, setup.meth3)
+        end
+    },
+
+    {
+        name = 'coke',
+        label = locale('tbl_set_cocak'),
+        icon = 'fa-solid fa-flask-vial',
+        items  = 'tkit_coke',
+        canInteract = function(_, distance)
+            return distance < 1.5 and not kitted
+        end,
+        onSelect = function()
+            kitted = true
+            --TriggerServerEvent('miit:s:table:meth', table.obj, setup.meth1, setup.meth2, setup.meth3)
+        end
+    },
+
+    {
+        name = 'meth',
+        label = locale('tbl_set_methk'),
+        icon = 'fa-solid fa-flask-vial',
+        items  = 'tkit_meth',
+        canInteract = function(_, distance)
+            return distance < 1.5 and not kitted
+        end,
+        onSelect = function()
+            kitted = true
+            TriggerServerEvent('miit:s:table:meth', table.obj, setup.meth1, setup.meth2, setup.meth3)
         end
     },
 }

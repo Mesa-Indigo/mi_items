@@ -86,7 +86,7 @@ AddEventHandler('miit:c:table:weapon', function(table, gun1, gun2, gun3)
     local gunops = {
         {
             name = 'gunc',
-            label = 'Stylize Weapon',
+            label = locale('tbl_set_clean'),
             icon = 'fa-solid fa-swatchbook',
             canInteract = function(_, distance)
                 return distance < 1.5
@@ -98,7 +98,7 @@ AddEventHandler('miit:c:table:weapon', function(table, gun1, gun2, gun3)
                 else
                     if lib.progressBar({
                         duration = 5000,
-                        label = locale('itm_wpn_skin'),
+                        label = locale('tbl_prc_drugp'),
                         useWhileDead = false,
                         canCancel = false,
                         disable = {
@@ -117,7 +117,7 @@ AddEventHandler('miit:c:table:weapon', function(table, gun1, gun2, gun3)
         },
         {
             name = 'gunm',
-            label = 'Create Attachments',
+            label = locale('tbl_act_wepn2'),
             icon = 'fa-solid fa-screwdriver-wrench',
             canInteract = function(_, distance)
                 return distance < 1.5
@@ -129,7 +129,7 @@ AddEventHandler('miit:c:table:weapon', function(table, gun1, gun2, gun3)
         },
         {
             name = 'cleanup',
-            label = 'Clean up table',
+            label = locale('tbl_set_clean'),
             icon = 'fa-solid fa-broom',
             canInteract = function(_, distance)
                 return distance < 1.5

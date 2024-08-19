@@ -880,39 +880,51 @@ return {
     --[[    Tables    ]]--
 
     ['fold_table'] = {
-        label = 'Foldable Table', weight = 3500,
+        label = 'Portable Table', weight = 3500,
         stack = false, close = true,
         description = "For on the go needs of a flat surface.",
     },
 
-    ['tkit_camp'] = {
-        label = 'Camping Grill Kit', weight = 4500,
+    ['tkit_grill'] = {
+        label = 'Grill Kit', weight = 4500,
         stack = false, close = true,
         description = "Loads the table with outdoor grilling equipment.",
     },
 
     ['tkit_alch'] = {
-        label = 'Camping Grill Kit', weight = 4500,
+        label = 'Liqour Kit', weight = 4500,
         stack = false, close = true,
-        description = "Loads the table with outdoor grilling equipment.",
+        description = "Loads the table with drinks and shots.",
+    },
+
+    ['tkit_weap'] = {
+        label = 'Weapons Kit', weight = 4500,
+        stack = false, close = true,
+        description = "Loads the table with weapon customizations.",
+    },
+
+    ['tkit_crim'] = {
+        label = 'Illegal Kit', weight = 4500,
+        stack = false, close = true,
+        description = "Loads the table with criminal crafting options.",
     },
 
     ['tkit_weed'] = {
-        label = 'Camping Grill Kit', weight = 4500,
+        label = 'Cannabis Prep Kit', weight = 4500,
         stack = false, close = true,
-        description = "Loads the table with outdoor grilling equipment.",
+        description = "Loads the table with cannabis processing equipment.",
     },
 
     ['tkit_coke'] = {
-        label = 'Camping Grill Kit', weight = 4500,
+        label = 'Cocaine Prep Kit', weight = 4500,
         stack = false, close = true,
-        description = "Loads the table with outdoor grilling equipment.",
+        description = "Loads the table with cocaine processing equipment.",
     },
 
     ['tkit_meth'] = {
-        label = 'Camping Grill Kit', weight = 4500,
+        label = 'Meth Prep Kit', weight = 4500,
         stack = false, close = true,
-        description = "Loads the table with outdoor grilling equipment.",
+        description = "Loads the table with meth processing equipment.",
     },
 
 

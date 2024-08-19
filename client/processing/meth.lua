@@ -6,7 +6,7 @@ AddEventHandler('miit:c:table:meth', function(table, meth1, meth2, meth3)
     local methops = {
         {
             name = 'meth',
-            label = 'Open Meth Menu',
+            label = locale('tbl_act_drugp'),
             icon = 'fa-solid fa-fire-burner',
             canInteract = function(_, distance)
                 return distance < 1.5
@@ -18,7 +18,7 @@ AddEventHandler('miit:c:table:meth', function(table, meth1, meth2, meth3)
         },
         {
             name = 'cleanup',
-            label = 'Clean up table',
+            label = locale('tbl_set_clean'),
             icon = 'fa-solid fa-broom',
             canInteract = function(_, distance)
                 return distance < 1.5
@@ -30,7 +30,7 @@ AddEventHandler('miit:c:table:meth', function(table, meth1, meth2, meth3)
     }
 
     if lib.progressBar({
-        duration = 5000, label = 'Setting Up Meth Kit', useWhileDead = false,
+        duration = 5000, label = locale('tbl_set_tkit'), useWhileDead = false,
         canCancel = true,
         disable = { car = true, move = true },
         anim = {

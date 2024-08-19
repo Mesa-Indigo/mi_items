@@ -68,8 +68,7 @@ exports('cleankit', function()
         description = 'You need to be close to a vehicle to use this tool' }
         DoNotif(txt, Err)
     else
-        --prog_setup(toolbox.obj)
-        --TaskTurnPedToFaceEntity(cache.ped, vehicle, 2000)
+        TaskTurnPedToFaceEntity(cache.ped, vehicle, 1000)
         TriggerServerEvent('mi_items:s:vehicle:clean', vehicle)
     end
 end)

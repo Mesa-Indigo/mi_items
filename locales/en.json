@@ -1,5 +1,5 @@
 {
-    "debug_": "Global Option Set: ",
+    "debug_": "DEBUG:MIIT: ",
 
     "eq_armor": "Equipping Body Armor",
 
@@ -19,11 +19,11 @@
     "cooler_dusche": "Take a Dusche Beer",
     "cooler_rancho": "Take a Rancho Beer",
 
-    "side_obtn_rock": "Mine Rock",
+    "side_obtn_rock": "Mine for Materils",
     "side_obtn_chem": "Open Container",
     "side_obtn_weed": "Collect Cannabis",
     "side_obtn_ccne": "Collect Coca Leaves",
-    "side_obtn_trsr": "Collect Treasure",
+    "side_obtn_trsr": "Open Treasure Chest",
 
     "side_obtng_rock": "Mining Materials",
     "side_obtng_chem": "Collecting Chemicals",
@@ -39,9 +39,30 @@
 
     "itm_wpn_skin": "Applying Weapon Skin",
 
+    "tbl_set_base": "Setting up Table",
+    "tbl_set_tkit": "Setting up Kit",
+    "tbl_set_clean": "Clean up Table",
+    "tbl_set_grill": "Set up Grill",
+    "tbl_set_drink": "Set up Drinks",
+    "tbl_set_wepns": "Set up Weapons Kit",
+    "tbl_set_crime": "Set up Illegal Kit",
+    "tbl_set_weedk": "Set up Cannabis Kit",
+    "tbl_set_methk": "Set up Meth Kit",
+    "tbl_set_cocak": "Set up Cocaine Kit",
+
+    "tbl_act_grill": "Begin Cooking",
+    "tbl_act_drink": "Pour Drinks",
+    "tbl_act_wepn1": "Repaint Weapon",
+    "tbl_act_wepn2": "Craft Attachments",
+    "tbl_act_drugp": "Process Drugs",
+    "tbl_act_crmac": "Craft Illegal Tools",
+
     "init_veh_repair": "Repair Engine",
+    "init_veh_rpring": "Repairing Engine",
     "init_veh_clean": "Clean Vehicle",
+    "init_veh_clning": "Cleaning Vehicle",
     "init_veh_recolor": "Change Color",
-    "init_veh_tire": "Repair Tires",
-    "init_veh_inspection": "Inspect Vehicle"
+    "init_veh_rclring": "Repainting Vehicle",
+    "init_veh_tire": "Repair Tire",
+    "init_veh_tring": "Repairing Tires"
 }
