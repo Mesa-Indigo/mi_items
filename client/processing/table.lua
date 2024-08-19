@@ -5,6 +5,10 @@ local setup = {
     cool = { obj = nil, model = lib.requestModel('v_res_mchopboard') },
     pan = { obj = nil, model = lib.requestModel('v_ret_fh_fry02') },
 
+    alc1 = { obj = nil, model = lib.requestModel('ng_proc_paper_news_globe') },
+    alc2 = { obj = nil, model = lib.requestModel('prop_clubset') },
+    alc3 = { obj = nil, model = lib.requestModel('prop_bar_caddy') },
+
     meth1 = { obj = nil, model = lib.requestModel('tr_prop_meth_smashedtray_02') },
     meth2 = { obj = nil, model = lib.requestModel('bkr_prop_meth_sacid') },
     meth3 = { obj = nil, model = lib.requestModel('tr_prop_meth_pseudoephedrine') },
@@ -18,19 +22,16 @@ local setup = {
     Inventory:openInventory('crafting', data)
 ]]
 
-local kitted = false
-
 local tableops = {
     {
         name = 'clean',
         label = locale('tbl_set_clean'),
         icon = 'fa-solid fa-broom',
         canInteract = function(_, distance)
-            return distance < 1.5 and kitted
+            return distance < 1.5
         end,
         onSelect = function()
-            kitted = false
-            TriggerServerEvent('miit:s:table:grill', table.obj, setup.grill, setup.cool, setup.pan)
+            TriggerServerEvent('miit:s:table:clean', table.obj)
         end
     },
 
@@ -40,10 +41,9 @@ local tableops = {
         icon = 'fa-solid fa-fire-burner',
         items  = 'tkit_grill',
         canInteract = function(_, distance)
-            return distance < 1.5 and not kitted
+            return distance < 1.5
         end,
         onSelect = function()
-            kitted = true
             TriggerServerEvent('miit:s:table:grill', table.obj, setup.grill, setup.cool, setup.pan)
         end
     },
@@ -52,13 +52,12 @@ local tableops = {
         name = 'drink',
         label = locale('tbl_set_drink'),
         icon = 'fa-solid fa-champagne-glasses',
-        items  = 'tkit_grill',
+        items  = 'tkit_alch',
         canInteract = function(_, distance)
-            return distance < 1.5 and not kitted
+            return distance < 1.5
         end,
         onSelect = function()
-            kitted = true
-            TriggerServerEvent('miit:s:table:grill', table.obj, setup.grill, setup.cool, setup.pan)
+            TriggerServerEvent('miit:s:table:drinks', table.obj, setup.alc1, setup.alc2, setup.alc3)
         end
     },
 
@@ -68,10 +67,9 @@ local tableops = {
         icon = 'fa-solid fa-gun',
         items  = 'tkit_weap',
         canInteract = function(_, distance)
-            return distance < 1.5 and not kitted
+            return distance < 1.5
         end,
         onSelect = function()
-            kitted = true
             --TriggerServerEvent('miit:s:table:weapon', table.obj, setup.gun1, setup.gun2, setup.gun3)
         end
     },
@@ -82,10 +80,9 @@ local tableops = {
         icon = 'fa-solid fa-mask',
         items  = 'tkit_crim',
         canInteract = function(_, distance)
-            return distance < 1.5 and not kitted
+            return distance < 1.5
         end,
         onSelect = function()
-            kitted = true
             --TriggerServerEvent('miit:s:table:meth', table.obj, setup.meth1, setup.meth2, setup.meth3)
         end
     },
@@ -96,10 +93,9 @@ local tableops = {
         icon = 'fa-solid fa-flask-vial',
         items  = 'tkit_weed',
         canInteract = function(_, distance)
-            return distance < 1.5 and not kitted
+            return distance < 1.5
         end,
         onSelect = function()
-            kitted = true
             --TriggerServerEvent('miit:s:table:meth', table.obj, setup.meth1, setup.meth2, setup.meth3)
         end
     },
@@ -110,10 +106,9 @@ local tableops = {
         icon = 'fa-solid fa-flask-vial',
         items  = 'tkit_coke',
         canInteract = function(_, distance)
-            return distance < 1.5 and not kitted
+            return distance < 1.5
         end,
         onSelect = function()
-            kitted = true
             --TriggerServerEvent('miit:s:table:meth', table.obj, setup.meth1, setup.meth2, setup.meth3)
         end
     },
@@ -124,10 +119,9 @@ local tableops = {
         icon = 'fa-solid fa-flask-vial',
         items  = 'tkit_meth',
         canInteract = function(_, distance)
-            return distance < 1.5 and not kitted
+            return distance < 1.5
         end,
         onSelect = function()
-            kitted = true
             TriggerServerEvent('miit:s:table:meth', table.obj, setup.meth1, setup.meth2, setup.meth3)
         end
     },

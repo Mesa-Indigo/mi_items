@@ -61,6 +61,11 @@ AddEventHandler('miit:s:table:grill', function(table, grill, cooler, pan)
     TriggerClientEvent('miit:c:table:grill', -1, table, grill, cooler, pan)
 end)
 
+RegisterNetEvent('miit:s:table:drinks')
+AddEventHandler('miit:s:table:drinks', function(table, alc1, alc2, alc3)
+    TriggerClientEvent('miit:c:table:drinks', -1, table, alc1, alc2, alc3)
+end)
+
 RegisterNetEvent('miit:s:table:meth')
 AddEventHandler('miit:s:table:meth', function(table, meth1, meth2, meth3)
     TriggerClientEvent('miit:c:table:meth', -1, table, meth1, meth2, meth3)

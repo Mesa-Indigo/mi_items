@@ -1179,13 +1179,13 @@ return {
 
     ['alc_cups'] = {
         label = 'Glass Cups', weight = 30,
-        stack = false, close = false,
+        stack = true, close = false,
         description = "Used for mixing drinks.",
     },
 
     ['alc_shots'] = {
         label = 'Shot Glasses', weight = 30,
-        stack = false, close = false,
+        stack = true, close = false,
         description = "Used for pouring shots.",
     },
 
