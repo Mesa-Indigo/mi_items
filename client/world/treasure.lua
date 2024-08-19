@@ -57,4 +57,4 @@ AddEventHandler('miit:c:load:diving', function()
     spawnobjects(World.Diving)
 end)
 
-TriggerServerEvent('miit:s:load:diving')
+--TriggerServerEvent('miit:s:load:diving')

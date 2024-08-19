@@ -55,6 +55,13 @@ lib.callback.register('miit:item:hybjoint', function(source)
     Inventory:AddItem(source, 'jt_hybrid', 4)
 end)
 
+-- cannabis payout
+lib.callback.register('miit:payout:activity', function(source, item, count, data)
+    Inventory:RemoveItem(source, item, count)
+    Wait(250)
+    Inventory:AddItem(source, 'money', count*data)
+end)
+
 -- mining reward items
 lib.callback.register('miit:give:mining:reward', function(source)
     local chance = World.Mining.reward

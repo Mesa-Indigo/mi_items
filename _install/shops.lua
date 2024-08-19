@@ -335,6 +335,24 @@ return {
 		}
 	},
 
+	--[[	WIP for mi_news system
+	NewsDispensers = {
+		name = 'News Box',
+		inventory = {
+			{ name = 'nwpr_global', price = 3 },
+			{ name = 'nwpr_meteor', price = 3 },
+		},
+		model = {
+			`prop_news_disp_02c`, `prop_news_disp_06a`,
+			`prop_news_disp_01a`, `prop_news_disp_03a`,
+			`prop_news_disp_02e`, `prop_news_disp_02b`,
+			`prop_news_disp_02e`, `prop_news_disp_02b`,
+			`prop_news_disp_03c`, `prop_news_disp_02a_s`,
+			`prop_news_disp_02a`, `prop_news_disp_02d`,
+		}
+	},
+	]]
+
 	VendingMachineCoffee = {
 		name = 'Coffee Machine',
 		inventory = {

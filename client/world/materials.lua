@@ -79,4 +79,4 @@ AddEventHandler('miit:c:load:mining', function()
     spawnobjects(World.Mining)
 end)
 
-TriggerServerEvent('miit:s:load:mining')
+--TriggerServerEvent('miit:s:load:mining')

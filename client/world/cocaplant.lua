@@ -67,4 +67,4 @@ AddEventHandler('miit:c:load:cocaplant', function()
     spawnobjects(World.Cocaplant)
 end)
 
-TriggerServerEvent('miit:s:load:cocaplant')
+--TriggerServerEvent('miit:s:load:cocaplant')

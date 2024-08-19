@@ -66,4 +66,4 @@ AddEventHandler('miit:c:load:cannabis', function()
     spawnobjects(World.Cannabis)
 end)
 
-TriggerServerEvent('miit:s:load:cannabis')
+--TriggerServerEvent('miit:s:load:cannabis')

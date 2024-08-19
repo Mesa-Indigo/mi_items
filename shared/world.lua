@@ -1,5 +1,42 @@
 World = {}
 
+World.Vend = {
+    
+    -- vendor locations
+    loc = {
+        -- cannabis vendor
+        cnbs = vec4(-1168.935, -1572.998, 4.663, 118.505),
+        -- chemical vendor
+        chem = vec4(2984.448, 3482.795, 71.441, 351.588),
+        -- treasure vendor
+        trsr = vec4(-1122.377, -1648.113, 4.354, 124.84),
+        -- material vendor
+        mtrl = vec4(284.674, 2847.151, 43.642, 69.263),
+    },
+
+    -- canabis prices
+    cnbs = {
+        jar_sat = 65,
+        jar_ind = 64,
+        jar_hyb = 67,
+        brk_sat = 178,
+        brk_ind = 182,
+        brk_hyb = 195,
+    },
+
+    -- canabis prices
+    chem = {
+        chem_sulfur = 49,
+        chem_potnitr = 57,
+        chem_psdnrn = 68,
+        chem_iodine = 48,
+        chem_phsrus = 51,
+        chem_amonia = 57,
+        chem_actone = 58,
+    },
+    
+}
+
 World.Mining = {
     -- the default location is the davis quartz quarry
     -- it covers the central quarry area

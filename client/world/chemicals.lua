@@ -70,4 +70,4 @@ AddEventHandler('miit:c:load:chemicals', function()
     spawnobjects(World.Chemicals)
 end)
 
-TriggerServerEvent('miit:s:load:chemicals')
+--TriggerServerEvent('miit:s:load:chemicals')
