@@ -1,7 +1,21 @@
 World = {}
 
 World.Vend = {
-    
+
+    -- set blips for vendors
+    blip = {
+        -- cannabis vendor
+        cnbs = true,
+        -- chemical vendor
+        chem = true,
+        -- treasure vendor
+        trsr = true,
+        -- material vendor
+        mtrl = true,
+        -- recycle vendor
+        rcyl = true,
+    },
+
     -- vendor locations
     loc = {
         -- cannabis vendor
@@ -9,9 +23,11 @@ World.Vend = {
         -- chemical vendor
         chem = vec4(2984.448, 3482.795, 71.441, 351.588),
         -- treasure vendor
-        trsr = vec4(-1122.377, -1648.113, 4.354, 124.84),
+        trsr = vec4(-1483.996, -947.206, 10.212, 140.153),
         -- material vendor
         mtrl = vec4(284.674, 2847.151, 43.642, 69.263),
+        -- recycle vendor
+        rcyl = vec4(746.982, -1399.967, 26.579, 188.617),
     },
 
     -- canabis prices

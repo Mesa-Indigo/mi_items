@@ -935,43 +935,43 @@ return {
     --[[    Containers    ]]--
 
     ['cnt_bcpk1'] = {
-        label = 'Backpack', weight = 6000,
+        label = 'Backpack', weight = 1000,
         stack = true, close = false,
         description = "Use to hold thing, like a bag that holds things.",
     },
 
     ['cnt_bcpk2'] = {
-        label = 'Backpack', weight = 6000,
+        label = 'Backpack', weight = 1000,
         stack = false, close = false,
         description = "Use to hold thing, like a bag that holds things.",
     },
 
     ['cnt_bcpk3'] = {
-        label = 'Backpack', weight = 7500,
+        label = 'Backpack', weight = 1000,
         stack = false, close = false,
         description = "Use to hold thing, like a bag that holds things.",
     },
 
     ['cnt_bcpk4'] = {
-        label = 'Backpack', weight = 7500,
+        label = 'Backpack', weight = 1000,
         stack = false, close = false,
         description = "Use to hold thing, like a bag that holds things.",
     },
 
     ['cnt_bfcs1'] = {
-        label = 'Briefcase', weight = 3500,
+        label = 'Briefcase', weight = 1000,
         stack = false, close = false,
         description = "I\'m a business man with a business plan.",
     },
 
     ['cnt_bfcs2'] = {
-        label = 'Briefcase', weight = 3500,
+        label = 'Briefcase', weight = 1000,
         stack = false, close = false,
         description = "I\'m a business man with a business plan.",
     },
 
     ['cnt_bfcs3'] = {
-        label = 'Briefcase', weight = 3500,
+        label = 'Briefcase', weight = 1000,
         stack = false, close = false,
         description = "I\'m a business man with a business plan.",
     },

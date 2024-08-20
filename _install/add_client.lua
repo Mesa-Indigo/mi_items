@@ -20,7 +20,14 @@ Item('parachute', function(data, slot)
 	end
 end)
 
--- armor tools
+-- liesure
+Item('cooler', function(data, slot)
+	ox_inventory:useItem(data, function(data)
+		exports['mi_items']:cooler()
+	end)
+end)
+
+-- table tools
 Item('fold_table', function(data, slot)
 	ox_inventory:useItem(data, function(data)
 		exports['mi_items']:fold_table()
