@@ -86,7 +86,7 @@ AddEventHandler('miit:c:table:weapon', function(table, gun1, gun2, gun3)
     local gunops = {
         {
             name = 'gunc',
-            label = locale('tbl_set_clean'),
+            label = locale('tbl_act_wepn1'),
             icon = 'fa-solid fa-swatchbook',
             canInteract = function(_, distance)
                 return distance < 1.5

@@ -31,7 +31,7 @@ local tableops = {
             return distance < 1.5
         end,
         onSelect = function()
-            TriggerServerEvent('miit:s:table:clean', table.obj)
+            TriggerServerEvent('miit:s:table:clean', table.obj, {})
         end
     },
 
@@ -70,7 +70,7 @@ local tableops = {
             return distance < 1.5
         end,
         onSelect = function()
-            --TriggerServerEvent('miit:s:table:weapon', table.obj, setup.gun1, setup.gun2, setup.gun3)
+            TriggerServerEvent('miit:s:table:weapon', table.obj, setup.gun1, setup.gun2, setup.gun3)
         end
     },
 
