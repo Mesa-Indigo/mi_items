@@ -21,25 +21,36 @@ local smokeeffect = function(coord)
     StopParticleFxLooped(smoke, true)
 end
 
+local visualeffects = function(effect, shake)
+    SetTimecycleModifier("spectator6")
+    AnimpostfxPlay(effect, 10000001, true)
+    ShakeGameplayCam("DRUNK_SHAKE", shake)
+end
+
+local stopeffects = function()
+    AnimpostfxStopAll()
+    SetTimecycleModifierStrength(0.0)
+    ShakeGameplayCam("DRUNK_SHAKE", 0.0)
+end
+
 -- smoke effect
 RegisterNetEvent('miit:c:smokebomb')
 AddEventHandler('miit:c:smokebomb', function()
     -- location
     local crd = GetEntityCoords(cache.ped)
-    -- smoke effect
+    -- smoke fx
     smokeeffect(crd)
-    -- effect
+    -- apply visual effects to nearby players in radius
+    -- exclude player who used item
     local zone = lib.getNearbyPlayers(crd, 3.0, false)
-    lib.print.info(zone)
-    if zone then
-        SetTimecycleModifier("spectator6")
-        AnimpostfxPlay('DefaultFlash', 10000001, true)
-        ShakeGameplayCam("DRUNK_SHAKE", 0.8)
-        Wait(2500)
-        AnimpostfxStopAll()
-        SetTimecycleModifierStrength(0.0)
-        ShakeGameplayCam("DRUNK_SHAKE", 0.0)
+    -- because debug
+    if Debug then
+        lib.print.info(zone)
     end
+    -- visual effects
+    visualeffects('DefaultFlash', 0.6)
+    Wait(2500)
+    stopeffects()
 end)
 
 
