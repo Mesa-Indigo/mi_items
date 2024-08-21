@@ -19,9 +19,9 @@ AddEventHandler('miut:client:firework:small', function(crds, obj)
         end
     end
 
-    local times = 5
+    local times = Item.Fireworks.count
 
-    Wait(10000)
+    Wait(Item.Fireworks.delay)
     repeat
         UseParticleFxAssetNextCall(ptfx)
         local part1 = StartNetworkedParticleFxNonLoopedAtCoord(
@@ -37,8 +37,8 @@ exports('firework_s1', function()
     local crds = GetOffsetFromEntityInWorldCoords(cache.ped, 0.0, 0.6, 0.0)
     local head = GetEntityHeading(cache.ped)
     -- spawn box
-    local box = lib.callback('miut:server:spawn:obj', false, function()
-    end, crds, 'ind_prop_firework_02')
+    local box = lib.callback('miut:s:spawn', false, function()
+    end, crds, 'ind_prop_firework_03')
     -- set heading
     SetEntityHeading(box, head)
     PlaceObjectOnGroundProperly(box)
@@ -47,7 +47,7 @@ exports('firework_s1', function()
     -- progress bar
     if lib.progressBar({
         duration = 5000,
-        label = 'Setting up Firework',
+        label = locale('itm_frwk_setp'),
         useWhileDead = false,
         canCancel = true,
         disable = { car = true, move = true },
@@ -57,6 +57,42 @@ exports('firework_s1', function()
         -- if success, set off reaction
         if Debug then lib.print.info('firework obj planted') end
         TriggerEvent('miut:client:firework:small', crds, box)
+        Wait(10000)
+        DeleteObject(box)
+    else
+        -- if cancel, delete box w/ no reaction
+        if Debug then lib.print.error('firework obj not planted') end
+        DeleteObject(box)
+    end
+end)
+
+exports('firework_s2', function()
+    -- variables
+    local crds = GetOffsetFromEntityInWorldCoords(cache.ped, 0.0, 0.6, 0.0)
+    local head = GetEntityHeading(cache.ped)
+    -- spawn box
+    local box = lib.callback('miut:s:spawn', false, function()
+    end, crds, 'ind_prop_firework_04')
+    -- set heading
+    SetEntityHeading(box, head)
+    PlaceObjectOnGroundProperly(box)
+    FreezeEntityPosition(box, true)
+    SetEntityCollision(box, true, true)
+    -- progress bar
+    if lib.progressBar({
+        duration = 5000,
+        label = locale('itm_frwk_setp'),
+        useWhileDead = false,
+        canCancel = true,
+        disable = { car = true, move = true },
+        anim = { scenario = 'CODE_HUMAN_MEDIC_TEND_TO_DEAD' },
+    })
+    then
+        -- if success, set off reaction
+        if Debug then lib.print.info('firework obj planted') end
+        TriggerEvent('miut:client:firework:small', crds, box)
+        Wait(10000)
+        DeleteObject(box)
     else
         -- if cancel, delete box w/ no reaction
         if Debug then lib.print.error('firework obj not planted') end

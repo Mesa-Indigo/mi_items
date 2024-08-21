@@ -76,7 +76,10 @@ end
 
 RegisterNetEvent('miit:c:load:mining')
 AddEventHandler('miit:c:load:mining', function()
-    spawnobjects(World.Mining)
+    if World.Mining.active then
+        spawnobjects(World.Mining)
+    else return
+    end
 end)
 
---TriggerServerEvent('miit:s:load:mining')
+TriggerServerEvent('miit:s:load:mining')

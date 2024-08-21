@@ -63,7 +63,10 @@ end
 
 RegisterNetEvent('miit:c:load:cannabis')
 AddEventHandler('miit:c:load:cannabis', function()
-    spawnobjects(World.Cannabis)
+    if World.Cannabis.active then
+        spawnobjects(World.Cannabis)
+    else return
+    end
 end)
 
---TriggerServerEvent('miit:s:load:cannabis')
+TriggerServerEvent('miit:s:load:cannabis')

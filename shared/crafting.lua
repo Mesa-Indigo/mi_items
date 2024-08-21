@@ -1,5 +1,0 @@
-Crafting = {}
-
-Crafting.Drug = {
-
-}

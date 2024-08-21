@@ -64,7 +64,10 @@ end
 
 RegisterNetEvent('miit:c:load:cocaplant')
 AddEventHandler('miit:c:load:cocaplant', function()
-    spawnobjects(World.Cocaplant)
+    if World.Cocaplant.active then
+        spawnobjects(World.Cocaplant)
+    else return
+    end
 end)
 
---TriggerServerEvent('miit:s:load:cocaplant')
+TriggerServerEvent('miit:s:load:cocaplant')

@@ -67,7 +67,10 @@ end
 
 RegisterNetEvent('miit:c:load:chemicals')
 AddEventHandler('miit:c:load:chemicals', function()
-    spawnobjects(World.Chemicals)
+    if World.Chemicals.active then
+        spawnobjects(World.Chemicals)
+    else return
+    end
 end)
 
---TriggerServerEvent('miit:s:load:chemicals')
+TriggerServerEvent('miit:s:load:chemicals')

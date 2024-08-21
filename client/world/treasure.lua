@@ -54,7 +54,10 @@ end
 
 RegisterNetEvent('miit:c:load:diving')
 AddEventHandler('miit:c:load:diving', function()
-    spawnobjects(World.Diving)
+    if World.Diving.active then
+        spawnobjects(World.Diving)
+    else return
+    end
 end)
 
---TriggerServerEvent('miit:s:load:diving')
+TriggerServerEvent('miit:s:load:diving')

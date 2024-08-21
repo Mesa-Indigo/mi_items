@@ -36,10 +36,7 @@ Item.Bomb = {
 -- delay is time to wait until playing particle effects
 -- count is how many times it will play the particle effect
 Item.Fireworks = {
-    small1 =    { delay = 10000, count = 10},
-    small2 =    { delay = 10000, count = 10},
-    big1 =      { delay = 15000, count = 20},
-    big2 =      { delay = 15000, count = 20},
+    delay = 15000, count = 15
 }
 
 --------------------------------
@@ -49,9 +46,7 @@ Item.Fireworks = {
 -- percent is the percentage of health to restore
 -- ex: percent = 10 means restore 1/10 of health
 Item.Recovery = {
-    minor =     { time = 8000, percent = 12 },
-    basic =     { time = 12000, percent = 8 },
-    major =     { time = 16000, percent = 4 },
+    bandage =     { time = 8000, percent = 8 },
 }
 
 --------------------------------

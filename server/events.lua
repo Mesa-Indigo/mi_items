@@ -45,6 +45,12 @@ AddEventHandler('mi_items:s:vehicle:repair', function(vehicle)
     TriggerClientEvent('mi_items:c:vehicle:repair', -1, vehicle)
 end)
 
+-- smoke bomb
+RegisterNetEvent('miit:s:smokebomb')
+AddEventHandler('miit:s:smokebomb', function()
+    TriggerClientEvent('miit:c:smokebomb', -1)
+end)
+
 -- table events
 RegisterNetEvent('miit:s:table:setup')
 AddEventHandler('miit:s:table:setup', function()

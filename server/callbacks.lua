@@ -1,4 +1,8 @@
 
+lib.callback.register('miut:s:spawn', function(source, crds, model)
+    CreateObject(model, crds.x, crds.y, crds.z-1, true, false, false)
+end)
+
 lib.callback.register('miit:item:add', function(source, item, count)
     Inventory:AddItem(source, item, count)
 end)

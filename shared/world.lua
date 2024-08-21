@@ -58,7 +58,7 @@ World.Mining = {
     -- it covers the central quarry area
 
     -- sets system as active / inactive
-    active = true,
+    active = false,
 
     -- sets model of object
     -- probably a rock
@@ -102,7 +102,7 @@ World.Chemicals = {
     -- it covers the area between the pier and bridge
 
     -- sets system as active / inactive
-    active = true,
+    active = false,
 
     -- sets model of chem object
     model = 'xm3_prop_xm3_barrel_01a',
@@ -146,7 +146,7 @@ World.Cannabis = {
     -- it covers the flat farm area
 
     -- sets system as active / inactive
-    active = true,
+    active = false,
 
     -- sets model of chem object
     model = 'prop_weed_01',
@@ -186,7 +186,7 @@ World.Cocaplant = {
     -- it covers the area between the pier and bridge
 
     -- sets system as active / inactive
-    active = true,
+    active = false,
 
     -- sets model of chem object
     model = 'h4_prop_bush_cocaplant_01',
@@ -224,7 +224,7 @@ World.Diving = {
     -- it covers the area in the gulf
 
     -- sets system as active / inactive
-    active = true,
+    active = false,
 
     -- sets model of chem object
     model = 'xm_prop_x17_chest_closed',

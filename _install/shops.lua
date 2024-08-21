@@ -16,6 +16,7 @@ return {
 			{ name = 'orangotang', price = 4 },
 			{ name = 'ejunk', price = 6 },
 
+			{ name = 'bandage_basic', price = 15 },
 			{ name = 'fold_table', price = 120 },
 			{ name = 'tkit_grill', price = 90 },
 
@@ -179,6 +180,8 @@ return {
 			{ name = 'at_grip', price = 360, license = 'weapon' },
 			{ name = 'at_scope_small', price = 450, license = 'weapon' },
 			{ name = 'at_scope_medium', price = 490, license = 'weapon' },
+
+			{ name = 'bandage_basic', price = 15 },
 		}, locations = {
 			vec3(-662.180, -934.961, 21.829),
 			vec3(810.25, -2157.60, 29.62),
@@ -265,13 +268,6 @@ return {
 			{ name = 'armor2', price = 525 },
 			{ name = 'armor3', price = 840 },
 			{ name = 'bandage_basic', price = 35 },
-
-			{ name = 'WEAPON_KNUCKLE', price = 350, metadata = { registered = false } },
-			{ name = 'WEAPON_SWITCHBLADE', price = 460, metadata = { registered = false } },
-			{ name = 'WEAPON_SNSPISTOL', price = 1250, metadata = { registered = false } },
-			{ name = 'WEAPON_MICROSMG', price = 1860, metadata = { registered = false } },
-			{ name = 'WEAPON_SAWNOFFSHOTGUN', price = 2965, metadata = { registered = false } },
-
 		}, targets = {
 			{ ped = `g_m_m_armgoon_01`, scenario = 'WORLD_HUMAN_DRUG_DEALER_HARD', loc = vec3(658.613, -1011.115, 21.722), heading = 165.0 },
 			{ ped = `g_m_y_mexgoon_02`, scenario = 'WORLD_HUMAN_DRUG_DEALER', loc = vec3(1292.248, -1621.394, 53.224), heading = 203.38 },
@@ -298,6 +294,7 @@ return {
 			{ name = 'lockpick', price = 15 },
 			{ name = 'ejunk', price = 8 },
 			{ name = 'candy', price = 10 },
+			{ name = 'bandage_basic', price = 8 },
 
 		}, targets = {
 			{ ped = `u_m_y_prisoner_01`, scenario = 'WORLD_HUMAN_DRUG_DEALER_HARD', loc = vec3(1724.573, 2496.237, 44.564), heading = 88.994 },
@@ -335,6 +332,19 @@ return {
 		}
 	},
 
+	VendingMachineCoffee = {
+		name = 'Coffee Machine',
+		inventory = {
+			{ name = 'coffee_black', price = 4 },
+			{ name = 'coffee_mocha', price = 4 },
+			{ name = 'coffee_cpcno', price = 4 },
+			{ name = 'coffee_amrcno', price = 4 },
+		},
+		model = {
+			`prop_vend_coffe_01`, `prop_vend_snak_01_tu`
+		}
+	},
+
 	--[[	WIP for mi_news system
 	NewsDispensers = {
 		name = 'News Box',
@@ -352,17 +362,4 @@ return {
 		}
 	},
 	]]
-
-	VendingMachineCoffee = {
-		name = 'Coffee Machine',
-		inventory = {
-			{ name = 'coffee_black', price = 4 },
-			{ name = 'coffee_mocha', price = 4 },
-			{ name = 'coffee_cpcno', price = 4 },
-			{ name = 'coffee_amrcno', price = 4 },
-		},
-		model = {
-			`prop_vend_coffe_01`, `prop_vend_snak_01_tu`
-		}
-	}
 }
