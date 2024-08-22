@@ -32,6 +32,8 @@ return {
             },
         }
     },
+    ----------------------------------------------------------------
+	----------------------------------------------------------------
 	{	-- DRUGS: Meth
         items = {
 			-- meth
@@ -330,7 +332,7 @@ return {
             {
                 name = 'at_scope_large', duration = 5000, count = 3,
                 ingredients = {
-                    scrap_iron = 4,
+                    scrap_iron = 6,
                     scrap_bolts = 3,
                     scrap_bottle = 2,
                     scrap_plastic = 3
@@ -342,7 +344,7 @@ return {
                 ingredients = {
                     scrap_iron = 4,
                     scrap_bolts = 3,
-                    scrap_bottle = 2,
+                    scrap_bottle = 3,
                     scrap_plastic = 3
                 }
             },
@@ -351,7 +353,7 @@ return {
                 ingredients = {
                     scrap_iron = 4,
                     scrap_bolts = 3,
-                    scrap_bottle = 2,
+                    scrap_bottle = 3,
                     scrap_plastic = 3
                 }
             },
@@ -360,7 +362,7 @@ return {
                 ingredients = {
                     scrap_iron = 4,
                     scrap_bolts = 3,
-                    scrap_bottle = 2,
+                    scrap_bottle = 3,
                     scrap_plastic = 3
                 }
             },
@@ -369,7 +371,7 @@ return {
                 ingredients = {
                     scrap_iron = 4,
                     scrap_bolts = 3,
-                    scrap_bottle = 2,
+                    scrap_bottle = 3,
                     scrap_plastic = 3
                 }
             },
@@ -378,7 +380,7 @@ return {
                 ingredients = {
                     scrap_iron = 4,
                     scrap_bolts = 3,
-                    scrap_bottle = 2,
+                    scrap_bottle = 3,
                     scrap_plastic = 3
                 }
             },
@@ -387,11 +389,49 @@ return {
                 ingredients = {
                     scrap_iron = 4,
                     scrap_bolts = 3,
-                    scrap_bottle = 2,
+                    scrap_bottle = 3,
                     scrap_plastic = 3
                 }
             },
-            
         }
     },
+    ----------------------------------------------------------------
+	----------------------------------------------------------------
+	{	-- CRIME: Tools
+    items = {
+        -- meth
+        {
+            name = 'lockpick', duration = 5000, count = 2,
+            ingredients = {
+                scrap_iron = 3,
+            }
+        },
+        {
+            name = 'hacktool_phone', duration = 10000, count = 1,
+            ingredients = {
+                phone = 1,
+                scrap_wires = 3,
+                scrap_aluminium = 2,
+            }
+        },
+        {
+            name = 'smokebomb', duration = 10000, count = 1,
+            ingredients = {
+                chem_amonia = 2,
+                scrap_wires = 3,
+                scrap_plastic = 2,
+            }
+        },
+        {
+            name = 'bombbag_exp', duration = 30000, count = 1,
+            ingredients = {
+                scrap_wires = 8,
+                scrap_plastic = 4,
+                scrap_aluminium = 4,
+                chem_sulfur = 4,
+                chem_potnitr = 6
+            }
+        },
+    }
+},
 }

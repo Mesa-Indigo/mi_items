@@ -16,6 +16,7 @@ return {
 			{ name = 'orangotang', price = 4 },
 			{ name = 'ejunk', price = 6 },
 
+			{ name = 'phone', price = 90 },
 			{ name = 'bandage_basic', price = 15 },
 			{ name = 'fold_table', price = 120 },
 			{ name = 'tkit_grill', price = 90 },

@@ -1037,7 +1037,7 @@ return {
 
     -- recovery
     ['bandage_basic'] = {
-        label = 'Basic Bandage', weight = 1200, stack = true,
+        label = 'Basic Bandage', weight = 300, stack = true,
         consume = 1,
         description = "That won't stop a bullet hole but ok I guess.",
     },
@@ -1129,30 +1129,26 @@ return {
         description = "See that shit go bing bong.",
     },
 
-    ['firework_b1'] = {
-        label = 'Small Firework: Rex', weight = 2300, stack = true,
-        consume = 1,
-        description = "See that shit go bing bong.",
-    },
-
-    ['firework_b2'] = {
-        label = 'Small Firework: Rex', weight = 2300, stack = true,
-        consume = 1,
-        description = "See that shit go bing bong.",
-    },
-
-    ['firework_exp'] = {
-        label = 'Expired Fireworks', weight = 1500, stack = true,
-        consume = 1,
-        description = "Remnants of a good time. I wonder what's inside?",
-    },
-
     -- bombs
     ['bombbag_exp'] = {
         label = 'Explosive Bag', weight = 5500, stack = false,
         consume = 1,
-        description = "Pro tip: Rust is not a vitamin. Also, I need to see a doctor.",
+        description = "That shit gonna explode boi, why are you still here?.",
         allowArmed = false,
+    },
+
+    -- cracked phone
+    ['hacktool_phone'] = {
+        label = 'Cracked Phone', weight = 230, stack = false,
+        description = "This shit is cracked yo, why do you still want it?.",
+        allowArmed = false,
+    },
+
+    -- smokebomb
+    ['smokebomb'] = {
+        label = 'Smokebomb', weight = 230, stack = true,
+        description = "Blind thy foes and flee, you fool.",
+        allowArmed = true,
     },
 
     -- beach

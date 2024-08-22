@@ -31,6 +31,18 @@ Item.Bomb = {
 }
 
 --------------------------------
+-- atm hack tool
+
+-- wait is the time before being able to hack again
+-- time is the min / max range in minutes
+-- reward is the min / max range in money given
+Item.ATM = {
+    wait =      30000,
+    time =      { min = 7000, max = 15000 },
+    reward =    { min = 50, max = 300 },
+}
+
+--------------------------------
 -- firework items
 
 -- delay is time to wait until playing particle effects

@@ -112,6 +112,13 @@ lib.callback.register('miit:weapon:tint', function(source, weapon, tint)
     Inventory:SetMetadata(source, weapon.slot, weapon.metadata)
 end)
 
+-- atm hack
+lib.callback.register('miit:give:atmhack:reward', function(source, min, max)
+    local chance = Item.ATM.reward
+    local amount = math.random(chance.min, chance.max)
+    Inventory:AddItem(source, 'money', amount)
+end)
+
 -- for meta item needs / notes & trading cards
 --[[
 -- create note object

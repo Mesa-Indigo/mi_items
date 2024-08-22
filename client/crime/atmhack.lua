@@ -5,47 +5,27 @@ local atms = {
 }
 
 local anim = {
-    dict = 'anim@heists@ornate_bank@hack',
-    begn = 'hack_enter',
+    dict = 'anim@heists@humane_labs@emp@hack_door',
     hack = 'hack_loop',
-    finl = 'hack_exit',
 }
 
--- functions
-local start = function()
-    if lib.progressBar({
-        duration = 5000, label = 'Repairing Engine',
-        useWhileDead = false, canCancel = true,
-        disable = {
-            car = true, move = true
-        },
-        anim = {
-            blendIn = 3.0, dict = anim.dict, flag = 01,
-            clip = anim.begn, blendOut = 3.0,
-        },
-        prop = {
-            {
-                model = `prop_tool_adjspanner`,
-                pos = vec3(0.07, 0.055, 0.01),
-                rot = vec3(280.0, 10.0, 310.0)
-            }
-        },
-    }) then
-        print('weh')
-    end
-end
+local disabled = false
 
 -- options
 local atmops = {
     {
         name = 'vendor',
-        label = 'talk to vendor',
-        icon = 'fa-solid fa-hand-fist',
+        label = locale('itm_atm_hack'),
+        icon = 'fa-solid fa-network-wired',
+        items = 'hacktool_phone',
         canInteract = function(_, distance)
-            return distance < 1.5
+            return distance < 1.5 and not disabled
         end,
         onSelect = function(data)
             TriggerEvent('miit:crime:atm', data)
+            disabled = true
+            Wait(Item.ATM.wait)
+            disabled = false
         end
     }
 }
@@ -58,7 +38,32 @@ RegisterNetEvent('miit:crime:atm')
 AddEventHandler('miit:crime:atm', function(data)
     local crd = data.coords
     local hed = GetEntityHeading(data.entity)
-    print(crd, hed)
-    TaskGoToEntity(cache.ped, data.entity, 2000, 0.3, 1.0, 1073741824, 0)
-    --TaskTurnPedToFaceEntity(cache.ped, data.entity, 3000)
+    if Debug then
+        lib.print.info(crd, hed)
+    end
+    TaskGoToEntity(cache.ped, data.entity, 2000, 0.75, 1.0, 1073741824, 0)
+    Wait(1000)
+    local dur = math.random(Item.ATM.time.min, Item.ATM.time.max)
+    if lib.progressBar({
+        duration = dur, label = locale('itm_atm_hackg'),
+        useWhileDead = false, canCancel = true,
+        disable = {
+            car = true, move = true
+        },
+        anim = {
+            blendIn = 3.0, dict = anim.dict, flag = 01,
+            clip = anim.hack, blendOut = 3.0,
+        },
+        prop = {
+            {
+                bone = 28422,
+                model = 'prop_police_phone',
+                pos = vec3(0.0, 0.0, 0.0301),
+                rot = vec3(0.0, 0.0, 0.0)
+            }
+        },
+    }) then
+        local atm = Item.ATM.reward
+        lib.callback.await('miit:give:atmhack:reward', atm.min, atm.max)
+    end
 end)
