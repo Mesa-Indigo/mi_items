@@ -135,6 +135,7 @@ AddEventHandler('miit:c:table:weapon', function(table, gun1, gun2, gun3)
                 return distance < 1.5
             end,
             onSelect = function()
+                Placed = false
                 TriggerServerEvent('miit:s:table:clean', table, { gun1, gun2, gun3 })
             end
         },

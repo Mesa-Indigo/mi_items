@@ -87,6 +87,16 @@ AddEventHandler('miit:s:table:crime', function(table, crm1, crm2, crm3)
     TriggerClientEvent('miit:c:table:crime', -1, table, crm1, crm2, crm3)
 end)
 
+RegisterNetEvent('miit:s:table:cocaine')
+AddEventHandler('miit:s:table:cocaine', function(table, ckn1, ckn2, ckn3)
+    TriggerClientEvent('miit:c:table:cocaine', -1, table, ckn1, ckn2, ckn3)
+end)
+
+RegisterNetEvent('miit:s:table:weed')
+AddEventHandler('miit:s:table:weed', function(table, cnb1, cnb2, cnb3)
+    TriggerClientEvent('miit:c:table:weed', -1, table, cnb1, cnb2, cnb3)
+end)
+
 -- creation of temporary stash
 RegisterNetEvent('miit:s:camp:tempstash')
 RegisterServerEvent('miit:s:camp:tempstash', function(stash, label, slot, weight, list)

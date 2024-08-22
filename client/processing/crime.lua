@@ -24,6 +24,7 @@ AddEventHandler('miit:c:table:crime', function(table, crm1, crm2, crm3)
                 return distance < 1.5
             end,
             onSelect = function()
+                Placed = false
                 TriggerServerEvent('miit:s:table:clean', table, { crm1, crm2, crm3 })
             end
         },

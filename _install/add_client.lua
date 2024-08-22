@@ -20,6 +20,17 @@ Item('parachute', function(data, slot)
 	end
 end)
 
+-- phone object
+Item('phone', function(data, slot)
+	local success, result = pcall(function()
+		return exports.npwd:isPhoneVisible()
+	end)
+
+	if success then
+		exports.npwd:setPhoneVisible(not result)
+	end
+end)
+
 -- liesure
 Item('cooler', function(data, slot)
 	ox_inventory:useItem(data, function(data)
@@ -112,6 +123,12 @@ Item('bombbag_exp', function(data, slot)
 	end)
 end)
 
+Item('smokebomb', function(data, slot)
+	ox_inventory:useItem(data, function(data)
+		exports['mi_items']:smokebomb()
+	end)
+end)
+
 -- drugs
 Item('pc_cocaine', function(data, slot)
 	ox_inventory:useItem(data, function(data)
@@ -143,13 +160,14 @@ Item('jt_hybrid', function(data, slot)
 	end)
 end)
 
--- phone object
-Item('phone', function(data, slot)
-	local success, result = pcall(function()
-		return exports.npwd:isPhoneVisible()
+Item('firework_s1', function(data, slot)
+	ox_inventory:useItem(data, function(data)
+		exports['mi_items']:firework_s1()
 	end)
+end)
 
-	if success then
-		exports.npwd:setPhoneVisible(not result)
-	end
+Item('firework_s2', function(data, slot)
+	ox_inventory:useItem(data, function(data)
+		exports['mi_items']:firework_s2()
+	end)
 end)

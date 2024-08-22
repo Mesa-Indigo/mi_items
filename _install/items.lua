@@ -1124,7 +1124,7 @@ return {
     },
 
     ['firework_s2'] = {
-        label = 'Small Firework: Rex', weight = 2300, stack = true,
+        label = 'Small Firework: Ven', weight = 2300, stack = true,
         consume = 1,
         description = "See that shit go bing bong.",
     },
@@ -1158,6 +1158,7 @@ return {
         description = "Get some fresh beers, dude.",
     },
 
+    --[[ WIP for camping set
     -- camping
     ['tent'] = {
         label = 'Camping Tent', weight = 5600, stack = true,
@@ -1172,6 +1173,7 @@ return {
         consume = 1,
         allowArmed = false,
     },
+    ]]
 
     ['alc_cups'] = {
         label = 'Glass Cups', weight = 30,

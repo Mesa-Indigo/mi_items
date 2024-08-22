@@ -19,14 +19,22 @@ local setup = {
 
     crm1 = { obj = nil, model = lib.requestModel('m23_2_prop_m32_blueprt_01a') },
     crm2 = { obj = nil, model = lib.requestModel('m23_2_prop_m32_bag_weapons_01a') },
-    crm3 = { obj = nil, model = lib.requestModel('prop_mp_drug_pack_red') },
+    crm3 = { obj = nil, model = lib.requestModel('prop_mp_drug_package') },
+
+    ckn1 = { obj = nil, model = lib.requestModel('h4_prop_h4_coke_scale_02') },
+    ckn2 = { obj = nil, model = lib.requestModel('bkr_prop_coke_cut_02') },
+    ckn3 = { obj = nil, model = lib.requestModel('h4_prop_h4_coke_stack_01a') },
+
+    cnb1 = { obj = nil, model = lib.requestModel('bkr_prop_weed_scales_01a') },
+    cnb2 = { obj = nil, model = lib.requestModel('prop_weed_block_01') },
+    cnb3 = { obj = nil, model = lib.requestModel('sf_prop_sf_weed_01_small_01a') },
 }
 --[[
     local data = { id = 3 , 1 }
     Inventory:openInventory('crafting', data)
 ]]
 
-local placed = false
+Placed = false
 
 local tableops = {
     {
@@ -34,10 +42,10 @@ local tableops = {
         label = locale('tbl_set_clean'),
         icon = 'fa-solid fa-broom',
         canInteract = function(_, distance)
-            return distance < 1.5
+            return distance < 1.5 and Placed
         end,
         onSelect = function()
-            RemoveOps()
+            Placed = false
             TriggerServerEvent('miit:s:table:clean', table.obj, {})
         end
     },
@@ -48,10 +56,11 @@ local tableops = {
         icon = 'fa-solid fa-fire-burner',
         items  = 'tkit_grill',
         canInteract = function(_, distance)
-            return distance < 1.5 and not placed
+            return distance < 1.5 and not Placed
         end,
         onSelect = function()
-            placed = true
+            Placed = true
+            lib.callback.await('miit:item:rem', cache.ped, 'tkit_grill', 1)
             TriggerServerEvent('miit:s:table:grill', table.obj, setup.grill, setup.cool, setup.pan)
         end
     },
@@ -62,10 +71,11 @@ local tableops = {
         icon = 'fa-solid fa-champagne-glasses',
         items  = 'tkit_alch',
         canInteract = function(_, distance)
-            return distance < 1.5 and not placed
+            return distance < 1.5 and not Placed
         end,
         onSelect = function()
-            placed = true
+            Placed = true
+            lib.callback.await('miit:item:rem', cache.ped, 'tkit_alch', 1)
             TriggerServerEvent('miit:s:table:drinks', table.obj, setup.alc1, setup.alc2, setup.alc3)
         end
     },
@@ -76,10 +86,11 @@ local tableops = {
         icon = 'fa-solid fa-gun',
         items  = 'tkit_weap',
         canInteract = function(_, distance)
-            return distance < 1.5 and not placed
+            return distance < 1.5 and not Placed
         end,
         onSelect = function()
-            placed = true
+            Placed = true
+            lib.callback.await('miit:item:rem', cache.ped, 'tkit_weap', 1)
             TriggerServerEvent('miit:s:table:weapon', table.obj, setup.gun1, setup.gun2, setup.gun3)
         end
     },
@@ -90,10 +101,11 @@ local tableops = {
         icon = 'fa-solid fa-mask',
         items  = 'tkit_crim',
         canInteract = function(_, distance)
-            return distance < 1.5 and not placed
+            return distance < 1.5 and not Placed
         end,
         onSelect = function()
-            placed = true
+            Placed = true
+            lib.callback.await('miit:item:rem', cache.ped, 'tkit_crim', 1)
             TriggerServerEvent('miit:s:table:crime', table.obj, setup.crm1, setup.crm2, setup.crm3)
         end
     },
@@ -104,11 +116,12 @@ local tableops = {
         icon = 'fa-solid fa-flask-vial',
         items  = 'tkit_weed',
         canInteract = function(_, distance)
-            return distance < 1.5 and not placed
+            return distance < 1.5 and not Placed
         end,
         onSelect = function()
-            placed = true
-            --TriggerServerEvent('miit:s:table:meth', table.obj, setup.meth1, setup.meth2, setup.meth3)
+            Placed = true
+            lib.callback.await('miit:item:rem', cache.ped, 'tkit_weed', 1)
+            TriggerServerEvent('miit:s:table:weed', table.obj, setup.cnb1, setup.cnb2, setup.cnb3)
         end
     },
 
@@ -118,11 +131,12 @@ local tableops = {
         icon = 'fa-solid fa-flask-vial',
         items  = 'tkit_coke',
         canInteract = function(_, distance)
-            return distance < 1.5 and not placed
+            return distance < 1.5 and not Placed
         end,
         onSelect = function()
-            placed = true
-            --TriggerServerEvent('miit:s:table:meth', table.obj, setup.meth1, setup.meth2, setup.meth3)
+            Placed = true
+            lib.callback.await('miit:item:rem', cache.ped, 'tkit_coke', 1)
+            TriggerServerEvent('miit:s:table:cocaine', table.obj, setup.ckn1, setup.ckn2, setup.ckn3)
         end
     },
 
@@ -132,10 +146,11 @@ local tableops = {
         icon = 'fa-solid fa-flask-vial',
         items  = 'tkit_meth',
         canInteract = function(_, distance)
-            return distance < 1.5 and not placed
+            return distance < 1.5 and not Placed
         end,
         onSelect = function()
-            placed = true
+            Placed = true
+            lib.callback.await('miit:item:rem', cache.ped, 'tkit_meth', 1)
             TriggerServerEvent('miit:s:table:meth', table.obj, setup.meth1, setup.meth2, setup.meth3)
         end
     },
@@ -198,6 +213,6 @@ AddEventHandler('miit:c:table:clean', function(obj, objects)
 end)
 
 
-RegisterCommand('ctable', function()
+exports('fold_table', function()
     TriggerServerEvent('miit:s:table:setup')
-end, false)
+end)

@@ -7,7 +7,7 @@ AddEventHandler('miit:c:table:meth', function(table, meth1, meth2, meth3)
         {
             name = 'meth',
             label = locale('tbl_act_drugp'),
-            icon = 'fa-solid fa-fire-burner',
+            icon = 'fa-solid fa-flask-vial',
             canInteract = function(_, distance)
                 return distance < 1.5
             end,
@@ -24,6 +24,7 @@ AddEventHandler('miit:c:table:meth', function(table, meth1, meth2, meth3)
                 return distance < 1.5
             end,
             onSelect = function()
+                Placed = false
                 TriggerServerEvent('miit:s:table:clean', table, { meth1, meth2, meth3 })
             end
         },

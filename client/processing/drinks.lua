@@ -24,6 +24,7 @@ AddEventHandler('miit:c:table:drinks', function(table, alc1, alc2, alc3)
                 return distance < 1.5
             end,
             onSelect = function()
+                Placed = false
                 TriggerServerEvent('miit:s:table:clean', table, { alc1, alc2, alc3 })
             end
         },

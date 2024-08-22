@@ -24,6 +24,7 @@ AddEventHandler('miit:c:table:grill', function(table, grill, cooler, pan)
                 return distance < 1.5
             end,
             onSelect = function()
+                Placed = false
                 TriggerServerEvent('miit:s:table:clean', table, { grill, cooler, pan })
             end
         },
