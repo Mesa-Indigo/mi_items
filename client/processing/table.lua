@@ -16,11 +16,17 @@ local setup = {
     gun1 = { obj = nil, model = lib.requestModel('prop_tool_bluepnt') },
     gun2 = { obj = nil, model = lib.requestModel('prop_paint_spray01a') },
     gun3 = { obj = nil, model = lib.requestModel('h4_prop_h4_case_supp_01a') },
+
+    crm1 = { obj = nil, model = lib.requestModel('m23_2_prop_m32_blueprt_01a') },
+    crm2 = { obj = nil, model = lib.requestModel('m23_2_prop_m32_bag_weapons_01a') },
+    crm3 = { obj = nil, model = lib.requestModel('prop_mp_drug_pack_red') },
 }
 --[[
     local data = { id = 3 , 1 }
     Inventory:openInventory('crafting', data)
 ]]
+
+local placed = false
 
 local tableops = {
     {
@@ -31,6 +37,7 @@ local tableops = {
             return distance < 1.5
         end,
         onSelect = function()
+            RemoveOps()
             TriggerServerEvent('miit:s:table:clean', table.obj, {})
         end
     },
@@ -41,9 +48,10 @@ local tableops = {
         icon = 'fa-solid fa-fire-burner',
         items  = 'tkit_grill',
         canInteract = function(_, distance)
-            return distance < 1.5
+            return distance < 1.5 and not placed
         end,
         onSelect = function()
+            placed = true
             TriggerServerEvent('miit:s:table:grill', table.obj, setup.grill, setup.cool, setup.pan)
         end
     },
@@ -54,9 +62,10 @@ local tableops = {
         icon = 'fa-solid fa-champagne-glasses',
         items  = 'tkit_alch',
         canInteract = function(_, distance)
-            return distance < 1.5
+            return distance < 1.5 and not placed
         end,
         onSelect = function()
+            placed = true
             TriggerServerEvent('miit:s:table:drinks', table.obj, setup.alc1, setup.alc2, setup.alc3)
         end
     },
@@ -67,9 +76,10 @@ local tableops = {
         icon = 'fa-solid fa-gun',
         items  = 'tkit_weap',
         canInteract = function(_, distance)
-            return distance < 1.5
+            return distance < 1.5 and not placed
         end,
         onSelect = function()
+            placed = true
             TriggerServerEvent('miit:s:table:weapon', table.obj, setup.gun1, setup.gun2, setup.gun3)
         end
     },
@@ -80,10 +90,11 @@ local tableops = {
         icon = 'fa-solid fa-mask',
         items  = 'tkit_crim',
         canInteract = function(_, distance)
-            return distance < 1.5
+            return distance < 1.5 and not placed
         end,
         onSelect = function()
-            --TriggerServerEvent('miit:s:table:meth', table.obj, setup.meth1, setup.meth2, setup.meth3)
+            placed = true
+            TriggerServerEvent('miit:s:table:crime', table.obj, setup.crm1, setup.crm2, setup.crm3)
         end
     },
 
@@ -93,9 +104,10 @@ local tableops = {
         icon = 'fa-solid fa-flask-vial',
         items  = 'tkit_weed',
         canInteract = function(_, distance)
-            return distance < 1.5
+            return distance < 1.5 and not placed
         end,
         onSelect = function()
+            placed = true
             --TriggerServerEvent('miit:s:table:meth', table.obj, setup.meth1, setup.meth2, setup.meth3)
         end
     },
@@ -106,9 +118,10 @@ local tableops = {
         icon = 'fa-solid fa-flask-vial',
         items  = 'tkit_coke',
         canInteract = function(_, distance)
-            return distance < 1.5
+            return distance < 1.5 and not placed
         end,
         onSelect = function()
+            placed = true
             --TriggerServerEvent('miit:s:table:meth', table.obj, setup.meth1, setup.meth2, setup.meth3)
         end
     },
@@ -119,9 +132,10 @@ local tableops = {
         icon = 'fa-solid fa-flask-vial',
         items  = 'tkit_meth',
         canInteract = function(_, distance)
-            return distance < 1.5
+            return distance < 1.5 and not placed
         end,
         onSelect = function()
+            placed = true
             TriggerServerEvent('miit:s:table:meth', table.obj, setup.meth1, setup.meth2, setup.meth3)
         end
     },
@@ -142,6 +156,8 @@ AddEventHandler('miit:c:table:setup', function()
             scenario = 'CODE_HUMAN_MEDIC_TEND_TO_DEAD',
         },
     }) then
+        lib.callback.await('miit:item:rem', cache.ped, 'fold_table', 1)
+
         local offset_table = GetOffsetFromEntityInWorldCoords(cache.ped, 0.0, 1.2, 0.0)
         local heading = GetEntityHeading(cache.ped)
 
@@ -157,7 +173,9 @@ AddEventHandler('miit:c:table:setup', function()
     end
 end)
 
-
+RemoveOps = function()
+    Target:removeLocalEntity(table.obj, tableops)
+end
 
 RegisterNetEvent('miit:c:table:clean')
 AddEventHandler('miit:c:table:clean', function(obj, objects)
@@ -175,6 +193,7 @@ AddEventHandler('miit:c:table:clean', function(obj, objects)
         end
         Wait(150)
         DeleteObject(obj)
+        lib.callback.await('miit:item:add', cache.ped, 'fold_table', 1)
     end
 end)
 

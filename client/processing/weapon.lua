@@ -98,7 +98,7 @@ AddEventHandler('miit:c:table:weapon', function(table, gun1, gun2, gun3)
                 else
                     if lib.progressBar({
                         duration = 5000,
-                        label = locale('tbl_prc_drugp'),
+                        label = locale('tbl_act_wepn12'),
                         useWhileDead = false,
                         canCancel = false,
                         disable = {
@@ -123,7 +123,7 @@ AddEventHandler('miit:c:table:weapon', function(table, gun1, gun2, gun3)
                 return distance < 1.5
             end,
             onSelect = function()
-                local data = { id = 5 , 1 }
+                local data = { id = 6 , 1 }
                 Inventory:openInventory('crafting', data)
             end
         },

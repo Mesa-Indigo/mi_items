@@ -12,7 +12,7 @@ AddEventHandler('miit:c:table:grill', function(table, grill, cooler, pan)
                 return distance < 1.5
             end,
             onSelect = function()
-                local data = { id = 3 , 1 }
+                local data = { id = 4 , 1 }
                 Inventory:openInventory('crafting', data)
             end
         },

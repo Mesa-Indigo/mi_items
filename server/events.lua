@@ -78,8 +78,13 @@ AddEventHandler('miit:s:table:meth', function(table, meth1, meth2, meth3)
 end)
 
 RegisterNetEvent('miit:s:table:weapon')
-AddEventHandler('miit:s:table:weapon', function(table, meth1, meth2, meth3)
-    TriggerClientEvent('miit:c:table:weapon', -1, table, meth1, meth2, meth3)
+AddEventHandler('miit:s:table:weapon', function(table, gun1, gun2, gun3)
+    TriggerClientEvent('miit:c:table:weapon', -1, table, gun1, gun2, gun3)
+end)
+
+RegisterNetEvent('miit:s:table:crime')
+AddEventHandler('miit:s:table:crime', function(table, crm1, crm2, crm3)
+    TriggerClientEvent('miit:c:table:crime', -1, table, crm1, crm2, crm3)
 end)
 
 -- creation of temporary stash

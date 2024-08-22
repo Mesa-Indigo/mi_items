@@ -183,6 +183,8 @@ return {
 			{ name = 'at_scope_medium', price = 490, license = 'weapon' },
 
 			{ name = 'bandage_basic', price = 15 },
+			{ name = 'firework_s1', price = 35 },
+			{ name = 'firework_s2', price = 35 },
 		}, locations = {
 			vec3(-662.180, -934.961, 21.829),
 			vec3(810.25, -2157.60, 29.62),
