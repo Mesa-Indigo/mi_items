@@ -54,7 +54,7 @@ AddEventHandler('miit:c:smokebomb', function()
     smokeeffect(crd)
     -- apply visual effects to nearby players in radius
     -- exclude player who used item
-    local zone = lib.getNearbyPlayers(crd, 3.0, true)
+    local zone = lib.getNearbyPlayers(crd, 3.0, false)
     -- because debug
     if Debug then
         lib.print.info(zone)
@@ -62,7 +62,7 @@ AddEventHandler('miit:c:smokebomb', function()
     for _, char in pairs(zone) do
         -- visual effects
         lib.print.info(char.ped)
-        stun(char.ped)
+        --stun(char.ped)
         visualeffects('DefaultFlash', 0.6)
         Wait(2500)
         stopeffects(char.ped)
