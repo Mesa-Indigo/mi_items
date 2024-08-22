@@ -1,6 +1,7 @@
 
 -- variables
 local dict, anim = 'veh@driveby@first_person@bike@passenger@throw', 'drop_grenade'
+local sdict, sanim = 'anim@heists@ornate_bank@thermal_charge', 'cover_eyes_intro'
 
 local smokeeffect = function(coord)
     local smoke
@@ -27,10 +28,21 @@ local visualeffects = function(effect, shake)
     ShakeGameplayCam("DRUNK_SHAKE", shake)
 end
 
-local stopeffects = function()
+local stun = function(ped)
+    TaskPlayAnim(ped, sdict, sanim, 8.0, 8.0, -1, 49, 0, false, false, false)
+    local playinganim = true
+    if playinganim then
+        TaskPlayAnim(ped, sdict, sanim, 8.0, 8.0, -1, 49, 0, false, false, false)
+    else
+        TaskPlayAnim(ped, sdict, sanim, 8.0, 8.0, -1, 49, 0, false, false, false)
+    end
+end
+
+local stopeffects = function(ped)
     AnimpostfxStopAll()
     SetTimecycleModifierStrength(0.0)
     ShakeGameplayCam("DRUNK_SHAKE", 0.0)
+    ClearPedTasksImmediately(ped)
 end
 
 -- smoke effect
@@ -42,15 +54,19 @@ AddEventHandler('miit:c:smokebomb', function()
     smokeeffect(crd)
     -- apply visual effects to nearby players in radius
     -- exclude player who used item
-    local zone = lib.getNearbyPlayers(crd, 3.0, false)
+    local zone = lib.getNearbyPlayers(crd, 3.0, true)
     -- because debug
     if Debug then
         lib.print.info(zone)
     end
-    -- visual effects
-    visualeffects('DefaultFlash', 0.6)
-    Wait(2500)
-    stopeffects()
+    for _, char in pairs(zone) do
+        -- visual effects
+        lib.print.info(char.ped)
+        stun(char.ped)
+        visualeffects('DefaultFlash', 0.6)
+        Wait(2500)
+        stopeffects(char.ped)
+    end
 end)
 
 
