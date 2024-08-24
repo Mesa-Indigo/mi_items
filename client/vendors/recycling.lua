@@ -1,5 +1,14 @@
 local ped = { obj = nil, spawned = false}
 
+local blip = function()
+    local data = World.Vend
+    local blip = AddBlipForCoord(data.loc.rcyl.x, data.loc.rcyl.y, 0)
+    SetBlipSprite(blip, 728) SetBlipDisplay(blip, 4)
+    SetBlipScale(blip, 0.6) SetBlipColour(blip, 43)
+    SetBlipAsShortRange(blip, true) BeginTextCommandSetBlipName("STRING")
+    AddTextComponentString('Recycling Vendor') EndTextCommandSetBlipName(blip)
+end
+
 local checkinv = function(item, data)
     local count = Inventory:Search('count', item)
     if count == 0 then
@@ -10,59 +19,59 @@ local checkinv = function(item, data)
 end
 
 local loadvend = function()
-    local vendor = World.Vend.chem
+    local vendor = World.Vend.rcyl
     lib.registerContext({
     id = 'vendor',
     title = 'Vendor Menu',
     options = {
             {
-                title = 'Sulfur', icon = 'money-bills',
+                title = 'Iron Scrap', icon = 'money-bills',
                 onSelect = function()
-                    checkinv('chem_sulfur', vendor.chem_sulfur)
+                    checkinv('scrap_iron', vendor.scrap_iron)
                 end,
-                metadata = { { label = 'Item Value', value = vendor.chem_sulfur } },
+                metadata = { { label = 'Item Value', value = vendor.scrap_iron } },
             },
             {
-                title = 'Potassium Nitrate', icon = 'money-bills',
+                title = 'Aluminium Scrap', icon = 'money-bills',
                 onSelect = function()
-                    checkinv('chem_potnitr', vendor.chem_potnitr)
+                    checkinv('scrap_aluminium', vendor.scrap_aluminium)
                 end,
-                metadata = { { label = 'Item Value', value = vendor.chem_potnitr } },
+                metadata = { { label = 'Item Value', value = vendor.scrap_aluminium } },
             },
             {
-                title = 'Psuedoephedrine', icon = 'money-bills',
+                title = 'Bolts & Fittings', icon = 'money-bills',
                 onSelect = function()
-                    checkinv('chem_psdnrn', vendor.chem_psdnrn)
+                    checkinv('scrap_bolts', vendor.scrap_bolts)
                 end,
-                metadata = { { label = 'Item Value', value = vendor.chem_psdnrn } },
+                metadata = { { label = 'Item Value', value = vendor.scrap_bolts } },
             },
             {
-                title = 'Iodine', icon = 'money-bills',
+                title = 'Wood Planks', icon = 'money-bills',
                 onSelect = function()
-                    checkinv('chem_iodine', vendor.chem_iodine)
+                    checkinv('scrap_wood', vendor.scrap_wood)
                 end,
-                metadata = { { label = 'Item Value', value = vendor.chem_iodine } },
+                metadata = { { label = 'Item Value', value = vendor.scrap_wood } },
             },
             {
-                title = 'Phosphorus', icon = 'money-bills',
+                title = 'Plastic Scrap', icon = 'money-bills',
                 onSelect = function()
-                    checkinv('chem_phsrus', vendor.chem_phsrus)
+                    checkinv('scrap_plastic', vendor.scrap_plastic)
                 end,
-                metadata = { { label = 'Item Value', value = vendor.chem_phsrus } },
+                metadata = { { label = 'Item Value', value = vendor.scrap_plastic } },
             },
             {
-                title = 'Ammonia', icon = 'money-bills',
+                title = 'Glass Bottle', icon = 'money-bills',
                 onSelect = function()
-                    checkinv('chem_amonia', vendor.chem_amonia)
+                    checkinv('scrap_bottle', vendor.scrap_bottle)
                 end,
-                metadata = { { label = 'Item Value', value = vendor.chem_amonia } },
+                metadata = { { label = 'Item Value', value = vendor.scrap_bottle } },
             },
             {
-                title = 'Acetone', icon = 'money-bills',
+                title = 'Bundle of Wires', icon = 'money-bills',
                 onSelect = function()
-                    checkinv('chem_actone', vendor.chem_actone)
+                    checkinv('scrap_wires', vendor.scrap_wires)
                 end,
-                metadata = { { label = 'Item Value', value = vendor.chem_actone } },
+                metadata = { { label = 'Item Value', value = vendor.scrap_wires } },
             }
         }
     })
@@ -72,7 +81,7 @@ end
 local vendops = {
     {
         name = 'vendor',
-        label = 'talk to vendor',
+        label = locale('int_vend_itm'),
         icon = 'fa-solid fa-hand-fist',
         canInteract = function(_, distance)
             return distance < 1.5
@@ -85,8 +94,8 @@ local vendops = {
 
 -- create ped
 local createped = function()
-    local coord = World.Vend.loc.chem
-    local model, crd = lib.requestModel('s_m_m_scientist_01'), coord
+    local coord = World.Vend.loc.rcyl
+    local model, crd = lib.requestModel('s_m_m_dockwork_01'), coord
     ped.obj = CreatePed(1, model, crd.x, crd.y, crd.z-1, crd.w, true, false)
     TaskStartScenarioInPlace(ped.obj, 'WORLD_HUMAN_CLIPBOARD_FACILITY', 0, true)
     FreezeEntityPosition(ped.obj, true)
@@ -96,6 +105,13 @@ local createped = function()
     Target:addLocalEntity(ped.obj, vendops)
 end
 
-RegisterCommand('vendor', function()
+RegisterNetEvent('miit:c:vend:recycling')
+AddEventHandler('miit:c:vend:recycling', function()
+    if World.Vend.blip.rcyl then
+        blip()
+    else return
+    end
     createped()
-end, false)
+end)
+
+TriggerServerEvent('miit:s:vend:recycling')

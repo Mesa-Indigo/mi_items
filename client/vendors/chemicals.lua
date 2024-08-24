@@ -1,5 +1,14 @@
 local ped = { obj = nil, spawned = false}
 
+local blip = function()
+    local data = World.Vend
+    local blip = AddBlipForCoord(data.loc.chem.x, data.loc.chem.y, 0)
+    SetBlipSprite(blip, 499) SetBlipDisplay(blip, 4)
+    SetBlipScale(blip, 0.6) SetBlipColour(blip, 30)
+    SetBlipAsShortRange(blip, true) BeginTextCommandSetBlipName("STRING")
+    AddTextComponentString('Chemicals Vendor') EndTextCommandSetBlipName(blip)
+end
+
 local checkinv = function(item, data)
     local count = Inventory:Search('count', item)
     if count == 0 then
@@ -72,7 +81,7 @@ end
 local vendops = {
     {
         name = 'vendor',
-        label = 'talk to vendor',
+        label = locale('int_vend_itm'),
         icon = 'fa-solid fa-hand-fist',
         canInteract = function(_, distance)
             return distance < 1.5
@@ -96,6 +105,13 @@ local createped = function()
     Target:addLocalEntity(ped.obj, vendops)
 end
 
-RegisterCommand('vendor', function()
+RegisterNetEvent('miit:c:vend:chemicals')
+AddEventHandler('miit:c:vend:chemicals', function()
+    if World.Vend.blip.chem then
+        blip()
+    else return
+    end
     createped()
-end, false)
+end)
+
+TriggerServerEvent('miit:s:vend:chemicals')

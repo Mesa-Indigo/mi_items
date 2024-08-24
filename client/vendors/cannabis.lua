@@ -1,5 +1,14 @@
 local ped = { obj = nil, spawned = false}
 
+local blip = function()
+    local data = World.Vend
+    local blip = AddBlipForCoord(data.loc.cnbs.x, data.loc.cnbs.y, 0)
+    SetBlipSprite(blip, 496) SetBlipDisplay(blip, 4)
+    SetBlipScale(blip, 0.6) SetBlipColour(blip, 25)
+    SetBlipAsShortRange(blip, true) BeginTextCommandSetBlipName("STRING")
+    AddTextComponentString('Weed Vendor') EndTextCommandSetBlipName(blip)
+end
+
 local checkinv = function(item, data)
     local count = Inventory:Search('count', item)
     if count == 0 then
@@ -66,7 +75,7 @@ end
 local vendops = {
     {
         name = 'vendor',
-        label = 'talk to vendor',
+        label = locale('int_vend_itm'),
         icon = 'fa-solid fa-hand-fist',
         canInteract = function(_, distance)
             return distance < 1.5
@@ -89,3 +98,14 @@ local createped = function()
     SetEntityInvincible(ped.obj, true)
     Target:addLocalEntity(ped.obj, vendops)
 end
+
+RegisterNetEvent('miit:c:vend:cannabis')
+AddEventHandler('miit:c:vend:cannabis', function()
+    if World.Vend.blip.cnbs then
+        blip()
+    else return
+    end
+    createped()
+end)
+
+TriggerServerEvent('miit:s:vend:cannabis')

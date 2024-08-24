@@ -120,7 +120,7 @@ return {
 			{ name = 'rancho_beer', price = 9 },
 			{ name = 'dusche_beer', price = 10 },
 			{ name = 'stronzo_beer', price = 10 },
-			{ name = 'water', price = 3 },
+			{ name = 'tkit_alch', price = 95 },
 
 			{ name = 'bourgeoix_bottle', price = 46 },
 			{ name = 'cariaque_bottle', price = 35 },
@@ -220,7 +220,7 @@ return {
 			{ name = 'cnt_bfcs2', price = 132 },
 
 			{ name = 'cnt_bfcs3', price = 145 },
-			{ name = 'clothbag', price = 150 },
+			--{ name = 'clothbag', price = 150 },
 		}, targets = {
 			{ ped = `a_m_y_dhill_01`, scenario = 'WORLD_HUMAN_AA_SMOKE', loc = vec3(1197.937, 2714.696, 37.224), heading = 209.692 },
 			{ ped = `a_m_y_bevhills_02`, scenario = 'WORLD_HUMAN_AA_COFFEE', loc = vec3(-3175.711, 1050.305, 19.863), heading = 244.897 },
@@ -271,6 +271,12 @@ return {
 			{ name = 'armor2', price = 525 },
 			{ name = 'armor3', price = 840 },
 			{ name = 'bandage_basic', price = 35 },
+
+			{ name = 'fold_table', price = 65 },
+			{ name = 'tkit_weed', price = 320 },
+			{ name = 'tkit_coke', price = 420 },
+			{ name = 'tkit_meth', price = 652 },
+			{ name = 'tkit_crim', price = 352 },
 		}, targets = {
 			{ ped = `g_m_m_armgoon_01`, scenario = 'WORLD_HUMAN_DRUG_DEALER_HARD', loc = vec3(658.613, -1011.115, 21.722), heading = 165.0 },
 			{ ped = `g_m_y_mexgoon_02`, scenario = 'WORLD_HUMAN_DRUG_DEALER', loc = vec3(1292.248, -1621.394, 53.224), heading = 203.38 },
