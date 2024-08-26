@@ -50,7 +50,47 @@ World.Vend = {
         chem_amonia = 57,
         chem_actone = 58,
     },
-    
+
+    -- material prices
+    mtrl = {
+        ore_iron = 10,
+        ore_gold = 10,
+        ore_coal = 10,
+        ruby_uncut = 10,
+        sapphire_uncut = 10,
+        emerald_uncut = 10,
+        diamond_uncut = 10,
+    },
+
+    ccne = {
+        pc_cocaine = 10,
+        bc_cocaine = 20
+    },
+
+    meth = {
+        pd_meth = 10,
+        cr_meth = 10,
+        bc_meth = 10
+    },
+
+    rcyl = {
+        scrap_iron = 10,
+        scrap_aluminium = 10,
+        scrap_bolts = 10,
+        scrap_wood = 10,
+        scrap_plastic = 10,
+        scrap_bottle = 10,
+        scrap_wires = 10,
+    },
+
+    trsr = {
+        trsr_doubloons = 10,
+        trsr_sharkstooth = 10,
+        trsr_sanddollar = 10,
+        trsr_seaglass = 10,
+        trsr_pearls = 10,
+    }
+
 }
 
 World.Mining = {
@@ -58,7 +98,7 @@ World.Mining = {
     -- it covers the central quarry area
 
     -- sets system as active / inactive
-    active = false,
+    active = true,
 
     -- sets model of object
     -- probably a rock
@@ -146,7 +186,7 @@ World.Cannabis = {
     -- it covers the flat farm area
 
     -- sets system as active / inactive
-    active = false,
+    active = true,
 
     -- sets model of chem object
     model = 'prop_weed_01',
@@ -186,7 +226,7 @@ World.Cocaplant = {
     -- it covers the area between the pier and bridge
 
     -- sets system as active / inactive
-    active = false,
+    active = true,
 
     -- sets model of chem object
     model = 'h4_prop_bush_cocaplant_01',
@@ -224,7 +264,7 @@ World.Diving = {
     -- it covers the area in the gulf
 
     -- sets system as active / inactive
-    active = false,
+    active = true,
 
     -- sets model of chem object
     model = 'xm_prop_x17_chest_closed',

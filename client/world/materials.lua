@@ -82,4 +82,6 @@ AddEventHandler('miit:c:load:mining', function()
     end
 end)
 
-TriggerServerEvent('miit:s:load:mining')
+AddEventHandler('OnResourceStart', function()
+    TriggerServerEvent('miit:s:load:mining')
+end)
