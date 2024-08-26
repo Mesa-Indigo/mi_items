@@ -1160,6 +1160,18 @@ return {
         description = "Flavor: Breast Milk PCP.",
     },
 
+    ['vpe_elect2'] = {
+        label = 'Electrotoke Vape', weight = 350, stack = false,
+        consume = 0.045,
+        description = "Flavor: Peanut Butter Meth.",
+    },
+
+    ['vpe_elect3'] = {
+        label = 'Electrotoke Vape', weight = 350, stack = false,
+        consume = 0.045,
+        description = "Flavor: Grape Bubblegum Heroin.",
+    },
+
     -- bombs
     ['bombbag_exp'] = {
         label = 'Explosive Bag', weight = 5500, stack = false,
