@@ -7,18 +7,40 @@ game 'gta5'
 --[[    resource information    ]]--
 name 'mi_items'
 author 'Agimir'
-version '0.0.0'
+version '1.0.0'
 repository 'https://github.com/Mesa-Indigo/mi_items'
-description 'ox item handling script'
+description 'ox_inventory support script for items / effects'
 
 --[[    dependancies    ]]--
-dependencies { '/onesync', 'ox_lib', 'ox_target', 'ox_inventory' }
+dependencies { 
+    '/server:7290', '/onesync',
+    'ox_lib', 'ox_target', 'ox_inventory'
+}
 
 --[[    manifest information    ]]--
-shared_scripts { '@ox_lib/init.lua', 'shared/*.lua'  }
+shared_scripts {
+    -- overextended dependancies
+    '@ox_lib/init.lua',
 
-client_scripts { 'client/main.lua', 'client/**/*.lua' }
+    -- core resources
+    'shared/*.lua',
+    'data/*.lua',
+    'utils/interface.lua'
+}
 
-server_scripts { '@oxmysql/lib/MySQL.lua', 'server/*.lua' }
+client_scripts {
+    -- core resources
+    'client/**/*.lua',
+    'utils/client.lua'
+}
+
+server_scripts {
+    -- overextended dependancies
+    '@oxmysql/lib/MySQL.lua',
+
+    -- core resources
+    'server/**/*.lua',
+    'utils/server.lua'
+}
 
 files { 'locales/*.json' }
