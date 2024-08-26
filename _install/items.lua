@@ -1146,7 +1146,7 @@ return {
 
     -- smokebomb
     ['smokebomb'] = {
-        label = 'Smokebomb', weight = 230, stack = true,
+        label = 'Smokebomb', weight = 230, stack = true, consume = 1,
         description = "Blind thy foes and flee, you fool.",
         allowArmed = true,
     },
