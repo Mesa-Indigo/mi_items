@@ -53,13 +53,13 @@ local colorvehicle = function(vehicle, color)
         local response = fixes[math.random(1, #fixes)]
         local tx2 = { id = 'color_complete', title = "Vehicle Painted",
         description = response }
-        DoNotif(tx2, Cor)
+        Ifc.DoNotif(tx2, Cor)
         lib.setVehicleProperties(vehicle, { color1 = color })
         lib.setVehicleProperties(vehicle, { color2 = color })
     else
         local tx3 = { id = 'color_stopped', title = "Painting Stopped",
         description = 'You stopped cleaning' }
-        DoNotif(tx3, War)
+        Ifc.DoNotif(tx3, War)
     end
 end
 
@@ -173,7 +173,7 @@ exports('spraykit', function()
   if not vehicle then
       local txt = { id = 'veh_notclose', title = 'Unable to Deploy Tool Kit',
       description = 'You need to be close to a vehicle to use this tool' }
-      DoNotif(txt, Err)
+      Ifc.DoNotif(txt, Err)
   else
       --prog_setup(toolbox.obj)
       --TaskTurnPedToFaceEntity(cache.ped, vehicle, 2000)

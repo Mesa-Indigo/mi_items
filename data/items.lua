@@ -1,6 +1,16 @@
 Item = {}
 
 --------------------------------
+-- smoking items
+
+-- time is the min / max range in minutes
+Item.Smoke = {
+    cigarette =     { time = 12000, dmg = true, amt = 64 },
+    cigar =         { time = 15000, dmg = true, amt = 32  },
+    vape =          { time = 7500,  dmg = true, amt = 128  },
+}
+
+--------------------------------
 -- armor items
 
 -- duration is the seconds it takes to use the item

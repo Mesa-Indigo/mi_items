@@ -31,14 +31,14 @@ local vehiclerepairs = function(vehicle)
         local response = fixes[math.random(1, #fixes)]
         local tx2 = { id = 'fix_complete', title = "Engine Repaired",
         description = response }
-        DoNotif(tx2, Cor) ClearPedTasks(cache.ped)
+        Ifc.DoNotif(tx2, Cor) ClearPedTasks(cache.ped)
         SetVehicleEngineHealth(vehicle, 1000)
         SetVehicleOilLevel(vehicle, 1000)
         SetVehicleDoorShut(vehicle, 4, false)
     else
         local tx3 = { id = 'fix_stopped', title = "Engine Repair Stopped",
         description = 'You stopped working on the engine' }
-        DoNotif(tx3, War) ClearPedTasks(cache.ped)
+        Ifc.DoNotif(tx3, War) ClearPedTasks(cache.ped)
     end
 end
 
@@ -49,7 +49,7 @@ AddEventHandler('mi_items:c:vehicle:repair', function(vehicle)
     if health == 1000.0 then
         local data = { id = 'fix_unneeded', title = "No Engine Damage Noted",
         description = 'This vehicle\'s engine has no need for repairs' }
-        DoNotif(data, Cor)
+        Ifc.DoNotif(data, Cor)
     elseif health <= 999.99 then
         vehiclerepairs(vehicle)
     end
@@ -63,28 +63,10 @@ exports('enginekit', function()
     if not vehicle then
         local txt = { id = 'veh_notclose', title = 'Unable to Deploy Tool Kit',
         description = 'You need to be close to a vehicle to use this tool' }
-        DoNotif(txt, Err)
+        Ifc.DoNotif(txt, Err)
     else
         --prog_setup(toolbox.obj)
         --TaskTurnPedToFaceEntity(cache.ped, vehicle, 2000)
         TriggerServerEvent('mi_items:s:vehicle:repair', vehicle)
     end
 end)
-
---[[
-RegisterCommand('repair', function()
-    -- get vehicle details
-    local coords = GetEntityCoords(cache.ped)
-    local vehicle = lib.getClosestVehicle(coords, 4.0, true)
-
-    if not vehicle then
-        local txt = { id = 'veh_notclose', title = 'Unable to Deploy Tool Kit',
-        description = 'You need to be close to a vehicle to use this tool' }
-        DoNotif(txt, Err)
-    else
-        --prog_setup(toolbox.obj)
-        --TaskTurnPedToFaceEntity(cache.ped, vehicle, 2000)
-        TriggerServerEvent('mi_items:s:vehicle:repair', vehicle)
-    end
-end, false)
-]]

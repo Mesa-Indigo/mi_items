@@ -52,13 +52,13 @@ local repairtire = function(vehicle, player)
         local response = fixes[math.random(1, #fixes)]
         local tx2 = { id = 'tire_complete', title = "Tires Repaired",
         description = response }
-        DoNotif(tx2, Cor)
+        Ifc.DoNotif(tx2, Cor)
         local tire = nearbytire(vehicle)
         SetVehicleTyreFixed(vehicle, tire)
     else
         local tx3 = { id = 'tire_stopped', title = "Repair Stopped",
         description = 'You stopped repairing the tire' }
-        DoNotif(tx3, War) ClearPedTasks(player)
+        Ifc.DoNotif(tx3, War) ClearPedTasks(player)
     end
 end
 
@@ -77,7 +77,7 @@ AddEventHandler('mi_items:c:vehicle:tires', function(vehicle)
     if not fix then
         local tx1 = { id = 'tire_notneeded', title = "Repair Not Needed",
         description = 'Your tires are in good health' }
-        DoNotif(tx1, Cor)
+        Ifc.DoNotif(tx1, Cor)
     elseif fix then
         repairtire(vehicle, player)
      end
@@ -91,7 +91,7 @@ exports('tirekit', function()
   if not vehicle then
       local txt = { id = 'veh_notclose', title = 'Unable to Deploy Tool Kit',
       description = 'You need to be close to a vehicle to use this tool' }
-      DoNotif(txt, Err)
+      Ifc.DoNotif(txt, Err)
   else
       --prog_setup(toolbox.obj)
       --TaskTurnPedToFaceEntity(cache.ped, vehicle, 2000)

@@ -1129,6 +1129,37 @@ return {
         description = "See that shit go bing bong.",
     },
 
+    -- smoking
+    ['smk_brand69'] = {
+        label = '69 Brand Cigarettes', weight = 150, stack = false,
+        consume = 0.085,
+        description = "Totally good for your lungs, trust your government.",
+    },
+
+    ['smk_debonaire'] = {
+        label = 'Debonaire Cigarettes', weight = 150, stack = false,
+        consume = 0.085,
+        description = "Totally good for your lungs, trust your government.",
+    },
+
+    ['smk_redwood'] = {
+        label = 'Redwood Cigarettes', weight = 150, stack = false,
+        consume = 0.085,
+        description = "Totally good for your lungs, trust your government.",
+    },
+
+    ['cgr_estancia'] = {
+        label = 'Estancia Cigar', weight = 150, stack = false,
+        consume = 0.25,
+        description = "Totally good for your lungs, trust your government.",
+    },
+
+    ['vpe_elect1'] = {
+        label = 'Electrotoke Vape', weight = 350, stack = false,
+        consume = 0.045,
+        description = "Flavor: Breast Milk PCP.",
+    },
+
     -- bombs
     ['bombbag_exp'] = {
         label = 'Explosive Bag', weight = 5500, stack = false,
