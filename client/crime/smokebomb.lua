@@ -70,7 +70,7 @@ AddEventHandler('miit:c:smokebomb', function()
 end)
 
 
-RegisterCommand('smokebomb', function()
+exports('smokebomb', function()
     if lib.progressBar({
         duration = 200, label = locale('itm_crm_smkbm'), useWhileDead = false,
         canCancel = true,
@@ -82,4 +82,4 @@ RegisterCommand('smokebomb', function()
     }) then
         TriggerServerEvent('miit:s:smokebomb')
     end
-end, false)
+end)

@@ -93,10 +93,7 @@ exports('cooler', function()
         },
     }) then
         cooler.obj = CreateObject(cooler.model, offset.x, offset.y, offset.z, true, false, false)
-        SetEntityHeading(cooler.obj, heading)
-        PlaceObjectOnGroundProperly(cooler.obj)
-        FreezeEntityPosition(cooler.obj, true)
-        SetEntityCollision(cooler.obj, true, true)
+        Cnt.SetObject(cooler.obj, heading)
         exports.ox_target:addLocalEntity(cooler.obj, tableoptions_start)
     end
 end)

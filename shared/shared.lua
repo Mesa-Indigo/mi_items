@@ -1,25 +1,18 @@
--- global variables
-Shared, Data, Utils = {}, {}, {}
+-- shared data variables
+Shared, Data = {}, {}
+
+-- utility resource variables
+Ifc, Cnt, Svr = {}, {}, {}
+
+-- ox variables
 Target, Inventory = exports.ox_target, exports.ox_inventory
+Lib, Sql = exports.ox_lib, exports.oxmysql
 
 -- debug option
 Debug = true
 
--- locale option | 'en', 'nl'
+-- locale option | 'en', 'es', 'fr'
 Locale = 'en'
 
-
---[[    WIP - do not touch
-
--- function for clothing bag item to obtain outfits
--- change export if you use a different clothing system than illenium-appearance
-RegisterNetEvent('miit:c:clothing:outfitbag')
-AddEventHandler('miit:s:clothing:outfitbag', function()
-
-    TriggerEvent('illenium-appearance:client:openOutfitMenu')
-    --exports['illenium-appearance']openOutfitMenu()
-
-end)
-
-
-]]
+-- load locale
+lib.locale()
