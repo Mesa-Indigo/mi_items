@@ -77,6 +77,12 @@ Item('bandage_basic', function(data, slot)
 	end)
 end)
 
+-- recovery
+Item('ejunk', function(data, slot)
+	ox_inventory:useItem(data, function(data)
+		exports['mi_items']:ejunk()
+	end)
+end)
 
 -- vehicles
 Item('spraykit', function(data, slot)

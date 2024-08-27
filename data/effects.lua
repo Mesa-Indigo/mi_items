@@ -19,5 +19,5 @@ Consume.Drugs = {
 -- duration is the seconds the effect will last
 -- rate is the player speed it will be set at
 Consume.Energy = {
-    ejunk =    { duration = 30, rate = 1.15 },
+    ejunk =    { duration = 10000, rate = 1.15 },
 }
