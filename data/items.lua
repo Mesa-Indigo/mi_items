@@ -47,7 +47,7 @@ Item.Bomb = {
 -- time is the min / max range in minutes
 -- reward is the min / max range in money given
 Item.ATM = {
-    wait =      30000,
+    wait =      120000,
     time =      { min = 7000, max = 15000 },
     reward =    { min = 50, max = 300 },
 }

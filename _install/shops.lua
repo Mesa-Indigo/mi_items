@@ -16,6 +16,12 @@ return {
 			{ name = 'orangotang', price = 4 },
 			{ name = 'ejunk', price = 6 },
 
+			{ name = 'smk_brand69', price = 12 },
+			{ name = 'smk_debonaire', price = 12 },
+			{ name = 'smk_redwood', price = 12 },
+			{ name = 'vpe_elect1', price = 21 },
+			{ name = 'vpe_elect3', price = 21 },
+
 			{ name = 'phone', price = 90 },
 			{ name = 'bandage_basic', price = 15 },
 			{ name = 'fold_table', price = 120 },
@@ -133,6 +139,13 @@ return {
 			{ name = 'richards_bottle', price = 42 },
 			{ name = 'alc_cups', price = 2 },
 			{ name = 'alc_shots', price = 1 },
+
+			{ name = 'smk_brand69', price = 12 },
+			{ name = 'smk_debonaire', price = 12 },
+			{ name = 'smk_redwood', price = 12 },
+			{ name = 'vpe_elect1', price = 21 },
+			{ name = 'vpe_elect2', price = 21 },
+			{ name = 'vpe_elect3', price = 21 },
 		}, locations = {
 			vec3(1135.808, -982.281, 46.415),
 			vec3(-1222.915, -906.983, 12.326),
@@ -353,6 +366,18 @@ return {
 			`prop_vend_coffe_01`, `prop_vend_snak_01_tu`
 		}
 	},
+
+	VendingMachineSmokes = {
+		name = 'Cigarette Dispenser',
+		inventory = {
+			{ name = 'smk_brand69', price = 12 },
+			{ name = 'smk_debonaire', price = 12 },
+			{ name = 'smk_redwood', price = 12 },
+		},
+		model = {
+			'prop_vend_fags_01'
+		}
+	}
 
 	--[[	WIP for mi_news system
 	NewsDispensers = {
