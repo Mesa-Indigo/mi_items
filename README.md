@@ -1,5 +1,5 @@
 ![items](https://github.com/user-attachments/assets/63f72d37-467b-4738-8880-02b903620ca8)
-# M.I. Ox Items
+# M.I. Items
 
 ![GitHub all releases](https://img.shields.io/github/downloads/Mesa-Indigo/mi_items/total)
 ![GitHub](https://img.shields.io/github/license/Mesa-Indigo/mi_items)
