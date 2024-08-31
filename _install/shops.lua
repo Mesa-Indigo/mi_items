@@ -223,6 +223,25 @@ return {
 		}
 	},
 
+	DivingDealer = {
+		name = 'Aquatics Store',
+		blip = {
+			id = 729, colour = 18, scale = 0.6
+		}, inventory = {
+			{ name = 'rebreather', price = 45 },
+			{ name = 'divegear', price = 235 },
+			{ name = 'bandage_basic', price = 15 },
+
+		}, targets = {
+			{ ped = `a_f_y_beach_01`, scenario = 'WORLD_HUMAN_STAND_MOBILE_FACILITY', loc = vec3(-1534.148, -905.941, 9.160), heading = 149.956 },
+			{ ped = `a_m_m_beach_01`, scenario = 'WORLD_HUMAN_STAND_MOBILE_FACILITY', loc = vec3(-1218.521, -1516.501, 3.380), heading = 125.518 },
+			{ ped = `a_f_y_beach_01`, scenario = 'WORLD_HUMAN_STAND_MOBILE_FACILITY', loc = vec3(-3272.755, 964.904, 7.347), heading =  1.718 },
+			{ ped = `a_m_m_beach_01`, scenario = 'WORLD_HUMAN_STAND_MOBILE_FACILITY', loc = vec3(1538.815, 3783.326, 33.206), heading = 208.672 },
+			{ ped = `a_m_m_beach_01`, scenario = 'WORLD_HUMAN_STAND_MOBILE_FACILITY', loc = vec3(1311.383, 4366.654, 40.135), heading = 252.57 },
+			{ ped = `a_f_y_beach_01`, scenario = 'WORLD_HUMAN_STAND_MOBILE_FACILITY', loc = vec3(-1593.944, 5192.642, 3.310), heading =  213.521 },
+		}
+	},
+
 	Clothshop = {
 		name = 'Bags & Cases',
 		inventory = {
@@ -323,7 +342,6 @@ return {
 			{ ped = `s_m_y_prisoner_01`, scenario = 'WORLD_HUMAN_DRUG_DEALER', loc = vec3(1627.465, 2565.282, 44.564), heading = 136.072 },
 		}
 	},
-
 
 	VendingMachineDrinks = {
 		name = 'Vending Machine',
