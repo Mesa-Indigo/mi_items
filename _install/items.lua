@@ -1175,6 +1175,13 @@ return {
         description = "Flavor: Grape Bubblegum Heroin.",
     },
 
+    -- utility
+    ['towel'] = {
+        label = 'Towels', weight = 100, stack = true,
+        consume = 0.25,
+        description = "Wipe off all that grime and shit bud.",
+    },
+
     -- bombs
     ['bombbag_exp'] = {
         label = 'Explosive Bag', weight = 5500, stack = false,
