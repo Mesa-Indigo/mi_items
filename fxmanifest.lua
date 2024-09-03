@@ -14,7 +14,7 @@ description 'ox_inventory support script for items / effects'
 --[[    dependancies    ]]--
 dependencies { 
     '/server:7290',
-    'ox_lib', 'ox_target', 'ox_inventory'
+    'ox_lib', 'ox_target', 'ox_inventory', 'oxmysql'
 }
 
 --[[    manifest information    ]]--
