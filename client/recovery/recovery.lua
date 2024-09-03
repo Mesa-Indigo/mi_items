@@ -49,6 +49,6 @@ exports('towel', function()
             rot = vec3(0.0, 0.0, 0.0)
         },
     }) then
-
+        ClearPedWetness(cache.ped) ClearPedBloodDamage(cache.ped)
     end
 end)

@@ -1,5 +1,3 @@
----@diagnostic disable: undefined-global
-
 -- parachute tool
 client.parachute = false
 Item('parachute', function(data, slot)
@@ -119,6 +117,12 @@ end)
 Item('divegear', function(data, slot)
 	ox_inventory:useItem(data, function(data)
 		exports['mi_items']:divegear()
+	end)
+end)
+
+Item('towel', function(data, slot)
+	ox_inventory:useItem(data, function(data)
+		exports['mi_items']:towel()
 	end)
 end)
 
