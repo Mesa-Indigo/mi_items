@@ -1,46 +1,40 @@
---[[    cfx.re information    ]]--
+
+-- game / build information
 use_experimental_fxv2_oal 'yes'
-fx_version 'cerulean'
-lua54 'yes'
-game 'gta5'
+fx_version 'cerulean' lua54 'yes' game 'gta5'
 
---[[    resource information    ]]--
-name 'mi_items'
-author 'Agimir'
-version '1.0.0'
+-- resource information
 repository 'https://github.com/Mesa-Indigo/mi_items'
-description 'ox_inventory support script for items / effects'
+description 'ox_core based script'
+author 'Agimir' name 'mi_items' version '1.1.0'
+license 'LGPL-3.0-or-later'
 
---[[    dependancies    ]]--
-dependencies { 
-    '/server:7290',
-    'ox_lib', 'ox_target', 'ox_inventory', 'oxmysql'
+-- resource dependencies
+dependencies {
+    'oxmysql',
+    'ox_lib',
+    'ox_inventory'
 }
 
---[[    manifest information    ]]--
+-- shared files
 shared_scripts {
-    -- overextended dependancies
     '@ox_lib/init.lua',
-
-    -- core resources
-    'shared/*.lua',
-    'data/*.lua',
-    'utils/interface.lua'
+    'source/shared/*.lua',
+    'data/*.lua', 'config.lua'
 }
 
+-- client files
 client_scripts {
-    -- core resources
-    'client/**/*.lua',
-    'utils/client.lua'
+    'source/client/**/*.lua'
 }
 
+-- server files
 server_scripts {
-    -- overextended dependancies
     '@oxmysql/lib/MySQL.lua',
-
-    -- core resources
-    'server/**/*.lua',
-    'utils/server.lua'
+    'source/server/**/*.lua'
 }
 
-files { 'locales/*.json' }
+-- resource files
+files {
+    'data/locale/*.json'
+}

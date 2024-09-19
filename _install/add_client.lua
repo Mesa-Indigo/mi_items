@@ -1,3 +1,5 @@
+---@diagnostic disable: undefined-global
+
 -- parachute tool
 client.parachute = false
 Item('parachute', function(data, slot)
@@ -32,196 +34,196 @@ end)
 -- liesure
 Item('cooler', function(data, slot)
 	ox_inventory:useItem(data, function(data)
-		exports['mi_items']:cooler()
+		exports['mi_items-items']:cooler()
 	end)
 end)
 
 -- table tools
 Item('fold_table', function(data, slot)
 	ox_inventory:useItem(data, function(data)
-		exports['mi_items']:fold_table()
+		exports['mi_items-items']:fold_table()
 	end)
 end)
 
 -- armor tools
 Item('armor1', function(data, slot)
 	ox_inventory:useItem(data, function(data)
-		exports['mi_items']:armor1()
+		exports['mi_items-items']:armor1()
 	end)
 end)
 
 Item('armor2', function(data, slot)
 	ox_inventory:useItem(data, function(data)
-		exports['mi_items']:armor2()
+		exports['mi_items-items']:armor2()
 	end)
 end)
 
 Item('armor3', function(data, slot)
 	ox_inventory:useItem(data, function(data)
-		exports['mi_items']:armor3()
+		exports['mi_items-items']:armor3()
 	end)
 end)
 
 Item('shield_riot', function(data, slot)
 	ox_inventory:useItem(data, function(data)
-		exports['mi_items']:shield_riot()
+		exports['mi_items-items']:shield_riot()
 	end)
 end)
 
 -- recovery
 Item('bandage_basic', function(data, slot)
 	ox_inventory:useItem(data, function(data)
-		exports['mi_items']:bandage_basic()
+		exports['mi_items-items']:bandage_basic()
 	end)
 end)
 
 -- recovery
 Item('ejunk', function(data, slot)
 	ox_inventory:useItem(data, function(data)
-		exports['mi_items']:ejunk()
+		exports['mi_items-items']:ejunk()
 	end)
 end)
 
 -- vehicles
 Item('spraykit', function(data, slot)
 	ox_inventory:useItem(data, function(data)
-		exports['mi_items']:spraykit()
+		exports['mi_items-items']:spraykit()
 	end)
 end)
 
 Item('enginekit', function(data, slot)
 	ox_inventory:useItem(data, function(data)
-		exports['mi_items']:enginekit()
+		exports['mi_items-items']:enginekit()
 	end)
 end)
 
 Item('tirekit', function(data, slot)
 	ox_inventory:useItem(data, function(data)
-		exports['mi_items']:tirekit()
+		exports['mi_items-items']:tirekit()
 	end)
 end)
 
 Item('cleankit', function(data, slot)
 	ox_inventory:useItem(data, function(data)
-		exports['mi_items']:cleankit()
+		exports['mi_items-items']:cleankit()
 	end)
 end)
 
 -- diving
 Item('rebreather', function(data, slot)
 	ox_inventory:useItem(data, function(data)
-		exports['mi_items']:rebreather()
+		exports['mi_items-items']:rebreather()
 	end)
 end)
 
 Item('divegear', function(data, slot)
 	ox_inventory:useItem(data, function(data)
-		exports['mi_items']:divegear()
+		exports['mi_items-items']:divegear()
 	end)
 end)
 
 Item('towel', function(data, slot)
 	ox_inventory:useItem(data, function(data)
-		exports['mi_items']:towel()
+		exports['mi_items-items']:towel()
 	end)
 end)
 
 -- crime things
 Item('bombbag_exp', function(data, slot)
 	ox_inventory:useItem(data, function(data)
-		exports['mi_items']:bombbag_exp()
+		exports['mi_items-items']:bombbag_exp()
 	end)
 end)
 
 Item('smokebomb', function(data, slot)
 	ox_inventory:useItem(data, function(data)
-		exports['mi_items']:smokebomb()
+		exports['mi_items-items']:smokebomb()
 	end)
 end)
 
 -- drugs
 Item('pc_cocaine', function(data, slot)
 	ox_inventory:useItem(data, function(data)
-		exports['mi_items']:cocaine()
+		exports['mi_items-items']:cocaine()
 	end)
 end)
 
 Item('cr_meth', function(data, slot)
 	ox_inventory:useItem(data, function(data)
-		exports['mi_items']:meth()
+		exports['mi_items-items']:meth()
 	end)
 end)
 
 Item('jt_sativa', function(data, slot)
 	ox_inventory:useItem(data, function(data)
-		exports['mi_items']:sativa()
+		exports['mi_items-items']:sativa()
 	end)
 end)
 
 Item('jt_indica', function(data, slot)
 	ox_inventory:useItem(data, function(data)
-		exports['mi_items']:indica()
+		exports['mi_items-items']:indica()
 	end)
 end)
 
 Item('jt_hybrid', function(data, slot)
 	ox_inventory:useItem(data, function(data)
-		exports['mi_items']:hybrid()
+		exports['mi_items-items']:hybrid()
 	end)
 end)
 
 -- fun stuff
 Item('firework_s1', function(data, slot)
 	ox_inventory:useItem(data, function(data)
-		exports['mi_items']:firework_s1()
+		exports['mi_items-items']:firework_s1()
 	end)
 end)
 
 Item('firework_s2', function(data, slot)
 	ox_inventory:useItem(data, function(data)
-		exports['mi_items']:firework_s2()
+		exports['mi_items-items']:firework_s2()
 	end)
 end)
 
 -- smoking
 Item('smk_brand69', function(data, slot)
 	ox_inventory:useItem(data, function(data)
-		exports['mi_items']:cigarette()
+		exports['mi_items-items']:cigarette()
 	end)
 end)
 
 Item('smk_debonaire', function(data, slot)
 	ox_inventory:useItem(data, function(data)
-		exports['mi_items']:cigarette()
+		exports['mi_items-items']:cigarette()
 	end)
 end)
 
 Item('smk_redwood', function(data, slot)
 	ox_inventory:useItem(data, function(data)
-		exports['mi_items']:cigarette()
+		exports['mi_items-items']:cigarette()
 	end)
 end)
 
 Item('vpe_elect1', function(data, slot)
 	ox_inventory:useItem(data, function(data)
-		exports['mi_items']:vape()
+		exports['mi_items-items']:vape()
 	end)
 end)
 
 Item('vpe_elect2', function(data, slot)
 	ox_inventory:useItem(data, function(data)
-		exports['mi_items']:vape()
+		exports['mi_items-items']:vape()
 	end)
 end)
 
 Item('vpe_elect3', function(data, slot)
 	ox_inventory:useItem(data, function(data)
-		exports['mi_items']:vape()
+		exports['mi_items-items']:vape()
 	end)
 end)
 
 Item('cgr_estancia', function(data, slot)
 	ox_inventory:useItem(data, function(data)
-		exports['mi_items']:cigar()
+		exports['mi_items-items']:cigar()
 	end)
 end)

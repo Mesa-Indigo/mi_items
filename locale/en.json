@@ -1,0 +1,87 @@
+{
+    "debug_": "DEBUG:MIIT: ",
+
+    "eq_armor": "Equipping Body Armor",
+
+    "eq_diving": "Equipping Diving Gear",
+    "rm_diving": "Removing Diving Gear",
+
+    "eq_rebreather": "Equipping Rebreather",
+    "rm_rebreather": "Removing Rebreather",
+
+    "eq_riotshield": "Equipping Riot Shield",
+    "rm_riotshield": "Removing Roit Shield",
+
+    "us_bottle": "Breaking Bottle",
+
+    "cooler_patriot": "Take a Patriot Beer",
+    "cooler_stronzo": "Take a Stronzo Beer",
+    "cooler_dusche": "Take a Dusche Beer",
+    "cooler_rancho": "Take a Rancho Beer",
+    "cooler_set": "Setting up Cooler",
+    "cooler_clean": "Clean out Cooler",
+    "cooler_clean2": "Cleaning out Cooler",
+
+    "side_obtn_rock": "Mine for Materils",
+    "side_obtn_chem": "Open Container",
+    "side_obtn_weed": "Collect Cannabis",
+    "side_obtn_ccne": "Collect Coca Leaves",
+    "side_obtn_trsr": "Open Treasure Chest",
+
+    "side_obtng_rock": "Mining Materials",
+    "side_obtng_chem": "Collecting Chemicals",
+    "side_obtng_weed": "Collecting Cannibis",
+    "side_obtng_ccne": "Collecting Coca Leaves",
+
+    "itm_note_create": "Write your note: ",
+    "itm_note_header": "Subject",
+    "itm_note_content": "Content",
+    "itm_note_putaway": "Put Note Away",
+
+    "itm_clth_menu": "Opening Outfit Bag",
+
+    "itm_frwk_setp": "Setting Up Firework",
+
+    "itm_rec_heal": "Applying Bandage",
+
+    "itm_crm_smkbm": "Smokebomb!",
+
+    "itm_towel": "Cleaning yourself",
+
+    "food_cut": "Splitting food",
+
+    "itm_card": "Presenting Card",
+
+    "itm_atm_hack": "Hack ATM",
+    "itm_atm_hackg": "Hacking ATM",
+
+    "itm_wpn_skin": "Applying Weapon Skin",
+
+    "tbl_set_base": "Setting up Table",
+    "tbl_set_tkit": "Setting up Kit",
+    "tbl_set_clean": "Clean up Table",
+    "tbl_set_grill": "Set up Grill",
+    "tbl_set_drink": "Set up Drinks",
+    "tbl_set_wepns": "Set up Weapons Kit",
+    "tbl_set_crime": "Set up Illegal Kit",
+    "tbl_set_weedk": "Set up Cannabis Kit",
+    "tbl_set_methk": "Set up Meth Kit",
+    "tbl_set_cocak": "Set up Cocaine Kit",
+
+    "tbl_act_grill": "Begin Cooking",
+    "tbl_act_drink": "Pour Drinks",
+    "tbl_act_wepn1": "Repaint Weapon",
+    "tbl_act_wepn12": "Preparing Tints",
+    "tbl_act_wepn2": "Craft Attachments",
+    "tbl_act_drugp": "Process Drugs",
+    "tbl_act_crmac": "Craft Illegal Tools",
+
+    "init_veh_repair": "Repair Engine",
+    "init_veh_rpring": "Repairing Engine",
+    "init_veh_clean": "Clean Vehicle",
+    "init_veh_clning": "Cleaning Vehicle",
+    "init_veh_recolor": "Change Color",
+    "init_veh_rclring": "Repainting Vehicle",
+    "init_veh_tire": "Repair Tire",
+    "init_veh_tring": "Repairing Tires"
+}
