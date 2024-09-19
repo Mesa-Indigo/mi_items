@@ -5,3 +5,5 @@
 ![GitHub](https://img.shields.io/github/license/Mesa-Indigo/mi_items)
 
 **[Documentation](https://mesa-indigo.gitbook.io/midevelopment/standalone-resources/m.i.-items)**  |  **[Discord](https://discord.gg/EtgZsVBtYB)**  |  **[Patreon](https://www.patreon.com/Agimir)**
+
+Requires [MI_Stream](https://github.com/Mesa-Indigo/mi_stream) for props
