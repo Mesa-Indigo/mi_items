@@ -1,71 +1,65 @@
 
--- get time
--- returns in world time details
-Cnt.GetWorldTime = function()
-    local tm = {
-        hour = GetClockHours(),
-        mint = GetClockMinutes(),
-        secd = GetClockSeconds()
-    }
-    return tm
+lib.locale()
+
+Util.IGTime = function()
+    local i = {
+        s = GetClockSeconds(),
+        m = GetClockMinutes(),
+        h = GetClockHours()
+    } return i
 end
 
--- get date
--- returns in world date details
-Cnt.GetWorldDate = function()
-    local dt = {
-        days = GetClockDayOfMonth(),
-        week = GetClockDayOfWeek(),
-        mnth = GetClockMonth()
-    }
-    return dt
+Util.IGDate = function()
+    local i = {
+        d = GetClockDayOfMonth(),
+        w = GetClockDayOfWeek(),
+        m = GetClockMonth()
+    } return i
 end
 
-
--- get vehicle data
--- returns vehicle model name (i.e. jester4 = Jester RR)
-Cnt.GetVehInfo = function(vehicle)
-    local model = GetEntityModel(vehicle)
-    local display = GetDisplayNameFromVehicleModel(model)
-    local name = GetLabelText(display)
-    return name
+Util.VehicleInfo = function(v)
+    local m = GetEntityModel(v)
+    local d = GetDisplayNameFromVehicleModel(m)
+    local n = GetLabelText(d)
+    return n
 end
 
--- set object orientation & physics
--- for placing props that will be stationary
-Cnt.SetObject = function(obj, head)
-    SetEntityHeading(obj, head)
-    PlaceObjectOnGroundProperly(obj)
-    FreezeEntityPosition(obj, true)
-    SetEntityCollision(obj, true, true)
+Util.Delete = function(e)
+    if not e then
+    return end
+    DeleteEntity(e)
+    e = nil
 end
 
--- teleport function
--- fades screen to ease player transport
-Cnt.Teleport = function(ped, x, y, z, w)
-    DoScreenFadeOut(100)
-    Citizen.Wait(1000)
-    SetEntityCoords(ped, x, y, z, false, false, false, false)
-    SetEntityHeading(ped, w)
-    DoScreenFadeIn(750)
+Util.SetObject = function(o,h)
+    SetEntityHeading(o, h)
+    PlaceObjectOnGroundProperly(o)
+    FreezeEntityPosition(o, true)
+    SetEntityCollision(o, true, true)
 end
 
--- convert current value and max value to percentage
-Cnt.GetPercentage = function(percent, maxvalue)
-    if tonumber(percent) and tonumber(maxvalue) then
-        return (maxvalue*percent)/100
+Util.Teleport = function(p, x, y, z, w)
+    DoScreenFadeOut(150)
+    Wait(500)
+    SetEntityCoords(p, x, y, z, false, false, false, false)
+    SetEntityHeading(p, w)
+    DoScreenFadeIn(150)
+end
+
+Util.GetPercentage = function(p, m)
+    if tonumber(p) and tonumber(m) then
+        return (m*p)/100
     end
 end
 
--- set color for progress bar in context menu
-Cnt.GetProgressColor = function(percent)
-    if percent >= 80 and percent <= 100 then
-        return '#40C057'
-    elseif percent <= 80 and percent >= 50 then
-        return '#FFD43B'
-    elseif percent <= 50 and percent >= 25 then
-        return '#F76707'
-    elseif percent <= 25 and percent >= 0 then
-        return '#E03131'
+Util.GetProgressColor = function(p)
+    if p >= 80 and p <= 100 then
+        return '#40C057' -- green
+    elseif p <= 80 and p >= 50 then
+        return '#FFD43B' -- yellow
+    elseif p <= 50 and p >= 25 then
+        return '#F76707' -- orange
+    elseif p <= 25 and p >= 0 then
+        return '#E03131' -- red
     end
 end

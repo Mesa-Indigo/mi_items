@@ -1,4 +1,8 @@
 
+lib.locale()
+
+Util = {}
+
 --------------------------------
 ----    Helpful Links   ----
 -- https://www.w3schools.com/colors/colors_picker.asp For HTML Colors
@@ -36,18 +40,16 @@ War = {
     color_icon = '#ffffff', icon_disp = 'exclamation', icon_anim = 'beat'
 }
 
-
-Ifc.DoNotif= function(data, type)
+Util.Notify = function(d, t)
     lib.notify({
-        id = data.id, title = data.title, description = data.description,
+        id = d.id, title = d.title, description = d.description,
         duration = NotInfo.duration, showDuration = NotInfo.showduration,
         position = NotInfo.position,
         style = {
-            backgroundColor = type.color_bgnd,
-            color = type.color_text,
-            ['.description'] = { color = type.color_desc }
+            backgroundColor = t.color_bgnd, color = t.color_text,
+            ['.description'] = { color = t.color_desc }
         },
-        icon = type.icon_disp, iconColor = type.color_icon,
-        iconAnimation = type.icon_anim
+        icon = t.icon_disp, iconColor = t.color_icon,
+        iconAnimation = t.icon_anim
     })
 end

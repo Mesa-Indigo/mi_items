@@ -31,14 +31,14 @@ local vehiclerepairs = function(vehicle)
         local response = fixes[math.random(1, #fixes)]
         local tx2 = { id = 'fix_complete', title = "Engine Repaired",
         description = response }
-        Ifc.DoNotif(tx2, Cor) ClearPedTasks(cache.ped)
+        Util.Notify(tx2, Cor) ClearPedTasks(cache.ped)
         SetVehicleEngineHealth(vehicle, 1000)
         SetVehicleOilLevel(vehicle, 1000)
         SetVehicleDoorShut(vehicle, 4, false)
     else
         local tx3 = { id = 'fix_stopped', title = "Engine Repair Stopped",
         description = 'You stopped working on the engine' }
-        Ifc.DoNotif(tx3, War) ClearPedTasks(cache.ped)
+        Util.Notify(tx3, War) ClearPedTasks(cache.ped)
     end
 end
 
@@ -49,7 +49,7 @@ AddEventHandler('mi_items:c:vehicle:repair', function(vehicle)
     if health == 1000.0 then
         local data = { id = 'fix_unneeded', title = "No Engine Damage Noted",
         description = 'This vehicle\'s engine has no need for repairs' }
-        Ifc.DoNotif(data, Cor)
+        Util.Notify(data, Cor)
     elseif health <= 999.99 then
         vehiclerepairs(vehicle)
     end
@@ -63,7 +63,7 @@ exports('enginekit', function()
     if not vehicle then
         local txt = { id = 'veh_notclose', title = 'Unable to Deploy Tool Kit',
         description = 'You need to be close to a vehicle to use this tool' }
-        Ifc.DoNotif(txt, Err)
+        Util.Notify(txt, Err)
     else
         --prog_setup(toolbox.obj)
         --TaskTurnPedToFaceEntity(cache.ped, vehicle, 2000)

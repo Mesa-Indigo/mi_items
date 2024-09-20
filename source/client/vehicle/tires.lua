@@ -52,13 +52,13 @@ local repairtire = function(vehicle, player)
         local response = fixes[math.random(1, #fixes)]
         local tx2 = { id = 'tire_complete', title = "Tires Repaired",
         description = response }
-        Ifc.DoNotif(tx2, Cor)
+        Util.Notify(tx2, Cor)
         local tire = nearbytire(vehicle)
         SetVehicleTyreFixed(vehicle, tire)
     else
         local tx3 = { id = 'tire_stopped', title = "Repair Stopped",
         description = 'You stopped repairing the tire' }
-        Ifc.DoNotif(tx3, War) ClearPedTasks(player)
+        Util.Notify(tx3, War) ClearPedTasks(player)
     end
 end
 
@@ -77,7 +77,7 @@ AddEventHandler('mi_items:c:vehicle:tires', function(vehicle)
     if not fix then
         local tx1 = { id = 'tire_notneeded', title = "Repair Not Needed",
         description = 'Your tires are in good health' }
-        Ifc.DoNotif(tx1, Cor)
+        Util.Notify(tx1, Cor)
     elseif fix then
         repairtire(vehicle, player)
      end
@@ -91,28 +91,10 @@ exports('tirekit', function()
   if not vehicle then
       local txt = { id = 'veh_notclose', title = 'Unable to Deploy Tool Kit',
       description = 'You need to be close to a vehicle to use this tool' }
-      Ifc.DoNotif(txt, Err)
+      Util.Notify(txt, Err)
   else
       --prog_setup(toolbox.obj)
       --TaskTurnPedToFaceEntity(cache.ped, vehicle, 2000)
       TriggerServerEvent('mi_items:s:vehicle:tires', vehicle)
   end
 end)
-
---[[
-RegisterCommand('tirefix', function()
-    -- get vehicle details
-    local coords = GetEntityCoords(cache.ped)
-    local vehicle = lib.getClosestVehicle(coords, 4.0, true)
-
-    if not vehicle then
-        local txt = { id = 'veh_notclose', title = 'Unable to Deploy Tool Kit',
-        description = 'You need to be close to a vehicle to use this tool' }
-        DoNotif(txt, Err)
-    else
-        --prog_setup(toolbox.obj)
-        --TaskTurnPedToFaceEntity(cache.ped, vehicle, 2000)
-        TriggerServerEvent('mi_items:s:vehicle:tires', vehicle)
-    end
-end, false)
-]]

@@ -40,7 +40,7 @@ exports('firework_s1', function()
     local box = lib.callback('miut:s:spawn', false, function()
     end, crds, 'ind_prop_firework_03')
     -- set heading
-    Cnt.SetObject(box, head)
+    Util.SetObject(box, head)
     -- progress bar
     if lib.progressBar({
         duration = 5000,
@@ -71,7 +71,7 @@ exports('firework_s2', function()
     local box = lib.callback('miut:s:spawn', false, function()
     end, crds, 'ind_prop_firework_04')
     -- set heading
-    Cnt.SetObject(box, head)
+    Util.SetObject(box, head)
     -- progress bar
     if lib.progressBar({
         duration = 5000,

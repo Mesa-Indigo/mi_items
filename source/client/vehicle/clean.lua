@@ -32,13 +32,13 @@ local cleanvehicle = function(vehicle, player)
         local response = fixes[math.random(1, #fixes)]
         local tx2 = { id = 'clean_complete', title = "Vehicle Cleaned",
         description = response }
-        Ifc.DoNotif(tx2, Cor)
+        Util.Notify(tx2, Cor)
         SetVehicleDirtLevel(vehicle, 0.0)
         RemoveDecalsFromVehicle(vehicle)
     else
         local tx3 = { id = 'clean_stopped', title = "Cleaning Stopped",
         description = 'You stopped cleaning' }
-        Ifc.DoNotif(tx3, War) ClearPedTasks(player)
+        Util.Notify(tx3, War) ClearPedTasks(player)
     end
 end
 
@@ -52,7 +52,7 @@ AddEventHandler('mi_items:c:vehicle:clean', function(vehicle)
     if dirt == 0.0 then
         local data = { id = 'fix_unneeded', title = "No Dirt Found",
         description = 'As sparkly as they come' }
-        Ifc.DoNotif(data, Cor)
+        Util.Notify(data, Cor)
     elseif dirt >= 0.0 then
         cleanvehicle(vehicle, player)
     end
@@ -66,7 +66,7 @@ exports('cleankit', function()
     if not vehicle then
         local txt = { id = 'veh_notclose', title = 'Unable to Deploy Tool Kit',
         description = 'You need to be close to a vehicle to use this tool' }
-        Ifc.DoNotif(txt, Err)
+        Util.Notify(txt, Err)
     else
         TaskTurnPedToFaceEntity(cache.ped, vehicle, 1000)
         TriggerServerEvent('mi_items:s:vehicle:clean', vehicle)
@@ -81,7 +81,7 @@ local vehicle = lib.getClosestVehicle(coords, 4.0, true)
 if not vehicle then
     local txt = { id = 'veh_notclose', title = 'Unable to Deploy Tool Kit',
     description = 'You need to be close to a vehicle to use this tool' }
-    Ifc.DoNotif(txt, Err)
+    Util.Notify(txt, Err)
 else
     --prog_setup(toolbox.obj)
     --TaskTurnPedToFaceEntity(cache.ped, vehicle, 2000)

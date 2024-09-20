@@ -93,7 +93,7 @@ exports('cooler', function()
         },
     }) then
         cooler.obj = CreateObject(cooler.model, offset.x, offset.y, offset.z, true, false, false)
-        Cnt.SetObject(cooler.obj, heading)
+        Util.SetObject(cooler.obj, heading)
         exports.ox_target:addLocalEntity(cooler.obj, tableoptions_start)
     end
 end)
