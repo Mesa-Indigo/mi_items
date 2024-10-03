@@ -41,13 +41,28 @@ return {
         },
 
 		['burger'] = {
-            model = 'prop_cs_burger_01',
-            pos = vec3(0.05, -0.02, -0.03), rot = vec3(150.0, 340.0, 170.0)
+            model = 'dh_burger3',
+            pos = vec3(0.05, -0.02, -0.03), rot = vec3(20.0, 0.0, -50.0)
+        },
+
+        ['burger_lg'] = {
+            model = 'dh_burger4',
+            pos = vec3(0.05, -0.02, -0.03), rot = vec3(20.0, 0.0, -50.0)
+        },
+
+        ['wrap'] = {
+            model = 'dh_wrap1',
+            pos = vec3(0.07, -0.01, -0.01), rot = vec3(90.0, 90.0, 180.0)
+        },
+
+        ['burrito'] = {
+            model = 'dh_wrap2',
+            pos = vec3(0.07, -0.01, -0.01), rot = vec3(90.0, 90.0, 180.0)
         },
 
         ['hotdog'] = {
             model = 'prop_cs_hotdog_01',
-            pos = vec3(0.06, -0.01, -0.03), rot = vec3(60.0, -90.0, 0.0)
+            pos = vec3(0.06, -0.01, -0.03), rot = vec3(60.0, 90.0, 0.0)
         },
 
 		['taco'] = {
@@ -122,7 +137,7 @@ return {
 
         ['granbar'] = {
             model = 'bar',
-            pos = vec3(0.13, 0.050, 0.020),  rot = vec3(-50.0, 100.0, 270.0)
+            pos = vec3(0.01, 0.01, 0.020),  rot = vec3(-50.0, 100.0, 270.0)
         },
 
         ['donut1'] = {
