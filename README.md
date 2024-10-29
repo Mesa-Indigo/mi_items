@@ -30,4 +30,4 @@ This resource is for adding pre-made items / shops / crafting recipes, updating 
 
 ### Dependancies:
 - [MI_Stream](https://github.com/Mesa-Indigo/mi_stream)
-- [MI_Stream](https://github.com/Mesa-Indigo/mi_world)
+- [MI_World](https://github.com/Mesa-Indigo/mi_world)
