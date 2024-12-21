@@ -1,6 +1,6 @@
 ---@diagnostic disable: undefined-global
 
--- parachute tool
+-- parachute tool 
 client.parachute = false
 Item('parachute', function(data, slot)
 	if not client.parachute then
