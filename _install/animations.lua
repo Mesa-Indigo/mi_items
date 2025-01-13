@@ -60,6 +60,16 @@ return {
             pos = vec3(0.07, -0.01, -0.01), rot = vec3(90.0, 90.0, 180.0)
         },
 
+        ['nuggets'] = {
+            model = 'dh_pack_nuggets_2',
+            pos = vec3(0.0, -0.02, 0.00), rot = vec3(0.0, 0.0, 270.0)
+        },
+
+        ['corndog'] = {
+            bone = 60309, model = 'dh_corn_dog',
+            pos = vec3(-0.017, 0.007, -0.021), rot = vec3(0.0, 0.0, 180.0)
+        },
+
         ['hotdog'] = {
             model = 'prop_cs_hotdog_01',
             pos = vec3(0.06, -0.01, -0.03), rot = vec3(60.0, 90.0, 0.0)
@@ -193,6 +203,21 @@ return {
         ['icrm8'] = {
             model = 'bzzz_icecream_raspberry', bone = 18905,
             pos = vec3(0.14, 0.03, 0.01), rot = vec3(85.0, 70.0, -203.0)
+        },
+
+        ['sdc_cola1'] = {
+            model = 'dh_medium_cup',
+            pos = vec3(0.02, 0.0, 0.08), rot = vec3(0.0, 0.0, 130.0)
+        },
+
+        ['sdc_cola2'] = {
+            model = 'dh_medium_cup_2',
+            pos = vec3(0.02, 0.0, 0.08), rot = vec3(0.0, 0.0, 130.0)
+        },
+
+        ['sdc_cola3'] = {
+            model = 'dh_medium_cup_3',
+            pos = vec3(0.02, 0.0, 0.08), rot = vec3(0.0, 0.0, 130.0)
         },
 
         ['water'] = {

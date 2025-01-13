@@ -73,7 +73,7 @@
         ['hotdog'] = {
             label = 'Plain Hotdog', weight = 90, stack = true, close = true,
             allowArmed = false, consume = 1, client = {
-                status = { hunger = 160000 }, anim = 'eating_hand', prop = 'taco',
+                status = { hunger = 160000 }, anim = 'eating_hand', prop = 'hotdog',
                 disable = { move = false, car = false, combat = true, sprint = true },
                 usetime = 7500,
             },
@@ -268,75 +268,111 @@
         ----------------------------------------------------------------------------------------------------
         ----------------------------------------------------------------------------------------------------
         --- CONSUMABLES: FAST FOOD
-        ['bs_bleeder'] = {
-            label = 'B.S. Bleeder', weight = 50, stack = true, close = true,
+        ['bs_burger1'] = {
+            label = 'Bleeder', weight = 50, stack = true, close = true,
             allowArmed = false, consume = 1, client = {
-                status = { hunger = 170000 }, anim = 'eating_hand', prop = 'burger',
+                status = { hunger = 270000 }, anim = 'eating_hand', prop = 'burger',
                 disable = { move = false, car = false, combat = true, sprint = true },
                 usetime = 5500,
             },
         },
 
-        ['bs_heartstopper'] = {
-            label = 'B.S. Heart Stopper', weight = 50, stack = true, close = true,
+        ['bs_burger2'] = {
+            label = 'Heart Stopper', weight = 50, stack = true, close = true,
             allowArmed = false, consume = 1, client = {
-                status = { hunger = 190000 }, anim = 'eating_hand', prop = 'burger_lg',
+                status = { hunger = 290000 }, anim = 'eating_hand', prop = 'burger_lg',
                 disable = { move = false, car = false, combat = true, sprint = true },
                 usetime = 5500,
             },
         },
 
-        ['bs_torpedo'] = {
-            label = 'B.S. Torpedo', weight = 50, stack = true, close = true,
+        ['bs_burger3'] = {
+            label = 'Torpedo', weight = 50, stack = true, close = true,
             allowArmed = false, consume = 1, client = {
-                status = { hunger = 170000 }, anim = 'eating_hand', prop = 'wrap',
+                status = { hunger = 270000 }, anim = 'eating_hand', prop = 'wrap',
                 disable = { move = false, car = false, combat = true, sprint = true },
                 usetime = 5500,
             },
         },
 
-        ['lp_chikennuggets'] = {
-            label = 'Pork & Noodles', weight = 80, stack = true, close = true,
+        ['cb_nuggets'] = {
+            label = 'Little Peckers', weight = 80, stack = true, close = true,
             allowArmed = false, consume = 1, client = {
-                status = { hunger = 190000 }, anim = 'eating_tool', prop = {
-                    {
-                        bone = 28422, model = 'prop_cs_fork',
-                        pos = vec3(0.0, 0.0, 0.0), rot = vec3(180.0, 180.0, 0.0)
-                    },
-                    {
-                        model = 'prop_ff_noodle_01',
-                        pos = vec3(-0.04, -0.02, 0.03), rot = vec3(0.0, 20.0, 10.0)
-                    }
-                },
+                status = { hunger = 140000 }, anim = 'eating_tool', prop = 'nuggets',
                 disable = { move = false, car = false, combat = true, sprint = true },
-                usetime = 15000,
+                usetime = 5000,
             },
         },
 
-        ['lp_burger'] = {
-            label = 'L.P. Hamburger', weight = 50, stack = true, close = true,
+        ['cb_chicken1'] = {
+            label = 'Farmer\'s Surprise', weight = 50, stack = true, close = true,
             allowArmed = false, consume = 1, client = {
-                status = { hunger = 170000 }, anim = 'eating_hand', prop = 'burger',
+                status = { hunger = 290000 }, anim = 'eating_hand', prop = 'burger_lg',
                 disable = { move = false, car = false, combat = true, sprint = true },
                 usetime = 5500,
             },
         },
 
-        ['lp_chicken'] = {
-            label = 'L.P Ckn Sandwich', weight = 50, stack = true, close = true,
+        ['cb_chicken2'] = {
+            label = 'Cluckin Huge', weight = 50, stack = true, close = true,
             allowArmed = false, consume = 1, client = {
-                status = { hunger = 190000 }, anim = 'eating_hand', prop = 'burger_lg',
+                status = { hunger = 290000 }, anim = 'eating_hand', prop = 'burger_lg',
                 disable = { move = false, car = false, combat = true, sprint = true },
                 usetime = 5500,
             },
         },
 
-        ['lp_chicken_spc'] = {
-            label = 'L.P Spicy Ckn Sandwich', weight = 50, stack = true, close = true,
+        ['ua_burger1'] = {
+            label = 'Double Burger', weight = 50, stack = true, close = true,
             allowArmed = false, consume = 1, client = {
-                status = { hunger = 190000 }, anim = 'eating_hand', prop = 'burger_lg',
+                status = { hunger = 290000 }, anim = 'eating_hand', prop = 'burger_lg',
                 disable = { move = false, car = false, combat = true, sprint = true },
                 usetime = 5500,
+            },
+        },
+
+        ['ua_burger2'] = {
+            label = 'Triple Burger', weight = 50, stack = true, close = true,
+            allowArmed = false, consume = 1, client = {
+                status = { hunger = 290000 }, anim = 'eating_hand', prop = 'burger_lg',
+                disable = { move = false, car = false, combat = true, sprint = true },
+                usetime = 5500,
+            },
+        },
+
+        ['ua_corndog'] = {
+            label = 'Corndog Surprise', weight = 50, stack = true, close = true,
+            allowArmed = false, consume = 1, client = {
+                status = { hunger = 290000 }, anim = 'eating_hand', prop = 'corndog',
+                disable = { move = false, car = false, combat = true, sprint = true },
+                usetime = 5500,
+            },
+        },
+
+        ['rs_drink1'] = {
+            label = 'Ecola', weight = 60, stack = true, close = true,
+            allowArmed = false, consume = 1, client = {
+                status = { thirst = 190000 }, anim = 'drinking_hand', prop = 'sdc_cola3',
+                disable = { move = false, car = false, combat = true, sprint = true },
+                usetime = 3500,
+            },
+        },
+
+        ['rs_drink2'] = {
+            label = 'Sprunk', weight = 60, stack = true, close = true,
+            allowArmed = false, consume = 1, client = {
+                status = { thirst = 190000 }, anim = 'drinking_hand', prop = 'sdc_cola1',
+                disable = { move = false, car = false, combat = true, sprint = true },
+                usetime = 3500,
+            },
+        },
+
+        ['rs_drink3'] = {
+            label = 'Orang-O-Tang', weight = 60, stack = true, close = true,
+            allowArmed = false, consume = 1, client = {
+                status = { thirst = 190000 }, anim = 'drinking_hand', prop = 'sdc_cola1',
+                disable = { move = false, car = false, combat = true, sprint = true },
+                usetime = 3500,
             },
         },
 
@@ -1009,6 +1045,13 @@
             label = 'Note', weight = 10, stack = false,
         },
 
+        ['newspaper'] = {
+            label = 'Newspaper', weight = 900, stack = true,
+            allowArmed = false, client = {
+                disable = { move = true, car = false, combat = true },
+            }, description = "Catch up on the news around San Andreas.",
+        },
+
         ['clothbag'] = {
             label = 'Outfit Bag', weight = 5000, stack = false,
             description = "Outfit changing on the fly.",
@@ -1016,6 +1059,11 @@
                 anim = { dict = 'clothingshirt', clip = 'try_shirt_positive_d' },
                 usetime = 4500
             }
+        },
+
+        ['license_drive'] = {
+            label = 'Driver\'s License', weight = 10, stack = false,
+            close = true, consume = 0, allowArmed = false
         },
     
         ['money'] = {
