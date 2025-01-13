@@ -7,7 +7,7 @@ local getsource = function()
     end
 end
 
-RegisterCommand('newspaper', function()
+exports('newspaper', function()
     local hit = getsource()
     lib.print.info(hit['Story_1'])
     lib.registerContext({
@@ -60,4 +60,4 @@ RegisterCommand('newspaper', function()
       })
 
       lib.showContext('news_menu')
-end, false)
+end)
