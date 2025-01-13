@@ -38,6 +38,11 @@ Item('cooler', function(data, slot)
 	end)
 end)
 
+Item('clothbag', function(data, slot)
+	ox_inventory:useItem(data, function(data)
+		TriggerEvent('illenium-appearance:client:openOutfitMenu')
+	end)
+end)
 -- table tools
 Item('fold_table', function(data, slot)
 	ox_inventory:useItem(data, function(data)

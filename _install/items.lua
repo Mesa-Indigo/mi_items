@@ -1008,6 +1008,15 @@
         ['note'] = {
             label = 'Note', weight = 10, stack = false,
         },
+
+        ['clothbag'] = {
+            label = 'Outfit Bag', weight = 5000, stack = false,
+            description = "Outfit changing on the fly.",
+            client = {
+                anim = { dict = 'clothingshirt', clip = 'try_shirt_positive_d' },
+                usetime = 4500
+            }
+        },
     
         ['money'] = {
             label = 'Money', weight = 0, stack = true,
