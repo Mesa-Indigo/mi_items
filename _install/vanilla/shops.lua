@@ -1,119 +1,71 @@
 return {
 	General = {
-		name = 'Gas Station',
+		name = 'General Store',
 		blip = {
 			id = 59, colour = 43, scale = 0.6
 		}, inventory = {
-			{ name = 'sandwich_ham', price = 5 },
-			{ name = 'taco', price = 4 },
-			{ name = 'candy', price = 3 },
-			{ name = 'apple', price = 3 },
-			{ name = 'donut', price = 4 },
-
-			{ name = 'water', price = 3 },
-			{ name = 'ecola', price = 4 },
-			{ name = 'sprunk', price = 4 },
-			{ name = 'orangotang', price = 4 },
-			{ name = 'ejunk', price = 6 },
+			{ name = 'subsandwich', price = 5 },
+			{ name = 'hotdog', price = 4 },
+			{ name = 'taco_beef', price = 4 },
+			{ name = 'taco_chicken', price = 3 },
+			{ name = 'taco_pork', price = 4 },
 
 			{ name = 'smk_brand69', price = 12 },
 			{ name = 'smk_debonaire', price = 12 },
 			{ name = 'smk_redwood', price = 12 },
-			{ name = 'vpe_elect1', price = 21 },
-			{ name = 'vpe_elect3', price = 21 },
+			{ name = 'vpe_elect1', price = 23 },
+			{ name = 'vpe_elect3', price = 23 },
 
-			{ name = 'phone', price = 90 },
-			{ name = 'bandage_basic', price = 15 },
-			{ name = 'fold_table', price = 120 },
-			{ name = 'tkit_grill', price = 90 },
+			{ name = 'phone', price = 285 },
+			{ name = 'bandage_basic', price = 25 },
 
 		}, locations = {
-			vec3(25.7, -1347.3, 29.49),
-			vec3(-3038.71, 585.9, 7.9),
-			vec3(-3241.47, 1001.14, 12.83),
-			vec3(1728.66, 6414.16, 35.03),
-			vec3(1697.99, 4924.4, 42.06),
-			vec3(1961.48, 3739.96, 32.34),
-			vec3(547.79, 2671.79, 42.15),
-			vec3(2679.25, 3280.12, 55.24),
-			vec3(2557.94, 382.05, 108.62),
-			vec3(373.55, 325.56, 103.56),
+			vec3(25.0, -1346.75, 29.5),
+			vec3(-47.5, -1758.0, 29.5),
+			vec3(-706.75, -914.25, 19.25),
+			vec3(1164.25, -323.0, 69.25),
+			vec3(373.5, 327.3, 103.9),
+			
 		}, targets = {
-			{ loc = vec3(25.55, -1346.75, 29.50), length = 0.55, width = 2.6, heading = 0.35, minZ = 29.5, maxZ = 29.8, distance = 2.0 },
-			{ loc = vec3(-3039.85, 585.4, 7.9), length = 0.55, width = 2.6, heading = 35.0, minZ = 7.9, maxZ = 8.3, distance = 2.0 },
-			{ loc = vec3(-3242.75, 1001.2, 12.83), length = 0.55, width = 2.6, heading = 175.0, minZ = 12.83, maxZ = 13.23, distance = 2.0 },
-			{ loc = vec3(1729.1, 6415.2, 35.04), length = 0.55, width = 2.6, heading = 333.5, minZ = 35.04, maxZ = 35.44, distance = 2.0 },
-			{ loc = vec3(1698.25, 4923.5, 42.06), length = 0.55, width = 2.6, heading = 235.0, minZ = 42.06, maxZ = 42.46, distance = 2.0 },
-			{ loc = vec3(1960.75, 3741.0, 32.34), length = 0.55, width = 2.6, heading = 210.0, minZ = 32.34, maxZ = 32.74, distance = 2.0 },
-			{ loc = vec3(548.05, 2670.65, 42.16), length = 0.55, width = 2.6, heading = 10.0, minZ = 42.16, maxZ = 42.56, distance = 2.0 },
-			{ loc = vec3(2678.1, 3280.6, 55.24), length = 0.55, width = 2.6, heading = 240.75, minZ = 55.24, maxZ = 55.64, distance = 2.0 },
-			{ loc = vec3(2556.7, 381.95, 108.62), length = 0.55, width = 2.6, heading = 267.75, minZ = 108.62, maxZ = 109.02, distance = 2.0 },
-			{ loc = vec3(373.75, 326.65, 103.57), length = 0.55, width = 2.6, heading = 346.0, minZ = 103.57, maxZ = 103.97, distance = 2.0 },
-			-- Gabz Paleto Gas Station
-			{ loc = vec3(161.65, 6641.2, 31.55), length = 0.55, width = 2.6, heading = 315.25, minZ = 31.55, maxZ = 31.95, distance = 2.0 },
-			-- Gabz Grove LTD
-			{ loc = vec3(-47.65, -1758.0, 29.6), length = 1.35, width = 0.1, heading = 319.75, minZ = 29.6, maxZ = 30.0, distance = 2.0 },
+			{ loc = vec3(25.0, -1346.75, 29.5), length = 1.0, width = 1.75, heading = 0.0, minZ = 29.5, maxZ = 29.9, distance = 2.0 },
+			{ loc = vec3(-47.5, -1758.0, 29.5), length = 1.0, width = 2.0, heading = 320.0, minZ = 29.5, maxZ = 30.2, distance = 2.0 },
+			{ loc = vec3(-706.75, -914.25, 19.25), length = 0.75, width = 1.25, heading = 0.0, minZ = 19.25, maxZ = 19.65, distance = 2.0 },
+			{ loc = vec3(1164.25, -323.0, 69.25), length = 1.0, width = 1.75, heading = 10.0, minZ = 69.25, maxZ = 69.65, distance = 2.0 },
+			{ loc = vec3(373.5, 327.3, 103.9), length = 1.0, width = 1.75, heading = 10.0, minZ = 103.9, maxZ = 104.3, distance = 2.0 },
+			
 		}
 	},
 
 	Grocery = {
 		name = 'Grocery',
 		inventory = {
-			{ name = 'ck_flour', price = 5 },
-			{ name = 'ck_bakingp', price = 4 },
-			{ name = 'ck_salt', price = 3 },
-			{ name = 'ck_pepper', price = 3 },
-			{ name = 'ck_sugar', price = 4 },
-
-			{ name = 'ck_spices', price = 3 },
-			{ name = 'ck_cookoil', price = 4 },
-			{ name = 'ck_bread', price = 4 },
-			{ name = 'ck_rice', price = 4 },
 			{ name = 'ck_butter', price = 6 },
-
 			{ name = 'ck_cheese', price = 3 },
 			{ name = 'ck_tomatoes', price = 4 },
 			{ name = 'ck_lettuce', price = 4 },
 			{ name = 'ck_onions', price = 4 },
-			{ name = 'ck_peppers', price = 6 },
 
+			{ name = 'ck_peppers', price = 6 },
 			{ name = 'ck_potatoes', price = 3 },
 			{ name = 'ck_eggs', price = 4 },
 			{ name = 'ck_beef', price = 4 },
 			{ name = 'ck_chkn', price = 4 },
-			{ name = 'ck_pork', price = 6 },
 
-			{ name = 'ck_chocolt', price = 3 },
-			{ name = 'ck_grhmckr', price = 4 },
-			{ name = 'ck_mrshmlw', price = 4 },
+			{ name = 'ck_pork', price = 6 },
 			{ name = 'milk', price = 4 },
 
 		}, locations = {
-			vec3(-3240.7, 1009.5, 13.35),
-			vec3(-3038.71, 585.9, 7.9),
-			vec3(-3241.47, 1001.14, 12.83),
-			vec3(1728.66, 6414.16, 35.03),
-			vec3(1697.99, 4924.4, 42.06),
-			vec3(1961.48, 3739.96, 32.34),
-			vec3(547.79, 2671.79, 42.15),
-			vec3(2679.25, 3280.12, 55.24),
-			vec3(2557.94, 382.05, 108.62),
-			vec3(373.55, 325.56, 103.56),
-		}, targets = {
-			{ loc = vec3(-3241.55, 1009.6, 13.35), length = 1.35, width = 0.1, heading = 355.0, minZ = 12.15, maxZ = 12.25, distance = 2.0 },
-			{ loc = vec3(-3042.0, 593.65, 8.45), length = 1.35, width = 0.1, heading = 18.0, minZ = 8.45, maxZ = 8.55, distance = 2.0 },
-			{ loc = vec3(1736.55, 6411.05, 35.55), length = 1.35, width = 0.1, heading = 63.5, minZ = 35.55, maxZ = 35.65, distance = 2.0 },
-			{ loc = vec3(1707.15, 4927.35, 42.4), length = 1.35, width = 0.1, heading = 55.0, minZ = 42.4, maxZ = 42.5, distance = 2.0 },
-			{ loc = vec3(1968.3, 3745.1, 32.85), length = 1.35, width = 0.1, heading = 119.25, minZ = 32.85, maxZ = 32.95, distance = 2.0 },
-			{ loc = vec3(539.6, 2670.1, 42.65), length = 1.35, width = 0.1, heading = 97.5, minZ = 42.65, maxZ = 42.75, distance = 2.0 },
-			{ loc = vec3(2682.6, 3287.8, 55.75), length = 1.35, width = 0.1, heading = 150.5, minZ = 55.75, maxZ = 55.85, distance = 2.0 },
-			{ loc = vec3(2557.5, 390.4, 109.15), length = 1.35, width = 0.1, heading = 177.75, minZ = 109.15, maxZ = 109.25, distance = 2.0 },
-			{ loc = vec3(381.85, 324.15, 104.1), length = 1.35, width = 0.1, heading = 75.75, minZ = 104.1, maxZ = 104.2, distance = 2.0 },
-			-- Gabz Paleto Gas Station
-			{ loc = vec3(167.4, 6634.9, 32.25), length = 1.35, width = 0.1, heading = 45.0, minZ = 32.25, maxZ = 32.35, distance = 2.0 },
-			-- Gabz Grove LTD
-			{ loc = vec3(-50.5, -1748.6, 29.75), length = 1.35, width = 0.1, heading = 320.0, minZ = 29.75, maxZ = 29.85, distance = 2.0 },
+			vec3(32.4, -1342.5, 29.8),
+			vec3(-50.15, -1748.2, 29.7),
+			vec3(-715.0, -908.55, 19.55),
+			vec3(1155.05, -319.25, 69.5),
+			vec3(381.5, 329.25, 103.85),
 
+		}, targets = {
+			{ loc = vec3(32.4, -1342.5, 29.8), length = 4.3, width = 1, heading = 0.0, minZ = 29.8, maxZ = 30.3, distance = 2.0 },
+			{ loc = vec3(-50.15, -1748.2, 29.7), length = 3.0, width = 1, heading = 320.0, minZ = 29.7, maxZ = 30.3, distance = 2.0 },
+			{ loc = vec3(-715.0, -908.55, 19.55), length = 2.8, width = 1, heading = 320.0, minZ = 19.55, maxZ = 20.3, distance = 2.0 },
+			{ loc = vec3(381.5, 329.25, 103.85), length = 2., width = 1, heading = 10.0, minZ = 103.85, maxZ = 104.35, distance = 2.0 },
 		}
 	},
 
@@ -343,14 +295,130 @@ return {
 		}
 	},
 
+	--------------------------------------------------------------------------------
+
+	GasStationBakedGoods = {
+		name = 'Baked Goods',
+		inventory = {
+			{ name = 'donut1', price = 3 },
+			{ name = 'donut2', price = 3 },
+			{ name = 'bagel', price = 4 },
+		},
+		model = {
+			`v_ret_247_donuts`
+		}
+	},
+
+	GasStationBeer = {
+		name = 'Beer',
+		inventory = {
+			{ name = 'rancho_beer', price = 4 },
+			{ name = 'dusche_beer', price = 6 },
+			{ name = 'stronzo_beer', price = 7 },
+			{ name = 'patriot_beer', price = 5 },
+		},
+		model = {
+			`v_ret_247shelves04`
+		}
+	},
+
+	GasStationSnacks = {
+		name = 'Snacks',
+		inventory = {
+			{ name = 'granbar', price = 4 },
+			{ name = 'chips', price = 6 },
+			{ name = 'candy', price = 7 },
+			{ name = 'smore', price = 5 },
+		},
+		model = {
+			`v_ret_247shelves03`
+		}
+	},
+
+	GasStationNonPerish = {
+		name = 'Groceries',
+		inventory = {
+			{ name = 'ck_flour', price = 2 },
+			{ name = 'ck_bakingp', price = 3 },
+			{ name = 'ck_salt', price = 3 },
+			{ name = 'ck_pepper', price = 3 },
+			{ name = 'ck_sugar', price = 4 },
+
+			{ name = 'ck_spices', price = 2 },
+			{ name = 'ck_cookoil', price = 3 },
+			{ name = 'ck_bread', price = 5 },
+			{ name = 'ck_rice', price = 4 },
+			{ name = 'ck_chocolt', price = 4 },
+
+			{ name = 'ck_grhmckr', price = 4 },
+			{ name = 'ck_mrshmlw', price = 4 },
+
+		},
+		model = {
+			`v_ret_247shelves01`, `v_ret_247shelves05`
+		}
+	},
+
+	GasStationFruits = {
+		name = 'Fruits / Vegs',
+		inventory = {
+			{ name = 'apple', price = 2 },
+			{ name = 'banana', price = 3 },
+			{ name = 'dragonfruit', price = 5 },
+			{ name = 'pineapple', price = 4 },
+			{ name = 'nectarine', price = 4 },
+
+			{ name = 'sunkist', price = 3 },
+		},
+		model = {
+			`v_ret_247_fruit`
+		}
+	},
+
+	GasStationCanDrinks = {
+		name = 'Drinks',
+		inventory = {
+			{ name = 'water', price = 3 },
+			{ name = 'ecola', price = 4 },
+			{ name = 'ecola_diet', price = 4 },
+			{ name = 'sprunk', price = 4 },
+			{ name = 'sprunk_diet', price = 4 },
+
+			{ name = 'orangotang', price = 5 },
+			{ name = 'orangotang_diet', price = 5 },
+			{ name = 'ejunk', price = 9 },
+		},
+		model = {
+			`v_ret_247shelves02`
+		}
+	},
+
+	GasStationDrinks = {
+		name = 'Fountain Drinks',
+		inventory = {
+			{ name = 'rs_drink1', price = 2 },
+			{ name = 'rs_drink2', price = 3 },
+			{ name = 'rs_drink3', price = 5 },
+		},
+		model = {
+			`prop_food_bs_soda_01`
+		}
+	},
+
+	--------------------------------------------------------------------------------
+
 	VendingMachineDrinks = {
 		name = 'Vending Machine',
 		inventory = {
 			{ name = 'water', price = 4 },
 			{ name = 'ecola', price = 5 },
+			{ name = 'ecola_diet', price = 5 },
 			{ name = 'sprunk', price = 5 },
-			{ name = 'orangotang', price = 5 },
-			{ name = 'ejunk', price = 7 },
+			{ name = 'sprunk_diet', price = 5 },
+
+			{ name = 'orangotang', price = 6 },
+			{ name = 'orangotang_diet', price = 6 },
+			{ name = 'ejunk', price = 11 },
 		},
 		model = {
 			`prop_vend_soda_02`, `sf_prop_sf_vend_drink_01a`,
@@ -362,10 +430,11 @@ return {
 	VendingMachineSnacks = {
 		name = 'Vending Machine',
 		inventory = {
-			{ name = 'chips_bag', price = 4 },
-			{ name = 'candy', price = 2 },
-			{ name = 'apple', price = 3 },
-			{ name = 'banana', price = 3 },
+			{ name = 'chips_bag', price = 5 },
+			{ name = 'smore', price = 5 },
+			{ name = 'candy', price = 4 },
+			{ name = 'apple', price = 4 },
+			{ name = 'banana', price = 4 },
 		},
 		model = {
 			`prop_vend_snak_01`, `prop_vend_snak_01_tu`
@@ -395,14 +464,15 @@ return {
 		model = {
 			'prop_vend_fags_01'
 		}
-	}
+	},
 
-	--[[	WIP for mi_news system
+	-- testing zone
+	--[[
+	
 	NewsDispensers = {
-		name = 'News Box',
+		name = 'Newspaper',
 		inventory = {
-			{ name = 'nwpr_global', price = 3 },
-			{ name = 'nwpr_meteor', price = 3 },
+			{ name = 'newspaper', price = 3 },
 		},
 		model = {
 			`prop_news_disp_02c`, `prop_news_disp_06a`,
@@ -413,5 +483,6 @@ return {
 			`prop_news_disp_02a`, `prop_news_disp_02d`,
 		}
 	},
+
 	]]
 }
