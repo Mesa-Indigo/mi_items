@@ -45,7 +45,8 @@ return {
 			{ loc = vec3(-3241.75, 1000.5, 12.8), length = 1.45, width = 0.8, heading = 355.0, minZ = 12.8, maxZ = 13.2, distance = 2.0 },
 			-- Senora Fwy
 			{ loc = vec3(2678.8, 3279.65, 55.25), length = 1.35, width = 0.75, heading = 330.0, minZ = 55.25, maxZ = 55.65, distance = 2.0 },
-
+			-- Great Ocean Fwy
+			{ loc = vec3(1728.2, 6414.4, 35.0), length = 0.8, width = 1.3, heading = 333.5, minZ = 35.0, maxZ = 35.4, distance = 2.0 },
 		}
 	},
 
@@ -88,6 +89,8 @@ return {
 			{ loc = vec3(2552.45, 388.95, 108.95), length = 1, width = 1.25, heading = 357.5, minZ = 108.95, maxZ = 109.35, distance = 2.0 },
 			-- Senora Fwy
 			{ loc = vec3(2677.5, 3288.65, 55.45), length = 1.25, width = 0.75, heading = 331.0, minZ = 55.45, maxZ = 55.85, distance = 2.0 },
+			-- Great Ocean Fwy
+			{ loc = vec3(1737.2, 6416.25, 35.35), length = 1.3, width = 1.05, heading = 334.25, minZ = 35.35, maxZ = 35.75, distance = 2.0 },
 
 		}
 	},
