@@ -38,7 +38,13 @@ return {
 			-- Clinton Ave
 			{ loc = vec3(373.5, 327.3, 103.9), length = 1.0, width = 1.75, heading = 10.0, minZ = 103.9, maxZ = 104.3, distance = 2.0 },
 			-- Rockford Dr
-			{ loc = vec3(-1819.95, 793.05, 138.15), length = 1.5, width = 1.0, heading = 312.5, minZ = 138.15, maxZ = 138.65, distance = 2.0 },
+			{ loc = vec3(-1819.95, 793.05, 138.0), length = 1.5, width = 1.0, heading = 312.5, minZ = 138.0, maxZ = 138.4, distance = 2.0 },
+			-- Inseno Dr
+			{ loc = vec3(-3038.6, 585.3, 7.9), length = 1.3, width = 1.2, heading = 20.0, minZ = 7.9, maxZ = 8.3, distance = 2.0 },
+			-- Barbareno Rd
+			{ loc = vec3(-3241.75, 1000.5, 12.8), length = 1.45, width = 0.8, heading = 355.0, minZ = 12.8, maxZ = 13.2, distance = 2.0 },
+			-- Senora Fwy
+			{ loc = vec3(2678.8, 3279.65, 55.25), length = 1.35, width = 0.75, heading = 330.0, minZ = 55.25, maxZ = 55.65, distance = 2.0 },
 
 		}
 	},
@@ -61,13 +67,6 @@ return {
 			{ name = 'ck_pork', price = 6 },
 			{ name = 'milk', price = 4 },
 
-		}, locations = {
-			vec3(32.4, -1342.5, 29.8),
-			vec3(-50.15, -1748.2, 29.7),
-			vec3(-715.0, -908.55, 19.55),
-			vec3(1155.05, -319.25, 69.5),
-			vec3(381.5, 329.25, 103.85),
-
 		}, targets = {
 			-- Grove Street
 			{ loc = vec3(32.4, -1342.5, 29.8), length = 4.3, width = 1, heading = 0.0, minZ = 29.8, maxZ = 30.3, distance = 2.0 },
@@ -81,6 +80,14 @@ return {
 			{ loc = vec3(381.5, 329.25, 103.85), length = 2.8, width = 1, heading = 10.0, minZ = 103.85, maxZ = 104.35, distance = 2.0 },
 			-- Rockford Dr
 			{ loc = vec3(-1830.25, 792.2, 138.55), length = 2.9, width = 1.15, heading = 42.5, minZ = 138.55, maxZ = 138.95, distance = 2.0 },
+			-- Inseno Dr
+			{ loc = vec3(-3046.0, 590.6, 8.25), length = 0.6, width = 1.25, heading = 18.0, minZ = 8.1, maxZ = 8.5, distance = 2.0 },
+			-- Barbareno Rd
+			{ loc = vec3(-3246.55, 1008.3, 13.15), length = 1, width = 1.3, heading = 355.0, minZ = 13.15, maxZ = 13.55, distance = 2.0 },
+			-- Palomino Fwy
+			{ loc = vec3(2552.45, 388.95, 108.95), length = 1, width = 1.25, heading = 357.5, minZ = 108.95, maxZ = 109.35, distance = 2.0 },
+			-- Senora Fwy
+			{ loc = vec3(2677.5, 3288.65, 55.45), length = 1.25, width = 0.75, heading = 331.0, minZ = 55.45, maxZ = 55.85, distance = 2.0 },
 
 		}
 	},
