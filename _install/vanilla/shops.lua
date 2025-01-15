@@ -27,12 +27,19 @@ return {
 			vec3(373.5, 327.3, 103.9),
 			
 		}, targets = {
+			-- Grove Street
 			{ loc = vec3(25.0, -1346.75, 29.5), length = 1.0, width = 1.75, heading = 0.0, minZ = 29.5, maxZ = 29.9, distance = 2.0 },
+			-- Olympic Freeway
 			{ loc = vec3(-47.5, -1758.0, 29.5), length = 1.0, width = 2.0, heading = 320.0, minZ = 29.5, maxZ = 30.2, distance = 2.0 },
+			-- Lindsay Circus
 			{ loc = vec3(-706.75, -914.25, 19.25), length = 0.75, width = 1.25, heading = 0.0, minZ = 19.25, maxZ = 19.65, distance = 2.0 },
+			-- Mirror Park Blvd
 			{ loc = vec3(1164.25, -323.0, 69.25), length = 1.0, width = 1.75, heading = 10.0, minZ = 69.25, maxZ = 69.65, distance = 2.0 },
+			-- Clinton Ave
 			{ loc = vec3(373.5, 327.3, 103.9), length = 1.0, width = 1.75, heading = 10.0, minZ = 103.9, maxZ = 104.3, distance = 2.0 },
-			
+			-- Rockford Dr
+			{ loc = vec3(-1819.95, 793.05, 138.15), length = 1.5, width = 1.0, heading = 312.5, minZ = 138.15, maxZ = 138.65, distance = 2.0 },
+
 		}
 	},
 
@@ -62,10 +69,19 @@ return {
 			vec3(381.5, 329.25, 103.85),
 
 		}, targets = {
+			-- Grove Street
 			{ loc = vec3(32.4, -1342.5, 29.8), length = 4.3, width = 1, heading = 0.0, minZ = 29.8, maxZ = 30.3, distance = 2.0 },
+			-- Olympic Freeway
 			{ loc = vec3(-50.15, -1748.2, 29.7), length = 3.0, width = 1, heading = 320.0, minZ = 29.7, maxZ = 30.3, distance = 2.0 },
+			-- Lindsay Circus
 			{ loc = vec3(-715.0, -908.55, 19.55), length = 2.8, width = 1, heading = 320.0, minZ = 19.55, maxZ = 20.3, distance = 2.0 },
-			{ loc = vec3(381.5, 329.25, 103.85), length = 2., width = 1, heading = 10.0, minZ = 103.85, maxZ = 104.35, distance = 2.0 },
+			-- Mirror Park Blvd
+			{ loc = vec3(381.5, 329.25, 103.85), length = 2.8, width = 1, heading = 10.0, minZ = 103.85, maxZ = 104.35, distance = 2.0 },
+			-- Clinton Ave
+			{ loc = vec3(381.5, 329.25, 103.85), length = 2.8, width = 1, heading = 10.0, minZ = 103.85, maxZ = 104.35, distance = 2.0 },
+			-- Rockford Dr
+			{ loc = vec3(-1830.25, 792.2, 138.55), length = 2.9, width = 1.15, heading = 42.5, minZ = 138.55, maxZ = 138.95, distance = 2.0 },
+
 		}
 	},
 
