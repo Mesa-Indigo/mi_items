@@ -1,4 +1,3 @@
---[[
 
 local issues = {
     engn = { },
@@ -59,34 +58,15 @@ local vehicleinspection = function(vehicle)
     lib.showContext('inspect_veh_menu')
 end
 
-RegisterNetEvent('mi_items:global:vehicle:inspect')
-AddEventHandler('mi_items:global:vehicle:inspect', function(vehicle)
-    local player = cache.ped
-    SetVehicleDoorOpen(vehicle, 4, false, false) Wait(500)
-    if lib.progressBar({
-        duration = 5000, label = 'Inspecting Vehicle',
-        useWhileDead = false, canCancel = true,
-        disable = {
-            car = true, move = true
-        },
-        anim = {
-            blendIn = 3.0, dict = 'mini@repair',
-            clip = 'fixing_a_player', blendOut = 3.0,
-        },
-        prop = {
-            model = `prop_tool_adjspanner`,
-            pos = vec3(0.07, 0.055, 0.01),
-            rot = vec3(280.0, 10.0, 310.0)
-        },
-    }) then
-        -- load inspection menu
-    else
-        local tx3 = { id = 'fix_stopped', title = "Engine Repair Stopped",
-        description = 'You stopped working on the engine' }
-        DoNotif(tx3, War) ClearPedTasks(player)
-        SetVehicleDoorShut(vehicle, 4, false)
-    end
-    vehicleinspection(vehicle)
-end)
+RegisterCommand('vehinsp', function()
+    local coords = GetEntityCoords(cache.ped)
+  local vehicle = lib.getClosestVehicle(coords, 4.0, true)
 
-]]
+  if not vehicle then
+      local txt = { id = 'veh_notclose', title = 'Unable to Deploy Tool Kit',
+      description = 'You need to be close to a vehicle to use this tool' }
+      Util.Notify(txt, Err)
+  else
+    vehicleinspection(vehicle)
+  end
+end, false)

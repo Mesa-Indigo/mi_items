@@ -173,7 +173,7 @@ exports('spraykit', function()
   if not vehicle then
       local txt = { id = 'veh_notclose', title = 'Unable to Deploy Tool Kit',
       description = 'You need to be close to a vehicle to use this tool' }
-      Ifc.DoNotif(txt, Err)
+      Util.Notify(txt, Err)
   else
       --prog_setup(toolbox.obj)
       --TaskTurnPedToFaceEntity(cache.ped, vehicle, 2000)
