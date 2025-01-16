@@ -351,8 +351,8 @@
 
         ['rs_drink1'] = {
             label = 'Ecola', weight = 60, stack = true, close = true,
-            allowArmed = false, consume = 1, client = {
-                status = { thirst = 190000 }, anim = 'drinking_hand', prop = 'sdc_cola3',
+            allowArmed = false, consume = 0.5, client = {
+                status = { thirst = 120000 }, anim = 'drinking_hand', prop = 'sdc_cola3',
                 disable = { move = false, car = false, combat = true, sprint = true },
                 usetime = 3500,
             },
@@ -360,8 +360,8 @@
 
         ['rs_drink2'] = {
             label = 'Sprunk', weight = 60, stack = true, close = true,
-            allowArmed = false, consume = 1, client = {
-                status = { thirst = 190000 }, anim = 'drinking_hand', prop = 'sdc_cola1',
+            allowArmed = false, consume = 0.5, client = {
+                status = { thirst = 120000 }, anim = 'drinking_hand', prop = 'sdc_cola1',
                 disable = { move = false, car = false, combat = true, sprint = true },
                 usetime = 3500,
             },
@@ -369,8 +369,8 @@
 
         ['rs_drink3'] = {
             label = 'Orang-O-Tang', weight = 60, stack = true, close = true,
-            allowArmed = false, consume = 1, client = {
-                status = { thirst = 190000 }, anim = 'drinking_hand', prop = 'sdc_cola1',
+            allowArmed = false, consume = 0.5, client = {
+                status = { thirst = 120000 }, anim = 'drinking_hand', prop = 'sdc_cola1',
                 disable = { move = false, car = false, combat = true, sprint = true },
                 usetime = 3500,
             },

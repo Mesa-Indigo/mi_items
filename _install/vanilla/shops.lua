@@ -1,4 +1,9 @@
 return {
+	
+	--------------------------------------------------------------------------------
+	--- GENERAL STORE
+	--------------------------------------------------------------------------------
+	
 	General = {
 		name = 'General Store',
 		blip = {
@@ -18,6 +23,9 @@ return {
 
 			{ name = 'phone', price = 285 },
 			{ name = 'bandage_basic', price = 25 },
+			{ name = 'firework_s1', price = 35 },
+			{ name = 'firework_s2', price = 35 },
+			{ name = 'clothbag', price = 65 },
 
 		}, locations = {
 			vec3(25.0, -1346.75, 29.5),
@@ -47,6 +55,10 @@ return {
 			{ loc = vec3(2678.8, 3279.65, 55.25), length = 1.35, width = 0.75, heading = 330.0, minZ = 55.25, maxZ = 55.65, distance = 2.0 },
 			-- Great Ocean Fwy
 			{ loc = vec3(1728.2, 6414.4, 35.0), length = 0.8, width = 1.3, heading = 333.5, minZ = 35.0, maxZ = 35.4, distance = 2.0 },
+			-- Alhambra Dr
+			{ loc = vec3(1961.0, 3739.75, 32.25), length = 0.7, width = 1.35, heading = 30.0, minZ = 32.25, maxZ = 32.65, distance = 2.0 },
+			-- Grapeseed M.St
+			{ loc = vec3(1697.7, 4924.0, 41.9), length = 1.3, width = 0.55, heading = 325.0, minZ = 41.9, maxZ = 42.3, distance = 2.0 },
 		}
 	},
 
@@ -91,39 +103,143 @@ return {
 			{ loc = vec3(2677.5, 3288.65, 55.45), length = 1.25, width = 0.75, heading = 331.0, minZ = 55.45, maxZ = 55.85, distance = 2.0 },
 			-- Great Ocean Fwy
 			{ loc = vec3(1737.2, 6416.25, 35.35), length = 1.3, width = 1.05, heading = 334.25, minZ = 35.35, maxZ = 35.75, distance = 2.0 },
+			-- Alhambra Dr
+			{ loc = vec3(1964.35, 3748.45, 32.65), length = 1.25, width = 1.2, heading = 30.0, minZ = 32.65, maxZ = 33.05, distance = 2.0 },
+			-- Grapeseed M.St
+			{ loc = vec3(1707.5, 4927.1, 42.4), length = 1.15, width = 2.8, heading = 325.0, minZ = 42.4, maxZ = 42.8, distance = 2.0 },
 
 		}
 	},
 
+	General_BakedGoods = {
+		name = 'Baked Goods',
+		inventory = {
+			{ name = 'donut1', price = 3 },
+			{ name = 'donut2', price = 3 },
+			{ name = 'bagel', price = 4 },
+		},
+		model = {
+			`v_ret_247_donuts`
+		}
+	},
+
+	General_Beer = {
+		name = 'Beer',
+		inventory = {
+			{ name = 'rancho_beer', price = 4 },
+			{ name = 'dusche_beer', price = 6 },
+			{ name = 'stronzo_beer', price = 7 },
+			{ name = 'patriot_beer', price = 5 },
+		},
+		model = {
+			`v_ret_247shelves04`
+		}
+	},
+
+	General_Snacks = {
+		name = 'Snacks',
+		inventory = {
+			{ name = 'granbar', price = 4 },
+			{ name = 'chips', price = 6 },
+			{ name = 'candy', price = 7 },
+			{ name = 'smore', price = 5 },
+		},
+		model = {
+			`v_ret_247shelves03`
+		}
+	},
+
+	General_NonPerish = {
+		name = 'Groceries',
+		inventory = {
+			{ name = 'ck_flour', price = 2 },
+			{ name = 'ck_bakingp', price = 3 },
+			{ name = 'ck_salt', price = 3 },
+			{ name = 'ck_pepper', price = 3 },
+			{ name = 'ck_sugar', price = 4 },
+
+			{ name = 'ck_spices', price = 2 },
+			{ name = 'ck_cookoil', price = 3 },
+			{ name = 'ck_bread', price = 5 },
+			{ name = 'ck_rice', price = 4 },
+			{ name = 'ck_chocolt', price = 4 },
+
+			{ name = 'ck_grhmckr', price = 4 },
+			{ name = 'ck_mrshmlw', price = 4 },
+
+		},
+		model = {
+			`v_ret_247shelves01`, `v_ret_247shelves05`
+		}
+	},
+
+	General_Fruits = {
+		name = 'Fruits / Vegs',
+		inventory = {
+			{ name = 'apple', price = 2 },
+			{ name = 'banana', price = 3 },
+			{ name = 'dragonfruit', price = 5 },
+			{ name = 'pineapple', price = 4 },
+			{ name = 'nectarine', price = 4 },
+
+			{ name = 'sunkist', price = 3 },
+		},
+		model = {
+			`v_ret_247_fruit`
+		}
+	},
+
+	General_CanDrinks = {
+		name = 'Drinks',
+		inventory = {
+			{ name = 'water', price = 3 },
+			{ name = 'ecola', price = 4 },
+			{ name = 'ecola_diet', price = 4 },
+			{ name = 'sprunk', price = 4 },
+			{ name = 'sprunk_diet', price = 4 },
+
+			{ name = 'orangotang', price = 5 },
+			{ name = 'orangotang_diet', price = 5 },
+			{ name = 'ejunk', price = 9 },
+		},
+		model = {
+			`v_ret_247shelves02`
+		}
+	},
+
+	General_Drinks = {
+		name = 'Fountain Drinks',
+		inventory = {
+			{ name = 'rs_drink1', price = 2 },
+			{ name = 'rs_drink2', price = 3 },
+			{ name = 'rs_drink3', price = 5 },
+		},
+		model = {
+			`prop_food_bs_soda_01`
+		}
+	},
+
+	--------------------------------------------------------------------------------
+	--- LIQOUR STORE
+	--------------------------------------------------------------------------------
+
 	Liquor = {
 		name = 'Liquor Store',
 		blip = {
-			id = 59, colour = 50, scale = 0.6
+			id = 59, colour = 13, scale = 0.6
 		}, inventory = {
-			{ name = 'patriot_beer', price = 8 },
-			{ name = 'rancho_beer', price = 9 },
-			{ name = 'dusche_beer', price = 10 },
-			{ name = 'stronzo_beer', price = 10 },
-			{ name = 'tkit_alch', price = 95 },
 
-			{ name = 'bourgeoix_bottle', price = 46 },
-			{ name = 'cariaque_bottle', price = 35 },
-			{ name = 'bleuterd_bottle', price = 37 },
-			{ name = 'ragga_bottle', price = 45 },
-			{ name = 'tequilya_bottle', price = 35 },
+			{ name = 'alc_cups', price = 16 },
+			{ name = 'alc_shots', price = 9 },
+			{ name = 'smk_brand69', price = 11 },
+			{ name = 'smk_debonaire', price = 11 },
+			{ name = 'smk_redwood', price = 11 },
 
-			{ name = 'nogo_bottle', price = 62 },
-			{ name = 'mount_bottle', price = 40 },
-			{ name = 'richards_bottle', price = 42 },
-			{ name = 'alc_cups', price = 2 },
-			{ name = 'alc_shots', price = 1 },
+			{ name = 'cgr_estancia', price = 16 },
+			{ name = 'vpe_elect1', price = 23 },
+			{ name = 'vpe_elect2', price = 23 },
+			{ name = 'vpe_elect3', price = 23 },
 
-			{ name = 'smk_brand69', price = 12 },
-			{ name = 'smk_debonaire', price = 12 },
-			{ name = 'smk_redwood', price = 12 },
-			{ name = 'vpe_elect1', price = 21 },
-			{ name = 'vpe_elect2', price = 21 },
-			{ name = 'vpe_elect3', price = 21 },
 		}, locations = {
 			vec3(1135.808, -982.281, 46.415),
 			vec3(-1222.915, -906.983, 12.326),
@@ -131,7 +247,6 @@ return {
 			vec3(-2968.243, 390.910, 15.043),
 			vec3(1166.024, 2708.930, 38.157),
 			vec3(1392.562, 3604.684, 34.980),
-			vec3(-1393.409, -606.624, 30.319)
 		}, targets = {
 			{ loc = vec3(1134.85, -982.5, 46.5), length = 0.55, width = 2.6, heading = 187.75, minZ = 46.5, maxZ = 46.9, distance = 2.0 },
 			{ loc = vec3(-1222.25, -907.75, 12.45), length = 0.55, width = 2.6, heading = 123.75, minZ = 12.45, maxZ = 12.95, distance = 2.0 },
@@ -139,21 +254,64 @@ return {
 			{ loc = vec3(-2967.05, 390.75, 15.2), length = 0.55, width = 2.6, heading = 356.0, minZ = 15.2, maxZ = 15.6, distance = 2.0 },
 			{ loc = vec3(1165.85, 2710.2, 38.3), length = 0.55, width = 2.6, heading = 270.0, minZ = 38.3, maxZ = 38.7, distance = 2.0 },
 			{ loc = vec3(1392.7, 3605.7, 35.1), length = 0.55, width = 2.6, heading = 289.75, minZ = 35.1, maxZ = 35.5, distance = 2.0 },
-			-- gabz liqour store
-			{ loc = vec3(-160.6, 6321.8, 31.7), length = 0.55, width = 2.6, heading = 225.0, minZ = 31.7, maxZ = 32.1, distance = 2.0 },
 		}
 	},
 
-	Ammunation = {
+	Liqour_Bottles = {
+		name = 'Liqour Bottles',
+		inventory = {
+			{ name = 'bourgeoix_bottle', price = 45 },
+			{ name = 'cariaque_bottle', price = 53 },
+			{ name = 'ragga_bottle', price = 45 },
+			{ name = 'tequilya_bottle', price = 36 },
+			{ name = 'nogo_bottle', price = 57 },
+
+			{ name = 'mount_bottle', price = 52 },
+			{ name = 'richards_bottle', price = 48 },
+		},
+		model = {
+			`v_ret_ml_fridge`
+		}
+	},
+
+	Liqour_Beer = {
+		name = 'Beer',
+		inventory = {
+			{ name = 'patriot_beer', price = 5 },
+			{ name = 'stronzo_beer', price = 6 },
+			{ name = 'dusche_beer', price = 8 },
+			{ name = 'rancho_beer', price = 7 },
+
+		},
+		model = {
+			`prop_bar_beerfridge_01`
+		}
+	},
+
+	--------------------------------------------------------------------------------
+	--- WEAPON STORE
+	--------------------------------------------------------------------------------
+
+	Weapons = {
 		name = 'Ammunation',
 		blip = {
 			id = 110, colour = 35, scale = 0.6
 		}, inventory = {
-			{ name = 'WEAPON_FLASHLIGHT', price = 65 },
-			{ name = 'WEAPON_KNIFE', price = 200 },
-			{ name = 'WEAPON_BAT', price = 100 },
-			{ name = 'WEAPON_FLAREGUN', price = 300, metadata = { registered = true } },
+			{ name = 'WEAPON_FLASHLIGHT', price = 40, metadata = { registered = false } },
+			{ name = 'WEAPON_KNIFE', price = 125, metadata = { registered = false } },
+			{ name = 'WEAPON_BAT', price = 85, metadata = { registered = false } },
+			{ name = 'WEAPON_FLAREGUN', price = 300, metadata = { registered = false } },
 			{ name = 'ammo-flare', price = 5, },
+		}, locations = {
+			vec3(813.25, -2153.5, 29.75),
+		}, targets = {
+			{ loc = vec3(813.25, -2153.5, 29.55), length = 0.8, width = 1, heading = 225.25, minZ = 29.55, maxZ = 29.95, distance = 2.0 },
+		}
+	},
+
+	Weapons_Light = {
+		name = 'Arms Shop',
+		inventory = {
 
 			{ name = 'WEAPON_PISTOL', price = 1130, metadata = { registered = true }, license = 'weapon' },
 			{ name = 'WEAPON_COMBATPISTOL', price = 1350, metadata = { registered = true }, license = 'weapon' },
@@ -167,39 +325,16 @@ return {
 			{ name = 'WEAPON_CARBINERIFLE', price = 5460, metadata = { registered = true }, license = 'weapon' },
 			{ name = 'ammo-rifle', price = 23, },
 
-			{ name = 'tkit_weap', price = 350, },
-			{ name = 'at_flashlight', price = 350, license = 'weapon' },
-			{ name = 'at_grip', price = 360, license = 'weapon' },
-			{ name = 'at_scope_small', price = 450, license = 'weapon' },
-			{ name = 'at_scope_medium', price = 490, license = 'weapon' },
-
-			{ name = 'bandage_basic', price = 15 },
-			{ name = 'firework_s1', price = 35 },
-			{ name = 'firework_s2', price = 35 },
 		}, locations = {
-			vec3(-662.180, -934.961, 21.829),
-			vec3(810.25, -2157.60, 29.62),
-			vec3(1693.44, 3760.16, 34.71),
-			vec3(-330.24, 6083.88, 31.45),
-			vec3(252.63, -50.00, 69.94),
-			vec3(22.56, -1109.89, 29.80),
-			vec3(2567.69, 294.38, 108.73),
-			vec3(-1117.58, 2698.61, 18.55),
-			vec3(842.44, -1033.42, 28.19)
+			vec3(810.15, -2158.25, 29.75),
 		}, targets = {
-			{ loc = vec3(-326.0, 6080.05, 31.8), length = 0.8, width = 1, heading = 225.25, minZ = 28.55, maxZ = 28.95, distance = 2.0 },
-			{ loc = vec3(-659.9, -940.45, 22.15), length = 0.8, width = 1, heading = 180.25, minZ = 22.15, maxZ = 22.55, distance = 2.0 },
-			{ loc = vec3(-3166.658, 1085.511, 20.974), length = 0.8, width = 1, heading = 180.25, minZ = 22.15, maxZ = 22.55, distance = 2.0 },
-			{ loc = vec3(812.9, -2154.35, 29.9), length = 0.8, width = 1, heading = 180.25, minZ = 29.9, maxZ = 30.3, distance = 2.0 },
-			{ loc = vec3(1698.05, 3756.2, 35.0), length = 0.8, width = 1, heading = 227.75, minZ = 34.9, maxZ = 35.3, distance = 2.0 },
-			{ loc = vec3(246.5, -50.35, 70.25), length = 0.8, width = 1, heading = 249.75, minZ = 70.25, maxZ = 70.65, distance = 2.0 },
-			{ loc = vec3(18.3, -1109.0, 30.1), length = 0.8, width = 1, heading = 249.75, minZ = 30.1, maxZ = 30.5, distance = 2.0 },
-			{ loc = vec3(2565.6, 299.6, 109.05), length = 0.8, width = 1, heading = 179.75, minZ = 109.05, maxZ = 109.45, distance = 2.0 },
-			{ loc = vec3(-1112.65, 2696.2, 18.9), length = 0.8, width = 1, heading = 131.25, minZ = 18.9, maxZ = 19.3, distance = 2.0 },
-			{ loc = vec3(841.95, -1027.9, 28.55), length = 0.8, width = 1, heading = 180.75, minZ = 28.55, maxZ = 28.95, distance = 2.0 },
-			{ loc = vec3(-1311.45, -393.25, 37.15), length = 0.8, width = 1, heading = 0.0, minZ = 28.55, maxZ = 28.95, distance = 2.0 },
+			{ loc = vec3(810.15, -2158.25, 29.55), length = 2.0, width = 1, heading = 0.0, minZ = 29.55, maxZ = 29.95, distance = 2.0 },
 		}
 	},
+
+	--------------------------------------------------------------------------------
+	--- WEAPON STORE
+	--------------------------------------------------------------------------------
 
 	DivingDealer = {
 		name = 'Aquatics Store',
@@ -230,7 +365,6 @@ return {
 			{ name = 'cnt_bfcs2', price = 132 },
 
 			{ name = 'cnt_bfcs3', price = 145 },
-			--{ name = 'clothbag', price = 150 },
 		}, targets = {
 			{ ped = `a_m_y_dhill_01`, scenario = 'WORLD_HUMAN_AA_SMOKE', loc = vec3(1197.937, 2714.696, 37.224), heading = 209.692 },
 			{ ped = `a_m_y_bevhills_02`, scenario = 'WORLD_HUMAN_AA_COFFEE', loc = vec3(-3175.711, 1050.305, 19.863), heading = 244.897 },
@@ -318,116 +452,6 @@ return {
 		}, targets = {
 			{ ped = `u_m_y_prisoner_01`, scenario = 'WORLD_HUMAN_DRUG_DEALER_HARD', loc = vec3(1724.573, 2496.237, 44.564), heading = 88.994 },
 			{ ped = `s_m_y_prisoner_01`, scenario = 'WORLD_HUMAN_DRUG_DEALER', loc = vec3(1627.465, 2565.282, 44.564), heading = 136.072 },
-		}
-	},
-
-	--------------------------------------------------------------------------------
-
-	GasStationBakedGoods = {
-		name = 'Baked Goods',
-		inventory = {
-			{ name = 'donut1', price = 3 },
-			{ name = 'donut2', price = 3 },
-			{ name = 'bagel', price = 4 },
-		},
-		model = {
-			`v_ret_247_donuts`
-		}
-	},
-
-	GasStationBeer = {
-		name = 'Beer',
-		inventory = {
-			{ name = 'rancho_beer', price = 4 },
-			{ name = 'dusche_beer', price = 6 },
-			{ name = 'stronzo_beer', price = 7 },
-			{ name = 'patriot_beer', price = 5 },
-		},
-		model = {
-			`v_ret_247shelves04`
-		}
-	},
-
-	GasStationSnacks = {
-		name = 'Snacks',
-		inventory = {
-			{ name = 'granbar', price = 4 },
-			{ name = 'chips', price = 6 },
-			{ name = 'candy', price = 7 },
-			{ name = 'smore', price = 5 },
-		},
-		model = {
-			`v_ret_247shelves03`
-		}
-	},
-
-	GasStationNonPerish = {
-		name = 'Groceries',
-		inventory = {
-			{ name = 'ck_flour', price = 2 },
-			{ name = 'ck_bakingp', price = 3 },
-			{ name = 'ck_salt', price = 3 },
-			{ name = 'ck_pepper', price = 3 },
-			{ name = 'ck_sugar', price = 4 },
-
-			{ name = 'ck_spices', price = 2 },
-			{ name = 'ck_cookoil', price = 3 },
-			{ name = 'ck_bread', price = 5 },
-			{ name = 'ck_rice', price = 4 },
-			{ name = 'ck_chocolt', price = 4 },
-
-			{ name = 'ck_grhmckr', price = 4 },
-			{ name = 'ck_mrshmlw', price = 4 },
-
-		},
-		model = {
-			`v_ret_247shelves01`, `v_ret_247shelves05`
-		}
-	},
-
-	GasStationFruits = {
-		name = 'Fruits / Vegs',
-		inventory = {
-			{ name = 'apple', price = 2 },
-			{ name = 'banana', price = 3 },
-			{ name = 'dragonfruit', price = 5 },
-			{ name = 'pineapple', price = 4 },
-			{ name = 'nectarine', price = 4 },
-
-			{ name = 'sunkist', price = 3 },
-		},
-		model = {
-			`v_ret_247_fruit`
-		}
-	},
-
-	GasStationCanDrinks = {
-		name = 'Drinks',
-		inventory = {
-			{ name = 'water', price = 3 },
-			{ name = 'ecola', price = 4 },
-			{ name = 'ecola_diet', price = 4 },
-			{ name = 'sprunk', price = 4 },
-			{ name = 'sprunk_diet', price = 4 },
-
-			{ name = 'orangotang', price = 5 },
-			{ name = 'orangotang_diet', price = 5 },
-			{ name = 'ejunk', price = 9 },
-		},
-		model = {
-			`v_ret_247shelves02`
-		}
-	},
-
-	GasStationDrinks = {
-		name = 'Fountain Drinks',
-		inventory = {
-			{ name = 'rs_drink1', price = 2 },
-			{ name = 'rs_drink2', price = 3 },
-			{ name = 'rs_drink3', price = 5 },
-		},
-		model = {
-			`prop_food_bs_soda_01`
 		}
 	},
 
