@@ -34,3 +34,8 @@ setContainerProperties('cnt_bfcs3', {
 	slots = 5,
 	maxWeight = 3500,
 })
+
+setContainerProperties('mealready', {
+	slots = 5,
+	maxWeight = 1625,
+})
