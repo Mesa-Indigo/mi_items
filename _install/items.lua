@@ -351,8 +351,8 @@
 
         ['rs_drink1'] = {
             label = 'Ecola', weight = 60, stack = true, close = true,
-            allowArmed = false, consume = 1, client = {
-                status = { thirst = 190000 }, anim = 'drinking_hand', prop = 'sdc_cola3',
+            allowArmed = false, consume = 0.5, client = {
+                status = { thirst = 120000 }, anim = 'drinking_hand', prop = 'sdc_cola3',
                 disable = { move = false, car = false, combat = true, sprint = true },
                 usetime = 3500,
             },
@@ -360,8 +360,8 @@
 
         ['rs_drink2'] = {
             label = 'Sprunk', weight = 60, stack = true, close = true,
-            allowArmed = false, consume = 1, client = {
-                status = { thirst = 190000 }, anim = 'drinking_hand', prop = 'sdc_cola1',
+            allowArmed = false, consume = 0.5, client = {
+                status = { thirst = 120000 }, anim = 'drinking_hand', prop = 'sdc_cola1',
                 disable = { move = false, car = false, combat = true, sprint = true },
                 usetime = 3500,
             },
@@ -369,8 +369,8 @@
 
         ['rs_drink3'] = {
             label = 'Orang-O-Tang', weight = 60, stack = true, close = true,
-            allowArmed = false, consume = 1, client = {
-                status = { thirst = 190000 }, anim = 'drinking_hand', prop = 'sdc_cola1',
+            allowArmed = false, consume = 0.5, client = {
+                status = { thirst = 120000 }, anim = 'drinking_hand', prop = 'sdc_cola1',
                 disable = { move = false, car = false, combat = true, sprint = true },
                 usetime = 3500,
             },
@@ -1124,19 +1124,19 @@
         },
     
         ['cleankit'] = {
-            label = 'Engine Repair Kit', weight = 7500, stack = true,
+            label = 'Cleaning Kit', weight = 7500, stack = true,
             allowArmed = false, consume = 0.2,
             description = "Used to clean a vehicle.",
         },
     
         ['spraykit'] = {
-            label = 'Engine Repair Kit', weight = 7500, stack = true,
+            label = 'Vehicle Spray Kit', weight = 7500, stack = true,
             allowArmed = false, consume = 0.2,
             description = "Used to recolor a vehicle.",
         },
     
         ['tirekit'] = {
-            label = 'Engine Repair Kit', weight = 7500, stack = true,
+            label = 'Tire Repair Kit', weight = 7500, stack = true,
             allowArmed = false, consume = 0.2,
             description = "Used to repair a vehicle's tire.",
         },
@@ -1220,45 +1220,51 @@
         },
     
         ['cnt_bcpk1'] = {
-            label = 'Backpack', weight = 1000,
+            label = 'Backpack', weight = 5000,
             stack = true, close = false,
             description = "Can be used to store items.",
         },
     
         ['cnt_bcpk2'] = {
-            label = 'Backpack', weight = 1000,
+            label = 'Backpack', weight = 5000,
             stack = false, close = false,
             description = "Can be used to store items.",
         },
     
         ['cnt_bcpk3'] = {
-            label = 'Backpack', weight = 1000,
+            label = 'Backpack', weight = 5000,
             stack = false, close = false,
             description = "Can be used to store items.",
         },
     
         ['cnt_bcpk4'] = {
-            label = 'Backpack', weight = 1000,
+            label = 'Backpack', weight = 5000,
             stack = false, close = false,
             description = "Can be used to store items.",
         },
     
         ['cnt_bfcs1'] = {
-            label = 'Briefcase', weight = 1000,
+            label = 'Briefcase', weight = 3000,
             stack = false, close = false,
             description = "Can be used to store items.",
         },
     
         ['cnt_bfcs2'] = {
-            label = 'Briefcase', weight = 1000,
+            label = 'Briefcase', weight = 3000,
             stack = false, close = false,
             description = "Can be used to store items.",
         },
     
         ['cnt_bfcs3'] = {
-            label = 'Briefcase', weight = 1000,
+            label = 'Briefcase', weight = 3000,
             stack = false, close = false,
             description = "Can be used to store items.",
+        },
+
+        ['mealready'] = {
+            label = 'MRE', weight = 1000,
+            stack = false, close = false,
+            description = "Meal ready to eat.",
         },
     
         ----------------------------------------------------------------------------------------------------
