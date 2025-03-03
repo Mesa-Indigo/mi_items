@@ -1124,19 +1124,19 @@
         },
     
         ['cleankit'] = {
-            label = 'Engine Repair Kit', weight = 7500, stack = true,
+            label = 'Cleaning Kit', weight = 7500, stack = true,
             allowArmed = false, consume = 0.2,
             description = "Used to clean a vehicle.",
         },
     
         ['spraykit'] = {
-            label = 'Engine Repair Kit', weight = 7500, stack = true,
+            label = 'Vehicle Spray Kit', weight = 7500, stack = true,
             allowArmed = false, consume = 0.2,
             description = "Used to recolor a vehicle.",
         },
     
         ['tirekit'] = {
-            label = 'Engine Repair Kit', weight = 7500, stack = true,
+            label = 'Tire Repair Kit', weight = 7500, stack = true,
             allowArmed = false, consume = 0.2,
             description = "Used to repair a vehicle's tire.",
         },
