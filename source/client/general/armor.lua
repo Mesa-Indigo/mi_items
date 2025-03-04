@@ -5,7 +5,7 @@ exports('armor1', function()
     local armor = Item.Armor.light
     if true then
         if lib.progressBar({
-            duration = armor.duration*1000,
+            duration = armor.time*1000,
             label = locale('eq_armor'),
             useWhileDead = false, allowFalling = false, allowRagdoll = false,
             allowCuffed = false, canCancel = true, disable = { car = false },
@@ -16,7 +16,7 @@ exports('armor1', function()
         }) then
             lib.print.info('armored')
             SetPlayerMaxArmour(cache.ped, 100)
-			SetPedArmour(cache.ped, armor.amount)
+			SetPedArmour(cache.ped, armor.amt)
         else
             return
         end
@@ -28,7 +28,7 @@ exports('armor2', function()
     local armor = Item.Armor.medium
     if true then
         if lib.progressBar({
-            duration = armor.duration*1000,
+            duration = armor.time*1000,
             label = locale('eq_armor'),
             useWhileDead = false, allowFalling = false, allowRagdoll = false,
             allowCuffed = false, canCancel = true, disable = { car = false },
@@ -38,7 +38,7 @@ exports('armor2', function()
             },
         }) then
             SetPlayerMaxArmour(cache.ped, 100)
-			SetPedArmour(cache.ped, armor.amount)
+			SetPedArmour(cache.ped, armor.amt)
         else
             return
         end
@@ -50,7 +50,7 @@ exports('armor3', function()
     local armor = Item.Armor.heavy
     if true then
         if lib.progressBar({
-            duration = armor.duration*1000,
+            duration = armor.time*1000,
             label = locale('eq_armor'),
             useWhileDead = false, allowFalling = false, allowRagdoll = false,
             allowCuffed = false, canCancel = true, disable = { car = false },
@@ -60,7 +60,7 @@ exports('armor3', function()
             },
         }) then
             SetPlayerMaxArmour(cache.ped, 100)
-			SetPedArmour(cache.ped, armor.amount)
+			SetPedArmour(cache.ped, armor.amt)
         else
             return
         end

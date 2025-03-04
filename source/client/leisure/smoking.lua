@@ -2,7 +2,7 @@ exports('cigarette', function()
     local maximum = GetEntityMaxHealth(cache.ped)
 	local current = GetEntityHealth(cache.ped)
     if lib.progressBar({
-        duration = 12000,
+        duration = Item.Smoke.cigarette.time * 1000,
         label = 'Smoking Cigarette',
         useWhileDead = false, allowFalling = true, allowRagdoll = false,
         allowCuffed = false, canCancel = true, disable = { car = false },
@@ -18,7 +18,7 @@ exports('cigarette', function()
     then if not Item.Smoke.cigarette.dmg then return
         else
             SetEntityHealth(cache.ped, math.min(maximum,
-            math.floor(current - maximum / 64)))
+            math.floor(current - maximum / Item.Smoke.cigarette.amt)))
         end
     end
 end)
@@ -27,7 +27,7 @@ exports('cigar', function()
     local maximum = GetEntityMaxHealth(cache.ped)
 	local current = GetEntityHealth(cache.ped)
     if lib.progressBar({
-        duration = Item.Smoke.cigar.time,
+        duration = Item.Smoke.cigar.time * 1000,
         label = 'Smoking Cigar',
         useWhileDead = false, allowFalling = true, allowRagdoll = false,
         allowCuffed = false, canCancel = true, disable = { car = false },
@@ -43,7 +43,7 @@ exports('cigar', function()
     then if not Item.Smoke.cigar.dmg then return
         else
             SetEntityHealth(cache.ped, math.min(maximum,
-            math.floor(current - maximum / 32)))
+            math.floor(current - maximum / Item.Smoke.cigar.amt)))
         end
     end
 end)
@@ -52,7 +52,7 @@ exports('vape', function()
     local maximum = GetEntityMaxHealth(cache.ped)
 	local current = GetEntityHealth(cache.ped)
     if lib.progressBar({
-        duration = 7500,
+        duration = Item.Smoke.vape.time * 1000,
         label = 'Hitting Vape',
         useWhileDead = false, allowFalling = true, allowRagdoll = false,
         allowCuffed = false, canCancel = true, disable = { car = false },
@@ -68,7 +68,7 @@ exports('vape', function()
     then if not Item.Smoke.vape.dmg then return
         else
             SetEntityHealth(cache.ped, math.min(maximum,
-            math.floor(current - maximum / 128)))
+            math.floor(current - maximum / Item.Smoke.vape.amt)))
         end
     end
 end)

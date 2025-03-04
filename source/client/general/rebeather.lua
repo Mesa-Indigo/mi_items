@@ -1,5 +1,4 @@
 -- timed diving kit
--- unlimited diving kit
 local maskmodel =
 lib.requestModel('reh_prop_reh_rebreather_01a', 300)
 local mask

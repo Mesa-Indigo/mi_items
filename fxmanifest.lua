@@ -19,9 +19,8 @@ dependencies {
 -- shared files
 shared_scripts {
     '@ox_lib/init.lua',
-    'source/shared/*.lua',
     'source/util/interface.lua',
-    'data/*.lua', 'config.lua'
+    'data/*.lua', 'shared.lua'
 }
 
 -- client files
