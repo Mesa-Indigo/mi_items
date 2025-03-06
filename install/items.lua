@@ -11,11 +11,7 @@
         }, description = "Use to equip parachute tool.",
     },
 
-    ['towel'] = {
-        label = 'Towels', weight = 100, stack = true,
-        consume = 0.25,
-        description = "Wipe off all that grime and shit bud.",
-    },
+    
 
     ['hacktool_phone'] = {
         label = 'Cracked Phone', weight = 230, stack = false,
@@ -1032,6 +1028,11 @@
                         exports.npwd:setPhoneDisabled(true) end)
                 end end
             }
+        },
+
+        ['towel'] = {
+            label = 'Clean Towel', weight = 100, stack = true,
+            description = "Wipe off all that grime and shit bud.",
         },
 
         ['notebook'] = {
