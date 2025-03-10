@@ -32,6 +32,65 @@
         ----------------------------------------------------------------------------------------------------
         ----------------------------------------------------------------------------------------------------
         ----------------------------------------------------------------------------------------------------
+        --- CONTAINER ITEMS
+
+        ['cnt_bcpk1'] = {
+            label = 'Backpack', weight = 5000,
+            stack = true, close = false,
+            description = "Can be used to store items.",
+        },
+    
+        ['cnt_bcpk2'] = {
+            label = 'Backpack', weight = 5000,
+            stack = false, close = false,
+            description = "Can be used to store items.",
+        },
+    
+        ['cnt_bcpk3'] = {
+            label = 'Backpack', weight = 5000,
+            stack = false, close = false,
+            description = "Can be used to store items.",
+        },
+    
+        ['cnt_bcpk4'] = {
+            label = 'Backpack', weight = 5000,
+            stack = false, close = false,
+            description = "Can be used to store items.",
+        },
+    
+        ['cnt_bfcs1'] = {
+            label = 'Briefcase', weight = 3000,
+            stack = false, close = false,
+            description = "Can be used to store items.",
+        },
+    
+        ['cnt_bfcs2'] = {
+            label = 'Briefcase', weight = 3000,
+            stack = false, close = false,
+            description = "Can be used to store items.",
+        },
+    
+        ['cnt_bfcs3'] = {
+            label = 'Briefcase', weight = 3000,
+            stack = false, close = false,
+            description = "Can be used to store items.",
+        },
+
+        ['mealready'] = {
+            label = 'MRE', weight = 1000,
+            stack = false, close = false,
+            description = "Meal ready to eat.",
+        },
+
+        ['medicalkit'] = {
+            label = 'First Aid Kit', weight = 1000,
+            stack = false, close = false,
+            description = "For use on minimal injuries.",
+        },
+
+        ----------------------------------------------------------------------------------------------------
+        ----------------------------------------------------------------------------------------------------
+        ----------------------------------------------------------------------------------------------------
         --- CONSUMABLES: GAS STATION
     
         ['subsandwich'] = {
@@ -991,6 +1050,22 @@
                 usetime = 2000,
             },
         },
+
+        ----------------------------------------------------------------------------------------------------
+        ----------------------------------------------------------------------------------------------------
+        ----------------------------------------------------------------------------------------------------
+        --- TOOLS: MEDICAL
+        
+        ['clean_towel'] = {
+            label = 'Clean Towel', weight = 100, stack = true,
+            description = "Wipe off all that grime and shit bud.",
+        },
+        
+        ['bandage_basic'] = {
+            label = 'Basic Bandage', weight = 300, stack = true,
+            consume = 1,
+            description = "Used to heal small wounds.",
+        },
     
         ----------------------------------------------------------------------------------------------------
         ----------------------------------------------------------------------------------------------------
@@ -1015,12 +1090,7 @@
                 end end
             }
         },
-
-        ['towel'] = {
-            label = 'Clean Towel', weight = 100, stack = true,
-            description = "Wipe off all that grime and shit bud.",
-        },
-
+        
         ['notebook'] = {
             label = 'Notebook', weight = 300, stack = false,
             allowArmed = false, consume = 0.05, client = {
@@ -1062,12 +1132,6 @@
             label = 'Lockpick', weight = 80, stack = true,
             allowArmed = false, consume = 1,
             description = "Used to pick locks.",
-        },
-    
-        ['bandage_basic'] = {
-            label = 'Basic Bandage', weight = 300, stack = true,
-            consume = 1,
-            description = "Used to heal small wounds.",
         },
     
         ['armor1'] = {
@@ -1205,55 +1269,7 @@
             stack = true, close = false,
             description = "Used for pouring shots.",
         },
-    
-        ['cnt_bcpk1'] = {
-            label = 'Backpack', weight = 5000,
-            stack = true, close = false,
-            description = "Can be used to store items.",
-        },
-    
-        ['cnt_bcpk2'] = {
-            label = 'Backpack', weight = 5000,
-            stack = false, close = false,
-            description = "Can be used to store items.",
-        },
-    
-        ['cnt_bcpk3'] = {
-            label = 'Backpack', weight = 5000,
-            stack = false, close = false,
-            description = "Can be used to store items.",
-        },
-    
-        ['cnt_bcpk4'] = {
-            label = 'Backpack', weight = 5000,
-            stack = false, close = false,
-            description = "Can be used to store items.",
-        },
-    
-        ['cnt_bfcs1'] = {
-            label = 'Briefcase', weight = 3000,
-            stack = false, close = false,
-            description = "Can be used to store items.",
-        },
-    
-        ['cnt_bfcs2'] = {
-            label = 'Briefcase', weight = 3000,
-            stack = false, close = false,
-            description = "Can be used to store items.",
-        },
-    
-        ['cnt_bfcs3'] = {
-            label = 'Briefcase', weight = 3000,
-            stack = false, close = false,
-            description = "Can be used to store items.",
-        },
 
-        ['mealready'] = {
-            label = 'MRE', weight = 1000,
-            stack = false, close = false,
-            description = "Meal ready to eat.",
-        },
-    
         ----------------------------------------------------------------------------------------------------
         ----------------------------------------------------------------------------------------------------
         ----------------------------------------------------------------------------------------------------
@@ -1262,54 +1278,6 @@
         ['rollpaper'] = {
             label = 'Rolling Paper', weight = 60, stack = true,
             description = "Used to roll joints.",
-        },
-    
-        ['fold_table'] = {
-            label = 'Portable Table', weight = 3500,
-            stack = false, close = true,
-            description = "Places configurable table.",
-        },
-    
-        ['tkit_grill'] = {
-            label = 'Grill Kit', weight = 4500,
-            stack = false, close = true,
-            description = "Loads tools for grilling.",
-        },
-    
-        ['tkit_alch'] = {
-            label = 'Liqour Kit', weight = 4500,
-            stack = false, close = true,
-            description = "Loads tools for mixing drinks.",
-        },
-    
-        ['tkit_weap'] = {
-            label = 'Weapons Kit', weight = 4500,
-            stack = false, close = true,
-            description = "Loads tools for customizing weapons.",
-        },
-    
-        ['tkit_crim'] = {
-            label = 'Illegal Kit', weight = 4500,
-            stack = false, close = true,
-            description = "Loads tools for creating illegal tools.",
-        },
-    
-        ['tkit_weed'] = {
-            label = 'Cannabis Prep Kit', weight = 4500,
-            stack = false, close = true,
-            description = "Loads tools for processing cannabis.",
-        },
-    
-        ['tkit_coke'] = {
-            label = 'Cocaine Prep Kit', weight = 4500,
-            stack = false, close = true,
-            description = "Loads tools for processing cocaine.",
-        },
-    
-        ['tkit_meth'] = {
-            label = 'Meth Prep Kit', weight = 4500,
-            stack = false, close = true,
-            description = "Loads tools for processing meth.",
         },
     
         ----------------------------------------------------------------------------------------------------

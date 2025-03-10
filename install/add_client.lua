@@ -126,9 +126,9 @@ Item('divegear', function(data, slot)
 	end)
 end)
 
-Item('towel', function(data, slot)
+Item('clean_towel', function(data, slot)
 	ox_inventory:useItem(data, function(data)
-		exports['mi_items']:towel()
+		exports['mi_items']:clean_towel()
 	end)
 end)
 

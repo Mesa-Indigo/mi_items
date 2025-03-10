@@ -1,4 +1,4 @@
-exports('towel', function()
+exports('clean_towel', function()
     if lib.progressBar({
         duration = 7500,
         label = locale('itm_towel'),
