@@ -11,20 +11,6 @@
         }, description = "Use to equip parachute tool.",
     },
 
-    
-
-    ['hacktool_phone'] = {
-        label = 'Cracked Phone', weight = 230, stack = false,
-        description = "This shit is cracked yo, why do you still want it?.",
-        allowArmed = false, consume = 0.1,
-    },
-
-    ['cooler_beer'] = {
-        label = 'Alcohol Cooler', weight = 2300, stack = false,
-        consume = 1,
-        description = "Get some fresh beers, dude.",
-    },
-
     ['tent'] = {
         label = 'Camping Tent', weight = 5600, stack = true,
         description = "Good for holding things and looking nature-y.",
