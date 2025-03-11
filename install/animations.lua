@@ -326,5 +326,15 @@ return {
             pos = vec3(0.02, -0.01, 0.08), rot = vec3(1.0, 5.0, -182.5)
         },
 
+        ['tincan_drink'] = {
+            model = 'v_res_fa_tincorn',
+            pos = vec3(-0.01, -0.01, 0.01), rot = vec3(1.0, 5.0, -182.5)
+        },
+
+        ['bread_slice'] = {
+            model = 'v_res_fa_bread03',
+            pos = vec3(0.14, 0.03, 0.01), rot = vec3(85.0, 70.0, -203.0)
+        },
+
 	}
 }

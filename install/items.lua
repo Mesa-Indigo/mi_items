@@ -39,53 +39,77 @@
             stack = true, close = false,
             description = "Can be used to store items.",
         },
-    
+
         ['cnt_bcpk2'] = {
             label = 'Backpack', weight = 5000,
             stack = false, close = false,
             description = "Can be used to store items.",
         },
-    
+
         ['cnt_bcpk3'] = {
             label = 'Backpack', weight = 5000,
             stack = false, close = false,
             description = "Can be used to store items.",
         },
-    
+
         ['cnt_bcpk4'] = {
             label = 'Backpack', weight = 5000,
             stack = false, close = false,
             description = "Can be used to store items.",
         },
-    
+
         ['cnt_bfcs1'] = {
             label = 'Briefcase', weight = 3000,
             stack = false, close = false,
             description = "Can be used to store items.",
         },
-    
+
         ['cnt_bfcs2'] = {
             label = 'Briefcase', weight = 3000,
             stack = false, close = false,
             description = "Can be used to store items.",
         },
-    
+
         ['cnt_bfcs3'] = {
             label = 'Briefcase', weight = 3000,
             stack = false, close = false,
             description = "Can be used to store items.",
         },
 
-        ['mealready'] = {
-            label = 'MRE', weight = 1000,
+        ['mealready1'] = {
+            label = 'MRE #10', weight = 3000,
             stack = false, close = false,
-            description = "Meal ready to eat.",
+            description = "Standard Issue MRE.",
+        },
+
+        ['mealready2'] = {
+            label = 'MRE #09', weight = 3000,
+            stack = false, close = false,
+            description = "Standard Issue MRE.",
+        },
+
+        ['mealready3'] = {
+            label = 'MRE #04', weight = 3000,
+            stack = false, close = false,
+            description = "Standard Issue MRE.",
+        },
+
+        ['mealready4'] = {
+            label = 'MRE #05', weight = 3000,
+            stack = false, close = false,
+            description = "Standard Issue MRE.",
+        },
+
+        ['mealready5'] = {
+            label = 'MRE #11', weight = 3000,
+            stack = false, close = false,
+            description = "Standard Issue MRE.",
         },
 
         ['medicalkit'] = {
-            label = 'First Aid Kit', weight = 1000,
+            label = 'First Aid Kit', weight = 2500,
             stack = false, close = false,
-            description = "For use on minimal injuries.",
+            description = "For use on minor injuries.",
         },
 
         ----------------------------------------------------------------------------------------------------
@@ -420,12 +444,71 @@
         ----------------------------------------------------------------------------------------------------
         ----------------------------------------------------------------------------------------------------
         ----------------------------------------------------------------------------------------------------
+        --- CONSUMABLES: MEAL READY TO EAT
+    
+        ['mre_chilimac'] = {
+            label = 'MRE 10: Chilimac', weight = 500, stack = true, close = true,
+            allowArmed = false, consume = 1, client = {
+                status = { hunger = 290000 }, anim = 'eating_hand', prop = 'tincan_drink',
+                disable = { move = false, car = false, combat = true, sprint = true },
+                usetime = 7500,
+            },
+        },
+
+        ['mre_beefstew'] = {
+            label = 'MRE 09: Beef Stew', weight = 500, stack = true, close = true,
+            allowArmed = false, consume = 1, client = {
+                status = { hunger = 290000 }, anim = 'eating_hand', prop = 'tincan_drink',
+                disable = { move = false, car = false, combat = true, sprint = true },
+                usetime = 7500,
+            },
+        },
+
+        ['mre_spaghetti'] = {
+            label = 'MRE 04: Spaghetti', weight = 500, stack = true, close = true,
+            allowArmed = false, consume = 1, client = {
+                status = { hunger = 290000 }, anim = 'eating_hand', prop = 'tincan_drink',
+                disable = { move = false, car = false, combat = true, sprint = true },
+                usetime = 7500,
+            },
+        },
+
+        ['mre_chknchunks'] = {
+            label = 'MRE 05: Chicken Chunks', weight = 500, stack = true, close = true,
+            allowArmed = false, consume = 1, client = {
+                status = { hunger = 290000 }, anim = 'eating_hand', prop = 'tincan_drink',
+                disable = { move = false, car = false, combat = true, sprint = true },
+                usetime = 7500,
+            },
+        },
+
+        ['mre_vgomelet'] = {
+            label = 'MRE 11: Veggie Omelet', weight = 500, stack = true, close = true,
+            allowArmed = false, consume = 1, client = {
+                status = { hunger = 290000 }, anim = 'eating_hand', prop = 'tincan_drink',
+                disable = { move = false, car = false, combat = true, sprint = true },
+                usetime = 7500,
+            },
+        },
+
+        ['mre_bread'] = {
+            label = 'MRE Flatbread', weight = 500, stack = true, close = true,
+            allowArmed = false, consume = 1, client = {
+                status = { hunger = 130000 }, anim = 'eating_hand', prop = 'tincan_drink',
+                disable = { move = false, car = false, combat = true, sprint = true },
+                usetime = 7500,
+            },
+        },
+
+        ----------------------------------------------------------------------------------------------------
+        ----------------------------------------------------------------------------------------------------
+        ----------------------------------------------------------------------------------------------------
         --- CONSUMABLES: CRAFTABLE
 
         ['sandwich_ham'] = {
             label = 'Ham Sandwich', weight = 50, stack = true, close = true,
             allowArmed = false, consume = 1, client = {
-                status = { hunger = 170000 }, anim = 'eating_hand', prop = 'sandwich',
+                status = { hunger = 170000 }, anim = 'eating_hand', prop = 'bread_slice',
                 disable = { move = false, car = false, combat = true, sprint = true },
                 usetime = 5500,
             },
