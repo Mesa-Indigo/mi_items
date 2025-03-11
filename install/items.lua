@@ -449,7 +449,7 @@
         ['mre_chilimac'] = {
             label = 'MRE 10: Chilimac', weight = 500, stack = true, close = true,
             allowArmed = false, consume = 1, client = {
-                status = { hunger = 290000 }, anim = 'eating_hand', prop = 'tincan_drink',
+                status = { hunger = 290000 }, anim = 'drinking_hand', prop = 'tincan_drink',
                 disable = { move = false, car = false, combat = true, sprint = true },
                 usetime = 7500,
             },
@@ -458,7 +458,7 @@
         ['mre_beefstew'] = {
             label = 'MRE 09: Beef Stew', weight = 500, stack = true, close = true,
             allowArmed = false, consume = 1, client = {
-                status = { hunger = 290000 }, anim = 'eating_hand', prop = 'tincan_drink',
+                status = { hunger = 290000 }, anim = 'drinking_hand', prop = 'tincan_drink',
                 disable = { move = false, car = false, combat = true, sprint = true },
                 usetime = 7500,
             },
@@ -467,7 +467,7 @@
         ['mre_spaghetti'] = {
             label = 'MRE 04: Spaghetti', weight = 500, stack = true, close = true,
             allowArmed = false, consume = 1, client = {
-                status = { hunger = 290000 }, anim = 'eating_hand', prop = 'tincan_drink',
+                status = { hunger = 290000 }, anim = 'drinking_hand', prop = 'tincan_drink',
                 disable = { move = false, car = false, combat = true, sprint = true },
                 usetime = 7500,
             },
@@ -476,7 +476,7 @@
         ['mre_chknchunks'] = {
             label = 'MRE 05: Chicken Chunks', weight = 500, stack = true, close = true,
             allowArmed = false, consume = 1, client = {
-                status = { hunger = 290000 }, anim = 'eating_hand', prop = 'tincan_drink',
+                status = { hunger = 290000 }, anim = 'drinking_hand', prop = 'tincan_drink',
                 disable = { move = false, car = false, combat = true, sprint = true },
                 usetime = 7500,
             },
@@ -485,7 +485,7 @@
         ['mre_vgomelet'] = {
             label = 'MRE 11: Veggie Omelet', weight = 500, stack = true, close = true,
             allowArmed = false, consume = 1, client = {
-                status = { hunger = 290000 }, anim = 'eating_hand', prop = 'tincan_drink',
+                status = { hunger = 290000 }, anim = 'drinking_hand', prop = 'tincan_drink',
                 disable = { move = false, car = false, combat = true, sprint = true },
                 usetime = 7500,
             },
